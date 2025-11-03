@@ -10,7 +10,7 @@ interface CoreElementsModalProps {
     onClose: () => void;
 }
 
-export const CoreElementsModal: React.FC<CoreElementsModalProps> = ({ subject, coreElements, selectedCoreElements, onToggleCoreElement, onClose }) => {
+export const CoreElementsModal: React.FC<CoreElementsModalProps> = React.memo(({ subject, coreElements, selectedCoreElements, onToggleCoreElement, onClose }) => {
     return (
         <div className="fixed inset-0 bg-gray-600 bg-opacity-75 flex items-center justify-center p-4 z-50" role="dialog" aria-modal="true">
             <div className="bg-white rounded-xl shadow-xl max-w-2xl w-full relative transform transition-all flex flex-col max-h-[90vh]">
@@ -53,4 +53,4 @@ export const CoreElementsModal: React.FC<CoreElementsModalProps> = ({ subject, c
             </div>
         </div>
     );
-};
+});

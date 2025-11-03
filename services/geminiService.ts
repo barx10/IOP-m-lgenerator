@@ -23,7 +23,11 @@ export const generateIopGoals = async (
 Dine hovedoppgaver er:
 1.  **Generer ETT forslag til 'Bro til tidligere temaer' ('continuityNote').** Dette skal være en kort, sammenhengende tekst.
 2.  **Generer ETT forslag til 'Påvirkning av kjerneelementer på mål' ('coreElementsInfluenceNote').** Dette skal være en kort, sammenhengende tekst som forklarer hvordan de valgte kjerneelementene har påvirket og formet de foreslåtte målene. Hvis ingen kjerneelementer er valgt, skriv en standard melding som indikerer dette.
-3.  **Generer TRE alternativer for 'Ferdigheter' og 'Kunnskap'.** For disse skal du lage tre separate og distinkte forslag. Hvert forslag må være et komplett objekt med mål, tiltak og forankring. Læreren vil se en forenklet liste med bare målene, og velge ett.
+3.  **Generer TRE alternativer for 'Ferdigheter' og 'Kunnskap' med STIGENDE VANSKELIGHETSGRAD.** For hver av disse to kategoriene skal du lage tre separate og distinkte forslag i rekkefølgen enkel, middels, utfordrende:
+    *   **Forslag 1 (Enkelt):** Et grunnleggende mål som fokuserer på kjernen i kompetansemålet, med betydelig stillasbygging og støtte.
+    *   **Forslag 2 (Middels):** Et mål på forventet nivå for trinnet, som krever en viss grad av selvstendighet.
+    *   **Forslag 3 (Utfordrende):** Et mål som strekker eleven, med høyere krav til selvstendighet, anvendelse eller kompleksitet.
+    Hvert forslag må være et komplett objekt med mål, tiltak og forankring. Læreren vil se en forenklet liste med bare målene, og velge ett.
 4.  **Generer ETT forslag til 'Samlet vurdering' ('overallBenefitSuggestion').** Dette skal være ett enkelt, helhetlig forslag.
 ${goalInstruction}
 5.  **Tilpass etter alder:** Målene skal være alderstilpassede for trinnet som er oppgitt (${profile.grade}. trinn). For en elev på 8. trinn (ca. 13 år) skal innholdet og eksemplene være annerledes enn for en elev på 10. trinn (ca. 15 år), selv om selve ferdighetene som trenes på er enkle. Innholdet skal oppleves som relevant og modent for alderen, men oppgavene skal være på et tilpasset, enkelt nivå.

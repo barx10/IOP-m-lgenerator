@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Card } from './Card';
 import { DocumentIcon } from './icons/DocumentIcon';
 import { curriculumData } from '../services/curriculumData';
@@ -9,15 +9,15 @@ interface CompetenceGoalSelectorProps {
     setSelectedGoals: (goals: string[]) => void;
 }
 
-export const CompetenceGoalSelector: React.FC<CompetenceGoalSelectorProps> = ({ selectedSubject, selectedGoals, setSelectedGoals }) => {
+export const CompetenceGoalSelector: React.FC<CompetenceGoalSelectorProps> = React.memo(({ selectedSubject, selectedGoals, setSelectedGoals }) => {
     
-    const handleGoalChange = (goal: string) => {
+    const handleGoalChange = useCallback((goal: string) => {
         if (selectedGoals.includes(goal)) {
             setSelectedGoals(selectedGoals.filter(g => g !== goal));
         } else {
             setSelectedGoals([...selectedGoals, goal]);
         }
-    };
+    }, [selectedGoals, setSelectedGoals]);
 
     const subjectData = curriculumData[selectedSubject];
 
@@ -47,4 +47,4 @@ export const CompetenceGoalSelector: React.FC<CompetenceGoalSelectorProps> = ({ 
             </div>
         </Card>
     );
-};
+});

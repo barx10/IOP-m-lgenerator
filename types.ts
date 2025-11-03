@@ -1,3 +1,4 @@
+
 export interface StudentProfile {
   grade: string;
   subject: string;
@@ -32,6 +33,11 @@ export interface IopConstructionKit {
   overallBenefitSuggestion: IopGoal;
 }
 
+// Define the Selections interface for storing selected IOP goals
+export interface Selections {
+  skills: IopGoal | null;
+  knowledge: IopGoal | null;
+}
 
 export interface CurriculumData {
   [subject: string]: {

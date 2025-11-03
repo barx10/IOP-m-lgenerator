@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface CardProps {
@@ -7,7 +6,7 @@ interface CardProps {
   icon?: React.ReactNode;
 }
 
-export const Card: React.FC<CardProps> = ({ title, children, icon }) => {
+export const Card: React.FC<CardProps> = React.memo(({ title, children, icon }) => {
   return (
     <div className="bg-white rounded-xl shadow-sm border border-gray-200/80 overflow-hidden">
       <div className="p-4 sm:p-5 border-b border-gray-200/80 bg-gray-50/50 flex items-center space-x-3">
@@ -19,4 +18,4 @@ export const Card: React.FC<CardProps> = ({ title, children, icon }) => {
       </div>
     </div>
   );
-};
+});

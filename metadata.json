@@ -1,5 +1,5 @@
 {
-  "name": "IOP Målgenerator",
+  "name": "IOP Målbygger",
   "description": "En app for å generere forslag til mål i individuell opplæringsplan (IOP) basert på elevdata, observasjoner og gjeldende lov- og læreplanverk.",
   "requestFramePermissions": []
 }
