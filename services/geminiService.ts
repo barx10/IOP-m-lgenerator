@@ -15,8 +15,8 @@ export const generateIopGoals = async (
     : "Du er en erfaren faglærer som fungerer som en assistent for å lage et undervisningsopplegg.";
     
   const goalInstruction = isSpecialEducation
-    ? `4.  **Formuler VELDIG ENKLE mål:** Målene skal være konkrete, lett forståelige og oppnåelige for en elev med betydelige læringsutfordringer. Bryt ned komplekse ferdigheter i små, håndterbare delmål basert på de valgte kompetansemålene og kjerneelementene.`
-    : `4.  **Formuler tydelige og konkrete mål:** Målene skal være på nivå med forventet progresjon for trinnet. De skal være utfordrende, men oppnåelige for en ordinær elev, og direkte knyttet til de valgte kompetansemålene og kjerneelementene.`;
+    ? `5.  **Formuler VELDIG ENKLE mål:** Målene skal være konkrete, lett forståelige og oppnåelige for en elev med betydelige læringsutfordringer. Bryt ned komplekse ferdigheter i små, håndterbare delmål basert på de valgte kompetansemålene og kjerneelementene.`
+    : `5.  **Formuler tydelige og konkrete mål:** Målene skal være på nivå med forventet progresjon for trinnet. De skal være utfordrende, men oppnåelige for en ordinær elev, og direkte knyttet til de valgte kompetansemålene og kjerneelementene.`;
 
 
   const systemInstruction = `${persona} Din oppgave er å generere forslag som læreren kan bruke til å sette sammen en helhetlig plan.
@@ -30,13 +30,13 @@ Dine hovedoppgaver er:
     Hvert forslag må være et komplett objekt med mål, tiltak og forankring. Læreren vil se en forenklet liste med bare målene, og velge ett.
 4.  **Generer ETT forslag til 'Samlet vurdering' ('overallBenefitSuggestion').** Dette skal være ett enkelt, helhetlig forslag.
 ${goalInstruction}
-5.  **Tilpass etter alder:** Målene skal være alderstilpassede for trinnet som er oppgitt (${profile.grade}. trinn). For en elev på 8. trinn (ca. 13 år) skal innholdet og eksemplene være annerledes enn for en elev på 10. trinn (ca. 15 år), selv om selve ferdighetene som trenes på er enkle. Innholdet skal oppleves som relevant og modent for alderen, men oppgavene skal være på et tilpasset, enkelt nivå.
-6.  **Struktur per kjerneområde:**
+6.  **Tilpass etter alder:** Målene skal være alderstilpassede for trinnet som er oppgitt (${profile.grade}. trinn). For en elev på 8. trinn (ca. 13 år) skal innholdet og eksemplene være annerledes enn for en elev på 10. trinn (ca. 15 år), selv om selve ferdighetene som trenes på er enkle. Innholdet skal oppleves som relevant og modent for alderen, men oppgavene skal være på et tilpasset, enkelt nivå.
+7.  **Struktur per kjerneområde:**
     - For **'Ferdigheter'** og **'Kunnskap'**: \`goal\`-feltet inneholder det spesifikke målet, og \`measures\`-feltet inneholder tiltakene for å nå målet.
     - For **'Samlet vurdering'**: \`goal\`-feltet inneholder **'individuelle læringsmål'** (basert på ferdigheter og kunnskap). \`measures\`-feltet inneholder **'vurdering'** (hvordan eleven skal vise kompetanse). \`evaluation\`-feltet inneholder en beskrivelse for **"Evaluering av utvikling sett opp mot mål i perioden"**, som forklarer hvordan man vurderer om de individuelle læringsmålene er nådd.
-7.  **Bruk enkelt språk:** Unngå all form for pedagogisk sjargong og byråkratisk språk. Skriv slik at både elever og foresatte lett kan forstå hva målet er og hvordan det skal nås.
-8.  **Koble til opplastede kilder:** Forankre målene i de vedlagde dokumentene (Opplæringsloven, Overordnet del), de valgte kjerneelementene og de valgte kompetansemålene. Siter på en enkel måte.
-9.  **Struktur:** Følg det vedlagte JSON-skjemaet for å strukturere responsen din. Toppnivået skal være ett enkelt JSON-objekt.`;
+8.  **Bruk enkelt språk:** Unngå all form for pedagogisk sjargong og byråkratisk språk. Skriv slik at både elever og foresatte lett kan forstå hva målet er og hvordan det skal nås.
+9.  **Koble til opplastede kilder:** Forankre målene i de vedlagde dokumentene (Opplæringsloven, Overordnet del), de valgte kjerneelementene og de valgte kompetansemålene. Siter på en enkel måte.
+10. **Struktur:** Følg det vedlagte JSON-skjemaet for å strukturere responsen din. Toppnivået skal være ett enkelt JSON-objekt.`;
 
   const goalsList = selectedGoals.map(goal => `- ${goal}`).join('\n');
   const coreElementsList = profile.selectedCoreElements.map(element => `- ${element}`).join('\n');

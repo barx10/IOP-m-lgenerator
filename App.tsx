@@ -53,14 +53,21 @@ const App: React.FC = () => {
 
     const handleProfileChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
-        setProfile(prev => {
-            const newProfile = { ...prev, [name]: value };
-            if (name === 'subject') {
-                newProfile.selectedCoreElements = [];
-                setSelectedGoals([]);
-            }
-            return newProfile;
-        });
+    
+        if (name === 'subject') {
+            // When subject changes, reset related state separately for robustness.
+            setSelectedGoals([]);
+            setProfile(prev => ({
+                ...prev,
+                subject: value,
+                selectedCoreElements: [],
+            }));
+        } else {
+            setProfile(prev => ({
+                ...prev,
+                [name]: value,
+            }));
+        }
     }, []);
 
     const handleFrameworkChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
@@ -156,7 +163,7 @@ const App: React.FC = () => {
 
                 <Card title="Velg mål for ferdigheter" icon={<CheckCircleIcon />}>
                     <div className="space-y-4">
-                        {skillsSuggestions.map((suggestion, index) => (
+                        {skillsSuggestions?.map((suggestion, index) => (
                             <div key={index} className={`p-4 rounded-lg border cursor-pointer transition-all ${selections.skills?.goal === suggestion.goal ? 'bg-blue-50 border-brand-blue ring-2 ring-brand-blue' : 'bg-white border-gray-200 hover:border-gray-300'}`} onClick={() => handleSelectionChange('skills', suggestion)}>
                                 <div className="flex justify-between items-start gap-4">
                                     <p className="font-medium text-gray-800 flex-grow">{suggestion.goal}</p>
@@ -177,7 +184,7 @@ const App: React.FC = () => {
 
                 <Card title="Velg mål for kunnskap" icon={<CheckCircleIcon />}>
                      <div className="space-y-4">
-                        {knowledgeSuggestions.map((suggestion, index) => (
+                        {knowledgeSuggestions?.map((suggestion, index) => (
                             <div key={index} className={`p-4 rounded-lg border cursor-pointer transition-all ${selections.knowledge?.goal === suggestion.goal ? 'bg-blue-50 border-brand-blue ring-2 ring-brand-blue' : 'bg-white border-gray-200 hover:border-gray-300'}`} onClick={() => handleSelectionChange('knowledge', suggestion)}>
                                 <div className="flex justify-between items-start gap-4">
                                     <p className="font-medium text-gray-800 flex-grow">{suggestion.goal}</p>
@@ -197,12 +204,16 @@ const App: React.FC = () => {
                 </Card>
 
                 <Card title="Samlet vurdering" icon={<DocumentIcon />}>
-                    <div className="space-y-3 text-sm text-gray-700">
-                        <p><span className="font-semibold">Individuelle læringsmål:</span> {overallBenefitSuggestion.goal}</p>
-                        <p><span className="font-semibold">Vurdering (hvordan eleven viser kompetanse):</span> {overallBenefitSuggestion.measures}</p>
-                        {overallBenefitSuggestion.evaluation && <p><span className="font-semibold">Evaluering av utvikling:</span> {overallBenefitSuggestion.evaluation}</p>}
-                        <p><span className="font-semibold">Forankring:</span> {overallBenefitSuggestion.anchoring}</p>
-                    </div>
+                    {overallBenefitSuggestion ? (
+                        <div className="space-y-3 text-sm text-gray-700">
+                            <p><span className="font-semibold">Individuelle læringsmål:</span> {overallBenefitSuggestion.goal}</p>
+                            <p><span className="font-semibold">Vurdering (hvordan eleven viser kompetanse):</span> {overallBenefitSuggestion.measures}</p>
+                            {overallBenefitSuggestion.evaluation && <p><span className="font-semibold">Evaluering av utvikling:</span> {overallBenefitSuggestion.evaluation}</p>}
+                            <p><span className="font-semibold">Forankring:</span> {overallBenefitSuggestion.anchoring}</p>
+                        </div>
+                    ) : (
+                        <p className="text-gray-500">Forslag til samlet vurdering kunne ikke genereres.</p>
+                    )}
                 </Card>
             </div>
         );
@@ -268,11 +279,21 @@ const App: React.FC = () => {
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
                                     <label htmlFor="startDate" className="block text-sm font-medium text-gray-700">Startdato</label>
-                                    <input type="date" name="startDate" id="startDate" value={framework.startDate} onChange={handleFrameworkChange} className="mt-1 focus:ring-brand-blue focus:border-brand-blue block w-full shadow-sm sm:text-sm border-gray-300 rounded-md bg-white text-gray-900 px-3 py-2"/>
+                                    <div className="relative mt-1">
+                                        <input type="date" name="startDate" id="startDate" value={framework.startDate} onChange={handleFrameworkChange} className="focus:ring-brand-blue focus:border-brand-blue block w-full shadow-sm sm:text-sm border-gray-300 rounded-md bg-white text-gray-900 px-3 py-2 pr-10"/>
+                                        <label htmlFor="startDate" className="cursor-pointer absolute inset-y-0 right-0 flex items-center pr-3">
+                                            <CalendarIcon className="h-5 w-5 text-gray-400" />
+                                        </label>
+                                    </div>
                                 </div>
                                 <div>
                                     <label htmlFor="endDate" className="block text-sm font-medium text-gray-700">Sluttdato</label>
-                                    <input type="date" name="endDate" id="endDate" value={framework.endDate} onChange={handleFrameworkChange} className="mt-1 focus:ring-brand-blue focus:border-brand-blue block w-full shadow-sm sm:text-sm border-gray-300 rounded-md bg-white text-gray-900 px-3 py-2"/>
+                                     <div className="relative mt-1">
+                                        <input type="date" name="endDate" id="endDate" value={framework.endDate} onChange={handleFrameworkChange} className="focus:ring-brand-blue focus:border-brand-blue block w-full shadow-sm sm:text-sm border-gray-300 rounded-md bg-white text-gray-900 px-3 py-2 pr-10"/>
+                                        <label htmlFor="endDate" className="cursor-pointer absolute inset-y-0 right-0 flex items-center pr-3">
+                                            <CalendarIcon className="h-5 w-5 text-gray-400" />
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </Card>
