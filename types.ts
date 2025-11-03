@@ -3,6 +3,7 @@ export interface StudentProfile {
   subject: string;
   topic: string;
   previousTopics: string;
+  selectedCoreElements: string[];
 }
 
 export interface Framework {
@@ -16,16 +17,25 @@ export interface UploadedFile {
 }
 
 export interface IopGoal {
-  coreArea: 'Ferdigheter' | 'Kunnskap' | 'Samlet utbytte';
+  coreArea: 'Ferdigheter' | 'Kunnskap' | 'Samlet vurdering';
   goal: string;
   measures: string;
   anchoring: string;
   evaluation?: string;
 }
 
+export interface IopConstructionKit {
+  continuityNote: string;
+  coreElementsInfluenceNote: string; // Added field for core elements influence
+  skillsSuggestions: IopGoal[];
+  knowledgeSuggestions: IopGoal[];
+  overallBenefitSuggestion: IopGoal;
+}
+
+
 export interface CurriculumData {
   [subject: string]: {
-    coreElements: string;
+    coreElements: string[];
     goals: string[];
   };
 }

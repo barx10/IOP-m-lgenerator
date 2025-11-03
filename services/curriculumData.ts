@@ -13,7 +13,13 @@ export const curriculumSubjects: string[] = [
 
 export const curriculumData: CurriculumData = {
     'Norsk': {
-        coreElements: "Kjerneelementene i norsk er tekst i kontekst, kritisk tilnærming til tekst, språklig mangfold, skriftlig tekstskaping og muntlig kommunikasjon.",
+        coreElements: [
+            "Tekst i kontekst",
+            "Kritisk tilnærming til tekst",
+            "Språklig mangfold",
+            "Skriftlig tekstskaping",
+            "Muntlig kommunikasjon"
+        ],
         goals: [
             "lese lyrikk, noveller, fagtekster og annen skjønnlitteratur og sakprosa på bokmål og nynorsk, svensk og dansk og samtale om formål, form og innhold",
             "lese samiske tekster på norsk og samtale om verdiene som kommer til uttrykk, og hvordan stedsnavn og personnavn som inneholder de samiske bokstavene, uttales",
@@ -35,7 +41,13 @@ export const curriculumData: CurriculumData = {
         ]
     },
     'Samfunnsfag': {
-        coreElements: "Kjerneelementene i samfunnsfag er utforsking og refleksjon, samfunnskritisk tenkning, identitet og fellesskap, demokrati og medborgerskap, og bærekraftige samfunn.",
+        coreElements: [
+            "Utforsking og refleksjon",
+            "Samfunnskritisk tenkning",
+            "Identitet og fellesskap",
+            "Demokrati og medborgerskap",
+            "Bærekraftige samfunn"
+        ],
         goals: [
             "bruke samfunnsfaglege metodar og digitale ressursar i eigne undersøkingar, presentere funn ved bruk av digitale verktøy og drøfte kor gyldige og relevante funna er",
             "vurdere på kva måtar ulike kjelder gir informasjon om eit samfunnsfagleg tema, og reflektere over korleis algoritmar, einsretta kjelder eller mangel på kjelder kan prege forståinga vår",
@@ -59,7 +71,11 @@ export const curriculumData: CurriculumData = {
         ]
     },
     'Engelsk': {
-        coreElements: "Kjerneelementene i engelsk er kommunikasjon, språklæring, og møte med engelskspråklige tekster.",
+        coreElements: [
+            "Kommunikasjon",
+            "Språklæring",
+            "Møte med engelskspråklige tekster"
+        ],
         goals: [
             "bruke varierte strategier i språklæring, tekstskaping og kommunikasjon",
             "bruke ulike digitale ressurser og andre hjelpemidler i språklæring, tekstskaping og samhandling",
@@ -83,7 +99,12 @@ export const curriculumData: CurriculumData = {
         ]
     },
     'KRLE': {
-        coreElements: "Kjerneelementene i KRLE er kunnskap om religioner og livssyn, utforsking av disse med ulike metoder, utforsking av eksistensielle spørsmål og etisk refleksjon.",
+        coreElements: [
+            "Kunnskap om religioner og livssyn",
+            "Utforsking av religioner og livssyn med ulike metoder",
+            "Utforsking av eksistensielle spørsmål og svar",
+            "Etisk refleksjon og handlingskompetanse"
+        ],
         goals: [
             "utforske og presentere sentrale trekk ved kristendom og andre religions- og livssynstradisjoner og deres utbredelse i dag",
             "utforske og drøfte hvordan kristendom og andre religioner inngår i historiske endringsprosesser globalt og nasjonalt",
@@ -103,7 +124,11 @@ export const curriculumData: CurriculumData = {
         ]
     },
     'Kroppsøving': {
-        coreElements: "Kjerneelementene i kroppsøving er bevegelse og kroppslig læring, deltakelse og samspill i bevegelsesaktiviteter, og uteaktiviteter og naturferdsel.",
+        coreElements: [
+            "Bevegelse og kroppslig læring",
+            "Deltakelse og samspill i bevegelsesaktiviteter",
+            "Uteaktiviteter og naturferdsel"
+        ],
         goals: [
             "utforske eigne moglegheiter til trening, helse og velvære gjennom leik, dans, friluftsliv, idrettsaktivitetar og andre bevegelsesaktivitetar",
             "trene på og utvikle ferdigheiter i varierte bevegelsesaktivitetar",
@@ -121,7 +146,12 @@ export const curriculumData: CurriculumData = {
         ]
     },
     'Kunst og håndverk': {
-        coreElements: "Kjerneelementene i kunst og håndverk er håndverksferdigheter, materialer og teknologi, kunst- og designprosesser, og visuell kommunikasjon.",
+        coreElements: [
+            "Håndverksferdigheter",
+            "Materialer og teknologi",
+            "Kunst- og designprosesser",
+            "Visuell kommunikasjon"
+        ],
         goals: [
             "utforske muligheter innenfor håndverksteknikker og egnet teknologi ved å bearbeide og sammenføye harde, plastiske og myke materialer.",
             "vurdere materialers holdbarhet og muligheter for reparasjon og gjenbruk, og bruke ulike verktøy og materialer på en hensiktsmessig og miljøbevisst måte",
@@ -136,7 +166,13 @@ export const curriculumData: CurriculumData = {
         ]
     },
     'Matematikk': {
-        coreElements: "Kjerneelementene i matematikk er utforsking og problemløsning, modellering og anvendelser, resonnering og argumentasjon, representasjon og kommunikasjon, og abstraksjon og generalisering.",
+        coreElements: [
+            "Utforsking og problemløsning",
+            "Modellering og anvendelser",
+            "Resonnering og argumentasjon",
+            "Representasjon og kommunikasjon",
+            "Abstraksjon og generalisering"
+        ],
         goals: [
             "utforske og generalisere multiplikasjon av polynom algebraisk og geometrisk",
             "utforske og samanlikne eigenskapar ved ulike funksjonar ved å bruke digitale verktøy",
@@ -151,7 +187,12 @@ export const curriculumData: CurriculumData = {
         ]
     },
     'Naturfag': {
-        coreElements: "Kjerneelementene i naturfag er naturvitenskapelige praksiser og tenkemåter, teknologi, jorda og livet på jorda, og kropp og helse.",
+        coreElements: [
+            "Naturvitenskapelige praksiser og tenkemåter",
+            "Teknologi",
+            "Jorda og livet på jorda",
+            "Kropp og helse"
+        ],
         goals: [
             "stille spørsmål og lage hypoteser om naturfaglige fenomener, identifisere avhengige og uavhengige variabler og samle data for å finne svar",
             "analysere og bruke innsamlede data til å lage forklaringer, drøfte forklaringene i lys av relevant teori og vurdere kvaliteten på egne og andres utforskinger",
