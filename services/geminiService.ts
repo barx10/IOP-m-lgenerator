@@ -6,37 +6,29 @@ export const generateIopGoals = async (
   framework: Framework,
   selectedGoals: string[],
   files: Record<string, UploadedFile[]>,
-  isSpecialEducation: boolean
+  expertAssessment: string
 ): Promise<IopConstructionKit> => {
   const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
-  const persona = isSpecialEducation
-    ? "Du er en erfaren spesialpedagog som fungerer som en assistent for å bygge en Individuell Opplæringsplan (IOP)."
-    : "Du er en erfaren faglærer som fungerer som en assistent for å lage et undervisningsopplegg.";
+  const persona = "Du er en erfaren spesialpedagog som fungerer som en assistent for å bygge en Individuell Opplæringsplan (IOP).";
     
-  const goalInstruction = isSpecialEducation
-    ? `5.  **Formuler VELDIG ENKLE mål:** Målene skal være konkrete, lett forståelige og oppnåelige for en elev med betydelige læringsutfordringer. Bryt ned komplekse ferdigheter i små, håndterbare delmål basert på de valgte kompetansemålene og kjerneelementene.`
-    : `5.  **Formuler tydelige og konkrete mål:** Målene skal være på nivå med forventet progresjon for trinnet. De skal være utfordrende, men oppnåelige for en ordinær elev, og direkte knyttet til de valgte kompetansemålene og kjerneelementene.`;
-
-
   const systemInstruction = `${persona} Din oppgave er å generere forslag som læreren kan bruke til å sette sammen en helhetlig plan.
 Dine hovedoppgaver er:
-1.  **Generer ETT forslag til 'Bro til tidligere temaer' ('continuityNote').** Dette skal være en kort, sammenhengende tekst.
-2.  **Generer ETT forslag til 'Påvirkning av kjerneelementer på mål' ('coreElementsInfluenceNote').** Dette skal være en kort, sammenhengende tekst som forklarer hvordan de valgte kjerneelementene har påvirket og formet de foreslåtte målene. Hvis ingen kjerneelementer er valgt, skriv en standard melding som indikerer dette.
-3.  **Generer TRE alternativer for 'Ferdigheter' og 'Kunnskap' med STIGENDE VANSKELIGHETSGRAD.** For hver av disse to kategoriene skal du lage tre separate og distinkte forslag i rekkefølgen enkel, middels, utfordrende:
+1.  **Generer ETT forslag til 'Påvirkning av kjerneelementer på mål' ('coreElementsInfluenceNote').** Dette skal være en kort, sammenhengende tekst som forklarer hvordan de valgte kjerneelementene har påvirket og formet de foreslåtte målene. Hvis ingen kjerneelementer er valgt, skriv en standard melding som indikerer dette.
+2.  **Generer TRE alternativer for 'Ferdigheter' og 'Kunnskap' med STIGENDE VANSKELIGHETSGRAD.** For hver av disse to kategoriene skal du lage tre separate og distinkte forslag i rekkefølgen enkel, middels, utfordrende:
     *   **Forslag 1 (Enkelt):** Et grunnleggende mål som fokuserer på kjernen i kompetansemålet, med betydelig stillasbygging og støtte.
     *   **Forslag 2 (Middels):** Et mål på forventet nivå for trinnet, som krever en viss grad av selvstendighet.
     *   **Forslag 3 (Utfordrende):** Et mål som strekker eleven, med høyere krav til selvstendighet, anvendelse eller kompleksitet.
     Hvert forslag må være et komplett objekt med mål, tiltak og forankring. Læreren vil se en forenklet liste med bare målene, og velge ett.
-4.  **Generer ETT forslag til 'Samlet vurdering' ('overallBenefitSuggestion').** Dette skal være ett enkelt, helhetlig forslag.
-${goalInstruction}
-6.  **Tilpass etter alder:** Målene skal være alderstilpassede for trinnet som er oppgitt (${profile.grade}. trinn). For en elev på 8. trinn (ca. 13 år) skal innholdet og eksemplene være annerledes enn for en elev på 10. trinn (ca. 15 år), selv om selve ferdighetene som trenes på er enkle. Innholdet skal oppleves som relevant og modent for alderen, men oppgavene skal være på et tilpasset, enkelt nivå.
-7.  **Struktur per kjerneområde:**
+3.  **Generer ETT forslag til 'Samlet vurdering' ('overallBenefitSuggestion').** Dette skal være ett enkelt, helhetlig forslag.
+4.  **Formuler VELDIG ENKLE mål:** Målene skal være konkrete, lett forståelige og oppnåelige for en elev med betydelige læringsutfordringer. Bryt ned komplekse ferdigheter i små, håndterbare delmål basert på de valgte kompetansemålene og kjerneelementene.
+5.  **Tilpass etter alder:** Målene skal være alderstilpassede for trinnet som er oppgitt (${profile.grade}. trinn). For en elev på 8. trinn (ca. 13 år) skal innholdet og eksemplene være annerledes enn for en elev på 10. trinn (ca. 15 år), selv om selve ferdighetene som trenes på er enkle. Innholdet skal oppleves som relevant og modent for alderen, men oppgavene skal være på et tilpasset, enkelt nivå.
+6.  **Struktur per kjerneområde:**
     - For **'Ferdigheter'** og **'Kunnskap'**: \`goal\`-feltet inneholder det spesifikke målet, og \`measures\`-feltet inneholder tiltakene for å nå målet.
     - For **'Samlet vurdering'**: \`goal\`-feltet inneholder **'individuelle læringsmål'** (basert på ferdigheter og kunnskap). \`measures\`-feltet inneholder **'vurdering'** (hvordan eleven skal vise kompetanse). \`evaluation\`-feltet inneholder en beskrivelse for **"Evaluering av utvikling sett opp mot mål i perioden"**, som forklarer hvordan man vurderer om de individuelle læringsmålene er nådd.
-8.  **Bruk enkelt språk:** Unngå all form for pedagogisk sjargong og byråkratisk språk. Skriv slik at både elever og foresatte lett kan forstå hva målet er og hvordan det skal nås.
-9.  **Koble til opplastede kilder:** Forankre målene i de vedlagde dokumentene (Opplæringsloven, Overordnet del), de valgte kjerneelementene og de valgte kompetansemålene. Siter på en enkel måte.
-10. **Struktur:** Følg det vedlagte JSON-skjemaet for å strukturere responsen din. Toppnivået skal være ett enkelt JSON-objekt.`;
+7.  **Bruk enkelt språk:** Unngå all form for pedagogisk sjargong og byråkratisk språk. Skriv slik at både elever og foresatte lett kan forstå hva målet er og hvordan det skal nås.
+8.  **Koble til opplastede kilder:** Forankre målene i de vedlagde dokumentene (Opplæringsloven, Overordnet del), de valgte kjerneelementene og de valgte kompetansemålene. Ta også hensyn til tilrådingen fra den sakkyndige vurderingen. Siter på en enkel måte.
+9.  **Struktur:** Følg det vedlagde JSON-skjemaet for å strukturere responsen din. Toppnivået skal være ett enkelt JSON-objekt.`;
 
   const goalsList = selectedGoals.map(goal => `- ${goal}`).join('\n');
   const coreElementsList = profile.selectedCoreElements.map(element => `- ${element}`).join('\n');
@@ -48,11 +40,13 @@ Generer forslag til en IOP basert på informasjonen under, de vedlagde kildedoku
 - Trinn: ${profile.grade}
 - Fag: ${profile.subject}
 - Tema: ${profile.topic}
-- Tidligere temaer (for kontekst): ${profile.previousTopics || 'Ingen oppgitt'}
-- Målgruppe: ${isSpecialEducation ? 'Elev i spesialundervisning' : 'Ordinær elev'}
+- Målgruppe: Elev i spesialundervisning
 
 **Tidsramme:**
 - Fra: ${framework.startDate} til ${framework.endDate}
+
+**Tilråding fra sakkyndig vurdering:**
+${expertAssessment || 'Ingen oppgitt.'}
 
 **Valgte kjerneelementer for perioden:**
 ${coreElementsList.length > 0 ? coreElementsList : 'Ingen spesifikke kjerneelementer valgt.'}
@@ -60,7 +54,7 @@ ${coreElementsList.length > 0 ? coreElementsList : 'Ingen spesifikke kjerneeleme
 **Valgte kompetansemål for perioden:**
 ${goalsList}
 
-Vennligst generer ETT forslag til kontinuitet, ETT forslag til hvordan kjerneelementer påvirker mål, TRE forslag til ferdigheter, TRE forslag til kunnskap, og ETT forslag til samlet vurdering.
+Vennligst generer ETT forslag til hvordan kjerneelementer påvirker mål, TRE forslag til ferdigheter, TRE forslag til kunnskap, og ETT forslag til samlet vurdering.
 `;
 
     const fileParts = Object.values(files)
@@ -130,10 +124,6 @@ Vennligst generer ETT forslag til kontinuitet, ETT forslag til hvordan kjerneele
                 type: Type.OBJECT,
                 description: "Et bygge-sett for en IOP. Inneholder ett forslag for kontinuitet og samlet vurdering, og tre forslag for ferdigheter og kunnskap.",
                 properties: {
-                    continuityNote: {
-                        type: Type.STRING,
-                        description: "Ett enkelt forslag til 'Bro til tidligere temaer'."
-                    },
                     coreElementsInfluenceNote: { // Added to schema
                         type: Type.STRING,
                         description: "En forklaring på hvordan de valgte kjerneelementene påvirker målene."
@@ -153,7 +143,7 @@ Vennligst generer ETT forslag til kontinuitet, ETT forslag til hvordan kjerneele
                         description: "Ett enkelt forslag til mål under 'Samlet vurdering'."
                     }
                 },
-                required: ['continuityNote', 'coreElementsInfluenceNote', 'skillsSuggestions', 'knowledgeSuggestions', 'overallBenefitSuggestion']
+                required: ['coreElementsInfluenceNote', 'skillsSuggestions', 'knowledgeSuggestions', 'overallBenefitSuggestion']
             },
         }
     });

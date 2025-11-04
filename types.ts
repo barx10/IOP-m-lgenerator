@@ -3,7 +3,6 @@ export interface StudentProfile {
   grade: string;
   subject: string;
   topic: string;
-  previousTopics: string;
   selectedCoreElements: string[];
 }
 
@@ -26,7 +25,6 @@ export interface IopGoal {
 }
 
 export interface IopConstructionKit {
-  continuityNote: string;
   coreElementsInfluenceNote: string; // Added field for core elements influence
   skillsSuggestions: IopGoal[];
   knowledgeSuggestions: IopGoal[];

@@ -1,50 +1,34 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { Card } from './Card';
 import { DocumentIcon } from './icons/DocumentIcon';
-import { curriculumData } from '../services/curriculumData';
+import { TextAreaField } from './TextAreaField';
 
 interface CompetenceGoalSelectorProps {
     selectedSubject: string;
-    selectedGoals: string[];
-    setSelectedGoals: (goals: string[]) => void;
+    pastedGoals: string;
+    setPastedGoals: (goals: string) => void;
 }
 
-export const CompetenceGoalSelector: React.FC<CompetenceGoalSelectorProps> = React.memo(({ selectedSubject, selectedGoals, setSelectedGoals }) => {
+export const CompetenceGoalSelector: React.FC<CompetenceGoalSelectorProps> = React.memo(({ selectedSubject, pastedGoals, setPastedGoals }) => {
     
-    const handleGoalChange = useCallback((goal: string) => {
-        if (selectedGoals.includes(goal)) {
-            setSelectedGoals(selectedGoals.filter(g => g !== goal));
-        } else {
-            setSelectedGoals([...selectedGoals, goal]);
-        }
-    }, [selectedGoals, setSelectedGoals]);
-
-    const subjectData = curriculumData[selectedSubject];
-
-    if (!selectedSubject || !subjectData) {
+    if (!selectedSubject) {
         return (
-            <Card title="Velg kompetansemål" icon={<DocumentIcon />}>
-                <p className="text-gray-500">Velg et fag i "Tema"-kortet over for å se relevante kompetansemål her.</p>
+            <Card title="Kompetansemål" icon={<DocumentIcon />}>
+                <p className="text-gray-500">Velg et fag i "Tema"-kortet over for å lime inn kompetansemål her.</p>
             </Card>
         );
     }
 
     return (
-        <Card title={`Velg kompetansemål for ${selectedSubject}`} icon={<DocumentIcon />}>
-            <div className="space-y-3 max-h-96 overflow-y-auto pr-2">
-                {subjectData.goals.map((goal, index) => (
-                    <label key={index} htmlFor={`goal-${index}`} className="flex items-start p-3 rounded-md hover:bg-gray-50 transition-colors cursor-pointer">
-                        <input
-                            type="checkbox"
-                            id={`goal-${index}`}
-                            checked={selectedGoals.includes(goal)}
-                            onChange={() => handleGoalChange(goal)}
-                            className="h-4 w-4 text-brand-blue border-gray-300 rounded focus:ring-brand-blue mt-1"
-                        />
-                        <span className="ml-3 text-sm text-gray-700">{goal}</span>
-                    </label>
-                ))}
-            </div>
+        <Card title={`Kompetansemål for ${selectedSubject}`} icon={<DocumentIcon />}>
+            <TextAreaField
+                id="competenceGoals"
+                label="Lim inn relevante kompetansemål her"
+                value={pastedGoals}
+                onChange={(e) => setPastedGoals(e.target.value)}
+                placeholder="Lim inn ett eller flere kompetansemål fra læreplanen, ett per linje for best resultat."
+                rows={6}
+            />
         </Card>
     );
 });
