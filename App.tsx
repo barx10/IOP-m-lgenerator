@@ -24,10 +24,7 @@ import { CheckCircleIcon } from './components/icons/CheckCircleIcon';
 
 declare global {
   interface Window {
-    html2canvas: (element: HTMLElement, options?: any) => Promise<HTMLCanvasElement>;
-    jspdf: {
-      jsPDF: new (options?: any) => any;
-    };
+    // Removed html2canvas and jspdf - using native print instead
   }
 }
 
@@ -37,12 +34,13 @@ const initialProfile: StudentProfile = {
   grade: '',
   subject: '',
   topic: '',
-  selectedCoreElements: [],
+  selectedCoreElement: '',
+  selectedCrossCurricularTheme: '',
 };
 
 const initialFramework: Framework = {
   startDate: new Date().toISOString().split('T')[0],
-  endDate: new Date(new Date().setMonth(new Date().getMonth() + 3)).toISOString().split('T')[0],
+  endDate: new Date(new Date().setMonth(new Date().getMonth() + 1)).toISOString().split('T')[0],
 };
 
 const App: React.FC = () => {
@@ -52,12 +50,12 @@ const App: React.FC = () => {
     const [pastedGoals, setPastedGoals] = useState<string>('');
     const [expertAssessment, setExpertAssessment] = useState<string>('');
     const [showCoreElementsModal, setShowCoreElementsModal] = useState(false);
+    const [showCrossCurricularModal, setShowCrossCurricularModal] = useState(false);
 
     const [status, setStatus] = useState<AppStatus>('idle');
     const [error, setError] = useState<string | null>(null);
     const [iopResult, setIopResult] = useState<IopConstructionKit | null>(null);
     const [selections, setSelections] = useState<Selections>({ skills: null, knowledge: null });
-    const [isDownloading, setIsDownloading] = useState(false);
 
     const handleProfileChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
@@ -68,7 +66,8 @@ const App: React.FC = () => {
             setProfile(prev => ({
                 ...prev,
                 subject: value,
-                selectedCoreElements: [],
+                selectedCoreElement: '',
+                selectedCrossCurricularTheme: '',
             }));
         } else {
             setProfile(prev => ({
@@ -84,13 +83,17 @@ const App: React.FC = () => {
     }, []);
     
     const handleToggleCoreElement = useCallback((element: string) => {
-        setProfile(prev => {
-            const selected = prev.selectedCoreElements;
-            const newSelected = selected.includes(element)
-                ? selected.filter(el => el !== element)
-                : [...selected, element];
-            return { ...prev, selectedCoreElements: newSelected };
-        });
+        setProfile(prev => ({
+            ...prev,
+            selectedCoreElement: prev.selectedCoreElement === element ? '' : element
+        }));
+    }, []);
+
+    const handleToggleCrossCurricularTheme = useCallback((theme: string) => {
+        setProfile(prev => ({
+            ...prev,
+            selectedCrossCurricularTheme: prev.selectedCrossCurricularTheme === theme ? '' : theme
+        }));
     }, []);
 
     const isFormValid = useMemo(() => {
@@ -120,6 +123,9 @@ const App: React.FC = () => {
             
             setIopResult(result);
             setStatus('success');
+            
+            // Scroll to top when results are shown
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         } catch (err) {
             setError(err instanceof Error ? err.message : 'An unknown error occurred.');
             setStatus('error');
@@ -147,70 +153,8 @@ const App: React.FC = () => {
     const handleDownloadPdf = async () => {
       if (!iopResult || !selections.skills || !selections.knowledge) return;
   
-      if (!window.html2canvas || !window.jspdf) {
-          setError("PDF-bibliotekene kunne ikke lastes. Prøv å laste siden på nytt.");
-          console.error("html2canvas or jspdf not found on window object");
-          return;
-      }
-  
-      setIsDownloading(true);
-      setError(null);
-      const reportElement = document.getElementById('printable-report-area');
-      if (!reportElement) {
-          setError("Rapportelementet ble ikke funnet.");
-          setIsDownloading(false);
-          return;
-      }
-  
-      // The printable area is styled with `hidden print:block`. We need to make it visible for capture.
-      reportElement.classList.remove('hidden');
-  
-      try {
-          const canvas = await window.html2canvas(reportElement, {
-              scale: 2, // for better resolution
-              useCORS: true,
-              logging: false,
-              windowWidth: reportElement.scrollWidth,
-              windowHeight: reportElement.scrollHeight
-          });
-          
-          const imgData = canvas.toDataURL('image/png');
-          const { jsPDF } = window.jspdf;
-          const pdf = new jsPDF({
-              orientation: 'portrait',
-              unit: 'mm',
-              format: 'a4'
-          });
-  
-          const pdfWidth = pdf.internal.pageSize.getWidth();
-          const pdfHeight = pdf.internal.pageSize.getHeight();
-          const imgWidth = canvas.width;
-          const imgHeight = canvas.height;
-          const ratio = imgWidth / imgHeight;
-          
-          let imgHeightOnPdf = pdfWidth / ratio;
-          let heightLeft = imgHeightOnPdf;
-          let position = 0;
-  
-          pdf.addImage(imgData, 'PNG', 0, position, pdfWidth, imgHeightOnPdf);
-          heightLeft -= pdfHeight;
-  
-          while (heightLeft > 0) {
-              position -= pdfHeight;
-              pdf.addPage();
-              pdf.addImage(imgData, 'PNG', 0, position, pdfWidth, imgHeightOnPdf);
-              heightLeft -= pdfHeight;
-          }
-          
-          pdf.save('IOP-plan.pdf');
-  
-      } catch (e) {
-          console.error("Error generating PDF:", e);
-          setError("En feil oppstod under generering av PDF-filen.");
-      } finally {
-          reportElement.classList.add('hidden');
-          setIsDownloading(false);
-      }
+      // Use browser's native print dialog which allows saving as PDF
+      window.print();
   };
     
     const renderIopResult = () => {
@@ -220,33 +164,21 @@ const App: React.FC = () => {
         const isPrintable = !!(selections.skills && selections.knowledge);
     
         return (
-            <div className="space-y-8">
+            <div className="space-y-8 animate-fade-in">
                 <div className="flex justify-between items-center">
-                    <button onClick={handleReset} className="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue">
+                    <button onClick={handleReset} className="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 hover:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue">
                         <ArrowLeftIcon className="mr-2" />
                         Start på nytt
                     </button>
-                    <h1 className="text-3xl font-bold text-gray-800">Resultater</h1>
+                    <h1 className="text-4xl font-bold text-gray-900">Resultater</h1>
                     <button 
                         onClick={handleDownloadPdf}
-                        disabled={!isPrintable || isDownloading}
-                        className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-brand-blue hover:bg-brand-blue/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue disabled:bg-gray-400 disabled:cursor-not-allowed"
-                        title={!isPrintable ? "Velg et mål for både ferdigheter og kunnskap for å laste ned" : "Last ned / Skriv ut"}
+                        disabled={!isPrintable}
+                        className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-brand-blue hover:bg-brand-blue/90 hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue disabled:bg-gray-400 disabled:cursor-not-allowed"
+                        title={!isPrintable ? "Velg et mål for både ferdigheter og kunnskap for å skrive ut" : "Forhåndsvis og skriv ut / Last ned som PDF"}
                     >
-                         {isDownloading ? (
-                            <>
-                                <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                                </svg>
-                                Laster ned...
-                            </>
-                        ) : (
-                            <>
-                                <DownloadIcon className="mr-2" />
-                                Last ned / Skriv ut
-                            </>
-                        )}
+                        <DownloadIcon className="mr-2" />
+                        Forhåndsvis / Skriv ut
                     </button>
                 </div>
                 {status === 'error' && <p className="text-red-600 text-sm mt-4 text-center">{error}</p>}
@@ -267,15 +199,15 @@ const App: React.FC = () => {
                     </div>
                 </Card>
 
-                <Card title="Velg mål for ferdigheter" icon={<CheckCircleIcon />}>
+                <Card title="Velg mål for ferdigheter" icon={<CheckCircleIcon />} className="border-l-4 border-accent-purple">
                     <div className="space-y-4">
                         {skillsSuggestions && skillsSuggestions.length > 0 ? (
                             skillsSuggestions.map((suggestion, index) => (
-                                <div key={index} className={`p-4 rounded-lg border cursor-pointer transition-all ${selections.skills?.goal === suggestion.goal ? 'bg-blue-50 border-brand-blue ring-2 ring-brand-blue' : 'bg-white border-gray-200 hover:border-gray-300'}`} onClick={() => handleSelectionChange('skills', suggestion)}>
+                                <div key={index} className={`p-4 rounded-xl border cursor-pointer transition-all duration-200 ${selections.skills?.goal === suggestion.goal ? 'bg-accent-purple-light border-accent-purple ring-2 ring-accent-purple shadow-md' : 'bg-white border-gray-200 hover:border-accent-purple hover:shadow-md'}`} onClick={() => handleSelectionChange('skills', suggestion)}>
                                     <div className="flex justify-between items-start gap-4">
                                         <p className="font-medium text-gray-800 flex-grow text-base">{suggestion.goal}</p>
                                         {difficultyLabels[index] && (
-                                             <span className="text-xs font-semibold text-gray-600 bg-gray-100 px-2.5 py-1 rounded-full whitespace-nowrap">{difficultyLabels[index]}</span>
+                                             <span className="text-xs font-semibold text-accent-purple bg-accent-purple-light px-2.5 py-1 rounded-full whitespace-nowrap">{difficultyLabels[index]}</span>
                                         )}
                                     </div>
                                     {selections.skills?.goal === suggestion.goal && (
@@ -302,15 +234,15 @@ const App: React.FC = () => {
                     </div>
                 </Card>
 
-                <Card title="Velg mål for kunnskap" icon={<CheckCircleIcon />}>
+                <Card title="Velg mål for kunnskap" icon={<CheckCircleIcon />} className="border-l-4 border-accent-orange">
                      <div className="space-y-4">
                         {knowledgeSuggestions && knowledgeSuggestions.length > 0 ? (
                             knowledgeSuggestions.map((suggestion, index) => (
-                                <div key={index} className={`p-4 rounded-lg border cursor-pointer transition-all ${selections.knowledge?.goal === suggestion.goal ? 'bg-blue-50 border-brand-blue ring-2 ring-brand-blue' : 'bg-white border-gray-200 hover:border-gray-300'}`} onClick={() => handleSelectionChange('knowledge', suggestion)}>
+                                <div key={index} className={`p-4 rounded-xl border cursor-pointer transition-all duration-200 ${selections.knowledge?.goal === suggestion.goal ? 'bg-accent-orange-light border-accent-orange ring-2 ring-accent-orange shadow-md' : 'bg-white border-gray-200 hover:border-accent-orange hover:shadow-md'}`} onClick={() => handleSelectionChange('knowledge', suggestion)}>
                                     <div className="flex justify-between items-start gap-4">
                                         <p className="font-medium text-gray-800 flex-grow text-base">{suggestion.goal}</p>
                                         {difficultyLabels[index] && (
-                                            <span className="text-xs font-semibold text-gray-600 bg-gray-100 px-2.5 py-1 rounded-full whitespace-nowrap">{difficultyLabels[index]}</span>
+                                            <span className="text-xs font-semibold text-accent-orange bg-accent-orange-light px-2.5 py-1 rounded-full whitespace-nowrap">{difficultyLabels[index]}</span>
                                         )}
                                     </div>
                                     {selections.knowledge?.goal === suggestion.goal && (
@@ -452,32 +384,45 @@ const App: React.FC = () => {
     };
 
     if (status === 'success') {
-        return <div className="max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8">{renderIopResult()}</div>;
+        return (
+            <div className="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen py-10 px-4 sm:px-6 lg:px-8">
+                <div className="max-w-4xl mx-auto">{renderIopResult()}</div>
+            </div>
+        );
     }
 
     return (
         <>
-            <div className="bg-brand-gray min-h-screen">
+            <div className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 min-h-screen">
                 <main className="max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-10">
-                        <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight">IOP Målbygger</h1>
-                        <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-500">Et verktøy for å generere forslag til individuelle opplæringsplaner.</p>
+                    <div className="text-center mb-16 animate-fade-in">
+                        <div className="inline-block mb-8">
+                            <div className="w-20 h-20 mx-auto bg-gradient-to-br from-brand-blue via-purple-600 to-pink-600 rounded-2xl shadow-2xl flex items-center justify-center transform rotate-3">
+                                <DocumentIcon className="w-12 h-12 text-white" />
+                            </div>
+                        </div>
+                        <h1 className="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-brand-blue via-purple-600 to-pink-600 tracking-tight mb-8 pb-2">
+                            IOP Målbygger
+                        </h1>
+                        <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-700 font-medium">
+                            Kraftig AI-drevet verktøy for individuelle opplæringsplaner ✨
+                        </p>
                     </div>
 
-                    <div className="space-y-8">
+                    <div className="space-y-6 animate-slide-up">
                         {/* Student profile and topic */}
                         <Card title="Tema" icon={<DocumentIcon />}>
                              <div className="grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
                                 <div className="sm:col-span-3">
-                                    <label htmlFor="grade" className="block text-sm font-medium text-gray-700">Trinn</label>
-                                    <select id="grade" name="grade" value={profile.grade} onChange={handleProfileChange} className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-brand-blue focus:border-brand-blue sm:text-sm rounded-md bg-white text-gray-900">
+                                    <label htmlFor="grade" className="block text-sm font-semibold text-gray-700 mb-1">Trinn</label>
+                                    <select id="grade" name="grade" value={profile.grade} onChange={handleProfileChange} className="mt-1 block w-full pl-3 pr-10 py-2.5 text-base border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-brand-blue sm:text-sm rounded-lg bg-white shadow-sm transition-all">
                                         <option value="" disabled>Velg trinn</option>
                                         {[...Array(10)].map((_, i) => <option key={i+1} value={i+1}>{i+1}. trinn</option>)}
                                     </select>
                                 </div>
                                 <div className="sm:col-span-3">
-                                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700">Fag</label>
-                                    <select id="subject" name="subject" value={profile.subject} onChange={handleProfileChange} className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-brand-blue focus:border-brand-blue sm:text-sm rounded-md bg-white text-gray-900">
+                                    <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 mb-1">Fag</label>
+                                    <select id="subject" name="subject" value={profile.subject} onChange={handleProfileChange} className="mt-1 block w-full pl-3 pr-10 py-2.5 text-base border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-brand-blue sm:text-sm rounded-lg bg-white shadow-sm transition-all">
                                         <option value="" disabled>Velg fag</option>
                                         {curriculumSubjects.map(sub => <option key={sub} value={sub}>{sub}</option>)}
                                     </select>
@@ -503,35 +448,39 @@ const App: React.FC = () => {
                         <Card title="Tidsramme" icon={<CalendarIcon />}>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
-                                    <label htmlFor="startDate" className="block text-sm font-medium text-gray-700">Startdato</label>
-                                    <div className="relative mt-1">
-                                        <input type="date" name="startDate" id="startDate" value={framework.startDate} onChange={handleFrameworkChange} className="focus:ring-brand-blue focus:border-brand-blue block w-full shadow-sm sm:text-sm border-gray-300 rounded-md bg-white text-gray-900 px-3 py-2 pr-10"/>
-                                        <label htmlFor="startDate" className="cursor-pointer absolute inset-y-0 right-0 flex items-center pr-3">
-                                            <CalendarIcon className="h-5 w-5 text-gray-400" />
-                                        </label>
-                                    </div>
+                                    <label htmlFor="startDate" className="block text-sm font-semibold text-gray-700 mb-1">Startdato</label>
+                                    <input type="date" name="startDate" id="startDate" value={framework.startDate} onChange={handleFrameworkChange} className="focus:ring-2 focus:ring-brand-blue focus:border-brand-blue block w-full shadow-sm sm:text-sm border-gray-300 rounded-lg bg-white text-gray-900 px-3 py-2.5 mt-1 transition-all"/>
                                 </div>
                                 <div>
-                                    <label htmlFor="endDate" className="block text-sm font-medium text-gray-700">Sluttdato</label>
-                                     <div className="relative mt-1">
-                                        <input type="date" name="endDate" id="endDate" value={framework.endDate} onChange={handleFrameworkChange} className="focus:ring-brand-blue focus:border-brand-blue block w-full shadow-sm sm:text-sm border-gray-300 rounded-md bg-white text-gray-900 px-3 py-2 pr-10"/>
-                                        <label htmlFor="endDate" className="cursor-pointer absolute inset-y-0 right-0 flex items-center pr-3">
-                                            <CalendarIcon className="h-5 w-5 text-gray-400" />
-                                        </label>
-                                    </div>
+                                    <label htmlFor="endDate" className="block text-sm font-semibold text-gray-700 mb-1">Sluttdato</label>
+                                    <input type="date" name="endDate" id="endDate" value={framework.endDate} onChange={handleFrameworkChange} className="focus:ring-2 focus:ring-brand-blue focus:border-brand-blue block w-full shadow-sm sm:text-sm border-gray-300 rounded-lg bg-white text-gray-900 px-3 py-2.5 mt-1 transition-all"/>
                                 </div>
                             </div>
                         </Card>
 
                         {/* Core Elements */}
                         {profile.subject && curriculumData[profile.subject]?.coreElements.length > 0 && (
-                             <Card title={`Kjerneelementer for ${profile.subject}`} icon={<BookOpenIcon />}>
-                                <div className="space-y-2">
-                                    <p className="text-sm text-gray-600">
-                                        Valgte kjerneelementer: {profile.selectedCoreElements.length > 0 ? profile.selectedCoreElements.join(', ') : 'Ingen valgt.'}
+                             <Card title={`Kjerneelement for ${profile.subject}`} icon={<BookOpenIcon className="text-brand-blue" />} className="border-l-4 border-brand-blue shadow-blue-200">
+                                <div className="space-y-3 p-4 bg-gradient-to-br from-blue-50 to-transparent rounded-xl">
+                                    <p className="text-base text-gray-700">
+                                        Valgt kjerneelement: <span className="font-bold text-brand-blue text-lg">{profile.selectedCoreElement || 'Ingen valgt.'}</span>
                                     </p>
-                                    <button onClick={() => setShowCoreElementsModal(true)} className="text-sm font-medium text-brand-blue hover:text-brand-blue/80">
-                                        Endre valgte kjerneelementer
+                                    <button onClick={() => setShowCoreElementsModal(true)} className="inline-flex items-center px-4 py-2 text-sm font-bold text-white bg-gradient-to-r from-brand-blue to-blue-700 rounded-lg hover:from-blue-700 hover:to-brand-blue transform hover:scale-105 transition-all duration-200 shadow-md hover:shadow-xl">
+                                        ⚙️ Endre valgt kjerneelement
+                                    </button>
+                                </div>
+                            </Card>
+                        )}
+
+                        {/* Cross-Curricular Themes */}
+                        {profile.subject && curriculumData[profile.subject]?.crossCurricularThemes.length > 0 && (
+                             <Card title={`Tverrfaglig tema for ${profile.subject}`} icon={<BookOpenIcon className="text-accent-green" />} className="border-l-4 border-accent-green shadow-green-200">"
+                                <div className="space-y-3 p-4 bg-gradient-to-br from-green-50 to-transparent rounded-xl">
+                                    <p className="text-base text-gray-700">
+                                        Valgt tema: <span className="font-bold text-accent-green text-lg">{profile.selectedCrossCurricularTheme || 'Ingen valgt (valgfritt).'}</span>
+                                    </p>
+                                    <button onClick={() => setShowCrossCurricularModal(true)} className="inline-flex items-center px-4 py-2 text-sm font-bold text-white bg-gradient-to-r from-accent-green to-green-700 rounded-lg hover:from-green-700 hover:to-accent-green transform hover:scale-105 transition-all duration-200 shadow-md hover:shadow-xl">
+                                        🌿 {profile.selectedCrossCurricularTheme ? 'Endre' : 'Velg'} tverrfaglig tema
                                     </button>
                                 </div>
                             </Card>
@@ -551,9 +500,17 @@ const App: React.FC = () => {
                                     type="button"
                                     onClick={handleSubmit}
                                     disabled={!isFormValid || status === 'loading'}
-                                    className="w-full sm:w-auto inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-brand-blue hover:bg-brand-blue/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue disabled:bg-gray-400 disabled:cursor-not-allowed"
+                                    className="w-full sm:w-auto inline-flex justify-center items-center py-3 px-8 border border-transparent shadow-lg text-base font-medium rounded-xl text-white bg-gradient-to-r from-brand-blue to-indigo-600 hover:from-brand-blue/90 hover:to-indigo-700 transform hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue disabled:from-gray-400 disabled:to-gray-400 disabled:cursor-not-allowed disabled:transform-none"
                                 >
-                                    {status === 'loading' ? 'Genererer forslag...' : 'Generer forslag til IOP'}
+                                    {status === 'loading' ? (
+                                        <>
+                                            <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                            </svg>
+                                            Genererer forslag...
+                                        </>
+                                    ) : 'Generer forslag til IOP'}
                                 </button>
                             </div>
                             {status === 'error' && <p className="text-red-600 text-sm mt-4 text-center">{error}</p>}
@@ -566,9 +523,20 @@ const App: React.FC = () => {
                 <CoreElementsModal
                     subject={profile.subject}
                     coreElements={curriculumData[profile.subject].coreElements}
-                    selectedCoreElements={profile.selectedCoreElements}
+                    selectedCoreElement={profile.selectedCoreElement}
                     onToggleCoreElement={handleToggleCoreElement}
                     onClose={() => setShowCoreElementsModal(false)}
+                />
+            )}
+
+            {showCrossCurricularModal && profile.subject && curriculumData[profile.subject] && (
+                <CoreElementsModal
+                    subject={profile.subject}
+                    coreElements={curriculumData[profile.subject].crossCurricularThemes}
+                    selectedCoreElement={profile.selectedCrossCurricularTheme}
+                    onToggleCoreElement={handleToggleCrossCurricularTheme}
+                    onClose={() => setShowCrossCurricularModal(false)}
+                    title="Velg tverrfaglig tema"
                 />
             )}
         </>

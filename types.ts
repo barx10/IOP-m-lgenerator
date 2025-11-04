@@ -1,9 +1,19 @@
+export interface CoreElement {
+  name: string;
+  description: string;
+}
+
+export interface CrossCurricularTheme {
+  name: string;
+  description: string;
+}
 
 export interface StudentProfile {
   grade: string;
   subject: string;
   topic: string;
-  selectedCoreElements: string[];
+  selectedCoreElement: string; // Changed from array to single string
+  selectedCrossCurricularTheme: string; // Added for cross-curricular themes
 }
 
 export interface Framework {
@@ -39,7 +49,8 @@ export interface Selections {
 
 export interface CurriculumData {
   [subject: string]: {
-    coreElements: string[];
+    coreElements: CoreElement[];
+    crossCurricularThemes: CrossCurricularTheme[];
     goals: string[];
   };
 }

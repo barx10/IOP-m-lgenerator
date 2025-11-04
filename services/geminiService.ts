@@ -1,5 +1,6 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import type { StudentProfile, Framework, IopConstructionKit } from '../types';
+import { curriculumData } from './curriculumData';
 
 // Callback type for streaming updates
 type StreamCallback = (partial: Partial<IopConstructionKit>) => void;
@@ -39,13 +40,32 @@ export const generateIopGoals = async (
 - Prinsipper: Likeverd, inkludering, universell utforming, elevmedvirkning`;
 
   const goalsList = selectedGoals.map(goal => `- ${goal}`).join('\n');
-  const coreElementsList = profile.selectedCoreElements.map(element => `- ${element}`).join('\n');
+  
+  // Get core element description
+  let coreElementText = '';
+  if (profile.selectedCoreElement) {
+    const subject = curriculumData[profile.subject];
+    if (subject) {
+      const element = subject.coreElements.find(el => el.name === profile.selectedCoreElement);
+      coreElementText = element ? `${element.name}: ${element.description}` : profile.selectedCoreElement;
+    }
+  }
+
+  // Get cross-curricular theme description (only if selected)
+  let crossCurricularText = '';
+  if (profile.selectedCrossCurricularTheme) {
+    const subject = curriculumData[profile.subject];
+    if (subject) {
+      const theme = subject.crossCurricularThemes.find(t => t.name === profile.selectedCrossCurricularTheme);
+      crossCurricularText = theme ? `${theme.name}: ${theme.description}` : profile.selectedCrossCurricularTheme;
+    }
+  }
 
   const userPrompt = `
 **Trinn:** ${profile.grade} (ca. ${parseInt(profile.grade) + 5} år)
 **Fag:** ${profile.subject}
 **Tema:** ${profile.topic}
-${expertAssessment ? `**Sakkyndig:** ${expertAssessment}\n` : ''}${coreElementsList.length > 0 ? `**Kjerneelementer:** ${coreElementsList}\n` : ''}**Kompetansemål:**
+${expertAssessment ? `**Sakkyndig:** ${expertAssessment}\n` : ''}${coreElementText ? `**Kjerneelement:** ${coreElementText}\n` : ''}${crossCurricularText ? `**Tverrfaglig tema:** ${crossCurricularText}\n` : ''}**Kompetansemål:**
 ${goalsList}
 `.trim();
 

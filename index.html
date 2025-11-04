@@ -11,9 +11,43 @@
         theme: {
           extend: {
             colors: {
-              'brand-blue': '#005A9C',
-              'brand-lightblue': '#E6F1F9',
-              'brand-gray': '#F3F4F6',
+              'brand-blue': '#0066CC',
+              'brand-lightblue': '#E6F2FF',
+              'brand-gray': '#F8FAFC',
+              'accent-green': '#10B981',
+              'accent-green-light': '#D1FAE5',
+              'accent-purple': '#8B5CF6',
+              'accent-purple-light': '#EDE9FE',
+              'accent-orange': '#F59E0B',
+              'accent-orange-light': '#FEF3C7',
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.6s ease-in-out',
+              'slide-up': 'slideUp 0.5s ease-out',
+              'bounce-subtle': 'bounceSubtle 2s infinite',
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'shimmer': 'shimmer 2s linear infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(-10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              slideUp: {
+                '0%': { transform: 'translateY(20px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              bounceSubtle: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-5px)' },
+              },
+              shimmer: {
+                '0%': { backgroundPosition: '-1000px 0' },
+                '100%': { backgroundPosition: '1000px 0' },
+              }
+            },
+            backgroundImage: {
+              'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
             }
           }
         }
@@ -21,32 +55,48 @@
     </script>
     <style>
       @media print {
+        /* Hide everything except the report */
         body * {
           visibility: hidden;
         }
-        #printable-report-area, #printable-report-area * {
+        
+        /* Show only the printable report */
+        #printable-report-area, 
+        #printable-report-area * {
           visibility: visible;
         }
+        
+        /* Position report at top of page */
         #printable-report-area {
           position: absolute;
           left: 0;
           top: 0;
           width: 100%;
-          padding: 0;
+          padding: 20px;
           margin: 0;
+          display: block !important;
         }
-        #printable-report-area .bg-white, #printable-report-area .bg-gray-50 {
-            box-shadow: none !important;
-            border: none !important;
+        
+        /* Clean up styling for print */
+        #printable-report-area .bg-white, 
+        #printable-report-area .bg-gray-50 {
+          background: white !important;
+          box-shadow: none !important;
+          border: none !important;
         }
+        
+        /* Page setup */
         @page {
-            size: A4;
-            margin: 1.5cm;
+          size: A4;
+          margin: 1.5cm;
+        }
+        
+        /* Prevent page breaks inside important sections */
+        #printable-report-area > div {
+          page-break-inside: avoid;
         }
       }
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script type="importmap">
 {
   "imports": {
