@@ -8,7 +8,6 @@ import {
   IopGoal
 } from './types';
 import { generateIopGoals } from './services/geminiService';
-import { hardcodedDocuments } from './services/hardcodedDocuments';
 import { curriculumData, curriculumSubjects } from './services/curriculumData';
 
 import { Card } from './components/Card';
@@ -32,7 +31,7 @@ declare global {
   }
 }
 
-const difficultyLabels = ['Enkelt', 'Middels', 'Utfordrende'];
+const difficultyLabels = ['Tilpasset', 'Utfordrende'];
 
 const initialProfile: StudentProfile = {
   grade: '',
@@ -106,13 +105,19 @@ const App: React.FC = () => {
         setSelections({ skills: null, knowledge: null });
         try {
             const goalsArray = pastedGoals.split('\n').filter(g => g.trim() !== '');
+            
+            // Use streaming for live updates
             const result = await generateIopGoals(
                 profile,
                 framework,
                 goalsArray,
-                hardcodedDocuments,
-                expertAssessment
+                expertAssessment,
+                (partial) => {
+                    // Update UI as data streams in
+                    setIopResult(prev => ({ ...prev, ...partial } as IopConstructionKit));
+                }
             );
+            
             setIopResult(result);
             setStatus('success');
         } catch (err) {
@@ -250,50 +255,85 @@ const App: React.FC = () => {
                     <div className="space-y-4">
                         <div>
                             <h3 className="font-semibold text-gray-800">Hvordan kjerneelementene påvirker målene</h3>
-                            <p className="text-gray-700 mt-1 text-base leading-relaxed">{coreElementsInfluenceNote}</p>
+                            {coreElementsInfluenceNote ? (
+                                <p className="text-gray-700 mt-1 text-base leading-relaxed">{coreElementsInfluenceNote}</p>
+                            ) : (
+                                <div className="mt-1 animate-pulse">
+                                    <div className="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
+                                    <div className="h-4 bg-gray-200 rounded w-1/2"></div>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </Card>
 
                 <Card title="Velg mål for ferdigheter" icon={<CheckCircleIcon />}>
                     <div className="space-y-4">
-                        {skillsSuggestions?.map((suggestion, index) => (
-                            <div key={index} className={`p-4 rounded-lg border cursor-pointer transition-all ${selections.skills?.goal === suggestion.goal ? 'bg-blue-50 border-brand-blue ring-2 ring-brand-blue' : 'bg-white border-gray-200 hover:border-gray-300'}`} onClick={() => handleSelectionChange('skills', suggestion)}>
-                                <div className="flex justify-between items-start gap-4">
-                                    <p className="font-medium text-gray-800 flex-grow text-base">{suggestion.goal}</p>
-                                    {difficultyLabels[index] && (
-                                         <span className="text-xs font-semibold text-gray-600 bg-gray-100 px-2.5 py-1 rounded-full whitespace-nowrap">{difficultyLabels[index]}</span>
+                        {skillsSuggestions && skillsSuggestions.length > 0 ? (
+                            skillsSuggestions.map((suggestion, index) => (
+                                <div key={index} className={`p-4 rounded-lg border cursor-pointer transition-all ${selections.skills?.goal === suggestion.goal ? 'bg-blue-50 border-brand-blue ring-2 ring-brand-blue' : 'bg-white border-gray-200 hover:border-gray-300'}`} onClick={() => handleSelectionChange('skills', suggestion)}>
+                                    <div className="flex justify-between items-start gap-4">
+                                        <p className="font-medium text-gray-800 flex-grow text-base">{suggestion.goal}</p>
+                                        {difficultyLabels[index] && (
+                                             <span className="text-xs font-semibold text-gray-600 bg-gray-100 px-2.5 py-1 rounded-full whitespace-nowrap">{difficultyLabels[index]}</span>
+                                        )}
+                                    </div>
+                                    {selections.skills?.goal === suggestion.goal && (
+                                        <div className="mt-4 text-base text-gray-700 space-y-3 leading-relaxed">
+                                            <p><span className="font-semibold">Tiltak:</span> {suggestion.measures}</p>
+                                            <p><span className="font-semibold">Forankring:</span> {suggestion.anchoring}</p>
+                                        </div>
                                     )}
                                 </div>
-                                {selections.skills?.goal === suggestion.goal && (
-                                    <div className="mt-4 text-base text-gray-700 space-y-3 leading-relaxed">
-                                        <p><span className="font-semibold">Tiltak:</span> {suggestion.measures}</p>
-                                        <p><span className="font-semibold">Forankring:</span> {suggestion.anchoring}</p>
-                                    </div>
-                                )}
-                            </div>
-                        ))}
+                            ))
+                        ) : (
+                            // Loading placeholders
+                            <>
+                                <div className="p-4 rounded-lg border border-gray-200 bg-white animate-pulse">
+                                    <div className="h-6 bg-gray-200 rounded w-3/4 mb-2"></div>
+                                    <div className="h-4 bg-gray-200 rounded w-1/4"></div>
+                                </div>
+                                <div className="p-4 rounded-lg border border-gray-200 bg-white animate-pulse">
+                                    <div className="h-6 bg-gray-200 rounded w-2/3 mb-2"></div>
+                                    <div className="h-4 bg-gray-200 rounded w-1/4"></div>
+                                </div>
+                            </>
+                        )}
                     </div>
                 </Card>
 
                 <Card title="Velg mål for kunnskap" icon={<CheckCircleIcon />}>
                      <div className="space-y-4">
-                        {knowledgeSuggestions?.map((suggestion, index) => (
-                            <div key={index} className={`p-4 rounded-lg border cursor-pointer transition-all ${selections.knowledge?.goal === suggestion.goal ? 'bg-blue-50 border-brand-blue ring-2 ring-brand-blue' : 'bg-white border-gray-200 hover:border-gray-300'}`} onClick={() => handleSelectionChange('knowledge', suggestion)}>
-                                <div className="flex justify-between items-start gap-4">
-                                    <p className="font-medium text-gray-800 flex-grow text-base">{suggestion.goal}</p>
-                                    {difficultyLabels[index] && (
-                                        <span className="text-xs font-semibold text-gray-600 bg-gray-100 px-2.5 py-1 rounded-full whitespace-nowrap">{difficultyLabels[index]}</span>
+                        {knowledgeSuggestions && knowledgeSuggestions.length > 0 ? (
+                            knowledgeSuggestions.map((suggestion, index) => (
+                                <div key={index} className={`p-4 rounded-lg border cursor-pointer transition-all ${selections.knowledge?.goal === suggestion.goal ? 'bg-blue-50 border-brand-blue ring-2 ring-brand-blue' : 'bg-white border-gray-200 hover:border-gray-300'}`} onClick={() => handleSelectionChange('knowledge', suggestion)}>
+                                    <div className="flex justify-between items-start gap-4">
+                                        <p className="font-medium text-gray-800 flex-grow text-base">{suggestion.goal}</p>
+                                        {difficultyLabels[index] && (
+                                            <span className="text-xs font-semibold text-gray-600 bg-gray-100 px-2.5 py-1 rounded-full whitespace-nowrap">{difficultyLabels[index]}</span>
+                                        )}
+                                    </div>
+                                    {selections.knowledge?.goal === suggestion.goal && (
+                                        <div className="mt-4 text-base text-gray-700 space-y-3 leading-relaxed">
+                                            <p><span className="font-semibold">Tiltak:</span> {suggestion.measures}</p>
+                                            <p><span className="font-semibold">Forankring:</span> {suggestion.anchoring}</p>
+                                        </div>
                                     )}
                                 </div>
-                                {selections.knowledge?.goal === suggestion.goal && (
-                                    <div className="mt-4 text-base text-gray-700 space-y-3 leading-relaxed">
-                                        <p><span className="font-semibold">Tiltak:</span> {suggestion.measures}</p>
-                                        <p><span className="font-semibold">Forankring:</span> {suggestion.anchoring}</p>
-                                    </div>
-                                )}
-                            </div>
-                        ))}
+                            ))
+                        ) : (
+                            // Loading placeholders
+                            <>
+                                <div className="p-4 rounded-lg border border-gray-200 bg-white animate-pulse">
+                                    <div className="h-6 bg-gray-200 rounded w-3/4 mb-2"></div>
+                                    <div className="h-4 bg-gray-200 rounded w-1/4"></div>
+                                </div>
+                                <div className="p-4 rounded-lg border border-gray-200 bg-white animate-pulse">
+                                    <div className="h-6 bg-gray-200 rounded w-2/3 mb-2"></div>
+                                    <div className="h-4 bg-gray-200 rounded w-1/4"></div>
+                                </div>
+                            </>
+                        )}
                     </div>
                 </Card>
 

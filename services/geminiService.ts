@@ -1,86 +1,57 @@
 import { GoogleGenAI, Type } from "@google/genai";
-import type { StudentProfile, Framework, UploadedFile, IopConstructionKit } from '../types';
+import type { StudentProfile, Framework, IopConstructionKit } from '../types';
+
+// Callback type for streaming updates
+type StreamCallback = (partial: Partial<IopConstructionKit>) => void;
 
 export const generateIopGoals = async (
   profile: StudentProfile,
   framework: Framework,
   selectedGoals: string[],
-  files: Record<string, UploadedFile[]>,
-  expertAssessment: string
+  expertAssessment: string,
+  onStream?: StreamCallback
 ): Promise<IopConstructionKit> => {
   const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
-  const systemInstruction = `Du er en erfaren spesialpedagog som assistent for å bygge en Individuell Opplæringsplan (IOP). Generer forslag til en helhetlig plan basert på vedlagte data.
+  const systemInstruction = `Du er spesialpedagog som lager IOP for elever i spesialundervisning.
 
-**Hovedoppgaver:**
-1.  **'Påvirkning av kjerneelementer på mål' ('coreElementsInfluenceNote'):** Generer ETT kort, sammenhengende forslag som forklarer kjerneelementenes innflytelse på målene. Hvis ingen kjerneelementer er valgt, skriv en standard melding.
-2.  **'Ferdigheter' og 'Kunnskap':** Generer TRE alternativer for hver kategori med STIGENDE VANSKELIGHETSGRAD (Enkel, Middels, Utfordrende). Hvert forslag skal være et komplett objekt med 'goal', 'measures' og 'anchoring'.
-    *   **Enkelt:** Grunnleggende mål, mye støtte.
-    *   **Middels:** Forventet nivå for trinnet, noe selvstendighet.
-    *   **Utfordrende:** Strekker eleven, høyere krav til selvstendighet/kompleksitet.
-3.  **'Samlet vurdering' ('overallBenefitSuggestion'):** Generer ETT helhetlig forslag.
-    *   'goal': individuelle læringsmål (basert på ferdigheter/kunnskap).
-    *   'measures': hvordan eleven skal vise kompetanse (vurdering).
-    *   'evaluation': evaluering av utvikling mot mål i perioden.
-4.  **Målformulering:**
-    *   **Veldig enkle:** Konkrete, lettforståelige, oppnåelige for elever med læringsutfordringer. Bryt ned komplekse ferdigheter.
-    *   **Alderstilpassede:** Relevant innhold for ${profile.grade}. trinn (ca. ${parseInt(profile.grade) + 5} år), men med oppgaver på tilpasset, enkelt nivå.
-    *   **Enkelt språk:** Unngå pedagogisk sjargong.
-5.  **Forankring:** Knytt målene til de vedlagte dokumentene (Opplæringsloven, Overordnet del), valgte kjerneelementer, kompetansemål og tilråding fra sakkyndig vurdering. Siter enkelt.
-6.  **Struktur:** Følg det vedlagte JSON-skjemaet for responsen. Toppnivået skal være ett enkelt JSON-objekt.`;
+**Oppgave:** Generer 1 note om kjerneelementer, 2 ferdighets-mål, 2 kunnskaps-mål, og 1 samlet vurdering.
+
+**To vanskelighetsgrader:**
+1. **Tilpasset:** Realistisk oppnåelig mål med støtte. Konkret og enkelt.
+2. **Utfordrende:** Strekker eleven. Mer selvstendighet og kompleksitet.
+
+**VIKTIG - Målformulering:**
+- Skriv BARE målet i 'goal'-feltet, IKKE inkluder vanskelighetsgrad
+- Eksempel RIKTIG: "Lese en kort novelle og identifisere hovedtema ved hjelp av støttespørsmål"
+- Eksempel FEIL: "**Tilpasset:** Lese en kort novelle..."
+- Vanskelighetsgraden vises automatisk i UI
+
+**Krav:**
+- Enkelt språk, konkrete mål
+- Forankret i kompetansemål og kjerneelementer
+- Oppnåelig for elever med læringsutfordringer
+
+**Lovverk og føringer:**
+- Opplæringsloven §5-1: Rett til tilpasset opplæring i inkluderende fellesskap
+- Overordnet del: Grunnleggende ferdigheter, danning, demokrati, kritisk tenkning
+- Tverrfaglige temaer: Folkehelse og livsmestring, demokrati og medborgerskap
+- Prinsipper: Likeverd, inkludering, universell utforming, elevmedvirkning`;
 
   const goalsList = selectedGoals.map(goal => `- ${goal}`).join('\n');
   const coreElementsList = profile.selectedCoreElements.map(element => `- ${element}`).join('\n');
 
   const userPrompt = `
-Generer forslag til en IOP basert på informasjonen under, de vedlagde kildedokumentene, de valgte kjerneelementene og de valgte kompetansemålene.
-
-**Tema for IOP:**
-- Trinn: ${profile.grade}
-- Fag: ${profile.subject}
-- Tema: ${profile.topic}
-- Målgruppe: Elev i spesialundervisning
-
-**Tidsramme:**
-- Fra: ${framework.startDate} til ${framework.endDate}
-
-**Tilråding fra sakkyndig vurdering:**
-${expertAssessment || 'Ingen oppgitt.'}
-
-**Valgte kjerneelementer for perioden:**
-${coreElementsList.length > 0 ? coreElementsList : 'Ingen spesifikke kjerneelementer valgt.'}
-
-**Valgte kompetansemål for perioden:**
+**Trinn:** ${profile.grade} (ca. ${parseInt(profile.grade) + 5} år)
+**Fag:** ${profile.subject}
+**Tema:** ${profile.topic}
+${expertAssessment ? `**Sakkyndig:** ${expertAssessment}\n` : ''}${coreElementsList.length > 0 ? `**Kjerneelementer:** ${coreElementsList}\n` : ''}**Kompetansemål:**
 ${goalsList}
+`.trim();
 
-Vennligst generer ETT forslag til hvordan kjerneelementer påvirker mål, TRE forslag til ferdigheter, TRE forslag til kunnskap, og ETT forslag til samlet vurdering.
-`;
-
-    const fileParts = Object.values(files)
-    .flat()
-    .map(file => {
-        let mimeType = '';
-        const extension = file.name.split('.').pop()?.toLowerCase();
-        if (extension === 'pdf') {
-            mimeType = 'application/pdf';
-        } else if (extension === 'html') {
-            mimeType = 'text/html';
-        } else if (extension === 'txt') {
-            mimeType = 'text/plain';
-        }
-        if (!mimeType) return null;
-        
-        return {
-            inlineData: {
-                mimeType,
-                data: file.content,
-            },
-        };
-    })
-    .filter((part): part is { inlineData: { mimeType: string; data: string; } } => part !== null);
-
+  // Removed file attachments - they add significant overhead without much value
+  // The model already has knowledge of Norwegian education law and curriculum principles
   const promptParts = [
-      ...fileParts,
       { text: userPrompt }
   ];
   
@@ -113,43 +84,110 @@ Vennligst generer ETT forslag til hvordan kjerneelementer påvirker mål, TRE fo
   };
 
   try {
-    const response = await ai.models.generateContent({
-        model: 'gemini-2.5-pro',
-        contents: { parts: promptParts },
-        config: {
-            systemInstruction,
-            responseMimeType: 'application/json',
-            responseSchema: {
-                type: Type.OBJECT,
-                description: "Et bygge-sett for en IOP. Inneholder ett forslag for kontinuitet og samlet vurdering, og tre forslag for ferdigheter og kunnskap.",
-                properties: {
-                    coreElementsInfluenceNote: { // Added to schema
-                        type: Type.STRING,
-                        description: "En forklaring på hvordan de valgte kjerneelementene påvirker målene."
-                    },
-                    skillsSuggestions: {
-                        type: Type.ARRAY,
-                        description: "En liste med 3 forslag til mål under 'Ferdigheter'.",
-                        items: iopGoalSchema
-                    },
-                    knowledgeSuggestions: {
-                        type: Type.ARRAY,
-                        description: "En liste med 3 forslag til mål under 'Kunnskap'.",
-                        items: iopGoalSchema
-                    },
-                    overallBenefitSuggestion: {
-                        ...iopGoalSchema,
-                        description: "Ett enkelt forslag til mål under 'Samlet vurdering'."
-                    }
-                },
-                required: ['coreElementsInfluenceNote', 'skillsSuggestions', 'knowledgeSuggestions', 'overallBenefitSuggestion']
-            },
+    // Use streaming if callback provided
+    if (onStream) {
+      const streamResponse = await ai.models.generateContentStream({
+          model: 'gemini-2.0-flash-001',
+          contents: { parts: promptParts },
+          config: {
+              systemInstruction,
+              responseMimeType: 'application/json',
+              responseSchema: {
+                  type: Type.OBJECT,
+                  description: "Et bygge-sett for en IOP. Inneholder ett forslag for kontinuitet og samlet vurdering, og to forslag for ferdigheter og kunnskap.",
+                  properties: {
+                      coreElementsInfluenceNote: {
+                          type: Type.STRING,
+                          description: "En forklaring på hvordan de valgte kjerneelementene påvirker målene."
+                      },
+                      skillsSuggestions: {
+                          type: Type.ARRAY,
+                          description: "2 forslag til mål under 'Ferdigheter' (Tilpasset, Utfordrende).",
+                          items: iopGoalSchema,
+                          minItems: 2,
+                          maxItems: 2
+                      },
+                      knowledgeSuggestions: {
+                          type: Type.ARRAY,
+                          description: "2 forslag til mål under 'Kunnskap' (Tilpasset, Utfordrende).",
+                          items: iopGoalSchema,
+                          minItems: 2,
+                          maxItems: 2
+                      },
+                      overallBenefitSuggestion: {
+                          ...iopGoalSchema,
+                          description: "Ett enkelt forslag til mål under 'Samlet vurdering'."
+                      }
+                  },
+                  required: ['coreElementsInfluenceNote', 'skillsSuggestions', 'knowledgeSuggestions', 'overallBenefitSuggestion']
+              },
+          }
+      });
+
+      let accumulatedText = '';
+      
+      // Stream chunks as they arrive
+      for await (const chunk of streamResponse) {
+        const chunkText = chunk.text;
+        accumulatedText += chunkText;
+        
+        // Try to parse partial JSON and send updates
+        try {
+          const partial = JSON.parse(accumulatedText);
+          onStream(partial);
+        } catch {
+          // Not yet valid JSON, continue accumulating
         }
-    });
-    
-    const textResponse = response.text;
-    const parsedResult: IopConstructionKit = JSON.parse(textResponse);
-    return parsedResult;
+      }
+      
+      // Final parse
+      const parsedResult: IopConstructionKit = JSON.parse(accumulatedText);
+      return parsedResult;
+      
+    } else {
+      // Non-streaming (original behavior)
+      const response = await ai.models.generateContent({
+          model: 'gemini-2.0-flash-001',
+          contents: { parts: promptParts },
+          config: {
+              systemInstruction,
+              responseMimeType: 'application/json',
+              responseSchema: {
+                  type: Type.OBJECT,
+                  description: "Et bygge-sett for en IOP. Inneholder ett forslag for kontinuitet og samlet vurdering, og to forslag for ferdigheter og kunnskap.",
+                  properties: {
+                      coreElementsInfluenceNote: {
+                          type: Type.STRING,
+                          description: "En forklaring på hvordan de valgte kjerneelementene påvirker målene."
+                      },
+                      skillsSuggestions: {
+                          type: Type.ARRAY,
+                          description: "2 forslag til mål under 'Ferdigheter' (Tilpasset, Utfordrende).",
+                          items: iopGoalSchema,
+                          minItems: 2,
+                          maxItems: 2
+                      },
+                      knowledgeSuggestions: {
+                          type: Type.ARRAY,
+                          description: "2 forslag til mål under 'Kunnskap' (Tilpasset, Utfordrende).",
+                          items: iopGoalSchema,
+                          minItems: 2,
+                          maxItems: 2
+                      },
+                      overallBenefitSuggestion: {
+                          ...iopGoalSchema,
+                          description: "Ett enkelt forslag til mål under 'Samlet vurdering'."
+                      }
+                  },
+                  required: ['coreElementsInfluenceNote', 'skillsSuggestions', 'knowledgeSuggestions', 'overallBenefitSuggestion']
+              },
+          }
+      });
+      
+      const textResponse = response.text;
+      const parsedResult: IopConstructionKit = JSON.parse(textResponse);
+      return parsedResult;
+    }
   } catch (error) {
     console.error("Error generating IOP goals:", error);
     if (error instanceof Error && error.message.includes("API key not valid")) {
