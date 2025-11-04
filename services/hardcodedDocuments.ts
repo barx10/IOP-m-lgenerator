@@ -11,17 +11,21 @@ const toBase64 = (str: string): string => {
   return btoa(binaryString);
 };
 
-const opplaeringslovenText = `Loven skal sikre god opplæring for barn, unge og voksne i et trygt miljø. Den gjelder for grunnskole og videregående opplæring, men ikke for privatskoler.
-Opplæringen skal i samarbeid med hjemmet gi historisk, kulturell og verdimessig forankring, bygge på kristen og humanistisk tradisjon, og fremme menneskerettigheter, demokrati, likestilling og vitenskapelig tenkning.
-Elever og lærlinger skal utvikle kunnskap, ferdigheter og holdninger for å mestre liv og samfunn, tenke kritisk, handle etisk og miljøbevisst, og oppleve respekt, medvirkning og lærelyst uten diskriminering. § 1-1 Formål, § 1-2 Virkeområde, § 1-3 Opplæring`;
+// Summarized version of opplaeringsloven.txt
+const opplaeringslovenSummary = `Opplæringsloven:
+- Sikrer god opplæring i trygt miljø for barn, unge, voksne (grunnskole, videregående).
+- Baseres på kristen/humanistisk tradisjon, fremmer menneskerettigheter, demokrati, likestilling, vitenskap.
+- Elever skal utvikle kunnskap, ferdigheter, holdninger for å mestre liv/samfunn, tenke kritisk, handle etisk/miljøbevisst, oppleve respekt/medvirkning uten diskriminering.`;
 
-const overordnetDelText = `Skolen skal bygge på verdiene i opplæringslovens formålsparagraf: menneskeverd, demokrati, likestilling, kritisk tenkning og respekt for mangfold.
-Opplæringen skal gi historisk og kulturell forankring, fremme skaperglede, engasjement og etisk bevissthet, og gi rom for medvirkning og demokrati i praksis.
-Skolen har et dobbelt oppdrag: utdanning og danning. Elevene skal utvikle sosial og faglig kompetanse, grunnleggende ferdigheter, evne til refleksjon og selvstendig læring.
-De tverrfaglige temaene er folkehelse og livsmestring, demokrati og medborgerskap, og bærekraftig utvikling.
-Skolen skal ha et inkluderende læringsmiljø, møte elevene med respekt og krav, og tilpasse opplæringen slik at alle får utvikle seg faglig og personlig.`;
+// Summarized version of overordnet-del.txt
+const overordnetDelSummary = `Overordnet del av læreplanen:
+- Bygger på Opplæringslovens formålsparagraf: menneskeverd, demokrati, likestilling, kritisk tenkning, mangfold.
+- Gir historisk/kulturell forankring, fremmer skaperglede, engasjement, etisk bevissthet, medvirkning.
+- Dobbelt oppdrag: utdanning og danning. Elever skal utvikle sosial/faglig kompetanse, grunnleggende ferdigheter, refleksjon, selvstendig læring.
+- Tverrfaglige temaer: folkehelse/livsmestring, demokrati/medborgerskap, bærekraftig utvikling.
+- Skal ha inkluderende læringsmiljø, møte elever med respekt/krav, tilpasse opplæring for faglig/personlig utvikling.`;
 
 export const hardcodedDocuments: Record<string, UploadedFile[]> = {
-  educationAct: [{ name: 'opplaeringsloven.txt', content: toBase64(opplaeringslovenText) }],
-  coreCurriculum: [{ name: 'overordnet-del.txt', content: toBase64(overordnetDelText) }],
+  educationAct: [{ name: 'opplaeringsloven.txt', content: toBase64(opplaeringslovenSummary) }],
+  coreCurriculum: [{ name: 'overordnet-del.txt', content: toBase64(overordnetDelSummary) }],
 };

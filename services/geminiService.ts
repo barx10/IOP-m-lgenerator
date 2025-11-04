@@ -10,25 +10,24 @@ export const generateIopGoals = async (
 ): Promise<IopConstructionKit> => {
   const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
-  const persona = "Du er en erfaren spesialpedagog som fungerer som en assistent for å bygge en Individuell Opplæringsplan (IOP).";
-    
-  const systemInstruction = `${persona} Din oppgave er å generere forslag som læreren kan bruke til å sette sammen en helhetlig plan.
-Dine hovedoppgaver er:
-1.  **Generer ETT forslag til 'Påvirkning av kjerneelementer på mål' ('coreElementsInfluenceNote').** Dette skal være en kort, sammenhengende tekst som forklarer hvordan de valgte kjerneelementene har påvirket og formet de foreslåtte målene. Hvis ingen kjerneelementer er valgt, skriv en standard melding som indikerer dette.
-2.  **Generer TRE alternativer for 'Ferdigheter' og 'Kunnskap' med STIGENDE VANSKELIGHETSGRAD.** For hver av disse to kategoriene skal du lage tre separate og distinkte forslag i rekkefølgen enkel, middels, utfordrende:
-    *   **Forslag 1 (Enkelt):** Et grunnleggende mål som fokuserer på kjernen i kompetansemålet, med betydelig stillasbygging og støtte.
-    *   **Forslag 2 (Middels):** Et mål på forventet nivå for trinnet, som krever en viss grad av selvstendighet.
-    *   **Forslag 3 (Utfordrende):** Et mål som strekker eleven, med høyere krav til selvstendighet, anvendelse eller kompleksitet.
-    Hvert forslag må være et komplett objekt med mål, tiltak og forankring. Læreren vil se en forenklet liste med bare målene, og velge ett.
-3.  **Generer ETT forslag til 'Samlet vurdering' ('overallBenefitSuggestion').** Dette skal være ett enkelt, helhetlig forslag.
-4.  **Formuler VELDIG ENKLE mål:** Målene skal være konkrete, lett forståelige og oppnåelige for en elev med betydelige læringsutfordringer. Bryt ned komplekse ferdigheter i små, håndterbare delmål basert på de valgte kompetansemålene og kjerneelementene.
-5.  **Tilpass etter alder:** Målene skal være alderstilpassede for trinnet som er oppgitt (${profile.grade}. trinn). For en elev på 8. trinn (ca. 13 år) skal innholdet og eksemplene være annerledes enn for en elev på 10. trinn (ca. 15 år), selv om selve ferdighetene som trenes på er enkle. Innholdet skal oppleves som relevant og modent for alderen, men oppgavene skal være på et tilpasset, enkelt nivå.
-6.  **Struktur per kjerneområde:**
-    - For **'Ferdigheter'** og **'Kunnskap'**: \`goal\`-feltet inneholder det spesifikke målet, og \`measures\`-feltet inneholder tiltakene for å nå målet.
-    - For **'Samlet vurdering'**: \`goal\`-feltet inneholder **'individuelle læringsmål'** (basert på ferdigheter og kunnskap). \`measures\`-feltet inneholder **'vurdering'** (hvordan eleven skal vise kompetanse). \`evaluation\`-feltet inneholder en beskrivelse for **"Evaluering av utvikling sett opp mot mål i perioden"**, som forklarer hvordan man vurderer om de individuelle læringsmålene er nådd.
-7.  **Bruk enkelt språk:** Unngå all form for pedagogisk sjargong og byråkratisk språk. Skriv slik at både elever og foresatte lett kan forstå hva målet er og hvordan det skal nås.
-8.  **Koble til opplastede kilder:** Forankre målene i de vedlagde dokumentene (Opplæringsloven, Overordnet del), de valgte kjerneelementene og de valgte kompetansemålene. Ta også hensyn til tilrådingen fra den sakkyndige vurderingen. Siter på en enkel måte.
-9.  **Struktur:** Følg det vedlagde JSON-skjemaet for å strukturere responsen din. Toppnivået skal være ett enkelt JSON-objekt.`;
+  const systemInstruction = `Du er en erfaren spesialpedagog som assistent for å bygge en Individuell Opplæringsplan (IOP). Generer forslag til en helhetlig plan basert på vedlagte data.
+
+**Hovedoppgaver:**
+1.  **'Påvirkning av kjerneelementer på mål' ('coreElementsInfluenceNote'):** Generer ETT kort, sammenhengende forslag som forklarer kjerneelementenes innflytelse på målene. Hvis ingen kjerneelementer er valgt, skriv en standard melding.
+2.  **'Ferdigheter' og 'Kunnskap':** Generer TRE alternativer for hver kategori med STIGENDE VANSKELIGHETSGRAD (Enkel, Middels, Utfordrende). Hvert forslag skal være et komplett objekt med 'goal', 'measures' og 'anchoring'.
+    *   **Enkelt:** Grunnleggende mål, mye støtte.
+    *   **Middels:** Forventet nivå for trinnet, noe selvstendighet.
+    *   **Utfordrende:** Strekker eleven, høyere krav til selvstendighet/kompleksitet.
+3.  **'Samlet vurdering' ('overallBenefitSuggestion'):** Generer ETT helhetlig forslag.
+    *   'goal': individuelle læringsmål (basert på ferdigheter/kunnskap).
+    *   'measures': hvordan eleven skal vise kompetanse (vurdering).
+    *   'evaluation': evaluering av utvikling mot mål i perioden.
+4.  **Målformulering:**
+    *   **Veldig enkle:** Konkrete, lettforståelige, oppnåelige for elever med læringsutfordringer. Bryt ned komplekse ferdigheter.
+    *   **Alderstilpassede:** Relevant innhold for ${profile.grade}. trinn (ca. ${parseInt(profile.grade) + 5} år), men med oppgaver på tilpasset, enkelt nivå.
+    *   **Enkelt språk:** Unngå pedagogisk sjargong.
+5.  **Forankring:** Knytt målene til de vedlagte dokumentene (Opplæringsloven, Overordnet del), valgte kjerneelementer, kompetansemål og tilråding fra sakkyndig vurdering. Siter enkelt.
+6.  **Struktur:** Følg det vedlagte JSON-skjemaet for responsen. Toppnivået skal være ett enkelt JSON-objekt.`;
 
   const goalsList = selectedGoals.map(goal => `- ${goal}`).join('\n');
   const coreElementsList = profile.selectedCoreElements.map(element => `- ${element}`).join('\n');
