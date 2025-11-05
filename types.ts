@@ -47,6 +47,19 @@ export interface Selections {
   knowledge: IopGoal | null;
 }
 
+// Saved subject with complete information
+export interface SavedSubject {
+  subject: string;
+  profile: StudentProfile;
+  framework: Framework;
+  selections: {
+    skills: IopGoal;
+    knowledge: IopGoal;
+  };
+  overallBenefit: IopGoal;
+  coreElementsNote: string;
+}
+
 export interface CurriculumData {
   [subject: string]: {
     coreElements: CoreElement[];

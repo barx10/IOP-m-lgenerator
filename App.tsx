@@ -4,6 +4,7 @@ import {
   Framework,
   IopConstructionKit,
   Selections,
+  SavedSubject,
   AppStatus,
   IopGoal
 } from './types';
@@ -56,6 +57,9 @@ const App: React.FC = () => {
     const [error, setError] = useState<string | null>(null);
     const [iopResult, setIopResult] = useState<IopConstructionKit | null>(null);
     const [selections, setSelections] = useState<Selections>({ skills: null, knowledge: null });
+    const [loadingProgress, setLoadingProgress] = useState(0);
+    const [savedSubjects, setSavedSubjects] = useState<SavedSubject[]>([]);
+    const [studentCode, setStudentCode] = useState<string>(''); // For student initials/code
 
     const handleProfileChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
@@ -106,6 +110,16 @@ const App: React.FC = () => {
         setError(null);
         setIopResult(null);
         setSelections({ skills: null, knowledge: null });
+        setLoadingProgress(0);
+        
+        // Simulate progress while waiting
+        const progressInterval = setInterval(() => {
+            setLoadingProgress(prev => {
+                if (prev >= 90) return prev;
+                return prev + Math.random() * 10;
+            });
+        }, 300);
+        
         try {
             const goalsArray = pastedGoals.split('\n').filter(g => g.trim() !== '');
             
@@ -118,15 +132,19 @@ const App: React.FC = () => {
                 (partial) => {
                     // Update UI as data streams in
                     setIopResult(prev => ({ ...prev, ...partial } as IopConstructionKit));
+                    setLoadingProgress(prev => Math.min(prev + 5, 95));
                 }
             );
             
+            clearInterval(progressInterval);
+            setLoadingProgress(100);
             setIopResult(result);
             setStatus('success');
             
             // Scroll to top when results are shown
             window.scrollTo({ top: 0, behavior: 'smooth' });
         } catch (err) {
+            clearInterval(progressInterval);
             setError(err instanceof Error ? err.message : 'An unknown error occurred.');
             setStatus('error');
         }
@@ -141,6 +159,7 @@ const App: React.FC = () => {
         setError(null);
         setIopResult(null);
         setSelections({ skills: null, knowledge: null });
+        setLoadingProgress(0);
     };
 
     const handleSelectionChange = (type: 'skills' | 'knowledge', goal: IopGoal) => {
@@ -150,8 +169,46 @@ const App: React.FC = () => {
         }));
     };
 
+    const handleSaveSubject = () => {
+        if (!selections.skills || !selections.knowledge || !iopResult?.overallBenefitSuggestion) {
+            alert('Vennligst velg både ferdighets- og kunnskapsmål før du lagrer.');
+            return;
+        }
+
+        const newSavedSubject: SavedSubject = {
+            subject: profile.subject,
+            profile: { ...profile },
+            framework: { ...framework },
+            selections: {
+                skills: selections.skills,
+                knowledge: selections.knowledge,
+            },
+            overallBenefit: iopResult.overallBenefitSuggestion,
+            coreElementsNote: iopResult.coreElementsInfluenceNote || '',
+        };
+
+        setSavedSubjects(prev => [...prev, newSavedSubject]);
+        
+        // Reset for next subject
+        setProfile(initialProfile);
+        setPastedGoals('');
+        setExpertAssessment('');
+        setStatus('idle');
+        setError(null);
+        setIopResult(null);
+        setSelections({ skills: null, knowledge: null });
+        setLoadingProgress(0);
+        
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    const handleRemoveSavedSubject = (index: number) => {
+        setSavedSubjects(prev => prev.filter((_, i) => i !== index));
+    };
+
     const handleDownloadPdf = async () => {
-      if (!iopResult || !selections.skills || !selections.knowledge) return;
+      if (savedSubjects.length === 0) return;
   
       // Use browser's native print dialog which allows saving as PDF
       window.print();
@@ -170,16 +227,17 @@ const App: React.FC = () => {
                         <ArrowLeftIcon className="mr-2" />
                         Start på nytt
                     </button>
-                    <h1 className="text-4xl font-bold text-gray-900">Resultater</h1>
-                    <button 
-                        onClick={handleDownloadPdf}
-                        disabled={!isPrintable}
-                        className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-brand-blue hover:bg-brand-blue/90 hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue disabled:bg-gray-400 disabled:cursor-not-allowed"
-                        title={!isPrintable ? "Velg et mål for både ferdigheter og kunnskap for å skrive ut" : "Forhåndsvis og skriv ut / Last ned som PDF"}
-                    >
-                        <DownloadIcon className="mr-2" />
-                        Forhåndsvis / Skriv ut
-                    </button>
+                    <h1 className="text-4xl font-bold text-gray-900">Resultater - {profile.subject}</h1>
+                    <div className="flex gap-2">
+                        <button 
+                            onClick={handleSaveSubject}
+                            disabled={!isPrintable}
+                            className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-accent-green hover:bg-accent-green/90 hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-green disabled:bg-gray-400 disabled:cursor-not-allowed"
+                            title={!isPrintable ? "Velg et mål for både ferdigheter og kunnskap før du lagrer" : "Lagre dette faget og legg til nytt fag"}
+                        >
+                            💾 Lagre fag
+                        </button>
+                    </div>
                 </div>
                 {status === 'error' && <p className="text-red-600 text-sm mt-4 text-center">{error}</p>}
 
@@ -295,98 +353,34 @@ const App: React.FC = () => {
                         <p className="text-gray-500">Forslag til samlet vurdering kunne ikke genereres.</p>
                     )}
                 </Card>
-
-                <div id="printable-report-area" className="hidden">
-                    {isPrintable && (
-                        <div className="pt-8">
-                            <div className="text-center">
-                                <h2 className="text-3xl font-bold text-gray-900">Ferdigstilt plan</h2>
-                                <p className="mt-2 text-lg text-gray-500">Klar for utskrift</p>
-                            </div>
-                            <div className="mt-8 p-8 sm:p-12 bg-white rounded-lg shadow-lg border border-gray-200">
-                                <div className="space-y-10">
-                                    <div className="text-center border-b pb-6">
-                                        <h2 className="text-3xl font-bold text-gray-900">Individuell Opplæringsplan</h2>
-                                        <p className="mt-2 text-lg text-gray-600">Forslag for {profile.subject}</p>
-                                    </div>
-
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                                        <div>
-                                            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Elevprofil</h3>
-                                            <p className="mt-2 text-base text-gray-800 leading-relaxed">
-                                                <span className="font-semibold">Fag:</span> {profile.subject}<br/>
-                                                <span className="font-semibold">Trinn:</span> {profile.grade}. trinn<br/>
-                                                <span className="font-semibold">Tema:</span> {profile.topic}
-                                            </p>
-                                        </div>
-                                        <div>
-                                            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Tidsramme</h3>
-                                            <p className="mt-2 text-base text-gray-800 leading-relaxed">
-                                            {new Date(framework.startDate).toLocaleDateString('nb-NO')} – {new Date(framework.endDate).toLocaleDateString('nb-NO')}
-                                            </p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div className="space-y-6">
-                                        <h3 className="text-xl font-semibold text-gray-800 border-b pb-2">Notater</h3>
-                                        <div className="mt-4 space-y-4 text-base text-gray-700 leading-relaxed">
-                                            <div>
-                                                <h4 className="font-semibold">Hvordan kjerneelementene påvirker målene</h4>
-                                                <p>{coreElementsInfluenceNote}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="space-y-6">
-                                        <h3 className="text-xl font-semibold text-gray-800 border-b pb-2">Valgte Mål</h3>
-                                        <div className="space-y-6">
-                                            {selections.skills && (
-                                                <div className="p-4 bg-gray-50 rounded-md">
-                                                    <h4 className="text-lg font-semibold text-brand-blue">Ferdigheter</h4>
-                                                    <div className="mt-2 space-y-2 text-base text-gray-700 leading-relaxed">
-                                                        <p><span className="font-semibold">Mål:</span> {selections.skills.goal}</p>
-                                                        <p><span className="font-semibold">Tiltak:</span> {selections.skills.measures}</p>
-                                                        <p><span className="font-semibold">Forankring:</span> {selections.skills.anchoring}</p>
-                                                    </div>
-                                                </div>
-                                            )}
-                                            {selections.knowledge && (
-                                                <div className="p-4 bg-gray-50 rounded-md">
-                                                    <h4 className="text-lg font-semibold text-brand-blue">Kunnskap</h4>
-                                                    <div className="mt-2 space-y-2 text-base text-gray-700 leading-relaxed">
-                                                        <p><span className="font-semibold">Mål:</span> {selections.knowledge.goal}</p>
-                                                        <p><span className="font-semibold">Tiltak:</span> {selections.knowledge.measures}</p>
-                                                        <p><span className="font-semibold">Forankring:</span> {selections.knowledge.anchoring}</p>
-                                                    </div>
-                                                </div>
-                                            )}
-                                        </div>
-                                    </div>
-
-                                    {overallBenefitSuggestion && (
-                                        <div className="space-y-6">
-                                            <h3 className="text-xl font-semibold text-gray-800 border-b pb-2">Samlet vurdering</h3>
-                                            <div className="space-y-3 text-base text-gray-700 leading-relaxed">
-                                                <p><span className="font-semibold">Individuelle læringsmål:</span> {overallBenefitSuggestion.goal}</p>
-                                                <p><span className="font-semibold">Vurdering (hvordan eleven viser kompetanse):</span> {overallBenefitSuggestion.measures}</p>
-                                                {overallBenefitSuggestion.evaluation && <p><span className="font-semibold">Evaluering av utvikling:</span> {overallBenefitSuggestion.evaluation}</p>}
-                                                <p><span className="font-semibold">Forankring:</span> {overallBenefitSuggestion.anchoring}</p>
-                                            </div>
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                </div>
             </div>
         );
     };
 
-    if (status === 'success') {
+    if (status === 'success' || status === 'loading') {
         return (
             <div className="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen py-10 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-4xl mx-auto">{renderIopResult()}</div>
+                {/* Progress Bar */}
+                {status === 'loading' && (
+                    <div className="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg border-b-2 border-brand-blue">
+                        <div className="max-w-4xl mx-auto px-4 py-4">
+                            <div className="flex items-center justify-between mb-2">
+                                <p className="text-sm font-semibold text-gray-700">🤖 Genererer IOP-forslag...</p>
+                                <p className="text-sm font-bold text-brand-blue">{Math.round(loadingProgress)}%</p>
+                            </div>
+                            <div className="w-full bg-gray-200 rounded-full h-2.5 overflow-hidden">
+                                <div 
+                                    className="h-full bg-gradient-to-r from-brand-blue via-purple-600 to-pink-600 rounded-full transition-all duration-300 ease-out relative overflow-hidden"
+                                    style={{ width: `${loadingProgress}%` }}
+                                >
+                                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-30 animate-shimmer"></div>
+                                </div>
+                            </div>
+                            <p className="text-xs text-gray-500 mt-2">✨ AI analyserer kompetansemål og genererer tilpassede forslag...</p>
+                        </div>
+                    </div>
+                )}
+                <div className="max-w-4xl mx-auto" style={{ marginTop: status === 'loading' ? '120px' : '0' }}>{renderIopResult()}</div>
             </div>
         );
     }
@@ -405,11 +399,63 @@ const App: React.FC = () => {
                             IOP Målbygger
                         </h1>
                         <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-700 font-medium">
-                            Kraftig AI-drevet verktøy for individuelle opplæringsplaner ✨
+                            ✨Kraftig KI-drevet verktøy for individuelle opplæringsplaner ✨
                         </p>
                     </div>
 
+                    {/* Saved subjects display */}
+                    {savedSubjects.length > 0 && (
+                        <Card title={`📚 Lagrede fag (${savedSubjects.length})`} icon={<CheckCircleIcon className="w-5 h-5" />} className="mb-6 border-l-4 border-accent-green">
+                            <div className="space-y-2">
+                                {savedSubjects.map((saved, index) => (
+                                    <div key={index} className="flex items-center justify-between p-3 bg-white rounded-lg border border-gray-200 hover:border-accent-green hover:shadow-md transition-all">
+                                        <div className="flex items-center gap-3">
+                                            <CheckCircleIcon className="w-5 h-5 text-accent-green flex-shrink-0" />
+                                            <div>
+                                                <p className="font-bold text-gray-800">{saved.subject}</p>
+                                                <p className="text-sm text-gray-600">{saved.profile.topic}</p>
+                                            </div>
+                                        </div>
+                                        <button
+                                            onClick={() => handleRemoveSavedSubject(index)}
+                                            className="px-3 py-1 text-sm text-red-600 hover:text-white hover:bg-red-600 rounded transition-all"
+                                            title="Fjern dette faget"
+                                        >
+                                            ✕
+                                        </button>
+                                    </div>
+                                ))}
+                                <button
+                                    onClick={handleDownloadPdf}
+                                    className="w-full mt-4 inline-flex items-center justify-center gap-2 px-4 py-2.5 border border-transparent shadow-sm text-sm font-semibold rounded-lg text-white bg-brand-blue hover:bg-blue-700 hover:shadow-md transition-all duration-200"
+                                >
+                                    <DownloadIcon className="w-5 h-5" />
+                                    Skriv ut alle {savedSubjects.length} fag
+                                </button>
+                            </div>
+                        </Card>
+                    )}
+
                     <div className="space-y-6 animate-slide-up">
+                        {/* Student code/initials */}
+                        <Card title="Elevidentifikasjon" icon={<DocumentIcon />}>
+                            <div>
+                                <label htmlFor="studentCode" className="block text-sm font-semibold text-gray-700 mb-1">
+                                    Initialer eller kode
+                                    <span className="text-xs font-normal text-gray-500 ml-2">(vises diskret i rapporten)</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    id="studentCode"
+                                    value={studentCode}
+                                    onChange={(e) => setStudentCode(e.target.value.toUpperCase())}
+                                    placeholder="F.eks. 'AB' eller 'ELV-01'"
+                                    maxLength={10}
+                                    className="mt-1 block w-full px-3 py-2.5 text-base border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-brand-blue rounded-lg bg-white shadow-sm transition-all"
+                                />
+                            </div>
+                        </Card>
+
                         {/* Student profile and topic */}
                         <Card title="Tema" icon={<DocumentIcon />}>
                              <div className="grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
@@ -539,6 +585,80 @@ const App: React.FC = () => {
                     title="Velg tverrfaglig tema"
                 />
             )}
+
+            {/* Print area for multi-subject report */}
+            <div id="printable-report-area" className="hidden">
+                {savedSubjects.length > 0 && (
+                    <div className="pt-8">
+                        <div className="text-center">
+                            <h2 className="text-3xl font-bold text-gray-900">Individuell Opplæringsplan</h2>
+                            {studentCode && (
+                                <p className="mt-2 text-sm text-gray-400">Elev: {studentCode}</p>
+                            )}
+                            <p className="mt-2 text-lg text-gray-600">{savedSubjects.length} fag</p>
+                        </div>
+                        <div className="mt-8 p-8 sm:p-12 bg-white rounded-lg shadow-lg border border-gray-200">
+                            <div className="space-y-12">
+                                {/* Common info */}
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 border-b pb-6">
+                                    <div>
+                                        <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Trinn</h3>
+                                        <p className="mt-2 text-base text-gray-800 leading-relaxed">
+                                            {savedSubjects[0].profile.grade}. trinn
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Tidsramme</h3>
+                                        <p className="mt-2 text-base text-gray-800 leading-relaxed">
+                                            {new Date(savedSubjects[0].framework.startDate).toLocaleDateString('nb-NO')} – {new Date(savedSubjects[0].framework.endDate).toLocaleDateString('nb-NO')}
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* Each subject */}
+                                {savedSubjects.map((saved, index) => (
+                                    <div key={index} className="space-y-6 border-b last:border-b-0 pb-10 last:pb-0">
+                                        <div className="text-center bg-gradient-to-r from-brand-blue to-purple-600 text-white py-4 rounded-lg">
+                                            <h2 className="text-2xl font-bold">{saved.subject}</h2>
+                                            <p className="text-sm mt-1 opacity-90">{saved.profile.topic}</p>
+                                        </div>
+
+                                        {saved.coreElementsNote && (
+                                            <div>
+                                                <h4 className="font-semibold text-gray-800 text-sm uppercase tracking-wide">Kjerneelementer</h4>
+                                                <p className="mt-1 text-base text-gray-700 leading-relaxed">{saved.coreElementsNote}</p>
+                                            </div>
+                                        )}
+
+                                        <div className="space-y-4">
+                                            <h3 className="text-lg font-semibold text-gray-800 border-b pb-2">Valgte mål</h3>
+                                            
+                                            <div className="p-4 bg-purple-50 rounded-md border-l-4 border-accent-purple">
+                                                <h4 className="text-base font-semibold text-accent-purple">Ferdigheter</h4>
+                                                <p className="mt-2 text-sm text-gray-700 leading-relaxed">{saved.selections.skills.goal}</p>
+                                            </div>
+
+                                            <div className="p-4 bg-orange-50 rounded-md border-l-4 border-accent-orange">
+                                                <h4 className="text-base font-semibold text-accent-orange">Kunnskap</h4>
+                                                <p className="mt-2 text-sm text-gray-700 leading-relaxed">{saved.selections.knowledge.goal}</p>
+                                            </div>
+                                        </div>
+
+                                        <div className="p-4 bg-blue-50 rounded-md border-l-4 border-brand-blue">
+                                            <h3 className="text-base font-semibold text-brand-blue">Samlet vurdering</h3>
+                                            <div className="mt-2 space-y-2 text-sm text-gray-700 leading-relaxed">
+                                                <p><span className="font-semibold">Individuelle læringsmål:</span> {saved.overallBenefit.goal}</p>
+                                                <p><span className="font-semibold">Vurdering (hvordan eleven viser kompetanse):</span> {saved.overallBenefit.measures}</p>
+                                                {saved.overallBenefit.evaluation && <p><span className="font-semibold">Evaluering av utvikling:</span> {saved.overallBenefit.evaluation}</p>}
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                )}
+            </div>
         </>
     );
 };
