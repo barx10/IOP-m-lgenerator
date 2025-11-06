@@ -107,7 +107,7 @@ ${goalsList}
     // Use streaming if callback provided
     if (onStream) {
       const streamResponse = await ai.models.generateContentStream({
-          model: 'gemini-2.0-flash-001',
+          model: 'gemini-2.5-flash',
           contents: { parts: promptParts },
           config: {
               systemInstruction,
@@ -167,7 +167,7 @@ ${goalsList}
     } else {
       // Non-streaming (original behavior)
       const response = await ai.models.generateContent({
-          model: 'gemini-2.0-flash-001',
+          model: 'gemini-2.5-flash',
           contents: { parts: promptParts },
           config: {
               systemInstruction,

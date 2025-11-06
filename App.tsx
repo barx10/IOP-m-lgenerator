@@ -112,27 +112,29 @@ const App: React.FC = () => {
         setSelections({ skills: null, knowledge: null });
         setLoadingProgress(0);
         
-        // Simulate progress while waiting
+        // Smooth progress animation - continues to 98% then waits for completion
         const progressInterval = setInterval(() => {
             setLoadingProgress(prev => {
-                if (prev >= 90) return prev;
-                return prev + Math.random() * 10;
+                if (prev >= 98) return prev;
+                // Slower progress as we get closer to 98%
+                const increment = Math.max(0.5, (98 - prev) / 20);
+                return Math.min(prev + increment, 98);
             });
-        }, 300);
+        }, 200);
         
         try {
-            const goalsArray = pastedGoals.split('\n').filter(g => g.trim() !== '');
+            // Single goal - trim and wrap in array
+            const goalsArray = [pastedGoals.trim()];
             
-            // Use streaming for live updates
+            // Generate IOP goals (streaming callback may not trigger incrementally due to JSON parsing)
             const result = await generateIopGoals(
                 profile,
                 framework,
                 goalsArray,
                 expertAssessment,
                 (partial) => {
-                    // Update UI as data streams in
+                    // Update UI when complete JSON is received
                     setIopResult(prev => ({ ...prev, ...partial } as IopConstructionKit));
-                    setLoadingProgress(prev => Math.min(prev + 5, 95));
                 }
             );
             
@@ -344,10 +346,6 @@ const App: React.FC = () => {
                                     <p className="mt-1 text-base text-gray-800 leading-relaxed">{overallBenefitSuggestion.evaluation}</p>
                                 </div>
                             )}
-                            <div>
-                                <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Forankring</h4>
-                                <p className="mt-1 text-base text-gray-800 leading-relaxed">{overallBenefitSuggestion.anchoring}</p>
-                            </div>
                         </div>
                     ) : (
                         <p className="text-gray-500">Forslag til samlet vurdering kunne ikke genereres.</p>
@@ -376,7 +374,11 @@ const App: React.FC = () => {
                                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-30 animate-shimmer"></div>
                                 </div>
                             </div>
-                            <p className="text-xs text-gray-500 mt-2">✨ AI analyserer kompetansemål og genererer tilpassede forslag...</p>
+                            <p className="text-xs text-gray-500 mt-2">
+                                {loadingProgress >= 95 
+                                    ? '🎯 Legger de siste tingene på plass...' 
+                                    : '✨ AI analyserer kompetansemål og genererer tilpassede forslag...'}
+                            </p>
                         </div>
                     </div>
                 )}
@@ -480,14 +482,29 @@ const App: React.FC = () => {
                         </Card>
 
                         <Card title="Tilråding om tiltak" icon={<DocumentIcon />}>
-                            <TextAreaField
-                                id="expertAssessment"
-                                label="Lim inn relevant tekst fra sakkyndig vurdering her"
-                                value={expertAssessment}
-                                onChange={(e) => setExpertAssessment(e.target.value)}
-                                placeholder="F.eks. 'Eleven har behov for utstrakt bruk av visuell støtte og struktur i alle fag...'"
-                                rows={4}
-                            />
+                            <div className="space-y-2">
+                                <TextAreaField
+                                    id="expertAssessment"
+                                    label="Lim inn relevant tekst fra sakkyndig vurdering her"
+                                    value={expertAssessment}
+                                    onChange={(e) => {
+                                        const value = e.target.value;
+                                        if (value.length <= 150) {
+                                            setExpertAssessment(value);
+                                        }
+                                    }}
+                                    placeholder="F.eks. 'Eleven har behov for utstrakt bruk av visuell støtte...'"
+                                    rows={3}
+                                />
+                                <div className="flex items-center justify-between text-xs">
+                                    <p className="text-gray-500">
+                                        💡 Valgfritt - Kun det mest essensielle
+                                    </p>
+                                    <p className={`font-medium ${expertAssessment.length > 130 ? 'text-orange-600' : 'text-gray-500'}`}>
+                                        {150 - expertAssessment.length} tegn igjen
+                                    </p>
+                                </div>
+                            </div>
                         </Card>
 
                         {/* Framework */}
@@ -520,7 +537,7 @@ const App: React.FC = () => {
 
                         {/* Cross-Curricular Themes */}
                         {profile.subject && curriculumData[profile.subject]?.crossCurricularThemes.length > 0 && (
-                             <Card title={`Tverrfaglig tema for ${profile.subject}`} icon={<BookOpenIcon className="text-accent-green" />} className="border-l-4 border-accent-green shadow-green-200">"
+                             <Card title={`Tverrfaglig tema for ${profile.subject}`} icon={<BookOpenIcon className="text-accent-green" />} className="border-l-4 border-accent-green shadow-green-200">
                                 <div className="space-y-3 p-4 bg-gradient-to-br from-green-50 to-transparent rounded-xl">
                                     <p className="text-base text-gray-700">
                                         Valgt tema: <span className="font-bold text-accent-green text-lg">{profile.selectedCrossCurricularTheme || 'Ingen valgt (valgfritt).'}</span>
