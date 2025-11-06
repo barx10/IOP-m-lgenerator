@@ -243,20 +243,15 @@ const App: React.FC = () => {
                 </div>
                 {status === 'error' && <p className="text-red-600 text-sm mt-4 text-center">{error}</p>}
 
-                <Card title="Sammendrag og notater" icon={<DocumentIcon />}>
-                    <div className="space-y-4">
-                        <div>
-                            <h3 className="font-semibold text-gray-800">Hvordan kjerneelementene påvirker målene</h3>
-                            {coreElementsInfluenceNote ? (
-                                <p className="text-gray-700 mt-1 text-base leading-relaxed">{coreElementsInfluenceNote}</p>
-                            ) : (
-                                <div className="mt-1 animate-pulse">
-                                    <div className="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
-                                    <div className="h-4 bg-gray-200 rounded w-1/2"></div>
-                                </div>
-                            )}
+                <Card title="Sammendrag" icon={<DocumentIcon />}>
+                    {coreElementsInfluenceNote ? (
+                        <p className="text-gray-700 text-base leading-relaxed">{coreElementsInfluenceNote}</p>
+                    ) : (
+                        <div className="animate-pulse">
+                            <div className="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
+                            <div className="h-4 bg-gray-200 rounded w-1/2"></div>
                         </div>
-                    </div>
+                    )}
                 </Card>
 
                 <Card title="Velg mål for ferdigheter" icon={<CheckCircleIcon />} className="border-l-4 border-accent-purple">
@@ -329,7 +324,7 @@ const App: React.FC = () => {
                     </div>
                 </Card>
 
-                <Card title="Samlet vurdering" icon={<DocumentIcon />}>
+                <Card title="IOP-mål" icon={<DocumentIcon />}>
                     {overallBenefitSuggestion ? (
                          <div className="space-y-6">
                             <div>
@@ -348,7 +343,7 @@ const App: React.FC = () => {
                             )}
                         </div>
                     ) : (
-                        <p className="text-gray-500">Forslag til samlet vurdering kunne ikke genereres.</p>
+                        <p className="text-gray-500">Forslag til IOP-mål kunne ikke genereres.</p>
                     )}
                 </Card>
             </div>

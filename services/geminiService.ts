@@ -14,30 +14,20 @@ export const generateIopGoals = async (
 ): Promise<IopConstructionKit> => {
   const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
-  const systemInstruction = `Du er spesialpedagog som lager IOP for elever i spesialundervisning.
+  const systemInstruction = `Du er spesialpedagog. Du skriver konkrete forslag til IOP for elever med spesialundervisning.
 
-**Oppgave:** Generer 1 note om kjerneelementer, 2 ferdighets-mål, 2 kunnskaps-mål, og 1 samlet vurdering.
+Basert på input skal du generere:
+1) 1 kort note som kobler sakkyndig vurdering, kjerneelementer og kompetansemål til elevens behov
+2) 2 ferdighetsmål (praktiske ferdigheter)
+3) 2 kunnskapsmål (teoretisk kunnskap)
+4) 1 kort samlet vurdering av om målene er realistiske og i tråd med alder
+5) 1 kort plan for hvordan målene skal evalueres i perioden
 
-**To vanskelighetsgrader:**
-1. **Tilpasset:** Realistisk oppnåelig mål med støtte. Konkret og enkelt.
-2. **Utfordrende:** Strekker eleven. Mer selvstendighet og kompleksitet.
+For både ferdighetsmål og kunnskapsmål skal du lage:
+- Ett Tilpasset nivå (realistisk oppnåelig med støtte)
+- Ett Utfordrende nivå (strekker eleven videre)
 
-**VIKTIG - Målformulering:**
-- Skriv BARE målet i 'goal'-feltet, IKKE inkluder vanskelighetsgrad
-- Eksempel RIKTIG: "Lese en kort novelle og identifisere hovedtema ved hjelp av støttespørsmål"
-- Eksempel FEIL: "**Tilpasset:** Lese en kort novelle..."
-- Vanskelighetsgraden vises automatisk i UI
-
-**Krav:**
-- Enkelt språk, konkrete mål
-- Forankret i kompetansemål og kjerneelementer
-- Oppnåelig for elever med læringsutfordringer
-
-**Lovverk og føringer:**
-- Opplæringsloven §5-1: Rett til tilpasset opplæring i inkluderende fellesskap
-- Overordnet del: Grunnleggende ferdigheter, danning, demokrati, kritisk tenkning
-- Tverrfaglige temaer: Folkehelse og livsmestring, demokrati og medborgerskap
-- Prinsipper: Likeverd, inkludering, universell utforming, elevmedvirkning`;
+VIKTIG: Skriv BARE selve målet i 'goal'-feltet, IKKE inkluder nivå-teksten "Tilpasset" eller "Utfordrende" i målteksten.`;
 
   const goalsList = selectedGoals.map(goal => `- ${goal}`).join('\n');
   
@@ -85,7 +75,7 @@ ${goalsList}
         },
         goal: {
             type: Type.STRING,
-            description: "Det konkrete, enkle målet for eleven. For 'Samlet vurdering' skal dette feltet inneholde de individuelle læringsmålene."
+            description: "Det konkrete, enkle målet for eleven. For 'Samlet vurdering' skal dette feltet inneholde elevens individuelle læringsmål - en konkret formulering av både praktiske ferdigheter og teoretisk kunnskap eleven skal mestre i perioden."
         },
         measures: {
             type: Type.STRING,
@@ -107,7 +97,7 @@ ${goalsList}
     // Use streaming if callback provided
     if (onStream) {
       const streamResponse = await ai.models.generateContentStream({
-          model: 'gemini-2.5-flash',
+          model: 'gemini-2.0-flash-001',
           contents: { parts: promptParts },
           config: {
               systemInstruction,
@@ -167,7 +157,7 @@ ${goalsList}
     } else {
       // Non-streaming (original behavior)
       const response = await ai.models.generateContent({
-          model: 'gemini-2.5-flash',
+          model: 'gemini-2.0-flash-001',
           contents: { parts: promptParts },
           config: {
               systemInstruction,
