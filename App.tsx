@@ -16,6 +16,7 @@ import { CompetenceGoalSelector } from './components/CompetenceGoalSelector';
 import { TextAreaField } from './components/TextAreaField';
 import { CoreElementsModal } from './components/CoreElementsModal';
 import { AboutModal } from './components/AboutModal';
+import { Footer } from './components/Footer';
 
 import { DocumentIcon } from './components/icons/DocumentIcon';
 import { CalendarIcon } from './components/icons/CalendarIcon';
@@ -380,6 +381,7 @@ const App: React.FC = () => {
                     </div>
                 )}
                 <div className="max-w-4xl mx-auto" style={{ marginTop: status === 'loading' ? '120px' : '0' }}>{renderIopResult()}</div>
+                <Footer />
             </div>
         );
     }
@@ -588,6 +590,7 @@ const App: React.FC = () => {
                         </div>
                     </div>
                 </main>
+                <Footer />
             </div>
 
             {showCoreElementsModal && profile.subject && curriculumData[profile.subject] && (
