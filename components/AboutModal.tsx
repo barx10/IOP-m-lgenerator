@@ -53,7 +53,7 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
                             </p>
                             <p>
                                 Jeg er lærer og utvikler med lidenskap for edtech og digital kompetanse i skolen. 
-                                Gjennom arbeid med <a href="https://www.laererliv.no/" target="_blank" rel="noopener noreferrer" className="text-brand-blue hover:underline">lærerLiv</a> jobber 
+                                Gjennom arbeid med <a href="https://www.laererliv.no/" target="_blank" rel="noopener noreferrer" className="text-brand-blue hover:underline">Lærerliv</a> jobber 
                                 jeg for å gjøre læreres hverdag enklere og bedre.
                             </p>
                             <p>
