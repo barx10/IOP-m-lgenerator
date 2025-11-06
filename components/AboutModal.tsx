@@ -82,9 +82,10 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
                                     Google Gemini API for å generere IOP-mål. Google behandler data i henhold til deres 
                                     personvernregler og tjenestevilkår.
                                 </p>
-                                <p className="font-medium text-amber-700 mt-2">
-                                    💡 Anbefaling: Anonymiser elevdata før du bruker appen. Unngå personnavn, 
-                                    fødselsnummer og andre direkte identifiserbare opplysninger.
+                                <p className="font-semibold text-red-600 mt-2 flex items-start gap-2">
+                                    <span className="text-lg flex-shrink-0">⚠️</span>
+                                    <span>Lovpålagt krav: Du må anonymisere elevdata før bruk. Ikke bruk personnavn, 
+                                    fødselsnummer eller andre direkte identifiserbare opplysninger.</span>
                                 </p>
                             </div>
                             <div>
