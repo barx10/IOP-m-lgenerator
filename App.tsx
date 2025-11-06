@@ -15,6 +15,7 @@ import { Card } from './components/Card';
 import { CompetenceGoalSelector } from './components/CompetenceGoalSelector';
 import { TextAreaField } from './components/TextAreaField';
 import { CoreElementsModal } from './components/CoreElementsModal';
+import { AboutModal } from './components/AboutModal';
 
 import { DocumentIcon } from './components/icons/DocumentIcon';
 import { CalendarIcon } from './components/icons/CalendarIcon';
@@ -60,6 +61,7 @@ const App: React.FC = () => {
     const [loadingProgress, setLoadingProgress] = useState(0);
     const [savedSubjects, setSavedSubjects] = useState<SavedSubject[]>([]);
     const [studentCode, setStudentCode] = useState<string>(''); // For student initials/code
+    const [showAboutModal, setShowAboutModal] = useState(false);
 
     const handleProfileChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
@@ -385,6 +387,17 @@ const App: React.FC = () => {
     return (
         <>
             <div className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 min-h-screen">
+                {/* Om button in top right corner */}
+                <div className="fixed top-4 right-4 z-40">
+                    <button
+                        onClick={() => setShowAboutModal(true)}
+                        className="inline-flex items-center gap-2 px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 hover:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue"
+                        title="Om IOP-målgenerator"
+                    >
+                        ℹ️ Om
+                    </button>
+                </div>
+
                 <main className="max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16 animate-fade-in">
                         <div className="inline-block mb-8">
@@ -671,6 +684,9 @@ const App: React.FC = () => {
                     </div>
                 )}
             </div>
+
+            {/* About Modal */}
+            <AboutModal isOpen={showAboutModal} onClose={() => setShowAboutModal(false)} />
         </>
     );
 };
