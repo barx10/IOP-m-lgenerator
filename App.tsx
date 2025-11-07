@@ -8,7 +8,7 @@ import {
   AppStatus,
   IopGoal
 } from './types';
-import { generateIopGoals } from './services/geminiService';
+import { generateIopGoals } from './services/geminiService.backend';
 import { curriculumData, curriculumSubjects } from './services/curriculumData';
 
 import { Card } from './components/Card';
