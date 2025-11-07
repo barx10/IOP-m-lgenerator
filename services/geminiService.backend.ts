@@ -4,7 +4,18 @@ import type { StudentProfile, Framework, IopConstructionKit } from '../types';
 type StreamCallback = (partial: Partial<IopConstructionKit>) => void;
 
 // Get API URL based on environment
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+// In production, use same origin (relative path)
+// In development, use localhost:3000 for Vite dev server
+const getApiUrl = () => {
+  // Check if we're in development (localhost)
+  if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
+    return 'http://localhost:3000';
+  }
+  // In production, use same origin (empty string means relative path)
+  return '';
+};
+
+const API_URL = getApiUrl();
 
 export const generateIopGoals = async (
   profile: StudentProfile,
@@ -18,6 +29,8 @@ export const generateIopGoals = async (
     // Create AbortController for timeout
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 55000); // 55 second timeout
+    
+    console.log('Calling API:', `${API_URL}/api/generate-iop`);
     
     const response = await fetch(`${API_URL}/api/generate-iop`, {
       method: 'POST',
@@ -35,8 +48,10 @@ export const generateIopGoals = async (
 
     clearTimeout(timeoutId);
 
+    console.log('API response status:', response.status);
+
     if (!response.ok) {
-      const errorData = await response.json();
+      const errorData = await response.json().catch(() => ({ error: 'Unknown error' }));
       
       if (response.status === 429) {
         throw new Error('For mange forespørsler. Vennligst prøv igjen om en time.');
@@ -46,7 +61,7 @@ export const generateIopGoals = async (
         throw new Error('Serveren brukte for lang tid. Prøv med færre kompetansemål eller enklere beskrivelse.');
       }
       
-      throw new Error(errorData.error || 'Kunne ikke generere IOP-forslag');
+      throw new Error(errorData.error || `Server error: ${response.status}`);
     }
 
     const result: IopConstructionKit = await response.json();
