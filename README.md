@@ -2,19 +2,42 @@
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# Run and deploy your AI Studio app
+# IOP Målbygger
 
-This contains everything you need to run your app locally.
+AI-drevet verktøy for å generere individuelle opplæringsplaner (IOP) for elever med spesialundervisning.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1tpLeGwFTsJhtXTGMXVg5RDSO04DoPwls
+## ✨ Funksjoner
 
-## Run Locally
+- 🤖 AI-genererte IOP-mål basert på kompetansemål fra læreplanen
+- 📚 Støtte for flere fag og trinn
+- 🎯 Ferdighetsmål og kunnskapsmål på tilpasset og utfordrende nivå
+- 💾 Lagre og sammenligne flere fag
+- 🖨️ Print kompakt rapport for alle fag
+- 🔒 Personvernsikker - ingen permanent lagring
 
-**Prerequisites:**  Node.js
+## 🚀 Kom i gang
 
+### Lokal utvikling
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+**Forutsetninger:** Node.js installert
+
+1. **Installer avhengigheter:**
+   ```bash
+   npm install
+   ```
+
+2. **Sett opp API-nøkkel:**
+   - Kopier `.env.example` til `.env`
+   - Legg til din Gemini API-nøkkel fra [Google AI Studio](https://aistudio.google.com/app/apikey)
+
+3. **Start dev server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Åpne i nettleser:**
+   http://localhost:3000 (eller port som vises i terminal)
+
+### Deploy til produksjon
+
+For sikker offentlig tilgjengelig deployment, se [DEPLOYMENT.md](DEPLOYMENT.md) for komplett guide til Vercel-oppsett med backend API.
