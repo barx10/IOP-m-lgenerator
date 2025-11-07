@@ -15,6 +15,10 @@ export const generateIopGoals = async (
 ): Promise<IopConstructionKit> => {
   
   try {
+    // Create AbortController for timeout
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 55000); // 55 second timeout
+    
     const response = await fetch(`${API_URL}/api/generate-iop`, {
       method: 'POST',
       headers: {
@@ -25,14 +29,21 @@ export const generateIopGoals = async (
         framework,
         selectedGoals,
         expertAssessment
-      })
+      }),
+      signal: controller.signal
     });
+
+    clearTimeout(timeoutId);
 
     if (!response.ok) {
       const errorData = await response.json();
       
       if (response.status === 429) {
         throw new Error('For mange forespørsler. Vennligst prøv igjen om en time.');
+      }
+      
+      if (response.status === 504) {
+        throw new Error('Serveren brukte for lang tid. Prøv med færre kompetansemål eller enklere beskrivelse.');
       }
       
       throw new Error(errorData.error || 'Kunne ikke generere IOP-forslag');
@@ -48,6 +59,16 @@ export const generateIopGoals = async (
     return result;
   } catch (error: any) {
     console.error('Error calling backend API:', error);
-    throw new Error(error.message || 'Nettverksfeil. Sjekk internettforbindelsen din.');
+    
+    // Better error messages
+    if (error.name === 'AbortError') {
+      throw new Error('Serveren brukte for lang tid. Prøv med færre kompetansemål eller enklere beskrivelse.');
+    }
+    
+    if (error.message.includes('Failed to fetch') || error.message.includes('NetworkError')) {
+      throw new Error('Nettverksfeil. Sjekk internettforbindelsen din og prøv igjen.');
+    }
+    
+    throw new Error(error.message || 'Ukjent feil ved generering. Prøv igjen.');
   }
 };

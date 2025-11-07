@@ -167,7 +167,8 @@ ${goalsList}
         systemInstruction,
         responseMimeType: "application/json",
         responseSchema,
-        temperature: 0.7
+        temperature: 0.7,
+        maxOutputTokens: 2048 // Limit response size to prevent timeouts
       }
     });
 
@@ -178,6 +179,15 @@ ${goalsList}
 
   } catch (error: any) {
     console.error('Error generating IOP:', error);
+    
+    // Better error handling
+    if (error.message?.includes('timeout') || error.code === 'ETIMEDOUT') {
+      return res.status(504).json({ 
+        error: 'Serveren brukte for lang tid. Prøv med færre kompetansemål.',
+        details: 'Gateway Timeout'
+      });
+    }
+    
     return res.status(500).json({ 
       error: 'Kunne ikke generere IOP-forslag. Prøv igjen senere.',
       details: error.message 
