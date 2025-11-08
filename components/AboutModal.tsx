@@ -59,7 +59,7 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
                                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Om appen</h3>
                                 <div className="text-gray-700 space-y-2">
                                     <p>
-                                        IOP-målgenerator er et verktøy som hjelper lærere og spesialpedagoger med å lage 
+                                        IOP-målbygger er et verktøy som hjelper lærere og spesialpedagoger med å lage 
                                         konkrete, strukturerte mål for elever med individuell opplæringsplan (IOP).
                                     </p>
                                     <p>
@@ -68,7 +68,7 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
                                         kjerneelementer, og sakkyndig vurdering.
                                     </p>
                                     <p className="font-medium text-amber-700">
-                                        ⚠️ Viktig: AI-genererte forslag må alltid kvalitetssikres og tilpasses av fagperson. 
+                                        ⚠️ Viktig: KI-genererte forslag må alltid kvalitetssikres og tilpasses av fagperson. 
                                         Dette verktøyet er en hjelp, ikke en erstatning for profesjonell vurdering.
                                     </p>
                                 </div>
@@ -122,7 +122,7 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
                                         <h4 className="font-semibold text-gray-900 mb-1">GDPR og ansvar</h4>
                                         <p>
                                             Som bruker er du ansvarlig for å følge skolens retningslinjer for 
-                                            personvern og GDPR ved bruk av AI-verktøy. Denne appen er et hjelpemiddel 
+                                            personvern og GDPR ved bruk av KI-verktøy. Denne appen er et hjelpemiddel 
                                             og erstatter ikke profesjonell vurdering eller etablerte rutiner for IOP-arbeid.
                                         </p>
                                     </div>
@@ -170,9 +170,9 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
                         <>
                             {/* Tips for bruk av AI */}
                             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                                <h3 className="text-lg font-semibold text-blue-900 mb-2">💡 Tips før du bruker AI-forslag</h3>
+                                <h3 className="text-lg font-semibold text-blue-900 mb-2">💡 Tips før du bruker KI-forslag</h3>
                                 <p className="text-blue-800 text-sm">
-                                    AI kan gi gode forslag, men du som fagperson må alltid vurdere om målene er realistiske, 
+                                    KI kan gi gode forslag, men du som fagperson må alltid vurdere om målene er realistiske, 
                                     relevante og tilpasset den enkelte eleven. Bruk AI som et utgangspunkt, ikke som fasit.
                                 </p>
                             </div>
@@ -306,7 +306,7 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
                                 <p>
                                     Kilde:{' '}
                                     <a 
-                                        href="https://www.udir.no/laring-og-trivsel/spesialpedagogikk/individuell-opplaringsplan/" 
+                                        href="https://www.udir.no/regelverk-og-tilsyn/skole-og-opplaring/veileder-for-tilpasset-opplaring-og-individuell-tilrettelegging/8.-individuell-opplaringsplan-iop/" 
                                         target="_blank" 
                                         rel="noopener noreferrer"
                                         className="text-brand-blue hover:underline"
