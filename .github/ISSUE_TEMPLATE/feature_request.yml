@@ -1,0 +1,37 @@
+name: Feature Request
+description: Foreslå en ny funksjon
+title: "[FEATURE] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Takk for forslaget! Beskriv gjerne ideen din nedenfor.
+  
+  - type: textarea
+    id: problem
+    attributes:
+      label: Er dette relatert til et problem?
+      description: Beskriv problemet du ønsker å løse
+      placeholder: Jeg er frustrert når...
+  
+  - type: textarea
+    id: solution
+    attributes:
+      label: Foreslått løsning
+      description: Beskriv løsningen du ønsker
+      placeholder: Jeg ønsker at...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativer
+      description: Andre løsninger du har vurdert
+  
+  - type: textarea
+    id: context
+    attributes:
+      label: Tilleggskontekst
+      description: Annen relevant informasjon eller skjermbilder

@@ -1,0 +1,65 @@
+name: Bug Report
+description: Rapporter en feil eller problem
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Takk for at du rapporterer en feil! Vennligst fyll ut informasjonen nedenfor.
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: Beskrivelse av problemet
+      description: Hva gikk galt?
+      placeholder: Fortell oss hva som skjedde
+    validations:
+      required: true
+  
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steg for å reprodusere
+      description: Hvordan kan vi gjenskape feilen?
+      placeholder: |
+        1. Gå til '...'
+        2. Klikk på '...'
+        3. Rul ned til '...'
+        4. Se feil
+    validations:
+      required: true
+  
+  - type: textarea
+    id: expected
+    attributes:
+      label: Forventet oppførsel
+      description: Hva skulle ha skjedd?
+    validations:
+      required: true
+  
+  - type: textarea
+    id: actual
+    attributes:
+      label: Faktisk oppførsel
+      description: Hva skjedde i stedet?
+    validations:
+      required: true
+  
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Skjermbilder
+      description: Legg til skjermbilder hvis relevant
+  
+  - type: input
+    id: browser
+    attributes:
+      label: Nettleser
+      placeholder: Chrome 119, Safari 17, etc.
+  
+  - type: textarea
+    id: additional
+    attributes:
+      label: Tilleggsinformasjon
+      description: Annen relevant informasjon
