@@ -6,11 +6,10 @@
   **Kraftig KI-drevet verktøy for individuelle opplæringsplaner**
   
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-  [![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black)](https://iop-byggeren.vercel.app/)
   [![Made with React](https://img.shields.io/badge/Made%20with-React-61DAFB?logo=react)](https://reactjs.org/)
   [![Powered by Gemini](https://img.shields.io/badge/Powered%20by-Gemini%20AI-4285F4?logo=google)](https://ai.google.dev/)
   
-  [🚀 Live Demo](https://iop-byggeren.vercel.app/) • [📚 Dokumentasjon](#-kom-i-gang) • [🐛 Rapporter Bug](https://github.com/barx10/IOP-m-lgenerator/issues) • [💡 Feature Request](https://github.com/barx10/IOP-m-lgenerator/issues)
+  [📚 Dokumentasjon](#-kom-i-gang) • [🐛 Rapporter Bug](https://github.com/barx10/IOP-m-lgenerator/issues) • [💡 Feature Request](https://github.com/barx10/IOP-m-lgenerator/issues)
 </div>
 
 ---
