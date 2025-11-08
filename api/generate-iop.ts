@@ -3,7 +3,7 @@ import { GoogleGenAI, Type } from "@google/genai";
 // Simple in-memory rate limiting (resets on function cold start)
 const requestCounts = new Map<string, { count: number; resetTime: number }>();
 
-const RATE_LIMIT = 50; // requests per window (balanced for school/individual use)
+const RATE_LIMIT = 100; // requests per window (balanced for school/individual use)
 const RATE_WINDOW = 60 * 60 * 1000; // 1 hour in ms
 
 function checkRateLimit(ip: string): boolean {
