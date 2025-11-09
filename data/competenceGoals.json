@@ -1132,5 +1132,151 @@
         }
       ]
     }
+  },
+  "MAH": {
+    "name": "Mat og helse",
+    "levels": {
+      "4": [
+        {
+          "code": "MAH-01",
+          "text": "følge prinsipper for god hygiene i forbindelse med matlaging",
+          "coreElements": ["Mat og måltider", "Mat og helse"]
+        },
+        {
+          "code": "MAH-02",
+          "text": "bruke redskaper, rom- og vektmål og enkle teknikker i forbindelse med matlaging",
+          "coreElements": ["Mat og måltider", "Mat og livsstil"]
+        },
+        {
+          "code": "MAH-03",
+          "text": "kjenne igjen smaker i mat og undre seg over hvorfor smak er noe vi opplever ulikt",
+          "coreElements": ["Mat og måltider", "Mat og kultur"]
+        },
+        {
+          "code": "MAH-04",
+          "text": "fortelle om hva som kjennetegner sunn og variert mat, og hvorfor det er viktig for helsen",
+          "coreElements": ["Mat og helse", "Mat og livsstil"]
+        },
+        {
+          "code": "MAH-05",
+          "text": "utnytte lokale matvarer i matlaging og presentere leddene i produksjonskjeden fra råvare til måltid",
+          "coreElements": ["Mat og forbruk", "Mat og kultur"]
+        },
+        {
+          "code": "MAH-06",
+          "text": "sortere avfall i forbindelse med matlaging og forklare hvorfor det er viktig å gjøre det",
+          "coreElements": ["Mat og forbruk", "Mat og helse"]
+        },
+        {
+          "code": "MAH-07",
+          "text": "lage enkle måltider og bidra til å skape en trivelig ramme rundt måltider sammen med andre",
+          "coreElements": ["Mat og måltider", "Mat og kultur"]
+        },
+        {
+          "code": "MAH-08",
+          "text": "samtale om måltidsskikker fra norsk og samisk kultur og fra andre kulturer, og om verdien av å spise sammen med andre",
+          "coreElements": ["Mat og kultur", "Mat og måltider"]
+        },
+        {
+          "code": "MAH-09",
+          "text": "samtale om hvordan skolemåltidet kan bidra til en god skolehverdag",
+          "coreElements": ["Mat og helse", "Mat og kultur"]
+        }
+      ],
+      "7": [
+        {
+          "code": "MAH-10",
+          "text": "bruke redskaper, grunnleggende teknikker og matlagingsmetoder til å lage trygg og bærekraftig mat som gir grunnlag for god helse",
+          "coreElements": ["Mat og måltider", "Mat og helse"]
+        },
+        {
+          "code": "MAH-11",
+          "text": "bruke sansene til å utforske og vurdere matens smak og tekstur og til å utforske anretning av mat",
+          "coreElements": ["Mat og måltider", "Mat og kultur"]
+        },
+        {
+          "code": "MAH-12",
+          "text": "kjenne igjen og gjøre rede for grunnsmaker i matvarer og fortelle om og diskutere hvordan smak kan påvirke matpreferanser og matvalg",
+          "coreElements": ["Mat og kultur", "Mat og livsstil"]
+        },
+        {
+          "code": "MAH-13",
+          "text": "bruke oppskrifter i matlaging og regne ut og vurdere mengden i porsjonene både med og uten bruk av digitale ressurser",
+          "coreElements": ["Mat og måltider", "Mat og livsstil"]
+        },
+        {
+          "code": "MAH-14",
+          "text": "vise sammenhenger mellom matvaregrupper og næringsstoffer som er viktige for god helse",
+          "coreElements": ["Mat og helse", "Mat og livsstil"]
+        },
+        {
+          "code": "MAH-15",
+          "text": "bruke matmerking og kostmodeller til å sette sammen et sunt, variert og bærekraftig kosthold og reflektere over valgene sine",
+          "coreElements": ["Mat og helse", "Mat og forbruk"]
+        },
+        {
+          "code": "MAH-16",
+          "text": "bruke digitale ressurser til å sammenligne og drøfte produktinformasjon og reklame i ulike medier",
+          "coreElements": ["Mat og forbruk", "Mat og livsstil"]
+        },
+        {
+          "code": "MAH-17",
+          "text": "utnytte matvarer og rester fra matlaging og reflektere over eget matforbruk",
+          "coreElements": ["Mat og forbruk", "Mat og helse"]
+        },
+        {
+          "code": "MAH-18",
+          "text": "utforske og presentere tradisjonelle norske og samiske metoder for å konservere mat og fortelle om råvarene som blir konservert",
+          "coreElements": ["Mat og kultur", "Mat og forbruk"]
+        },
+        {
+          "code": "MAH-19",
+          "text": "lage måltider fra ulike kulturer og fortelle om og utforske hvordan sosialt fellesskap og samhandling kan være med på å styrke god helse",
+          "coreElements": ["Mat og kultur", "Mat og helse"]
+        }
+      ],
+      "10": [
+        {
+          "code": "MAH-20",
+          "text": "planlegge og bruke egnede redskaper, teknikker og matlagingsmetoder til å lage trygg og bærekraftig mat som gir grunnlag for god helse",
+          "coreElements": ["Mat og måltider", "Mat og helse"]
+        },
+        {
+          "code": "MAH-21",
+          "text": "bruke sansene til å vurdere kvaliteten på matvarer, utforske og kombinere smaker i matlagingen og forbedre oppskrifter, menyer og anretning av mat",
+          "coreElements": ["Mat og måltider", "Mat og kultur"]
+        },
+        {
+          "code": "MAH-22",
+          "text": "drøfte hvordan kosthold kan bidra til god helse, og bruke digitale ressurser til å vurdere eget kosthold og til å velge sunne og varierte matvarer i forbindelse med matlaging",
+          "coreElements": ["Mat og helse", "Mat og livsstil"]
+        },
+        {
+          "code": "MAH-23",
+          "text": "gjøre rede for og kritisk vurdere påstander, råd og informasjon om kosthold og helse",
+          "coreElements": ["Mat og helse", "Mat og forbruk"]
+        },
+        {
+          "code": "MAH-24",
+          "text": "kritisk vurdere informasjon om matproduksjon og drøfte hvordan forbrukermakt kan påvirke lokal og global matproduksjon",
+          "coreElements": ["Mat og forbruk", "Mat og kultur"]
+        },
+        {
+          "code": "MAH-25",
+          "text": "utforske klimaavtrykket til matvarer og gjøre rede for hvordan matvalg og matforbruk kan påvirke miljøet, klimaet og matsikkerheten",
+          "coreElements": ["Mat og forbruk", "Mat og helse"]
+        },
+        {
+          "code": "MAH-26",
+          "text": "lage mat fra norsk og samisk kultur og fra andre kulturer og sammenligne og utforske råvarer og matlagingsmetoder som brukes i ulike matkulturer",
+          "coreElements": ["Mat og kultur", "Mat og måltider"]
+        },
+        {
+          "code": "MAH-27",
+          "text": "vise gjennom matlaging og måltider hvordan identitet og fellesskap blir formidlet i ulike kulturer",
+          "coreElements": ["Mat og kultur", "Mat og helse"]
+        }
+      ]
+    }
   }
 }
