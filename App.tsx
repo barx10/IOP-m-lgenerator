@@ -573,6 +573,7 @@ const App: React.FC = () => {
                         {/* Competence Goals */}
                         <CompetenceGoalSelector
                             selectedSubject={profile.subject}
+                            selectedLevel={profile.grade}
                             pastedGoals={pastedGoals}
                             setPastedGoals={setPastedGoals}
                         />
