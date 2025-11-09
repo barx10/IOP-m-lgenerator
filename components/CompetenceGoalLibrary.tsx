@@ -33,7 +33,8 @@ export const CompetenceGoalLibrary: React.FC<CompetenceGoalLibraryProps> = ({
         'Kristendom, religion, livssyn og etikk (KRLE)': 'RLE',
         'Naturfag': 'NAT',
         'Samfunnsfag': 'SAF',
-        'Kroppsøving': 'KRO'
+        'Kroppsøving': 'KRO',
+        'Kunst og håndverk': 'KHV'
     };
 
     const subjectCode = subjectCodeMap[selectedSubject];
