@@ -472,10 +472,21 @@ const App: React.FC = () => {
                         <Card title="Tema" icon={<DocumentIcon />}>
                              <div className="grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
                                 <div className="sm:col-span-3">
-                                    <label htmlFor="grade" className="block text-sm font-semibold text-gray-700 mb-1">Trinn</label>
+                                    <label htmlFor="grade" className="block text-sm font-semibold text-gray-700 mb-1">
+                                        Kompetansemål-nivå
+                                        <span className="text-gray-500 text-xs ml-2 font-normal">
+                                            (Velg nærmeste sluttvurderingstidspunkt)
+                                        </span>
+                                    </label>
                                     <select id="grade" name="grade" value={profile.grade} onChange={handleProfileChange} className="mt-1 block w-full pl-3 pr-10 py-2.5 text-base border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-brand-blue sm:text-sm rounded-lg bg-white shadow-sm transition-all">
-                                        <option value="" disabled>Velg trinn</option>
-                                        {[...Array(10)].map((_, i) => <option key={i+1} value={i+1}>{i+1}. trinn</option>)}
+                                        <option value="" disabled>Velg kompetansemål-nivå</option>
+                                        <option value="2">Etter 2. trinn (1-2)</option>
+                                        <option value="4">Etter 4. trinn (3-4)</option>
+                                        <option value="7">Etter 7. trinn (5-7)</option>
+                                        <option value="10">Etter 10. trinn (8-10)</option>
+                                        <option value="vg1">Vg1</option>
+                                        <option value="vg2">Vg2</option>
+                                        <option value="vg3">Vg3</option>
                                     </select>
                                 </div>
                                 <div className="sm:col-span-3">
@@ -630,9 +641,20 @@ const App: React.FC = () => {
                                 {/* Common info */}
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 border-b pb-6">
                                     <div>
-                                        <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Trinn</h3>
+                                        <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Kompetansemål-nivå</h3>
                                         <p className="mt-2 text-base text-gray-800 leading-relaxed">
-                                            {savedSubjects[0].profile.grade}. trinn
+                                            {(() => {
+                                                const gradeLabels: Record<string, string> = {
+                                                    '2': 'Etter 2. trinn',
+                                                    '4': 'Etter 4. trinn',
+                                                    '7': 'Etter 7. trinn',
+                                                    '10': 'Etter 10. trinn',
+                                                    'vg1': 'Vg1',
+                                                    'vg2': 'Vg2',
+                                                    'vg3': 'Vg3'
+                                                };
+                                                return gradeLabels[savedSubjects[0].profile.grade] || savedSubjects[0].profile.grade;
+                                            })()}
                                         </p>
                                     </div>
                                     <div>

@@ -84,8 +84,20 @@ VIKTIG: Skriv BARE selve målet i 'goal'-feltet, IKKE inkluder nivå-teksten "Ti
       crossCurricularText = `**Tverrfaglig tema:** ${profile.selectedCrossCurricularTheme}\n`;
     }
 
+    // Map grade value to readable text
+    const gradeLabels: Record<string, string> = {
+      '2': 'etter 2. trinn',
+      '4': 'etter 4. trinn',
+      '7': 'etter 7. trinn',
+      '10': 'etter 10. trinn',
+      'vg1': 'Vg1',
+      'vg2': 'Vg2',
+      'vg3': 'Vg3'
+    };
+    const gradeText = gradeLabels[profile.grade] || profile.grade;
+
     const userPrompt = `
-**Trinn:** ${profile.grade} (ca. ${parseInt(profile.grade) + 5} år)
+**Kompetansemål-nivå:** ${gradeText}
 **Fag:** ${profile.subject}
 **Tema:** ${profile.topic}
 ${expertAssessment ? `**Sakkyndig:** ${expertAssessment}\n` : ''}${coreElementText}${crossCurricularText}**Kompetansemål:**
