@@ -440,12 +440,18 @@ const App: React.FC = () => {
     const url = window.URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `IOP-mål_${profile.studentCode || 'elev'}_${profile.period.replace(/\s+/g, '_')}.docx`;
+    
+    // Sanitize filename
+    const studentPart = (profile.studentCode || 'elev').replace(/[^a-zA-Z0-9æøåÆØÅ_-]/g, '_');
+    const periodPart = profile.period.replace(/[^a-zA-Z0-9æøåÆØÅ_-]/g, '_');
+    link.download = `IOP-mål_${studentPart}_${periodPart}.docx`;
+    
     link.click();
     window.URL.revokeObjectURL(url);
     } catch (error) {
       console.error('Feil ved generering av Word-dokument:', error);
-      alert('Det oppstod en feil ved nedlasting av Word-dokumentet. Prøv igjen.');
+      console.error('Error details:', error instanceof Error ? error.message : error);
+      alert(`Det oppstod en feil ved nedlasting av Word-dokumentet:\n${error instanceof Error ? error.message : 'Ukjent feil'}\n\nSe konsollen for mer info.`);
     }
   };
     
