@@ -11,7 +11,7 @@ interface CompetenceGoalSelectorProps {
     setPastedGoals: (goals: string) => void;
 }
 
-const MAX_GOAL_LENGTH = 800; // Increased to support multiple goals
+const MAX_GOAL_LENGTH = 300; // One focused competence goal
 
 export const CompetenceGoalSelector: React.FC<CompetenceGoalSelectorProps> = React.memo(({ 
     selectedSubject, 
@@ -22,7 +22,8 @@ export const CompetenceGoalSelector: React.FC<CompetenceGoalSelectorProps> = Rea
     const [inputMode, setInputMode] = useState<'library' | 'manual'>('library');
 
     const handleLibrarySelection = (goals: string[]) => {
-        setPastedGoals(goals.join('\n\n'));
+        // Only support 1 goal, join shouldn't be needed but kept for safety
+        setPastedGoals(goals.join(''));
     };
 
     const handleManualChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -32,14 +33,11 @@ export const CompetenceGoalSelector: React.FC<CompetenceGoalSelectorProps> = Rea
         }
     };
 
-    // Parse currently pasted goals into array
-    const currentGoalsArray = pastedGoals
-        .split('\n\n')
-        .map(g => g.trim())
-        .filter(g => g.length > 0);
+    // Parse currently pasted goals into array (should only be 1)
+    const currentGoalsArray = pastedGoals.trim() ? [pastedGoals.trim()] : [];
 
     const remainingChars = MAX_GOAL_LENGTH - pastedGoals.length;
-    const isNearLimit = remainingChars < 100;
+    const isNearLimit = remainingChars < 50;
 
     if (!selectedSubject) {
         return (
@@ -93,15 +91,15 @@ export const CompetenceGoalSelector: React.FC<CompetenceGoalSelectorProps> = Rea
                     <div className="space-y-2">
                         <TextAreaField
                             id="competenceGoals"
-                            label="Lim inn kompetansemål fra læreplanen"
+                            label="Lim inn ETT kompetansemål fra læreplanen"
                             value={pastedGoals}
                             onChange={handleManualChange}
-                            placeholder="Lim inn ett eller flere kompetansemål fra læreplanen. Skill flere mål med dobbel linjeskift."
-                            rows={8}
+                            placeholder="Lim inn ett kompetansemål fra læreplanen som er mest relevant for temaet."
+                            rows={6}
                         />
                         <div className="flex items-center justify-between text-xs">
                             <p className="text-gray-500">
-                                💡 Tips: Skill flere mål med en tom linje mellom
+                                💡 Tips: Velg det kompetansemålet som er mest relevant
                             </p>
                             <p className={`font-medium ${isNearLimit ? 'text-orange-600' : 'text-gray-500'}`}>
                                 {remainingChars} tegn igjen
@@ -114,11 +112,11 @@ export const CompetenceGoalSelector: React.FC<CompetenceGoalSelectorProps> = Rea
                 {pastedGoals.trim() && (
                     <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 text-sm">
                         <p className="text-blue-900 font-medium">
-                            ✓ {currentGoalsArray.length} kompetansemål valgt
+                            ✓ 1 kompetansemål valgt
                         </p>
                         {inputMode === 'library' && (
                             <p className="text-blue-700 text-xs mt-1">
-                                Du kan bytte til "✍️ Lim inn selv" for å redigere eller legge til egne mål
+                                Du kan bytte til "✍️ Lim inn selv" for å redigere eller bruke et annet mål
                             </p>
                         )}
                     </div>

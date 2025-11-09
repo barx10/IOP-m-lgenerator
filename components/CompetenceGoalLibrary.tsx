@@ -61,19 +61,27 @@ export const CompetenceGoalLibrary: React.FC<CompetenceGoalLibraryProps> = ({
 
     const handleToggleGoal = (goalText: string) => {
         setSelectedGoals(prev => {
-            const newSelection = prev.includes(goalText)
-                ? prev.filter(g => g !== goalText)
-                : [...prev, goalText];
+            // If deselecting, remove it
+            if (prev.includes(goalText)) {
+                return prev.filter(g => g !== goalText);
+            }
             
-            onSelectGoals(newSelection);
-            return newSelection;
+            // If selecting and already have 1 goal, replace it
+            if (prev.length >= 1) {
+                return [goalText]; // Replace the existing goal
+            }
+            
+            return [goalText];
         });
     };
 
     const handleSelectAll = () => {
-        const allGoalTexts = filteredGoals.map(g => g.text);
-        setSelectedGoals(allGoalTexts);
-        onSelectGoals(allGoalTexts);
+        // Only select the first goal when "select all" is clicked
+        if (filteredGoals.length > 0) {
+            const firstGoal = filteredGoals[0].text;
+            setSelectedGoals([firstGoal]);
+            onSelectGoals([firstGoal]);
+        }
     };
 
     const handleClearAll = () => {
@@ -116,6 +124,9 @@ export const CompetenceGoalLibrary: React.FC<CompetenceGoalLibraryProps> = ({
                 <p className="text-sm opacity-90">
                     {(competenceGoalsData as any)[subjectCode].name} - Etter {selectedLevel === '2' ? '2.' : selectedLevel === '4' ? '4.' : selectedLevel === '7' ? '7.' : '10.'} trinn
                 </p>
+                <p className="text-xs opacity-75 mt-1">
+                    💡 Velg ETT kompetansemål som er mest relevant
+                </p>
             </div>
 
             {/* Search and actions */}
@@ -135,23 +146,16 @@ export const CompetenceGoalLibrary: React.FC<CompetenceGoalLibraryProps> = ({
 
                 <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-600">
-                        {selectedGoals.length} av {availableGoals.length} valgt
+                        {selectedGoals.length > 0 ? '✓ 1 kompetansemål valgt' : 'Velg 1 kompetansemål'}
                     </span>
-                    <div className="flex gap-2">
-                        <button
-                            onClick={handleSelectAll}
-                            className="text-sm text-brand-blue hover:text-brand-blue/80 font-medium"
-                        >
-                            Velg alle
-                        </button>
-                        <span className="text-gray-300">|</span>
+                    {selectedGoals.length > 0 && (
                         <button
                             onClick={handleClearAll}
                             className="text-sm text-gray-600 hover:text-gray-800 font-medium"
                         >
-                            Fjern alle
+                            Fjern valg
                         </button>
-                    </div>
+                    )}
                 </div>
             </div>
 
@@ -205,9 +209,9 @@ export const CompetenceGoalLibrary: React.FC<CompetenceGoalLibraryProps> = ({
             {/* Help text */}
             {selectedGoals.length > 0 && (
                 <div className="bg-green-50 border border-green-200 rounded-lg p-3 text-sm text-green-800">
-                    <p className="font-medium">✓ {selectedGoals.length} kompetansemål valgt</p>
+                    <p className="font-medium">✓ 1 kompetansemål valgt</p>
                     <p className="text-xs mt-1 text-green-700">
-                        Disse vil bli brukt til å generere IOP-mål når du klikker "Generer mål"
+                        Dette vil bli brukt til å generere fokuserte IOP-mål når du klikker "Generer mål"
                     </p>
                 </div>
             )}
