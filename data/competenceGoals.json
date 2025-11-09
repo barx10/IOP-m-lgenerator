@@ -528,5 +528,238 @@
         }
       ]
     }
+  },
+  "KRO": {
+    "name": "Kroppsøving",
+    "levels": {
+      "2": [
+        {
+          "code": "KRO-01",
+          "text": "utforske egen kroppslig bevegelse i lek og andre aktiviteter, alene og sammen med andre",
+          "coreElements": ["Bevegelsesgleden", "Bevegelseskompetanse"]
+        },
+        {
+          "code": "KRO-02",
+          "text": "utforske og gjennomføre grunnleggende bevegelser som å krype, gå, løpe, hinke, satse, lande, vende og rulle i ulike miljøer ut fra egne forutsetninger",
+          "coreElements": ["Bevegelseskompetanse", "Bevegelsesgleden"]
+        },
+        {
+          "code": "KRO-03",
+          "text": "øve på å avlevere, ta imot og leke med ulike redskaper og balltyper",
+          "coreElements": ["Bevegelseskompetanse", "Bevegelsesgleden"]
+        },
+        {
+          "code": "KRO-04",
+          "text": "leke og være med sammen med andre i aktivitet i varierte bevegelsesmiljøer",
+          "coreElements": ["Samhandling", "Bevegelsesgleden"]
+        },
+        {
+          "code": "KRO-05",
+          "text": "leke og utføre grunnleggende øvelser med tilvenning til vann, som å dykke, flyte, gli, skape framdrift, hoppe uti og orientere seg i vann",
+          "coreElements": ["Bevegelseskompetanse", "Helse og livskvalitet"]
+        },
+        {
+          "code": "KRO-06",
+          "text": "forstå og praktisere enkle regler for samspill i ulike bevegelsesaktiviteter",
+          "coreElements": ["Samhandling", "Bevegelseskompetanse"]
+        },
+        {
+          "code": "KRO-07",
+          "text": "utforske naturen i nærmiljøet med varierte aktiviteter til ulike årstider",
+          "coreElements": ["Bevegelsesgleden", "Helse og livskvalitet"]
+        },
+        {
+          "code": "KRO-08",
+          "text": "forstå og praktisere turregler og bruke klær etter vær og forhold i naturen",
+          "coreElements": ["Helse og livskvalitet", "Bevegelseskompetanse"]
+        },
+        {
+          "code": "KRO-09",
+          "text": "øve på trygg ferdsel i trafikken",
+          "coreElements": ["Helse og livskvalitet", "Bevegelseskompetanse"]
+        },
+        {
+          "code": "KRO-10",
+          "text": "øve på trygg ferdsel ved vann og på å tilkalle hjelp",
+          "coreElements": ["Helse og livskvalitet", "Bevegelseskompetanse"]
+        }
+      ],
+      "4": [
+        {
+          "code": "KRO-11",
+          "text": "utforske og gjennomføre leker, idrettsaktiviteter, danser og andre bevegelsesaktiviteter",
+          "coreElements": ["Bevegelsesgleden", "Bevegelseskompetanse"]
+        },
+        {
+          "code": "KRO-12",
+          "text": "bruke kroppen til å utforske aktiviteter og utvikle grunnleggende bevegelser",
+          "coreElements": ["Bevegelseskompetanse", "Bevegelsesgleden"]
+        },
+        {
+          "code": "KRO-13",
+          "text": "øve på og bruke basisferdigheter som å føre, kaste, sprette, sparke og ta imot ball i ulike bevegelsesaktiviteter",
+          "coreElements": ["Bevegelseskompetanse", "Bevegelsesgleden"]
+        },
+        {
+          "code": "KRO-14",
+          "text": "være svømmedyktig ved å falle uti på dypt vann, svømme 100 meter på magen, og underveis dykke ned og hente en gjenstand med hendene, stoppe og hvile i 3 minutter (og samtidig flyte på magen, orientere seg, rulle over og flyte på ryggen), og deretter svømme 100 meter på rygg og ta seg opp på land",
+          "coreElements": ["Bevegelseskompetanse", "Helse og livskvalitet"]
+        },
+        {
+          "code": "KRO-15",
+          "text": "forstå og bruke regler for samhandling i spill og bevegelsesaktiviteter",
+          "coreElements": ["Samhandling", "Bevegelseskompetanse"]
+        },
+        {
+          "code": "KRO-16",
+          "text": "forstå kroppslig ulikhet mellom seg selv og andre, og inkludere andre i ulike bevegelsesaktiviteter",
+          "coreElements": ["Samhandling", "Helse og livskvalitet"]
+        },
+        {
+          "code": "KRO-17",
+          "text": "utforske uteaktiviteter og samarbeide med andre under vekslende årstider i nærmiljøet",
+          "coreElements": ["Bevegelsesgleden", "Samhandling"]
+        },
+        {
+          "code": "KRO-18",
+          "text": "lage og bruke kart for å orientere seg i kjent terreng",
+          "coreElements": ["Bevegelseskompetanse", "Helse og livskvalitet"]
+        },
+        {
+          "code": "KRO-19",
+          "text": "øve på trygg og sporløs ferdsel i naturen",
+          "coreElements": ["Helse og livskvalitet", "Bevegelseskompetanse"]
+        },
+        {
+          "code": "KRO-20",
+          "text": "forstå og følge regler i trafikken",
+          "coreElements": ["Helse og livskvalitet", "Bevegelseskompetanse"]
+        }
+      ],
+      "7": [
+        {
+          "code": "KRO-21",
+          "text": "utforske og gjennomføre lek og spill sammen med andre i ulike bevegelsesaktiviteter",
+          "coreElements": ["Bevegelsesgleden", "Samhandling"]
+        },
+        {
+          "code": "KRO-22",
+          "text": "øve på sammensatte bevegelser, alene og sammen med andre",
+          "coreElements": ["Bevegelseskompetanse", "Bevegelsesgleden"]
+        },
+        {
+          "code": "KRO-23",
+          "text": "gjennomføre aktiviteter ut fra egne interesser og forutsetninger i dans, friluftsliv, idrettsaktiviteter og andre bevegelsesaktiviteter",
+          "coreElements": ["Bevegelsesgleden", "Helse og livskvalitet"]
+        },
+        {
+          "code": "KRO-24",
+          "text": "bruke kart, digitale verktøy og tegn i naturen til å orientere seg i natur og nærmiljø",
+          "coreElements": ["Bevegelseskompetanse", "Helse og livskvalitet"]
+        },
+        {
+          "code": "KRO-25",
+          "text": "forstå og praktisere regler for aktivitet og spill og respektere resultatene",
+          "coreElements": ["Samhandling", "Bevegelseskompetanse"]
+        },
+        {
+          "code": "KRO-26",
+          "text": "forstå ulikheter mellom seg selv og andre og delta i bevegelsesaktiviteter som kan være tilpasset ikke bare egne forutsetninger, men også andres",
+          "coreElements": ["Samhandling", "Helse og livskvalitet"]
+        },
+        {
+          "code": "KRO-27",
+          "text": "utføre grunnleggende teknikker i svømming på magen, på ryggen og under vann",
+          "coreElements": ["Bevegelseskompetanse", "Helse og livskvalitet"]
+        },
+        {
+          "code": "KRO-28",
+          "text": "vurdere sikkerhet i uteaktivitet og naturferdsel og gjennomføre selvberging i vann",
+          "coreElements": ["Helse og livskvalitet", "Bevegelseskompetanse"]
+        },
+        {
+          "code": "KRO-29",
+          "text": "bruke nærmiljøet og utforske lokale kulturer for friluftsliv",
+          "coreElements": ["Bevegelsesgleden", "Helse og livskvalitet"]
+        },
+        {
+          "code": "KRO-30",
+          "text": "gjøre rede for allemannsretten under ferdsel og opphold i naturen",
+          "coreElements": ["Helse og livskvalitet", "Bevegelseskompetanse"]
+        },
+        {
+          "code": "KRO-31",
+          "text": "gjennomføre overnattingstur og reflektere over egne naturopplevelser",
+          "coreElements": ["Bevegelsesgleden", "Helse og livskvalitet"]
+        }
+      ],
+      "10": [
+        {
+          "code": "KRO-32",
+          "text": "utforske egne muligheter til trening, helse og velvære gjennom lek, dans, friluftsliv, idrettsaktiviteter og andre bevegelsesaktiviteter",
+          "coreElements": ["Helse og livskvalitet", "Bevegelsesgleden"]
+        },
+        {
+          "code": "KRO-33",
+          "text": "trene på og utvikle ferdigheter i varierte bevegelsesaktiviteter",
+          "coreElements": ["Bevegelseskompetanse", "Bevegelsesgleden"]
+        },
+        {
+          "code": "KRO-34",
+          "text": "øve på og gjennomføre danseaktiviteter fra ungdomskulturer og andre kulturer, og sammen med medelever skape og presentere dansekomposisjoner",
+          "coreElements": ["Bevegelseskompetanse", "Samhandling"]
+        },
+        {
+          "code": "KRO-35",
+          "text": "reflektere over hvordan ulike framstillinger av kropp i media og samfunnet påvirker bevegelsesaktivitet, kroppsidentitet og selvbilde",
+          "coreElements": ["Helse og livskvalitet", "Samhandling"]
+        },
+        {
+          "code": "KRO-36",
+          "text": "planlegge og gjennomføre bevegelsesaktiviteter som kan gjennomføres ved skader eller sykdom",
+          "coreElements": ["Helse og livskvalitet", "Bevegelseskompetanse"]
+        },
+        {
+          "code": "KRO-37",
+          "text": "bruke egne ferdigheter og kunnskaper på en slik måte at det kan medvirke til framgang for andre",
+          "coreElements": ["Samhandling", "Bevegelseskompetanse"]
+        },
+        {
+          "code": "KRO-38",
+          "text": "anerkjenne ulikhet mellom seg selv og andre i bevegelsesaktiviteter og inkludere alle, uavhengig av forutsetninger",
+          "coreElements": ["Samhandling", "Helse og livskvalitet"]
+        },
+        {
+          "code": "KRO-39",
+          "text": "forstå flere typer kart og digitale verktøy og bruke dem til å orientere seg i kjente og ukjente miljøer",
+          "coreElements": ["Bevegelseskompetanse", "Helse og livskvalitet"]
+        },
+        {
+          "code": "KRO-40",
+          "text": "utføre varierte svømmeteknikker og svømme en lengre distanse basert på egen målsetting",
+          "coreElements": ["Bevegelseskompetanse", "Helse og livskvalitet"]
+        },
+        {
+          "code": "KRO-41",
+          "text": "forstå og gjennomføre livredning i, på og ved vann ute i naturen",
+          "coreElements": ["Helse og livskvalitet", "Bevegelseskompetanse"]
+        },
+        {
+          "code": "KRO-42",
+          "text": "forstå og gjennomføre livreddende førstehjelp",
+          "coreElements": ["Helse og livskvalitet", "Bevegelseskompetanse"]
+        },
+        {
+          "code": "KRO-43",
+          "text": "gjennomføre friluftslivsaktiviteter til ulike årstider, også med overnatting ute, og reflektere over hva naturopplevelser kan bety for seg selv og andre",
+          "coreElements": ["Bevegelsesgleden", "Helse og livskvalitet"]
+        },
+        {
+          "code": "KRO-44",
+          "text": "vurdere risiko og sikkerhet ved ulike uteaktiviteter, og forstå og gjennomføre sporløs og trygg ferdsel",
+          "coreElements": ["Helse og livskvalitet", "Bevegelseskompetanse"]
+        }
+      ]
+    }
   }
 }
