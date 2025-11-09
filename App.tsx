@@ -223,14 +223,15 @@ const App: React.FC = () => {
   const handleDownloadDocx = async () => {
     if (savedSubjects.length === 0) return;
 
-    const gradeLabels: Record<string, string> = {
-      '2': 'Etter 2. trinn',
-      '4': 'Etter 4. trinn',
-      '7': 'Etter 7. trinn',
-      '10': 'Etter 10. trinn',
-    };
+    try {
+      const gradeLabels: Record<string, string> = {
+        '2': 'Etter 2. trinn',
+        '4': 'Etter 4. trinn',
+        '7': 'Etter 7. trinn',
+        '10': 'Etter 10. trinn',
+      };
 
-    const children: any[] = [];
+      const children: any[] = [];
 
     // Title
     children.push(
@@ -442,6 +443,10 @@ const App: React.FC = () => {
     link.download = `IOP-mål_${profile.studentCode || 'elev'}_${profile.period.replace(/\s+/g, '_')}.docx`;
     link.click();
     window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Feil ved generering av Word-dokument:', error);
+      alert('Det oppstod en feil ved nedlasting av Word-dokumentet. Prøv igjen.');
+    }
   };
     
     const renderIopResult = () => {
