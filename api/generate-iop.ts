@@ -178,11 +178,7 @@ ${goalsList}
       config: {
         systemInstruction,
         responseMimeType: "application/json",
-        responseSchema,
-        temperature: 0.5, // Lower for faster, more consistent responses
-        maxOutputTokens: 2048, // Limit response size to prevent timeouts
-        topP: 0.9,
-        topK: 40
+        responseSchema
       }
     });
 
