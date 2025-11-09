@@ -10,6 +10,7 @@ import {
 } from './types';
 import { generateIopGoals } from './services/geminiService.backend';
 import { curriculumData, curriculumSubjects } from './services/curriculumData';
+import { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType, UnderlineType } from 'docx';
 
 import { Card } from './components/Card';
 import { CompetenceGoalSelector } from './components/CompetenceGoalSelector';
@@ -217,6 +218,230 @@ const App: React.FC = () => {
   
       // Use browser's native print dialog which allows saving as PDF
       window.print();
+  };
+
+  const handleDownloadDocx = async () => {
+    if (savedSubjects.length === 0) return;
+
+    const gradeLabels: Record<string, string> = {
+      '2': 'Etter 2. trinn',
+      '4': 'Etter 4. trinn',
+      '7': 'Etter 7. trinn',
+      '10': 'Etter 10. trinn',
+    };
+
+    const children: any[] = [];
+
+    // Title
+    children.push(
+      new Paragraph({
+        text: "IOP-mål",
+        heading: HeadingLevel.HEADING_1,
+        alignment: AlignmentType.CENTER,
+        spacing: { after: 400 }
+      })
+    );
+
+    // Student info
+    if (profile.studentCode) {
+      children.push(
+        new Paragraph({
+          text: "Elevidentifikasjon: " + profile.studentCode,
+          spacing: { after: 200 }
+        })
+      );
+    }
+
+    children.push(
+      new Paragraph({
+        text: "Periode: " + profile.period,
+        spacing: { after: 200 }
+      })
+    );
+
+    children.push(
+      new Paragraph({
+        text: " ",
+        spacing: { after: 300 }
+      })
+    );
+
+    // Each subject
+    savedSubjects.forEach((subject, index) => {
+      // Subject heading
+      children.push(
+        new Paragraph({
+          text: subject.subject,
+          heading: HeadingLevel.HEADING_2,
+          spacing: { before: 400, after: 200 }
+        })
+      );
+
+      // Grade and topic
+      children.push(
+        new Paragraph({
+          children: [
+            new TextRun({ text: "Kompetansemålnivå: ", bold: true }),
+            new TextRun(gradeLabels[subject.grade] || subject.grade)
+          ],
+          spacing: { after: 100 }
+        })
+      );
+
+      children.push(
+        new Paragraph({
+          children: [
+            new TextRun({ text: "Tema: ", bold: true }),
+            new TextRun(subject.topic)
+          ],
+          spacing: { after: 200 }
+        })
+      );
+
+      // Competence goals
+      children.push(
+        new Paragraph({
+          children: [
+            new TextRun({ text: "Kompetansemål:", bold: true })
+          ],
+          spacing: { after: 100 }
+        })
+      );
+
+      subject.competenceGoals.forEach(goal => {
+        children.push(
+          new Paragraph({
+            text: "• " + goal,
+            spacing: { after: 100 }
+          })
+        );
+      });
+
+      // Skills goal
+      if (subject.skillsGoal) {
+        children.push(
+          new Paragraph({
+            children: [
+              new TextRun({ text: "Ferdighetsmål:", bold: true, underline: { type: UnderlineType.SINGLE } })
+            ],
+            spacing: { before: 200, after: 100 }
+          })
+        );
+
+        children.push(
+          new Paragraph({
+            text: subject.skillsGoal.goal,
+            spacing: { after: 100 }
+          })
+        );
+
+        children.push(
+          new Paragraph({
+            children: [
+              new TextRun({ text: "Tiltak: ", bold: true }),
+              new TextRun(subject.skillsGoal.measures)
+            ],
+            spacing: { after: 100 }
+          })
+        );
+
+        children.push(
+          new Paragraph({
+            children: [
+              new TextRun({ text: "Forankring: ", bold: true }),
+              new TextRun(subject.skillsGoal.anchoring)
+            ],
+            spacing: { after: 200 }
+          })
+        );
+      }
+
+      // Knowledge goal
+      if (subject.knowledgeGoal) {
+        children.push(
+          new Paragraph({
+            children: [
+              new TextRun({ text: "Kunnskapsmål:", bold: true, underline: { type: UnderlineType.SINGLE } })
+            ],
+            spacing: { before: 200, after: 100 }
+          })
+        );
+
+        children.push(
+          new Paragraph({
+            text: subject.knowledgeGoal.goal,
+            spacing: { after: 100 }
+          })
+        );
+
+        children.push(
+          new Paragraph({
+            children: [
+              new TextRun({ text: "Tiltak: ", bold: true }),
+              new TextRun(subject.knowledgeGoal.measures)
+            ],
+            spacing: { after: 100 }
+          })
+        );
+
+        children.push(
+          new Paragraph({
+            children: [
+              new TextRun({ text: "Forankring: ", bold: true }),
+              new TextRun(subject.knowledgeGoal.anchoring)
+            ],
+            spacing: { after: 200 }
+          })
+        );
+      }
+
+      // Overall benefit
+      if (subject.overallBenefit) {
+        children.push(
+          new Paragraph({
+            children: [
+              new TextRun({ text: "Helhetlig vurdering:", bold: true, underline: { type: UnderlineType.SINGLE } })
+            ],
+            spacing: { before: 200, after: 100 }
+          })
+        );
+
+        children.push(
+          new Paragraph({
+            text: subject.overallBenefit,
+            spacing: { after: 400 }
+          })
+        );
+      }
+
+      // Add separator between subjects (except last)
+      if (index < savedSubjects.length - 1) {
+        children.push(
+          new Paragraph({
+            text: "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+            alignment: AlignmentType.CENTER,
+            spacing: { before: 300, after: 300 }
+          })
+        );
+      }
+    });
+
+    // Create document
+    const doc = new Document({
+      sections: [{
+        properties: {},
+        children: children
+      }]
+    });
+
+    // Generate and download
+    const blob = await Packer.toBlob(doc);
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `IOP-mål_${profile.studentCode || 'elev'}_${profile.period.replace(/\s+/g, '_')}.docx`;
+    link.click();
+    window.URL.revokeObjectURL(url);
   };
     
     const renderIopResult = () => {
@@ -437,13 +662,22 @@ const App: React.FC = () => {
                                         </button>
                                     </div>
                                 ))}
-                                <button
-                                    onClick={handleDownloadPdf}
-                                    className="w-full mt-4 inline-flex items-center justify-center gap-2 px-4 py-2.5 border border-transparent shadow-sm text-sm font-semibold rounded-lg text-white bg-brand-blue hover:bg-blue-700 hover:shadow-md transition-all duration-200"
-                                >
-                                    <DownloadIcon className="w-5 h-5" />
-                                    Skriv ut alle {savedSubjects.length} fag
-                                </button>
+                                <div className="flex gap-2 mt-4">
+                                    <button
+                                        onClick={handleDownloadPdf}
+                                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 border border-transparent shadow-sm text-sm font-semibold rounded-lg text-white bg-brand-blue hover:bg-blue-700 hover:shadow-md transition-all duration-200"
+                                    >
+                                        <DownloadIcon className="w-5 h-5" />
+                                        📄 PDF (skriv ut)
+                                    </button>
+                                    <button
+                                        onClick={handleDownloadDocx}
+                                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 border border-transparent shadow-sm text-sm font-semibold rounded-lg text-white bg-accent-green hover:bg-green-700 hover:shadow-md transition-all duration-200"
+                                    >
+                                        <DownloadIcon className="w-5 h-5" />
+                                        📝 Word (rediger)
+                                    </button>
+                                </div>
                             </div>
                         </Card>
                     )}
