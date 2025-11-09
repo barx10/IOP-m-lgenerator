@@ -648,39 +648,39 @@ const App: React.FC = () => {
                         </div>
                         <div className="mt-8 p-8 sm:p-12 bg-white rounded-lg shadow-lg border border-gray-200">
                             <div className="space-y-12">
-                                {/* Common info */}
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 border-b pb-6">
-                                    <div>
-                                        <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Kompetansemålnivå</h3>
-                                        <p className="mt-2 text-base text-gray-800 leading-relaxed">
-                                            {(() => {
-                                                const gradeLabels: Record<string, string> = {
-                                                    '2': 'Etter 2. trinn',
-                                                    '4': 'Etter 4. trinn',
-                                                    '7': 'Etter 7. trinn',
-                                                    '10': 'Etter 10. trinn',
-                                                    'vg1': 'Vg1',
-                                                    'vg2': 'Vg2',
-                                                    'vg3': 'Vg3'
-                                                };
-                                                return gradeLabels[savedSubjects[0].profile.grade] || savedSubjects[0].profile.grade;
-                                            })()}
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Tidsramme</h3>
-                                        <p className="mt-2 text-base text-gray-800 leading-relaxed">
-                                            {new Date(savedSubjects[0].framework.startDate).toLocaleDateString('nb-NO')} – {new Date(savedSubjects[0].framework.endDate).toLocaleDateString('nb-NO')}
-                                        </p>
-                                    </div>
-                                </div>
-
                                 {/* Each subject */}
                                 {savedSubjects.map((saved, index) => (
                                     <div key={index} className="print-page-break space-y-6 border-b last:border-b-0 pb-10 last:pb-0">
                                         <div className="text-center bg-gradient-to-r from-brand-blue to-purple-600 text-white py-4 rounded-lg">
                                             <h2 className="text-2xl font-bold">{saved.subject}</h2>
                                             <p className="text-sm mt-1 opacity-90">{saved.profile.topic}</p>
+                                        </div>
+
+                                        {/* Subject-specific info */}
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-gray-50 p-4 rounded-md">
+                                            <div>
+                                                <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Kompetansemålnivå</h3>
+                                                <p className="mt-1 text-sm text-gray-800">
+                                                    {(() => {
+                                                        const gradeLabels: Record<string, string> = {
+                                                            '2': 'Etter 2. trinn',
+                                                            '4': 'Etter 4. trinn',
+                                                            '7': 'Etter 7. trinn',
+                                                            '10': 'Etter 10. trinn',
+                                                            'vg1': 'Vg1',
+                                                            'vg2': 'Vg2',
+                                                            'vg3': 'Vg3'
+                                                        };
+                                                        return gradeLabels[saved.profile.grade] || saved.profile.grade;
+                                                    })()}
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Tidsramme</h3>
+                                                <p className="mt-1 text-sm text-gray-800">
+                                                    {new Date(saved.framework.startDate).toLocaleDateString('nb-NO')} – {new Date(saved.framework.endDate).toLocaleDateString('nb-NO')}
+                                                </p>
+                                            </div>
                                         </div>
 
                                         {saved.coreElementsNote && (
