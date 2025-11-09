@@ -117,6 +117,16 @@
           margin: 1.5cm;
         }
         
+        /* Each subject on its own page */
+        .print-page-break {
+          page-break-before: always;
+        }
+        
+        /* Don't break first subject to new page */
+        .print-page-break:first-child {
+          page-break-before: auto;
+        }
+        
         /* Prevent page breaks inside important sections */
         #printable-report-area > div {
           page-break-inside: avoid;

@@ -677,7 +677,7 @@ const App: React.FC = () => {
 
                                 {/* Each subject */}
                                 {savedSubjects.map((saved, index) => (
-                                    <div key={index} className="space-y-6 border-b last:border-b-0 pb-10 last:pb-0">
+                                    <div key={index} className="print-page-break space-y-6 border-b last:border-b-0 pb-10 last:pb-0">
                                         <div className="text-center bg-gradient-to-r from-brand-blue to-purple-600 text-white py-4 rounded-lg">
                                             <h2 className="text-2xl font-bold">{saved.subject}</h2>
                                             <p className="text-sm mt-1 opacity-90">{saved.profile.topic}</p>
