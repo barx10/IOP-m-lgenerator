@@ -692,22 +692,13 @@ const App: React.FC = () => {
                                         </button>
                                     </div>
                                 ))}
-                                <div className="flex gap-2 mt-4">
-                                    <button
-                                        onClick={handleDownloadPdf}
-                                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 border border-transparent shadow-sm text-sm font-semibold rounded-lg text-white bg-brand-blue hover:bg-blue-700 hover:shadow-md transition-all duration-200"
-                                    >
-                                        <DownloadIcon className="w-5 h-5" />
-                                        📄 PDF (skriv ut)
-                                    </button>
-                                    <button
-                                        onClick={handleDownloadDocx}
-                                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 border border-transparent shadow-sm text-sm font-semibold rounded-lg text-white bg-accent-green hover:bg-green-700 hover:shadow-md transition-all duration-200"
-                                    >
-                                        <DownloadIcon className="w-5 h-5" />
-                                        📝 Word (rediger)
-                                    </button>
-                                </div>
+                                <button
+                                    onClick={handleDownloadPdf}
+                                    className="w-full mt-4 inline-flex items-center justify-center gap-2 px-4 py-2.5 border border-transparent shadow-sm text-sm font-semibold rounded-lg text-white bg-brand-blue hover:bg-blue-700 hover:shadow-md transition-all duration-200"
+                                >
+                                    <DownloadIcon className="w-5 h-5" />
+                                    📄 Skriv ut alle {savedSubjects.length} fag (PDF)
+                                </button>
                             </div>
                         </Card>
                     )}
