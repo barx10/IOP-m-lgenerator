@@ -354,7 +354,7 @@ const App: React.FC = () => {
           new Paragraph({
             children: [
               new TextRun({ text: "Tiltak: ", bold: true }),
-              new TextRun(subject.skillsGoal.measures)
+              new TextRun({ text: subject.skillsGoal.measures })
             ],
             spacing: { after: 100 }
           })
@@ -364,7 +364,7 @@ const App: React.FC = () => {
           new Paragraph({
             children: [
               new TextRun({ text: "Forankring: ", bold: true }),
-              new TextRun(subject.skillsGoal.anchoring)
+              new TextRun({ text: subject.skillsGoal.anchoring })
             ],
             spacing: { after: 200 }
           })
@@ -395,7 +395,7 @@ const App: React.FC = () => {
           new Paragraph({
             children: [
               new TextRun({ text: "Tiltak: ", bold: true }),
-              new TextRun(subject.knowledgeGoal.measures)
+              new TextRun({ text: subject.knowledgeGoal.measures })
             ],
             spacing: { after: 100 }
           })
@@ -405,7 +405,7 @@ const App: React.FC = () => {
           new Paragraph({
             children: [
               new TextRun({ text: "Forankring: ", bold: true }),
-              new TextRun(subject.knowledgeGoal.anchoring)
+              new TextRun({ text: subject.knowledgeGoal.anchoring })
             ],
             spacing: { after: 200 }
           })
