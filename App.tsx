@@ -484,9 +484,6 @@ const App: React.FC = () => {
                                         <option value="4">Etter 4. trinn (3-4)</option>
                                         <option value="7">Etter 7. trinn (5-7)</option>
                                         <option value="10">Etter 10. trinn (8-10)</option>
-                                        <option value="vg1">Vg1</option>
-                                        <option value="vg2">Vg2</option>
-                                        <option value="vg3">Vg3</option>
                                     </select>
                                 </div>
                                 <div className="sm:col-span-3">
