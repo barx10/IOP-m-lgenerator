@@ -106,7 +106,7 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
                                         </p>
                                     </div>
                                     <div>
-                                        <h4 className="font-semibold text-gray-900 mb-1">Sending til AI-tjeneste</h4>
+                                        <h4 className="font-semibold text-gray-900 mb-1">Sending til KI-tjeneste</h4>
                                         <p>
                                             Informasjonen du legger inn (kompetansemål, sakkyndig vurdering, etc.) sendes til 
                                             Google Gemini API for å generere IOP-mål. Google behandler data i henhold til deres 
