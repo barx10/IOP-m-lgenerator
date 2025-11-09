@@ -585,7 +585,7 @@ const App: React.FC = () => {
                                 <div className="mb-4 p-3 bg-yellow-50 border border-yellow-200 rounded-lg text-sm text-yellow-800">
                                     <p className="font-medium mb-1">⚠️ Mangler:</p>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        {!profile.grade && <li>Kompetansemål-nivå</li>}
+                                        {!profile.grade && <li>Kompetansemålnivå</li>}
                                         {!profile.subject && <li>Fag</li>}
                                         {!profile.topic.trim() && <li>Tema for perioden</li>}
                                         {!pastedGoals.trim() && <li>Kompetansemål (velg fra bibliotek eller lim inn)</li>}
@@ -654,7 +654,7 @@ const App: React.FC = () => {
                                 {/* Common info */}
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 border-b pb-6">
                                     <div>
-                                        <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Kompetansemål-nivå</h3>
+                                        <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Kompetansemålnivå</h3>
                                         <p className="mt-2 text-base text-gray-800 leading-relaxed">
                                             {(() => {
                                                 const gradeLabels: Record<string, string> = {
