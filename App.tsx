@@ -430,7 +430,6 @@ const App: React.FC = () => {
     // Create document
     const doc = new Document({
       sections: [{
-        properties: {},
         children: children
       }]
     });
