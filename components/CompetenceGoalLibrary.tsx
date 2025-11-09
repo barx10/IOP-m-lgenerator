@@ -61,17 +61,23 @@ export const CompetenceGoalLibrary: React.FC<CompetenceGoalLibraryProps> = ({
 
     const handleToggleGoal = (goalText: string) => {
         setSelectedGoals(prev => {
+            let newSelection: string[];
+            
             // If deselecting, remove it
             if (prev.includes(goalText)) {
-                return prev.filter(g => g !== goalText);
-            }
-            
+                newSelection = prev.filter(g => g !== goalText);
+            } 
             // If selecting and already have 1 goal, replace it
-            if (prev.length >= 1) {
-                return [goalText]; // Replace the existing goal
+            else if (prev.length >= 1) {
+                newSelection = [goalText]; // Replace the existing goal
+            }
+            else {
+                newSelection = [goalText];
             }
             
-            return [goalText];
+            // Notify parent of change
+            onSelectGoals(newSelection);
+            return newSelection;
         });
     };
 
