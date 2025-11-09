@@ -189,11 +189,6 @@ export const CompetenceGoalLibrary: React.FC<CompetenceGoalLibraryProps> = ({
                                     className="mt-1 h-5 w-5 text-brand-blue border-gray-300 rounded focus:ring-brand-blue flex-shrink-0"
                                 />
                                 <div className="flex-1 min-w-0">
-                                    <div className="flex items-start justify-between gap-2 mb-1">
-                                        <span className="text-xs font-semibold text-gray-500 uppercase">
-                                            {goal.code}
-                                        </span>
-                                    </div>
                                     <p className="text-sm text-gray-900 leading-relaxed">
                                         {goal.text}
                                     </p>
