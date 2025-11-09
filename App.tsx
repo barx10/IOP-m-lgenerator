@@ -236,7 +236,9 @@ const App: React.FC = () => {
     // Title
     children.push(
       new Paragraph({
-        text: "IOP-mål",
+        children: [
+          new TextRun({ text: "IOP-mål", bold: true })
+        ],
         heading: HeadingLevel.HEADING_1,
         alignment: AlignmentType.CENTER,
         spacing: { after: 400 }
@@ -247,7 +249,9 @@ const App: React.FC = () => {
     if (profile.studentCode) {
       children.push(
         new Paragraph({
-          text: "Elevidentifikasjon: " + profile.studentCode,
+          children: [
+            new TextRun({ text: "Elevidentifikasjon: " + profile.studentCode })
+          ],
           spacing: { after: 200 }
         })
       );
@@ -255,14 +259,18 @@ const App: React.FC = () => {
 
     children.push(
       new Paragraph({
-        text: "Periode: " + profile.period,
+        children: [
+          new TextRun({ text: "Periode: " + profile.period })
+        ],
         spacing: { after: 200 }
       })
     );
 
     children.push(
       new Paragraph({
-        text: " ",
+        children: [
+          new TextRun({ text: " " })
+        ],
         spacing: { after: 300 }
       })
     );
@@ -272,7 +280,9 @@ const App: React.FC = () => {
       // Subject heading
       children.push(
         new Paragraph({
-          text: subject.subject,
+          children: [
+            new TextRun({ text: subject.subject, bold: true })
+          ],
           heading: HeadingLevel.HEADING_2,
           spacing: { before: 400, after: 200 }
         })
@@ -312,7 +322,9 @@ const App: React.FC = () => {
       subject.competenceGoals.forEach(goal => {
         children.push(
           new Paragraph({
-            text: "• " + goal,
+            children: [
+              new TextRun({ text: "• " + goal })
+            ],
             spacing: { after: 100 }
           })
         );
@@ -331,7 +343,9 @@ const App: React.FC = () => {
 
         children.push(
           new Paragraph({
-            text: subject.skillsGoal.goal,
+            children: [
+              new TextRun({ text: subject.skillsGoal.goal })
+            ],
             spacing: { after: 100 }
           })
         );
@@ -370,7 +384,9 @@ const App: React.FC = () => {
 
         children.push(
           new Paragraph({
-            text: subject.knowledgeGoal.goal,
+            children: [
+              new TextRun({ text: subject.knowledgeGoal.goal })
+            ],
             spacing: { after: 100 }
           })
         );
@@ -409,7 +425,9 @@ const App: React.FC = () => {
 
         children.push(
           new Paragraph({
-            text: subject.overallBenefit,
+            children: [
+              new TextRun({ text: subject.overallBenefit })
+            ],
             spacing: { after: 400 }
           })
         );
@@ -419,7 +437,9 @@ const App: React.FC = () => {
       if (index < savedSubjects.length - 1) {
         children.push(
           new Paragraph({
-            text: "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+            children: [
+              new TextRun({ text: "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" })
+            ],
             alignment: AlignmentType.CENTER,
             spacing: { before: 300, after: 300 }
           })
