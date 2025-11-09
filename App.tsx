@@ -580,6 +580,18 @@ const App: React.FC = () => {
 
                         {/* Submission */}
                         <div className="pt-5">
+                            {/* Debug info - fjern senere */}
+                            {!isFormValid && (
+                                <div className="mb-4 p-3 bg-yellow-50 border border-yellow-200 rounded-lg text-sm text-yellow-800">
+                                    <p className="font-medium mb-1">⚠️ Mangler:</p>
+                                    <ul className="list-disc pl-5 space-y-1">
+                                        {!profile.grade && <li>Kompetansemål-nivå</li>}
+                                        {!profile.subject && <li>Fag</li>}
+                                        {!profile.topic.trim() && <li>Tema for perioden</li>}
+                                        {!pastedGoals.trim() && <li>Kompetansemål (velg fra bibliotek eller lim inn)</li>}
+                                    </ul>
+                                </div>
+                            )}
                             <div className="flex justify-end">
                                 <button
                                     type="button"
