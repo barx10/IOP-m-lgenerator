@@ -8,6 +8,8 @@ export const curriculumSubjects: string[] = [
     'Kroppsøving',
     'Kunst og håndverk',
     'Matematikk',
+    'Mat og helse',
+    'Musikk',
     'Naturfag',
 ];
 
@@ -124,6 +126,34 @@ export const curriculumData: CurriculumData = {
             { name: "Folkehelse og livsmestring", description: "Forstå egen kropp og bruke helseinformasjon til trygge valg" },
             { name: "Demokrati og medborgerskap", description: "Skille vitenskapsbasert kunnskap fra ikke-vitenskapelige påstander, inkludert samisk kunnskap" },
             { name: "Bærekraftig utvikling", description: "Handle miljøbevisst, forstå klima og naturressurser og bevare biologisk mangfold" }
+        ],
+        goals: []
+    },
+    'Musikk': {
+        coreElements: [
+            { name: "Musisere", description: "Synge, spille og danse alene og sammen med andre" },
+            { name: "Komponere", description: "Skape, improvisere og sette sammen musikalske uttrykk" },
+            { name: "Lytte", description: "Oppleve, reflektere over og analysere musikk" }
+        ],
+        crossCurricularThemes: [
+            { name: "Folkehelse og livsmestring", description: "Musikalsk utfoldelse for identitet, mestring og sosialt fellesskap" },
+            { name: "Demokrati og medborgerskap", description: "Musikkens rolle i samfunnet og kritisk refleksjon over musikalske ytringer" },
+            { name: "Bærekraftig utvikling", description: "Musikk som kulturarv og uttrykk for miljøengasjement" }
+        ],
+        goals: []
+    },
+    'Mat og helse': {
+        coreElements: [
+            { name: "Mat og måltider", description: "Planlegge, lage mat og skape trivelige måltider" },
+            { name: "Mat og helse", description: "Forstå sammenhengen mellom kosthold, helse og livskvalitet" },
+            { name: "Mat og kultur", description: "Utforske mattradisjoner og måltiders sosiale betydning" },
+            { name: "Mat og forbruk", description: "Gjøre bevisste og bærekraftige matvalg" },
+            { name: "Mat og livsstil", description: "Utvikle positive holdninger til mat og sunne levevaner" }
+        ],
+        crossCurricularThemes: [
+            { name: "Folkehelse og livsmestring", description: "Mat, måltider og kosthold for god helse og trivsel" },
+            { name: "Demokrati og medborgerskap", description: "Kritisk forbruk og forbrukermakt i matproduksjon" },
+            { name: "Bærekraftig utvikling", description: "Bærekraftig matproduksjon, matsvinn og klimaavtrykk" }
         ],
         goals: []
     }
