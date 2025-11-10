@@ -1696,105 +1696,541 @@
   "NAT": {
     "name": "Naturfag",
     "levels": {
-      "4": [
+      "2": [
         {
           "code": "NAT-01",
-          "text": "stille spørsmål, lage hypoteser og utforske naturen gjennom observasjon og enkle undersøkelser",
+          "text": "undre seg, utforske og lage sp¿rsmŒl, og knytte dette til egne eller andres erfaringer",
           "coreElements": [
-            "Naturvitenskapelige praksiser",
-            "Utforsking og problemløsing"
+            "Teknologiske prosesser",
+            "Naturvitenskapelige praksiser"
           ]
         },
         {
           "code": "NAT-02",
-          "text": "observere og beskrive egne erfaringer i naturen og bruke ulike sanser",
+          "text": "presentere funnene sine og beskrive hvordan eleven har kommet fram til dem",
           "coreElements": [
-            "Naturvitenskapelige praksiser",
-            "Kommunikasjon og formidling"
+            "Systemtenkning",
+            "Naturvitenskapelige praksiser"
           ]
         },
         {
           "code": "NAT-03",
-          "text": "gjenkjenne og samtale om noen organismer i naturen",
+          "text": "presentere egne ideer til teknologiske oppfinnelser",
           "coreElements": [
-            "Kropp og helse",
-            "Organismemangfold"
+            "Naturvitenskapelige praksiser"
           ]
         },
         {
           "code": "NAT-04",
-          "text": "observere, beskrive og samtale om lys, lyd, magnetisme, varme, kulde og strøm",
+          "text": "utforske og beskrive observerbare egenskaper til ulike objekter, materialer og stoffer og sortere etter egenskaper",
           "coreElements": [
-            "Fenomener og stoffer",
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-05",
+          "text": "samtale om hvordan vi kan ta milj¿bevisste valg og gjennomf¿re lokale milj¿tiltak",
+          "coreElements": [
             "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-06",
+          "text": "utforske et naturomrŒde i n¾rmilj¿et og beskrive hvordan noen organismer er tilpasset omrŒdet og hverandre",
+          "coreElements": [
+            "Systemtenkning",
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-07",
+          "text": "oppleve naturen til ulike Œrstider, reflektere over hvordan naturen er i endring, og hvorfor Œret deles inn pŒ ulike mŒter i norsk og samisk tradisjon",
+          "coreElements": [
+            "Teknologiske prosesser",
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-08",
+          "text": "planlegge og gjennomf¿re unders¿kelser av v¾r og himmelfenomener og sammenligne mŒlinger, observasjoner og v¾rtegn gjennom Œret",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-09",
+          "text": "utforske sansene gjennom lek ute og inne og samtale om hvordan sansene brukes til Œ samle informasjon",
+          "coreElements": [
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-10",
+          "text": "gi eksempler pŒ noen vanlige sykdommer og samtale om hva man kan gj¿re for Œ verne kroppen mot smittsomme sykdommer",
+          "coreElements": [
+            "Teknologiske prosesser",
+            "Systemtenkning"
+          ]
+        }
+      ],
+      "4": [
+        {
+          "code": "NAT-11",
+          "text": "undre seg, stille sp¿rsmŒl og lage hypoteser?og utforske disse for Œ finne svar",
+          "coreElements": [
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-12",
+          "text": "bruke tabeller og figurer til Œ organisere data, lage forklaringer basert pŒ data og presentere funn",
+          "coreElements": [
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-13",
+          "text": "sammenligne modeller med observasjoner og samtale om hvorfor vi bruker modeller i naturfag",
+          "coreElements": [
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-14",
+          "text": "utforske teknologiske systemer som er satt sammen av ulike deler, og beskrive hvordan delene fungerer og virker sammen",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-15",
+          "text": "designe og lage et produkt basert pŒ en kravspesifikasjon",
+          "coreElements": [
+            "Teknologiske prosesser",
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-16",
+          "text": "utforske og beskrive hvordan noen stoffer kan endre seg nŒr de blandes med andre stoffer",
+          "coreElements": [
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-17",
+          "text": "utforske observerbare st¿rrelser som fart og temperatur og knytte dem til energi",
+          "coreElements": [
+            "Teknologiske prosesser",
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-18",
+          "text": "samtale om hva energi er, og utforske ulike energikjeder",
+          "coreElements": [
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-19",
+          "text": "utforske et naturomrŒde og dr¿fte b¾rekraftig bruk av omrŒdet",
+          "coreElements": [
+            "Teknologiske prosesser",
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-20",
+          "text": "utforske og sammenligne ulike dyre- og plantearters tilpasninger til milj¿ og levesteder og dr¿fte hvorfor noen arter d¿r ut",
+          "coreElements": [
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-21",
+          "text": "delta i h¿sting og bruk av naturressurser og dr¿fte hvordan naturressurser kan brukes pŒ en b¾rekraftig mŒte",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-22",
+          "text": "gi eksempler pŒ god dyrevelferd og reflektere over hvordan dyrs behov kan ivaretas",
+          "coreElements": [
+            "Systemtenkning",
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-23",
+          "text": "utforske og beskrive vannets kretsl¿p og gj¿re rede for hvorfor vann er viktig for livet pŒ jorda",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-24",
+          "text": "samtale om hva fysisk og psykisk helse er, og dr¿fte hvordan livsstil og trivsel pŒvirker helse",
+          "coreElements": [
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-25",
+          "text": "samtale om likheter og ulikheter mellom kj¿nnene, om kj¿nnsidentitet og om menneskets reproduksjon",
+          "coreElements": [
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-26",
+          "text": "beskrive hvordan muskler og skjelett fungerer, og knytte dette til bevegelse",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-27",
+          "text": "beskrive funksjoner i kroppens ytre forsvar og samtale om hvordan dette verner mot sykdom",
+          "coreElements": [
+            "Systemtenkning",
+            "Teknologiske prosesser"
           ]
         }
       ],
       "7": [
         {
-          "code": "NAT-05",
-          "text": "planlegge og gjennomføre systematiske observasjoner og undersøkelser og bruke ulike typer instrumenter",
+          "code": "NAT-28",
+          "text": "stille sp¿rsmŒl og lage hypoteser om naturfaglige fenomener, identifisere variabler og samle data for Œ finne svar",
+          "coreElements": [
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-29",
+          "text": "skille mellom observasjoner og slutninger, organisere data, bruke Œrsak-virkning-argumenter, trekke slutninger, vurdere feilkilder og presentere funn",
+          "coreElements": [
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-30",
+          "text": "bruke og vurdere modeller som representerer fenomener man ikke kan observere direkte, og gj¿re rede for hvorfor det brukes modeller i naturfag",
+          "coreElements": [
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-31",
+          "text": "lese og forstŒ faremerking og reflektere over hensikten med disse",
+          "coreElements": [
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-32",
+          "text": "gi eksempler pŒ hvordan naturvitenskapelig kunnskap er utviklet og utvikler seg",
+          "coreElements": [
+            "Teknologiske prosesser",
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-33",
+          "text": "gi eksempler pŒ hvordan tradisjonell kunnskap har bidratt og bidrar til naturvitenskapelig kunnskap",
           "coreElements": [
             "Naturvitenskapelige praksiser",
-            "Utforsking og problemløsing"
+            "Teknologiske prosesser"
           ]
         },
         {
-          "code": "NAT-06",
-          "text": "beskrive og sammenligne egenskaper ved stoffer og materialer",
+          "code": "NAT-34",
+          "text": "utforske, lage og programmere teknologiske systemer som bestŒr av deler som virker sammen",
           "coreElements": [
-            "Fenomener og stoffer",
-            "Modellering og systematisering"
+            "Teknologiske prosesser"
           ]
         },
         {
-          "code": "NAT-07",
-          "text": "utforske hvordan mennesker bruker naturen som ressurs, og reflektere over konsekvensene",
+          "code": "NAT-35",
+          "text": "designe og lage et produkt basert pŒ brukerbehov",
           "coreElements": [
-            "Jorda, mennesket og naturen",
-            "Kritisk vurdering"
+            "Teknologiske prosesser",
+            "Naturvitenskapelige praksiser"
           ]
         },
         {
-          "code": "NAT-08",
-          "text": "beskrive oppbygningen av solsystemet og forklare hvordan Jorda beveger seg i forhold til sola og månen",
+          "code": "NAT-36",
+          "text": "reflektere over hvordan teknologi kan l¿se utfordringer, skape muligheter og f¿re til nye dilemmaer",
           "coreElements": [
-            "Jorda i rommet",
-            "Modellering og systematisering"
+            "Naturvitenskapelige praksiser",
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-37",
+          "text": "utforske faseoverganger og kjemiske reaksjoner og beskrive hva som kjennetegner dem",
+          "coreElements": [
+            "Systemtenkning",
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-38",
+          "text": "bruke partikkelmodellen til Œ forklare faseoverganger og egenskapene til faste stoffer, v¾sker og gasser",
+          "coreElements": [
+            "Teknologiske prosesser",
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-39",
+          "text": "utforske elektriske og magnetiske krefter gjennom fors¿k og samtale om hvordan vi utnytter elektrisk energi i dagliglivet",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-40",
+          "text": "gj¿re rede for hvordan organismer kan deles inn i hovedgrupper, og gi eksempler pŒ ulike organismers s¾rtrekk",
+          "coreElements": [
+            "Systemtenkning",
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-41",
+          "text": "gj¿re rede for betydningen av biologisk mangfold og gjennomf¿re tiltak for Œ bevare det biologiske mangfoldet i n¾rmilj¿et",
+          "coreElements": [
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-42",
+          "text": "foreslŒ tiltak for Œ bevare det biologiske mangfoldet i nordomrŒdene og gi eksempler pŒ betydningen av tradisjonell kunnskap i naturforvaltning",
+          "coreElements": [
+            "Teknologiske prosesser",
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-43",
+          "text": "utforske og beskrive ulike n¾ringsnett og bruke dette til Œ diskutere samspill i naturen",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-44",
+          "text": "beskrive og visualisere hvordan d¿gn, mŒnefaser og Œrstider oppstŒr, og samtale om hvordan dette pŒvirker livet pŒ jorda",
+          "coreElements": [
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-45",
+          "text": "gj¿re rede for jordas forutsetninger for liv og sammenligne med andre himmellegemer i universet",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-46",
+          "text": "gj¿re rede for hvordan det geologiske kretsl¿pet, platetektonikk og ytre krefter er med pŒ Œ forme og endre ulike landskap",
+          "coreElements": [
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-47",
+          "text": "gj¿re rede for fysiske og psykiske forandringer i puberteten og samtale om hvordan dette kan pŒvirke f¿lelser, handlinger og seksualitet",
+          "coreElements": [
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-48",
+          "text": "gj¿re rede for noen av kroppens organsystemer og beskrive hvordan systemene virker sammen",
+          "coreElements": [
+            "Naturvitenskapelige praksiser"
           ]
         }
       ],
       "10": [
         {
-          "code": "NAT-09",
-          "text": "formulere hypoteser, planlegge og gjennomføre undersøkelser, og bruke dataverktøy til innsamling og bearbeiding av data",
+          "code": "NAT-49",
+          "text": "stille sp¿rsmŒl og lage hypoteser om naturfaglige fenomener, identifisere avhengige og uavhengige variabler og samle data for Œ finne svar",
+          "coreElements": [
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-50",
+          "text": "analysere og bruke innsamlede data til Œ lage forklaringer, dr¿fte forklaringene i lys av relevant teori og vurdere kvaliteten pŒ egne og andres utforskinger",
+          "coreElements": [
+            "Teknologiske prosesser",
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-51",
+          "text": "bruke og lage modeller for Œ forutsi eller beskrive naturfaglige prosesser og systemer og gj¿re rede for modellenes styrker og begrensninger",
+          "coreElements": [
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-52",
+          "text": "delta i risikovurderinger knyttet til fors¿k og f¿lge sikkerhetstiltakene",
           "coreElements": [
             "Naturvitenskapelige praksiser",
-            "Utforsking og problemløsing"
+            "Systemtenkning"
           ]
         },
         {
-          "code": "NAT-10",
-          "text": "forklare hvordan kjemiske reaksjoner fører til omdannelse av stoffer, og anvende dette i praktiske eksempler",
+          "code": "NAT-53",
+          "text": "gi eksempler pŒ dagsaktuell forskning og dr¿fte hvordan ny kunnskap genereres gjennom samarbeid og kritisk tiln¾rming til eksisterende kunnskap",
           "coreElements": [
-            "Fenomener og stoffer",
-            "Modellering og systematisering"
+            "Naturvitenskapelige praksiser",
+            "Teknologiske prosesser"
           ]
         },
         {
-          "code": "NAT-11",
-          "text": "drøfte hvordan teknologi kan bidra til en mer bærekraftig utvikling",
+          "code": "NAT-54",
+          "text": "utforske, forstŒ og lage teknologiske systemer som bestŒr av en sender og en mottaker",
           "coreElements": [
-            "Teknologi",
-            "Kritisk vurdering"
+            "Systemtenkning"
           ]
         },
         {
-          "code": "NAT-12",
-          "text": "forklare evolusjon og gi eksempler på utvikling av liv på jorda",
+          "code": "NAT-55",
+          "text": "bruke programmering til Œ utforske naturfaglige fenomener",
           "coreElements": [
-            "Organismemangfold",
-            "Modellering og systematisering"
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-56",
+          "text": "utforske kjemiske reaksjoner, forklare massebevaring og gj¿re rede for betydninger av noen forbrenningsreaksjoner",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-57",
+          "text": "bruke atommodeller og periodesystemet til Œ gj¿re rede for egenskaper til grunnstoffer og kjemiske forbindelser",
+          "coreElements": [
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-58",
+          "text": "beskrive drivhuseffekten og gj¿re rede for faktorer som kan forŒrsake globale klimaendringer",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-59",
+          "text": "gj¿re rede for energibevaring og energikvalitet og utforske ulike mŒter Œ omdanne, transportere og lagre energi pŒ",
+          "coreElements": [
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-60",
+          "text": "dr¿fte hvordan energiproduksjon og energibruk kan pŒvirke milj¿et lokalt og globalt",
+          "coreElements": [
+            "Teknologiske prosesser",
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-61",
+          "text": "beskrive hvordan forskere har kommet fram til evolusjonsteorien og bruke denne til Œ forklare utvikling av biologisk mangfold",
+          "coreElements": [
+            "Systemtenkning",
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-62",
+          "text": "sammenligne celler hos ulike organismer og beskrive sammenhenger mellom oppbygning og funksjon",
+          "coreElements": [
+            "Systemtenkning",
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-63",
+          "text": "utforske sammenhenger mellom abiotiske og biotiske faktorer i et ¿kosystem og diskutere hvordan energi og materie omdannes i kretsl¿p",
+          "coreElements": [
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-64",
+          "text": "gi eksempler pŒ og dr¿fte aktuelle dilemmaer knyttet til utnyttelse av naturressurser og tap av biologisk mangfold",
+          "coreElements": [
+            "Systemtenkning",
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-65",
+          "text": "gi eksempler pŒ samers tradisjonelle kunnskap om naturen og diskutere hvordan denne kunnskapen kan bidra til b¾rekraftig forvaltning av naturen",
+          "coreElements": [
+            "Systemtenkning",
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-66",
+          "text": "gj¿re rede for hvordan fotosyntese og celleŒnding gir energi til alt levende gjennom karbonkretsl¿pet",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-67",
+          "text": "bruke platetektonikkteorien til Œ forklare jordas utvikling over tid og gi eksempler pŒ observasjoner som st¿tter teorien",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-68",
+          "text": "dr¿fte sp¿rsmŒl knyttet til seksuell og reproduktiv helse",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-69",
+          "text": "sammenligne nervesystemet og hormonsystemet og beskrive hvordan rusmidler, legemidler, milj¿gifter og doping pŒvirker signalsystemene",
+          "coreElements": [
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-70",
+          "text": "beskrive kroppens immunforsvar og hvordan vaksiner virker, og gj¿re rede for hva vaksiner betyr for folkehelsen L¾replan i naturfag L¾replankode: NAT01-04 L¾replankode: NAT01-04",
+          "coreElements": [
+            "Teknologiske prosesser",
+            "Naturvitenskapelige praksiser"
           ]
         }
       ]
