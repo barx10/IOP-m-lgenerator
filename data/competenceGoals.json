@@ -6,108 +6,168 @@
         {
           "code": "MAT-01",
           "text": "utforske tal som mengde, rekkjefølgje, plassering og som mengde i praktiske samanhengar og presentere resultatet på varierte måtar",
-          "coreElements": ["Utforsking og problemløsning", "Representasjon og kommunikasjon"]
+          "coreElements": [
+            "Utforsking og problemløsning",
+            "Representasjon og kommunikasjon"
+          ]
         },
         {
           "code": "MAT-02",
           "text": "utforske og bruke plassverdisystemet for å beskrive oppbygnad av tal, og samanlikne og ordne heile tal",
-          "coreElements": ["Utforsking og problemløsning", "Abstraksjon og generalisering"]
+          "coreElements": [
+            "Utforsking og problemløsning",
+            "Abstraksjon og generalisering"
+          ]
         },
         {
           "code": "MAT-03",
           "text": "utforske og beskrive strukturar og mønster i leik og daglegliv",
-          "coreElements": ["Utforsking og problemløsning", "Modellering og anvendelse"]
+          "coreElements": [
+            "Utforsking og problemløsning",
+            "Modellering og anvendelse"
+          ]
         },
         {
           "code": "MAT-04",
           "text": "utforske, lage, beskrive og samanlikne todimenasjonale figurar og tremedimensjonale formar ved å bruke materiell og digitale verktøy",
-          "coreElements": ["Utforsking og problemløsning", "Representasjon og kommunikasjon"]
+          "coreElements": [
+            "Utforsking og problemløsning",
+            "Representasjon og kommunikasjon"
+          ]
         },
         {
           "code": "MAT-05",
           "text": "måle og samanlikne lengder, areal, volum, massar, temperaturar og tidsrom med kroppen, naturlege måleiningar og målereiskapar",
-          "coreElements": ["Modellering og anvendelse", "Representasjon og kommunikasjon"]
+          "coreElements": [
+            "Modellering og anvendelse",
+            "Representasjon og kommunikasjon"
+          ]
         }
       ],
       "4": [
         {
           "code": "MAT-06",
           "text": "utforske samanhengar mellom addisjon og subtraksjon, multiplikasjon og divisjon, og bruke dei i hovudrekning og overslagsrekning",
-          "coreElements": ["Utforsking og problemløsning", "Abstraksjon og generalisering"]
+          "coreElements": [
+            "Utforsking og problemløsning",
+            "Abstraksjon og generalisering"
+          ]
         },
         {
           "code": "MAT-07",
           "text": "utvikle, bruke og gi grunngjevingar for eigne prosedyrar for addisjon, subtraksjon, multiplikasjon og divisjon med heile tal",
-          "coreElements": ["Utforsking og problemløsning", "Resonnering og argumentasjon"]
+          "coreElements": [
+            "Utforsking og problemløsning",
+            "Resonnering og argumentasjon"
+          ]
         },
         {
           "code": "MAT-08",
           "text": "utforske og beskrive strukturar og mønster i tal og geometri",
-          "coreElements": ["Utforsking og problemløsning", "Abstraksjon og generalisering"]
+          "coreElements": [
+            "Utforsking og problemløsning",
+            "Abstraksjon og generalisering"
+          ]
         },
         {
           "code": "MAT-09",
           "text": "utforske og bruke posisjonssystemet for å beskrive oppbygnaden av tal, og samanlikne og ordne positive og negative heile tal, desimaltal og brøkar",
-          "coreElements": ["Abstraksjon og generalisering", "Representasjon og kommunikasjon"]
+          "coreElements": [
+            "Abstraksjon og generalisering",
+            "Representasjon og kommunikasjon"
+          ]
         },
         {
           "code": "MAT-10",
           "text": "gjere overslag over svar, utføre berekningar med dei fire rekneartane og vurdere kor rimelege svara er",
-          "coreElements": ["Utforsking og problemløsning", "Modellering og anvendelse"]
+          "coreElements": [
+            "Utforsking og problemløsning",
+            "Modellering og anvendelse"
+          ]
         }
       ],
       "7": [
         {
           "code": "MAT-11",
           "text": "utforske samanhengar mellom brøk, desimaltal og prosent, og bruke ulike representasjonar av rasjonale tal i praktiske og matematiske samanhengar",
-          "coreElements": ["Abstraksjon og generalisering", "Representasjon og kommunikasjon"]
+          "coreElements": [
+            "Abstraksjon og generalisering",
+            "Representasjon og kommunikasjon"
+          ]
         },
         {
           "code": "MAT-12",
           "text": "utforske strategiar for hovudrekning, overslagsrekning og skriftleg rekning og bruke digitale verktøy i berekning",
-          "coreElements": ["Utforsking og problemløsning", "Modellering og anvendelse"]
+          "coreElements": [
+            "Utforsking og problemløsning",
+            "Modellering og anvendelse"
+          ]
         },
         {
           "code": "MAT-13",
           "text": "utforske matematiske eigenskapar og samanhengar ved å bruke variablar, likningar, funksjonar og geometriske forhold",
-          "coreElements": ["Utforsking og problemløsning", "Abstraksjon og generalisering"]
+          "coreElements": [
+            "Utforsking og problemløsning",
+            "Abstraksjon og generalisering"
+          ]
         },
         {
           "code": "MAT-14",
           "text": "formulere og løyse problem ved å bruke matematiske metodar, og vurdere og presentere løysingane",
-          "coreElements": ["Modellering og anvendelse", "Resonnering og argumentasjon"]
+          "coreElements": [
+            "Modellering og anvendelse",
+            "Resonnering og argumentasjon"
+          ]
         },
         {
           "code": "MAT-15",
           "text": "utforske, beskrive og presentere strukturar og utviklingar i geometriske mønster og i tal",
-          "coreElements": ["Utforsking og problemløsning", "Representasjon og kommunikasjon"]
+          "coreElements": [
+            "Utforsking og problemløsning",
+            "Representasjon og kommunikasjon"
+          ]
         }
       ],
       "10": [
         {
           "code": "MAT-16",
           "text": "utforske samanhengar mellom mengder i praktiske situasjonar, og beskrive og generalisere samanhengar ved å bruke variablar, funksjonar, likningar og ulikskapar",
-          "coreElements": ["Modellering og anvendelse", "Abstraksjon og generalisering"]
+          "coreElements": [
+            "Modellering og anvendelse",
+            "Abstraksjon og generalisering"
+          ]
         },
         {
           "code": "MAT-17",
           "text": "utforske korleis algoritmar skapar, sorterer, søkjer i og presenterer data",
-          "coreElements": ["Utforsking og problemløsning", "Modellering og anvendelse"]
+          "coreElements": [
+            "Utforsking og problemløsning",
+            "Modellering og anvendelse"
+          ]
         },
         {
           "code": "MAT-18",
           "text": "formulere og løyse problem ved å bruke ulike strategiar, verktøy og formell matematikk",
-          "coreElements": ["Utforsking og problemløsning", "Resonnering og argumentasjon"]
+          "coreElements": [
+            "Utforsking og problemløsning",
+            "Resonnering og argumentasjon"
+          ]
         },
         {
           "code": "MAT-19",
           "text": "utforske matematiske metodar og verktøy, og vurdere deira moglegheiter og avgrensingar",
-          "coreElements": ["Utforsking og problemløsning", "Resonnering og argumentasjon"]
+          "coreElements": [
+            "Utforsking og problemløsning",
+            "Resonnering og argumentasjon"
+          ]
         },
         {
           "code": "MAT-20",
           "text": "presentere og grunngje analysar og resultat med omgrep, representasjonar og beringar som er tilpassa emne og mottakar",
-          "coreElements": ["Representasjon og kommunikasjon", "Resonnering og argumentasjon"]
+          "coreElements": [
+            "Representasjon og kommunikasjon",
+            "Resonnering og argumentasjon"
+          ]
         }
       ]
     }
@@ -118,119 +178,531 @@
       "2": [
         {
           "code": "NOR-01",
-          "text": "lytte, forstå og gjengi innhold fra muntlige tekster med sammensatte budskap",
-          "coreElements": ["Lese og skrive", "Muntlige tekster"]
+          "text": "lytte til og samtale om skj¿nnlitteratur og sakprosa pŒ bokmŒl og nynorsk",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Sammensatte tekster",
+            "Lese og skrive"
+          ]
         },
         {
           "code": "NOR-02",
-          "text": "uttrykke egne tanker, følelser, meninger og behov muntlig i ulike sammenhenger",
-          "coreElements": ["Muntlige tekster", "Kommunikasjon"]
+          "text": "lŒne og lese b¿ker fra biblioteket",
+          "coreElements": [
+            "Sammensatte tekster",
+            "Muntlige tekster",
+            "Tekstkompetanse"
+          ]
         },
         {
           "code": "NOR-03",
-          "text": "leke og eksperimentere med rim, rytme, språklyder, ord og meningsdanning",
-          "coreElements": ["Språk og språkbruk", "Muntlige tekster"]
+          "text": "uttrykke tekstopplevelser gjennom lek, sang, tegning, skriving og andre kreative aktiviteter",
+          "coreElements": [
+            "Sammensatte tekster",
+            "Lese og skrive",
+            "Muntlige tekster"
+          ]
         },
         {
           "code": "NOR-04",
-          "text": "samtale om illustrasjoner og sammenhenger mellom illustrasjoner og tekst",
-          "coreElements": ["Muntlige tekster", "Sammensatte tekster"]
+          "text": "samtale om og beskrive hvordan ord vi bruker, kan pŒvirke andre",
+          "coreElements": [
+            "Sammensatte tekster",
+            "Språk og språkbruk"
+          ]
         },
         {
           "code": "NOR-05",
-          "text": "utforske og leke med muntlige og skriftlige tekster",
-          "coreElements": ["Lese og skrive", "Muntlige tekster"]
+          "text": "leke med rim og rytme og lytte ut sprŒklyder og stavelser i ord",
+          "coreElements": [
+            "Tekstkompetanse",
+            "Språk og språkbruk"
+          ]
         },
         {
           "code": "NOR-06",
-          "text": "lese enkle tekster med sammenhengende setninger og reflektere over innholdet",
-          "coreElements": ["Lese og skrive", "Tekstkompetanse"]
+          "text": "trekke bokstavlyder sammen til ord under lesing og skriving",
+          "coreElements": [
+            "Muntlige tekster",
+            "Språk og språkbruk",
+            "Tekstkompetanse"
+          ]
         },
         {
           "code": "NOR-07",
-          "text": "samtale om bøker, filmer og spill og framføre enkle tekster",
-          "coreElements": ["Tekstkompetanse", "Muntlige tekster"]
+          "text": "lese med sammenheng og forstŒelse pŒ papir og digitalt og bruke enkle strategier for leseforstŒelse",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Tekstkompetanse"
+          ]
+        },
+        {
+          "code": "NOR-08",
+          "text": "lytte, ta ordet etter tur og begrunne egne meninger i samtaler",
+          "coreElements": [
+            "Sammensatte tekster",
+            "Muntlige tekster",
+            "Tekstkompetanse"
+          ]
+        },
+        {
+          "code": "NOR-09",
+          "text": "beskrive og fortelle muntlig og skriftlig",
+          "coreElements": [
+            "Sammensatte tekster",
+            "Muntlige tekster",
+            "Tekstkompetanse"
+          ]
+        },
+        {
+          "code": "NOR-10",
+          "text": "skrive tekster for hŒnd og med tastatur",
+          "coreElements": [
+            "Lese og skrive",
+            "Tekstkompetanse",
+            "Sammensatte tekster"
+          ]
+        },
+        {
+          "code": "NOR-11",
+          "text": "bruke store og smŒ bokstaver, punktum, sp¿rsmŒlstegn og utropstegn i tekster og samtale om egne og andres tekster",
+          "coreElements": [
+            "Sammensatte tekster",
+            "Muntlige tekster"
+          ]
+        },
+        {
+          "code": "NOR-12",
+          "text": "lage tekster som kombinerer skrift med bilder",
+          "coreElements": [
+            "Muntlige tekster",
+            "Lese og skrive"
+          ]
+        },
+        {
+          "code": "NOR-13",
+          "text": "utforske og samtale om oppbygningen av og betydningen til ord og uttrykk",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Lese og skrive",
+            "Sammensatte tekster"
+          ]
+        },
+        {
+          "code": "NOR-14",
+          "text": "utforske eget talesprŒk og samtale om forskjeller og likheter mellom talesprŒk og skriftsprŒk",
+          "coreElements": [
+            "Lese og skrive",
+            "Språk og språkbruk",
+            "Tekstkompetanse"
+          ]
         }
       ],
       "4": [
         {
-          "code": "NOR-08",
-          "text": "lytte til og forstå innholdet i ulike muntlige sjangrer",
-          "coreElements": ["Muntlige tekster", "Tekstkompetanse"]
+          "code": "NOR-15",
+          "text": "lese og lytte til fortellinger, eventyr, sangtekster, faktab¿ker og andre tekster pŒ bokmŒl og nynorsk og i oversettelse fra samiske og andre sprŒk, og samtale om hva tekstene betyr for eleven",
+          "coreElements": [
+            "Sammensatte tekster",
+            "Språk og språkbruk"
+          ]
         },
         {
-          "code": "NOR-09",
-          "text": "uttrykke seg med et variert ordforråd og tilpasse språket til mottaker, formål og situasjon",
-          "coreElements": ["Muntlige tekster", "Kommunikasjon", "Språk og språkbruk"]
+          "code": "NOR-16",
+          "text": "velge b¿ker fra bibliotek ut fra egne interesser og leseferdigheter",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Lese og skrive",
+            "Tekstkompetanse"
+          ]
         },
         {
-          "code": "NOR-10",
-          "text": "lese skjønnlitterære og faglitterære tekster på papir og skjerm",
-          "coreElements": ["Lese og skrive", "Tekstkompetanse"]
+          "code": "NOR-17",
+          "text": "lese tekster med flyt og forstŒelse og bruke lesestrategier mŒlrettet for Œ l¾re",
+          "coreElements": [
+            "Tekstkompetanse",
+            "Lese og skrive",
+            "Språk og språkbruk"
+          ]
         },
         {
-          "code": "NOR-11",
-          "text": "samtale om form, innhold og formål i tekster og framføre egne tekster",
-          "coreElements": ["Tekstkompetanse", "Muntlige tekster"]
+          "code": "NOR-18",
+          "text": "utforske og formidle tekster gjennom samtale, skriving, lek, bevegelse og andre kreative uttrykk",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Muntlige tekster"
+          ]
         },
         {
-          "code": "NOR-12",
-          "text": "bruke regler og konvensjoner for det norske språket når de skriver",
-          "coreElements": ["Lese og skrive", "Språk og språkbruk"]
+          "code": "NOR-19",
+          "text": "samtale om forskjellen mellom meninger og fakta i tekster",
+          "coreElements": [
+            "Tekstkompetanse",
+            "Muntlige tekster"
+          ]
+        },
+        {
+          "code": "NOR-20",
+          "text": "holde muntlige presentasjoner med og uten digitale ressurser",
+          "coreElements": [
+            "Muntlige tekster",
+            "Språk og språkbruk",
+            "Tekstkompetanse"
+          ]
+        },
+        {
+          "code": "NOR-21",
+          "text": "kombinere ulike uttrykksformer i sammensatte tekster",
+          "coreElements": [
+            "Muntlige tekster",
+            "Sammensatte tekster"
+          ]
+        },
+        {
+          "code": "NOR-22",
+          "text": "f¿lge opp innspill fra andre i faglige samtaler og stille oppklarende og utdypende sp¿rsmŒl",
+          "coreElements": [
+            "Lese og skrive",
+            "Muntlige tekster",
+            "Sammensatte tekster"
+          ]
+        },
+        {
+          "code": "NOR-23",
+          "text": "beskrive, fortelle og argumentere muntlig og skriftlig og bruke sprŒket pŒ kreative mŒter",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Muntlige tekster",
+            "Tekstkompetanse"
+          ]
+        },
+        {
+          "code": "NOR-24",
+          "text": "skrive tekster med funksjonell hŒndskrift og med tastatur",
+          "coreElements": [
+            "Muntlige tekster",
+            "Lese og skrive",
+            "Språk og språkbruk"
+          ]
+        },
+        {
+          "code": "NOR-25",
+          "text": "bruke komma og andre skilletegn i tekster",
+          "coreElements": [
+            "Sammensatte tekster",
+            "Muntlige tekster"
+          ]
+        },
+        {
+          "code": "NOR-26",
+          "text": "bruke fagsprŒk om setningsoppbygning og b¿ying av verb, substantiv og adjektiv i samtaler om sprŒk og om egne og andres tekster",
+          "coreElements": [
+            "Muntlige tekster",
+            "Tekstkompetanse"
+          ]
+        },
+        {
+          "code": "NOR-27",
+          "text": "reflektere over hvordan sprŒkbruken vŒr pŒvirker andre, og hvordan vi tilpasser og endrer sprŒket i ulike situasjoner",
+          "coreElements": [
+            "Muntlige tekster",
+            "Tekstkompetanse",
+            "Språk og språkbruk"
+          ]
+        },
+        {
+          "code": "NOR-28",
+          "text": "sammenligne ord og uttrykk i norsk og andre sprŒk",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Tekstkompetanse"
+          ]
+        },
+        {
+          "code": "NOR-29",
+          "text": "utforske og samtale om sprŒklig variasjon og mangfold i n¾rmilj¿et * utforske forskjeller og likheter mellom skriving pŒ hovedmŒl og sidemŒl",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Lese og skrive"
+          ]
         }
       ],
       "7": [
         {
-          "code": "NOR-13",
-          "text": "lytte til, gjøre seg opp en mening om og argumentere saklig i diskusjoner",
-          "coreElements": ["Muntlige tekster", "Kommunikasjon"]
+          "code": "NOR-30",
+          "text": "lese lyrikk, noveller, fagtekster og annen skj¿nnlitteratur og sakprosa pŒ bokmŒl og nynorsk, svensk og dansk og samtale om formŒl, form og innhold",
+          "coreElements": [
+            "Muntlige tekster",
+            "Lese og skrive"
+          ]
         },
         {
-          "code": "NOR-14",
-          "text": "bruke varierte muntlige framføringsformer tilpasset innhold, formål og mottaker",
-          "coreElements": ["Muntlige tekster", "Kommunikasjon"]
+          "code": "NOR-31",
+          "text": "lese samiske tekster pŒ norsk og samtale om verdiene som kommer til uttrykk, og hvordan stedsnavn og personnavn som inneholder de samiske bokstavene, uttales",
+          "coreElements": [
+            "Lese og skrive",
+            "Muntlige tekster",
+            "Språk og språkbruk"
+          ]
         },
         {
-          "code": "NOR-15",
-          "text": "bruke skjønnlitterære tekster og ungdomskultur som utgangspunkt for å reflektere over ulike måter å være menneske på",
-          "coreElements": ["Tekstkompetanse", "Lese og skrive"]
+          "code": "NOR-32",
+          "text": "orientere seg i faglige kilder pŒ bibliotek og digitalt, vurdere hvor pŒlitelige kildene er, og vise til kilder i egne tekster",
+          "coreElements": [
+            "Tekstkompetanse",
+            "Muntlige tekster",
+            "Sammensatte tekster"
+          ]
         },
         {
-          "code": "NOR-16",
-          "text": "lese, forstå og reflektere over innholdet i ulike typer tekster",
-          "coreElements": ["Lese og skrive", "Tekstkompetanse"]
+          "code": "NOR-33",
+          "text": "bruke lesestrategier tilpasset formŒlet med lesingen",
+          "coreElements": [
+            "Tekstkompetanse",
+            "Muntlige tekster"
+          ]
         },
         {
-          "code": "NOR-17",
-          "text": "skrive tekster som kombinerer skrift, lyd og bilder, tilpasset formål og mottaker",
-          "coreElements": ["Lese og skrive", "Sammensatte tekster"]
+          "code": "NOR-34",
+          "text": "skrive tekster med funksjonell hŒndskrift og med flyt pŒ tastatur",
+          "coreElements": [
+            "Lese og skrive",
+            "Tekstkompetanse",
+            "Muntlige tekster"
+          ]
+        },
+        {
+          "code": "NOR-35",
+          "text": "lytte til og videreutvikle innspill fra andre og begrunne egne standpunkter i samtaler",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Tekstkompetanse"
+          ]
+        },
+        {
+          "code": "NOR-36",
+          "text": "reflektere etisk over hvordan eleven framstiller seg selv og andre i digitale medier",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Lese og skrive"
+          ]
+        },
+        {
+          "code": "NOR-37",
+          "text": "presentere faglige emner muntlig med og uten digitale ressurser",
+          "coreElements": [
+            "Lese og skrive",
+            "Muntlige tekster",
+            "Tekstkompetanse"
+          ]
+        },
+        {
+          "code": "NOR-38",
+          "text": "leke med sprŒket og pr¿ve ut ulike virkemidler og framstillingsmŒter i muntlige og skriftlige tekster",
+          "coreElements": [
+            "Tekstkompetanse",
+            "Lese og skrive"
+          ]
+        },
+        {
+          "code": "NOR-39",
+          "text": "beskrive, fortelle, argumentere og reflektere i ulike muntlige og skriftlige sjangre og for ulike formŒl",
+          "coreElements": [
+            "Muntlige tekster",
+            "Lese og skrive",
+            "Tekstkompetanse"
+          ]
+        },
+        {
+          "code": "NOR-40",
+          "text": "skrive tekster med tydelig struktur og mestre sentrale regler for rettskriving, ordb¿ying og tegnsetting",
+          "coreElements": [
+            "Tekstkompetanse",
+            "Sammensatte tekster"
+          ]
+        },
+        {
+          "code": "NOR-41",
+          "text": "gi tilbakemelding pŒ medelevers tekster ut fra kriterier og bruke tilbakemeldinger i bearbeiding av egne tekster",
+          "coreElements": [
+            "Tekstkompetanse",
+            "Sammensatte tekster",
+            "Muntlige tekster"
+          ]
+        },
+        {
+          "code": "NOR-42",
+          "text": "bruke fagsprŒk og kunnskap om ordklasser og setningsoppbygning i samtale om egne og andres tekster",
+          "coreElements": [
+            "Lese og skrive",
+            "Muntlige tekster",
+            "Sammensatte tekster"
+          ]
+        },
+        {
+          "code": "NOR-43",
+          "text": "utforske og beskrive samspillet mellom skrift, bilder og andre uttrykksformer og lage egne sammensatte tekster",
+          "coreElements": [
+            "Tekstkompetanse",
+            "Muntlige tekster"
+          ]
+        },
+        {
+          "code": "NOR-44",
+          "text": "pr¿ve ut skriving av tekster pŒ sidemŒl",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Lese og skrive",
+            "Sammensatte tekster"
+          ]
+        },
+        {
+          "code": "NOR-45",
+          "text": "sammenligne talesprŒk i n¾rmilj¿et med andre talesprŒkvarianter i Norge og med nabosprŒk",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Muntlige tekster"
+          ]
+        },
+        {
+          "code": "NOR-46",
+          "text": "utforske og reflektere over sammenhengen mellom sprŒk og identitet",
+          "coreElements": [
+            "Sammensatte tekster",
+            "Lese og skrive",
+            "Tekstkompetanse"
+          ]
         }
       ],
       "10": [
         {
-          "code": "NOR-18",
-          "text": "mestre ulike lese- og skrivesituasjoner ved å bruke hensiktsmessige lesestrategier og skriveprosesser",
-          "coreElements": ["Lese og skrive", "Tekstkompetanse"]
+          "code": "NOR-47",
+          "text": "sammenligne og tolke romaner, noveller, lyrikk og andre tekster ut fra historisk kontekst og egen samtid",
+          "coreElements": [
+            "Tekstkompetanse",
+            "Sammensatte tekster",
+            "Språk og språkbruk"
+          ]
         },
         {
-          "code": "NOR-19",
-          "text": "bruke bibliotek og digitale kilder på en etisk forsvarlig måte",
-          "coreElements": ["Lese og skrive", "Tekstkompetanse"]
+          "code": "NOR-48",
+          "text": "beskrive og reflektere over egen bruk av lesestrategier i lesing av skj¿nnlitteratur og sakprosa",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Tekstkompetanse"
+          ]
         },
         {
-          "code": "NOR-20",
-          "text": "lytte til, ta hensyn til og utfordre andres argumenter i debatter og diskusjoner",
-          "coreElements": ["Muntlige tekster", "Kommunikasjon"]
+          "code": "NOR-49",
+          "text": "lytte til og lese tekster pŒ svensk og dansk og gj¿re rede for innhold og sprŒklige trekk",
+          "coreElements": [
+            "Lese og skrive",
+            "Språk og språkbruk"
+          ]
         },
         {
-          "code": "NOR-21",
-          "text": "bruke retoriske appellformer og virkemidler i framføring av egne muntlige tekster",
-          "coreElements": ["Muntlige tekster", "Tekstkompetanse"]
+          "code": "NOR-50",
+          "text": "utforske og reflektere over hvordan tekster framstiller unges livssituasjon",
+          "coreElements": [
+            "Lese og skrive",
+            "Språk og språkbruk",
+            "Muntlige tekster"
+          ]
         },
         {
-          "code": "NOR-22",
-          "text": "lese et representativt utvalg samtidstekster og tekster fra ulike tidsperioder og reflektere over innhold, form og formål",
-          "coreElements": ["Tekstkompetanse", "Lese og skrive"]
+          "code": "NOR-51",
+          "text": "gjenkjenne og bruke sprŒklige virkemidler og retoriske appellformer",
+          "coreElements": [
+            "Lese og skrive",
+            "Språk og språkbruk"
+          ]
+        },
+        {
+          "code": "NOR-52",
+          "text": "bruke kilder pŒ en kritisk mŒte, markere sitater og vise til kilder pŒ en etterrettelig mŒte i egne tekster",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Tekstkompetanse",
+            "Lese og skrive"
+          ]
+        },
+        {
+          "code": "NOR-53",
+          "text": "utforske og vurdere hvordan digitale medier pŒvirker og endrer sprŒk og kommunikasjon",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Tekstkompetanse"
+          ]
+        },
+        {
+          "code": "NOR-54",
+          "text": "bruke fagsprŒk og argumentere saklig i diskusjoner, samtaler, muntlige presentasjoner og skriftlige framstillinger om norskfaglige og tverrfaglige temaer",
+          "coreElements": [
+            "Lese og skrive",
+            "Muntlige tekster"
+          ]
+        },
+        {
+          "code": "NOR-55",
+          "text": "informere, fortelle, argumentere og reflektere i ulike muntlige og skriftlige sjangre og for ulike formŒl tilpasset mottaker og medium",
+          "coreElements": [
+            "Muntlige tekster",
+            "Lese og skrive",
+            "Språk og språkbruk"
+          ]
+        },
+        {
+          "code": "NOR-56",
+          "text": "skrive tekster med funksjonell tekstbinding og riktig tegnsetting og mestre rettskriving og ordb¿ying pŒ hovedmŒl og sidemŒl",
+          "coreElements": [
+            "Tekstkompetanse",
+            "Lese og skrive",
+            "Språk og språkbruk"
+          ]
+        },
+        {
+          "code": "NOR-57",
+          "text": "bruke fagsprŒk og kunnskap om grammatikk, tekststruktur og sjanger i samtale om og bearbeiding av tekster",
+          "coreElements": [
+            "Muntlige tekster",
+            "Tekstkompetanse",
+            "Sammensatte tekster"
+          ]
+        },
+        {
+          "code": "NOR-58",
+          "text": "uttrykke seg i ulike sjangre og eksperimentere med sjangre pŒ kreative mŒter",
+          "coreElements": [
+            "Lese og skrive",
+            "Språk og språkbruk",
+            "Sammensatte tekster"
+          ]
+        },
+        {
+          "code": "NOR-59",
+          "text": "lage sammensatte tekster og begrunne valg av uttrykksformer",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Lese og skrive",
+            "Muntlige tekster"
+          ]
+        },
+        {
+          "code": "NOR-60",
+          "text": "forklare den historiske bakgrunnen for bokmŒl og nynorsk og reflektere over statusen til de offisielle sprŒkene i Norge i dag",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Lese og skrive",
+            "Tekstkompetanse"
+          ]
+        },
+        {
+          "code": "NOR-61",
+          "text": "utforske sprŒklig variasjon og mangfold i Norge og reflektere over KompetansemŒl og vurdering vg2 yrkesfaglige utdanningsprogram L¾replan i norsk L¾replankode: NOR01-07 L¾replankode: NOR01-07",
+          "coreElements": [
+            "Sammensatte tekster",
+            "Lese og skrive"
+          ]
         }
       ]
     }
@@ -242,81 +714,126 @@
         {
           "code": "ENG-01",
           "text": "use basic patterns of intonation to ask questions and give statements",
-          "coreElements": ["Language learning", "Oral communication"]
+          "coreElements": [
+            "Language learning",
+            "Oral communication"
+          ]
         },
         {
           "code": "ENG-02",
           "text": "listen to and understand words and expressions in texts about familiar topics",
-          "coreElements": ["Oral communication", "Written communication"]
+          "coreElements": [
+            "Oral communication",
+            "Written communication"
+          ]
         },
         {
           "code": "ENG-03",
           "text": "use simple sentences and phrases to describe or present oneself or others",
-          "coreElements": ["Oral communication", "Language learning"]
+          "coreElements": [
+            "Oral communication",
+            "Language learning"
+          ]
         },
         {
           "code": "ENG-04",
           "text": "participate in simple, short dialogues related to everyday topics",
-          "coreElements": ["Oral communication", "Intercultural competence"]
+          "coreElements": [
+            "Oral communication",
+            "Intercultural competence"
+          ]
         },
         {
           "code": "ENG-05",
           "text": "write simple texts that describe or present oneself or others",
-          "coreElements": ["Written communication", "Language learning"]
+          "coreElements": [
+            "Written communication",
+            "Language learning"
+          ]
         }
       ],
       "7": [
         {
           "code": "ENG-06",
           "text": "identify and use different pronunciation patterns in the English language",
-          "coreElements": ["Language learning", "Oral communication"]
+          "coreElements": [
+            "Language learning",
+            "Oral communication"
+          ]
         },
         {
           "code": "ENG-07",
           "text": "listen to and understand the meaning of words and expressions based on the context they are used in",
-          "coreElements": ["Oral communication", "Language learning"]
+          "coreElements": [
+            "Oral communication",
+            "Language learning"
+          ]
         },
         {
           "code": "ENG-08",
           "text": "express oneself and interact with others spontaneously in familiar, everyday situations",
-          "coreElements": ["Oral communication", "Intercultural competence"]
+          "coreElements": [
+            "Oral communication",
+            "Intercultural competence"
+          ]
         },
         {
           "code": "ENG-09",
           "text": "use knowledge about word types and sentence structure in written and oral texts",
-          "coreElements": ["Language learning", "Written communication"]
+          "coreElements": [
+            "Language learning",
+            "Written communication"
+          ]
         },
         {
           "code": "ENG-10",
           "text": "read and understand the main content and important details in texts about various topics",
-          "coreElements": ["Written communication", "Intercultural competence"]
+          "coreElements": [
+            "Written communication",
+            "Intercultural competence"
+          ]
         }
       ],
       "10": [
         {
           "code": "ENG-11",
           "text": "express oneself fluently and coherently with a varied vocabulary and idiomatic expressions adapted to the purpose, recipient and situation",
-          "coreElements": ["Oral communication", "Language learning"]
+          "coreElements": [
+            "Oral communication",
+            "Language learning"
+          ]
         },
         {
           "code": "ENG-12",
           "text": "listen to, understand and use central terminology from education, working life and social life",
-          "coreElements": ["Oral communication", "Language learning"]
+          "coreElements": [
+            "Oral communication",
+            "Language learning"
+          ]
         },
         {
           "code": "ENG-13",
           "text": "read and understand texts of varying length about different topics at normal reading speed",
-          "coreElements": ["Written communication", "Language learning"]
+          "coreElements": [
+            "Written communication",
+            "Language learning"
+          ]
         },
         {
           "code": "ENG-14",
           "text": "write coherent texts with structure and clarity adapted to the purpose and target group",
-          "coreElements": ["Written communication", "Language learning"]
+          "coreElements": [
+            "Written communication",
+            "Language learning"
+          ]
         },
         {
           "code": "ENG-15",
           "text": "express and justify one's own points of view through oral presentations and in writing",
-          "coreElements": ["Oral communication", "Written communication"]
+          "coreElements": [
+            "Oral communication",
+            "Written communication"
+          ]
         }
       ]
     }
@@ -328,66 +845,102 @@
         {
           "code": "RLE-01",
           "text": "utforske og gi eksempler på mangfold av familieformer, samliv, vennskap og fellesskap",
-          "coreElements": ["Filosofi og etikk", "Utforskning av eksistensielle spørsmål og svar"]
+          "coreElements": [
+            "Filosofi og etikk",
+            "Utforskning av eksistensielle spørsmål og svar"
+          ]
         },
         {
           "code": "RLE-02",
           "text": "uttrykke egne tanker om liv og eksistensielle spørsmål",
-          "coreElements": ["Filosofi og etikk", "Utforskning av eksistensielle spørsmål og svar"]
+          "coreElements": [
+            "Filosofi og etikk",
+            "Utforskning av eksistensielle spørsmål og svar"
+          ]
         },
         {
           "code": "RLE-03",
           "text": "utforske og samtale om hvordan noen helligdager og merkedager markeres",
-          "coreElements": ["Religion og livssyn", "Utforskning av eksistensielle spørsmål og svar"]
+          "coreElements": [
+            "Religion og livssyn",
+            "Utforskning av eksistensielle spørsmål og svar"
+          ]
         },
         {
           "code": "RLE-04",
           "text": "gi eksempler på fortellinger fra ulike religioner og livssyn og samtale om hva fortellingene handler om",
-          "coreElements": ["Religion og livssyn", "Utforskning av eksistensielle spørsmål og svar"]
+          "coreElements": [
+            "Religion og livssyn",
+            "Utforskning av eksistensielle spørsmål og svar"
+          ]
         }
       ],
       "7": [
         {
           "code": "RLE-05",
           "text": "utforske og reflektere over egne og andres verdier og holdninger",
-          "coreElements": ["Filosofi og etikk", "Kritisk tenkning og analytisk tilnærming"]
+          "coreElements": [
+            "Filosofi og etikk",
+            "Kritisk tenkning og analytisk tilnærming"
+          ]
         },
         {
           "code": "RLE-06",
           "text": "utforske og presentere ulike perspektiver på hva det betyr å være menneske",
-          "coreElements": ["Filosofi og etikk", "Utforskning av eksistensielle spørsmål og svar"]
+          "coreElements": [
+            "Filosofi og etikk",
+            "Utforskning av eksistensielle spørsmål og svar"
+          ]
         },
         {
           "code": "RLE-07",
           "text": "utforske og presentere sentrale trekk ved kristendommen, islam, jødedom, hinduisme, buddhisme og sekulær livssynshumanisme",
-          "coreElements": ["Religion og livssyn", "Kjennskap til religioner og livssyn"]
+          "coreElements": [
+            "Religion og livssyn",
+            "Kjennskap til religioner og livssyn"
+          ]
         },
         {
           "code": "RLE-08",
           "text": "utforske og reflektere over hvordan religion og livssyn kan påvirke verdier og handlinger",
-          "coreElements": ["Religion og livssyn", "Kritisk tenkning og analytisk tilnærming"]
+          "coreElements": [
+            "Religion og livssyn",
+            "Kritisk tenkning og analytisk tilnærming"
+          ]
         }
       ],
       "10": [
         {
           "code": "RLE-09",
           "text": "utforske filosofiske spørsmål knyttet til etikk, menneskesyn og samfunn",
-          "coreElements": ["Filosofi og etikk", "Kritisk tenkning og analytisk tilnærming"]
+          "coreElements": [
+            "Filosofi og etikk",
+            "Kritisk tenkning og analytisk tilnærming"
+          ]
         },
         {
           "code": "RLE-10",
           "text": "undersøke og drøfte hvordan religion og livssyn kan bidra til dialog og samarbeid",
-          "coreElements": ["Religion og livssyn", "Dialog og toleranse"]
+          "coreElements": [
+            "Religion og livssyn",
+            "Dialog og toleranse"
+          ]
         },
         {
           "code": "RLE-11",
           "text": "analysere og vurdere egne og andres valg og handlinger i lys av ulike etiske perspektiver",
-          "coreElements": ["Filosofi og etikk", "Kritisk tenkning og analytisk tilnærming"]
+          "coreElements": [
+            "Filosofi og etikk",
+            "Kritisk tenkning og analytisk tilnærming"
+          ]
         },
         {
           "code": "RLE-12",
           "text": "utforske og drøfte hvordan religion og livssyn påvirker samfunnsutvikling",
-          "coreElements": ["Religion og livssyn", "Kjennskap til religioner og livssyn"]
+          "coreElements": [
+            "Religion og livssyn",
+            "Kjennskap til religioner og livssyn"
+          ]
         }
       ]
     }
@@ -399,66 +952,102 @@
         {
           "code": "NAT-01",
           "text": "stille spørsmål, lage hypoteser og utforske naturen gjennom observasjon og enkle undersøkelser",
-          "coreElements": ["Naturvitenskapelige praksiser", "Utforsking og problemløsing"]
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Utforsking og problemløsing"
+          ]
         },
         {
           "code": "NAT-02",
           "text": "observere og beskrive egne erfaringer i naturen og bruke ulike sanser",
-          "coreElements": ["Naturvitenskapelige praksiser", "Kommunikasjon og formidling"]
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Kommunikasjon og formidling"
+          ]
         },
         {
           "code": "NAT-03",
           "text": "gjenkjenne og samtale om noen organismer i naturen",
-          "coreElements": ["Kropp og helse", "Organismemangfold"]
+          "coreElements": [
+            "Kropp og helse",
+            "Organismemangfold"
+          ]
         },
         {
           "code": "NAT-04",
           "text": "observere, beskrive og samtale om lys, lyd, magnetisme, varme, kulde og strøm",
-          "coreElements": ["Fenomener og stoffer", "Naturvitenskapelige praksiser"]
+          "coreElements": [
+            "Fenomener og stoffer",
+            "Naturvitenskapelige praksiser"
+          ]
         }
       ],
       "7": [
         {
           "code": "NAT-05",
           "text": "planlegge og gjennomføre systematiske observasjoner og undersøkelser og bruke ulike typer instrumenter",
-          "coreElements": ["Naturvitenskapelige praksiser", "Utforsking og problemløsing"]
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Utforsking og problemløsing"
+          ]
         },
         {
           "code": "NAT-06",
           "text": "beskrive og sammenligne egenskaper ved stoffer og materialer",
-          "coreElements": ["Fenomener og stoffer", "Modellering og systematisering"]
+          "coreElements": [
+            "Fenomener og stoffer",
+            "Modellering og systematisering"
+          ]
         },
         {
           "code": "NAT-07",
           "text": "utforske hvordan mennesker bruker naturen som ressurs, og reflektere over konsekvensene",
-          "coreElements": ["Jorda, mennesket og naturen", "Kritisk vurdering"]
+          "coreElements": [
+            "Jorda, mennesket og naturen",
+            "Kritisk vurdering"
+          ]
         },
         {
           "code": "NAT-08",
           "text": "beskrive oppbygningen av solsystemet og forklare hvordan Jorda beveger seg i forhold til sola og månen",
-          "coreElements": ["Jorda i rommet", "Modellering og systematisering"]
+          "coreElements": [
+            "Jorda i rommet",
+            "Modellering og systematisering"
+          ]
         }
       ],
       "10": [
         {
           "code": "NAT-09",
           "text": "formulere hypoteser, planlegge og gjennomføre undersøkelser, og bruke dataverktøy til innsamling og bearbeiding av data",
-          "coreElements": ["Naturvitenskapelige praksiser", "Utforsking og problemløsing"]
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Utforsking og problemløsing"
+          ]
         },
         {
           "code": "NAT-10",
           "text": "forklare hvordan kjemiske reaksjoner fører til omdannelse av stoffer, og anvende dette i praktiske eksempler",
-          "coreElements": ["Fenomener og stoffer", "Modellering og systematisering"]
+          "coreElements": [
+            "Fenomener og stoffer",
+            "Modellering og systematisering"
+          ]
         },
         {
           "code": "NAT-11",
           "text": "drøfte hvordan teknologi kan bidra til en mer bærekraftig utvikling",
-          "coreElements": ["Teknologi", "Kritisk vurdering"]
+          "coreElements": [
+            "Teknologi",
+            "Kritisk vurdering"
+          ]
         },
         {
           "code": "NAT-12",
           "text": "forklare evolusjon og gi eksempler på utvikling av liv på jorda",
-          "coreElements": ["Organismemangfold", "Modellering og systematisering"]
+          "coreElements": [
+            "Organismemangfold",
+            "Modellering og systematisering"
+          ]
         }
       ]
     }
@@ -470,61 +1059,94 @@
         {
           "code": "SAF-01",
           "text": "utforske nærmiljøet og samtale om steder og plasseringer ved hjelp av kart og digitale verktøy",
-          "coreElements": ["Geografi", "Utforsking og undersøkelse"]
+          "coreElements": [
+            "Geografi",
+            "Utforsking og undersøkelse"
+          ]
         },
         {
           "code": "SAF-02",
           "text": "utforske hvordan livet til barn og unge i dag er likt og ulikt livet i ulike tider og steder",
-          "coreElements": ["Historie", "Forståelse av tid og sammenhenger"]
+          "coreElements": [
+            "Historie",
+            "Forståelse av tid og sammenhenger"
+          ]
         },
         {
           "code": "SAF-03",
           "text": "samtale om rettigheter og plikter i skolen og hva det betyr å være en god venn",
-          "coreElements": ["Samfunnsvitskap", "Demokratisk kompetanse"]
+          "coreElements": [
+            "Samfunnsvitskap",
+            "Demokratisk kompetanse"
+          ]
         }
       ],
       "7": [
         {
           "code": "SAF-04",
           "text": "stille spørsmål og undersøke forhold som angår samfunnet lokalt og globalt",
-          "coreElements": ["Utforsking og undersøkelse", "Kritisk tenkning"]
+          "coreElements": [
+            "Utforsking og undersøkelse",
+            "Kritisk tenkning"
+          ]
         },
         {
           "code": "SAF-05",
           "text": "bruke ulike kilder kritisk og belegge påstander",
-          "coreElements": ["Kritisk tenkning", "Kommunikasjon og deltaking"]
+          "coreElements": [
+            "Kritisk tenkning",
+            "Kommunikasjon og deltaking"
+          ]
         },
         {
           "code": "SAF-06",
           "text": "beskrive og vurdere menneskerettigheter og demokratiske prinsipper og rettigheter i skolen og samfunnet",
-          "coreElements": ["Samfunnsvitskap", "Demokratisk kompetanse"]
+          "coreElements": [
+            "Samfunnsvitskap",
+            "Demokratisk kompetanse"
+          ]
         },
         {
           "code": "SAF-07",
           "text": "utforske hvordan geografiske forhold påvirker og påvirkes av mennesker",
-          "coreElements": ["Geografi", "Forståelse av sammenhenger"]
+          "coreElements": [
+            "Geografi",
+            "Forståelse av sammenhenger"
+          ]
         }
       ],
       "10": [
         {
           "code": "SAF-08",
           "text": "formulere samfunnsfaglige spørsmål, innhente og bearbeide informasjon fra ulike kilder, vurdere kildenes relevans og troverdighet og referere på korrekt måte",
-          "coreElements": ["Utforsking og undersøkelse", "Kritisk tenkning"]
+          "coreElements": [
+            "Utforsking og undersøkelse",
+            "Kritisk tenkning"
+          ]
         },
         {
           "code": "SAF-09",
           "text": "vurdere og ta bevisste etiske valg basert på kunnskap om menneskerettigheter",
-          "coreElements": ["Samfunnsvitskap", "Demokratisk kompetanse"]
+          "coreElements": [
+            "Samfunnsvitskap",
+            "Demokratisk kompetanse"
+          ]
         },
         {
           "code": "SAF-10",
           "text": "drøfte årsaker til og konsekvenser av sentrale samfunnsendringer og historiske hendelser",
-          "coreElements": ["Historie", "Forståelse av tid og sammenhenger"]
+          "coreElements": [
+            "Historie",
+            "Forståelse av tid og sammenhenger"
+          ]
         },
         {
           "code": "SAF-11",
           "text": "analysere hvordan geografiske forhold påvirker levekår og samfunnsutvikling",
-          "coreElements": ["Geografi", "Kritisk tenkning"]
+          "coreElements": [
+            "Geografi",
+            "Kritisk tenkning"
+          ]
         }
       ]
     }
@@ -536,228 +1158,360 @@
         {
           "code": "KRO-01",
           "text": "utforske egen kroppslig bevegelse i lek og andre aktiviteter, alene og sammen med andre",
-          "coreElements": ["Bevegelsesgleden", "Bevegelseskompetanse"]
+          "coreElements": [
+            "Bevegelsesgleden",
+            "Bevegelseskompetanse"
+          ]
         },
         {
           "code": "KRO-02",
           "text": "utforske og gjennomføre grunnleggende bevegelser som å krype, gå, løpe, hinke, satse, lande, vende og rulle i ulike miljøer ut fra egne forutsetninger",
-          "coreElements": ["Bevegelseskompetanse", "Bevegelsesgleden"]
+          "coreElements": [
+            "Bevegelseskompetanse",
+            "Bevegelsesgleden"
+          ]
         },
         {
           "code": "KRO-03",
           "text": "øve på å avlevere, ta imot og leke med ulike redskaper og balltyper",
-          "coreElements": ["Bevegelseskompetanse", "Bevegelsesgleden"]
+          "coreElements": [
+            "Bevegelseskompetanse",
+            "Bevegelsesgleden"
+          ]
         },
         {
           "code": "KRO-04",
           "text": "leke og være med sammen med andre i aktivitet i varierte bevegelsesmiljøer",
-          "coreElements": ["Samhandling", "Bevegelsesgleden"]
+          "coreElements": [
+            "Samhandling",
+            "Bevegelsesgleden"
+          ]
         },
         {
           "code": "KRO-05",
           "text": "leke og utføre grunnleggende øvelser med tilvenning til vann, som å dykke, flyte, gli, skape framdrift, hoppe uti og orientere seg i vann",
-          "coreElements": ["Bevegelseskompetanse", "Helse og livskvalitet"]
+          "coreElements": [
+            "Bevegelseskompetanse",
+            "Helse og livskvalitet"
+          ]
         },
         {
           "code": "KRO-06",
           "text": "forstå og praktisere enkle regler for samspill i ulike bevegelsesaktiviteter",
-          "coreElements": ["Samhandling", "Bevegelseskompetanse"]
+          "coreElements": [
+            "Samhandling",
+            "Bevegelseskompetanse"
+          ]
         },
         {
           "code": "KRO-07",
           "text": "utforske naturen i nærmiljøet med varierte aktiviteter til ulike årstider",
-          "coreElements": ["Bevegelsesgleden", "Helse og livskvalitet"]
+          "coreElements": [
+            "Bevegelsesgleden",
+            "Helse og livskvalitet"
+          ]
         },
         {
           "code": "KRO-08",
           "text": "forstå og praktisere turregler og bruke klær etter vær og forhold i naturen",
-          "coreElements": ["Helse og livskvalitet", "Bevegelseskompetanse"]
+          "coreElements": [
+            "Helse og livskvalitet",
+            "Bevegelseskompetanse"
+          ]
         },
         {
           "code": "KRO-09",
           "text": "øve på trygg ferdsel i trafikken",
-          "coreElements": ["Helse og livskvalitet", "Bevegelseskompetanse"]
+          "coreElements": [
+            "Helse og livskvalitet",
+            "Bevegelseskompetanse"
+          ]
         },
         {
           "code": "KRO-10",
           "text": "øve på trygg ferdsel ved vann og på å tilkalle hjelp",
-          "coreElements": ["Helse og livskvalitet", "Bevegelseskompetanse"]
+          "coreElements": [
+            "Helse og livskvalitet",
+            "Bevegelseskompetanse"
+          ]
         }
       ],
       "4": [
         {
           "code": "KRO-11",
           "text": "utforske og gjennomføre leker, idrettsaktiviteter, danser og andre bevegelsesaktiviteter",
-          "coreElements": ["Bevegelsesgleden", "Bevegelseskompetanse"]
+          "coreElements": [
+            "Bevegelsesgleden",
+            "Bevegelseskompetanse"
+          ]
         },
         {
           "code": "KRO-12",
           "text": "bruke kroppen til å utforske aktiviteter og utvikle grunnleggende bevegelser",
-          "coreElements": ["Bevegelseskompetanse", "Bevegelsesgleden"]
+          "coreElements": [
+            "Bevegelseskompetanse",
+            "Bevegelsesgleden"
+          ]
         },
         {
           "code": "KRO-13",
           "text": "øve på og bruke basisferdigheter som å føre, kaste, sprette, sparke og ta imot ball i ulike bevegelsesaktiviteter",
-          "coreElements": ["Bevegelseskompetanse", "Bevegelsesgleden"]
+          "coreElements": [
+            "Bevegelseskompetanse",
+            "Bevegelsesgleden"
+          ]
         },
         {
           "code": "KRO-14",
           "text": "være svømmedyktig ved å falle uti på dypt vann, svømme 100 meter på magen, og underveis dykke ned og hente en gjenstand med hendene, stoppe og hvile i 3 minutter (og samtidig flyte på magen, orientere seg, rulle over og flyte på ryggen), og deretter svømme 100 meter på rygg og ta seg opp på land",
-          "coreElements": ["Bevegelseskompetanse", "Helse og livskvalitet"]
+          "coreElements": [
+            "Bevegelseskompetanse",
+            "Helse og livskvalitet"
+          ]
         },
         {
           "code": "KRO-15",
           "text": "forstå og bruke regler for samhandling i spill og bevegelsesaktiviteter",
-          "coreElements": ["Samhandling", "Bevegelseskompetanse"]
+          "coreElements": [
+            "Samhandling",
+            "Bevegelseskompetanse"
+          ]
         },
         {
           "code": "KRO-16",
           "text": "forstå kroppslig ulikhet mellom seg selv og andre, og inkludere andre i ulike bevegelsesaktiviteter",
-          "coreElements": ["Samhandling", "Helse og livskvalitet"]
+          "coreElements": [
+            "Samhandling",
+            "Helse og livskvalitet"
+          ]
         },
         {
           "code": "KRO-17",
           "text": "utforske uteaktiviteter og samarbeide med andre under vekslende årstider i nærmiljøet",
-          "coreElements": ["Bevegelsesgleden", "Samhandling"]
+          "coreElements": [
+            "Bevegelsesgleden",
+            "Samhandling"
+          ]
         },
         {
           "code": "KRO-18",
           "text": "lage og bruke kart for å orientere seg i kjent terreng",
-          "coreElements": ["Bevegelseskompetanse", "Helse og livskvalitet"]
+          "coreElements": [
+            "Bevegelseskompetanse",
+            "Helse og livskvalitet"
+          ]
         },
         {
           "code": "KRO-19",
           "text": "øve på trygg og sporløs ferdsel i naturen",
-          "coreElements": ["Helse og livskvalitet", "Bevegelseskompetanse"]
+          "coreElements": [
+            "Helse og livskvalitet",
+            "Bevegelseskompetanse"
+          ]
         },
         {
           "code": "KRO-20",
           "text": "forstå og følge regler i trafikken",
-          "coreElements": ["Helse og livskvalitet", "Bevegelseskompetanse"]
+          "coreElements": [
+            "Helse og livskvalitet",
+            "Bevegelseskompetanse"
+          ]
         }
       ],
       "7": [
         {
           "code": "KRO-21",
           "text": "utforske og gjennomføre lek og spill sammen med andre i ulike bevegelsesaktiviteter",
-          "coreElements": ["Bevegelsesgleden", "Samhandling"]
+          "coreElements": [
+            "Bevegelsesgleden",
+            "Samhandling"
+          ]
         },
         {
           "code": "KRO-22",
           "text": "øve på sammensatte bevegelser, alene og sammen med andre",
-          "coreElements": ["Bevegelseskompetanse", "Bevegelsesgleden"]
+          "coreElements": [
+            "Bevegelseskompetanse",
+            "Bevegelsesgleden"
+          ]
         },
         {
           "code": "KRO-23",
           "text": "gjennomføre aktiviteter ut fra egne interesser og forutsetninger i dans, friluftsliv, idrettsaktiviteter og andre bevegelsesaktiviteter",
-          "coreElements": ["Bevegelsesgleden", "Helse og livskvalitet"]
+          "coreElements": [
+            "Bevegelsesgleden",
+            "Helse og livskvalitet"
+          ]
         },
         {
           "code": "KRO-24",
           "text": "bruke kart, digitale verktøy og tegn i naturen til å orientere seg i natur og nærmiljø",
-          "coreElements": ["Bevegelseskompetanse", "Helse og livskvalitet"]
+          "coreElements": [
+            "Bevegelseskompetanse",
+            "Helse og livskvalitet"
+          ]
         },
         {
           "code": "KRO-25",
           "text": "forstå og praktisere regler for aktivitet og spill og respektere resultatene",
-          "coreElements": ["Samhandling", "Bevegelseskompetanse"]
+          "coreElements": [
+            "Samhandling",
+            "Bevegelseskompetanse"
+          ]
         },
         {
           "code": "KRO-26",
           "text": "forstå ulikheter mellom seg selv og andre og delta i bevegelsesaktiviteter som kan være tilpasset ikke bare egne forutsetninger, men også andres",
-          "coreElements": ["Samhandling", "Helse og livskvalitet"]
+          "coreElements": [
+            "Samhandling",
+            "Helse og livskvalitet"
+          ]
         },
         {
           "code": "KRO-27",
           "text": "utføre grunnleggende teknikker i svømming på magen, på ryggen og under vann",
-          "coreElements": ["Bevegelseskompetanse", "Helse og livskvalitet"]
+          "coreElements": [
+            "Bevegelseskompetanse",
+            "Helse og livskvalitet"
+          ]
         },
         {
           "code": "KRO-28",
           "text": "vurdere sikkerhet i uteaktivitet og naturferdsel og gjennomføre selvberging i vann",
-          "coreElements": ["Helse og livskvalitet", "Bevegelseskompetanse"]
+          "coreElements": [
+            "Helse og livskvalitet",
+            "Bevegelseskompetanse"
+          ]
         },
         {
           "code": "KRO-29",
           "text": "bruke nærmiljøet og utforske lokale kulturer for friluftsliv",
-          "coreElements": ["Bevegelsesgleden", "Helse og livskvalitet"]
+          "coreElements": [
+            "Bevegelsesgleden",
+            "Helse og livskvalitet"
+          ]
         },
         {
           "code": "KRO-30",
           "text": "gjøre rede for allemannsretten under ferdsel og opphold i naturen",
-          "coreElements": ["Helse og livskvalitet", "Bevegelseskompetanse"]
+          "coreElements": [
+            "Helse og livskvalitet",
+            "Bevegelseskompetanse"
+          ]
         },
         {
           "code": "KRO-31",
           "text": "gjennomføre overnattingstur og reflektere over egne naturopplevelser",
-          "coreElements": ["Bevegelsesgleden", "Helse og livskvalitet"]
+          "coreElements": [
+            "Bevegelsesgleden",
+            "Helse og livskvalitet"
+          ]
         }
       ],
       "10": [
         {
           "code": "KRO-32",
           "text": "utforske egne muligheter til trening, helse og velvære gjennom lek, dans, friluftsliv, idrettsaktiviteter og andre bevegelsesaktiviteter",
-          "coreElements": ["Helse og livskvalitet", "Bevegelsesgleden"]
+          "coreElements": [
+            "Helse og livskvalitet",
+            "Bevegelsesgleden"
+          ]
         },
         {
           "code": "KRO-33",
           "text": "trene på og utvikle ferdigheter i varierte bevegelsesaktiviteter",
-          "coreElements": ["Bevegelseskompetanse", "Bevegelsesgleden"]
+          "coreElements": [
+            "Bevegelseskompetanse",
+            "Bevegelsesgleden"
+          ]
         },
         {
           "code": "KRO-34",
           "text": "øve på og gjennomføre danseaktiviteter fra ungdomskulturer og andre kulturer, og sammen med medelever skape og presentere dansekomposisjoner",
-          "coreElements": ["Bevegelseskompetanse", "Samhandling"]
+          "coreElements": [
+            "Bevegelseskompetanse",
+            "Samhandling"
+          ]
         },
         {
           "code": "KRO-35",
           "text": "reflektere over hvordan ulike framstillinger av kropp i media og samfunnet påvirker bevegelsesaktivitet, kroppsidentitet og selvbilde",
-          "coreElements": ["Helse og livskvalitet", "Samhandling"]
+          "coreElements": [
+            "Helse og livskvalitet",
+            "Samhandling"
+          ]
         },
         {
           "code": "KRO-36",
           "text": "planlegge og gjennomføre bevegelsesaktiviteter som kan gjennomføres ved skader eller sykdom",
-          "coreElements": ["Helse og livskvalitet", "Bevegelseskompetanse"]
+          "coreElements": [
+            "Helse og livskvalitet",
+            "Bevegelseskompetanse"
+          ]
         },
         {
           "code": "KRO-37",
           "text": "bruke egne ferdigheter og kunnskaper på en slik måte at det kan medvirke til framgang for andre",
-          "coreElements": ["Samhandling", "Bevegelseskompetanse"]
+          "coreElements": [
+            "Samhandling",
+            "Bevegelseskompetanse"
+          ]
         },
         {
           "code": "KRO-38",
           "text": "anerkjenne ulikhet mellom seg selv og andre i bevegelsesaktiviteter og inkludere alle, uavhengig av forutsetninger",
-          "coreElements": ["Samhandling", "Helse og livskvalitet"]
+          "coreElements": [
+            "Samhandling",
+            "Helse og livskvalitet"
+          ]
         },
         {
           "code": "KRO-39",
           "text": "forstå flere typer kart og digitale verktøy og bruke dem til å orientere seg i kjente og ukjente miljøer",
-          "coreElements": ["Bevegelseskompetanse", "Helse og livskvalitet"]
+          "coreElements": [
+            "Bevegelseskompetanse",
+            "Helse og livskvalitet"
+          ]
         },
         {
           "code": "KRO-40",
           "text": "utføre varierte svømmeteknikker og svømme en lengre distanse basert på egen målsetting",
-          "coreElements": ["Bevegelseskompetanse", "Helse og livskvalitet"]
+          "coreElements": [
+            "Bevegelseskompetanse",
+            "Helse og livskvalitet"
+          ]
         },
         {
           "code": "KRO-41",
           "text": "forstå og gjennomføre livredning i, på og ved vann ute i naturen",
-          "coreElements": ["Helse og livskvalitet", "Bevegelseskompetanse"]
+          "coreElements": [
+            "Helse og livskvalitet",
+            "Bevegelseskompetanse"
+          ]
         },
         {
           "code": "KRO-42",
           "text": "forstå og gjennomføre livreddende førstehjelp",
-          "coreElements": ["Helse og livskvalitet", "Bevegelseskompetanse"]
+          "coreElements": [
+            "Helse og livskvalitet",
+            "Bevegelseskompetanse"
+          ]
         },
         {
           "code": "KRO-43",
           "text": "gjennomføre friluftslivsaktiviteter til ulike årstider, også med overnatting ute, og reflektere over hva naturopplevelser kan bety for seg selv og andre",
-          "coreElements": ["Bevegelsesgleden", "Helse og livskvalitet"]
+          "coreElements": [
+            "Bevegelsesgleden",
+            "Helse og livskvalitet"
+          ]
         },
         {
           "code": "KRO-44",
           "text": "vurdere risiko og sikkerhet ved ulike uteaktiviteter, og forstå og gjennomføre sporløs og trygg ferdsel",
-          "coreElements": ["Helse og livskvalitet", "Bevegelseskompetanse"]
+          "coreElements": [
+            "Helse og livskvalitet",
+            "Bevegelseskompetanse"
+          ]
         }
       ]
     }
@@ -769,213 +1523,336 @@
         {
           "code": "KHV-01",
           "text": "bruke håndverksteknikker og håndverktøy i utforming av tre, leire og tekstil på en miljøbevisst og trygg måte",
-          "coreElements": ["Visuelle uttrykksformer", "Håndverk og design"]
+          "coreElements": [
+            "Visuelle uttrykksformer",
+            "Håndverk og design"
+          ]
         },
         {
           "code": "KHV-02",
           "text": "undersøke egenskaper ved materialer og dele sanseerfaringer",
-          "coreElements": ["Håndverk og design", "Visuelle uttrykksformer"]
+          "coreElements": [
+            "Håndverk og design",
+            "Visuelle uttrykksformer"
+          ]
         },
         {
           "code": "KHV-03",
           "text": "utforske ulike visuelle uttrykk og bygge videre på andres ideer i eget skapende arbeid",
-          "coreElements": ["Visuelle uttrykksformer", "Kunst og visuell kommunikasjon"]
+          "coreElements": [
+            "Visuelle uttrykksformer",
+            "Kunst og visuell kommunikasjon"
+          ]
         },
         {
           "code": "KHV-04",
           "text": "eksperimentere med form, farge, rytme og kontrast",
-          "coreElements": ["Visuelle uttrykksformer", "Kunst og visuell kommunikasjon"]
+          "coreElements": [
+            "Visuelle uttrykksformer",
+            "Kunst og visuell kommunikasjon"
+          ]
         },
         {
           "code": "KHV-05",
           "text": "studere form gjennom å tegne, male og fotografere",
-          "coreElements": ["Visuelle uttrykksformer", "Kunst og visuell kommunikasjon"]
+          "coreElements": [
+            "Visuelle uttrykksformer",
+            "Kunst og visuell kommunikasjon"
+          ]
         },
         {
           "code": "KHV-06",
           "text": "skape fortellinger ved hjelp av digitale verktøy etter inspirasjon fra lokale og nasjonale kunstverk",
-          "coreElements": ["Kunst og visuell kommunikasjon", "Visuelle uttrykksformer"]
+          "coreElements": [
+            "Kunst og visuell kommunikasjon",
+            "Visuelle uttrykksformer"
+          ]
         },
         {
           "code": "KHV-07",
           "text": "forestille seg og beskrive framtiden gjennom tegning og modeller",
-          "coreElements": ["Visuelle uttrykksformer", "Arkitektur"]
+          "coreElements": [
+            "Visuelle uttrykksformer",
+            "Arkitektur"
+          ]
         },
         {
           "code": "KHV-08",
           "text": "planlegge og konstruere i naturmaterialer etter inspirasjon fra samisk og lokal byggeskikk",
-          "coreElements": ["Arkitektur", "Håndverk og design"]
+          "coreElements": [
+            "Arkitektur",
+            "Håndverk og design"
+          ]
         },
         {
           "code": "KHV-09",
           "text": "vise fram og presentere objekter gjennom utstilling eller samling",
-          "coreElements": ["Kunst og visuell kommunikasjon", "Håndverk og design"]
+          "coreElements": [
+            "Kunst og visuell kommunikasjon",
+            "Håndverk og design"
+          ]
         }
       ],
       "4": [
         {
           "code": "KHV-10",
           "text": "bruke håndverktøy og sammenføyningsteknikker i tre, leire og tekstil på en miljøbevisst og trygg måte",
-          "coreElements": ["Håndverk og design", "Visuelle uttrykksformer"]
+          "coreElements": [
+            "Håndverk og design",
+            "Visuelle uttrykksformer"
+          ]
         },
         {
           "code": "KHV-11",
           "text": "prøve ut ulike ideer og muligheter i gjenbruksmaterialer og formidle til andre hvordan man i egen hverdag kan bidra til å ivareta natur og miljø",
-          "coreElements": ["Håndverk og design", "Kunst og visuell kommunikasjon"]
+          "coreElements": [
+            "Håndverk og design",
+            "Kunst og visuell kommunikasjon"
+          ]
         },
         {
           "code": "KHV-12",
           "text": "gjennomføre kunst- og designprosesser ved å søke inspirasjon, utforske muligheter, gjøre valg og lage egne produkter",
-          "coreElements": ["Håndverk og design", "Visuelle uttrykksformer"]
+          "coreElements": [
+            "Håndverk og design",
+            "Visuelle uttrykksformer"
+          ]
         },
         {
           "code": "KHV-13",
           "text": "undersøke hvordan tradisjonshåndverk, inkludert samisk håndverk, utnytter naturmaterialers egenskaper, og bruke erfaringer til å lage enkle bruksgjenstander",
-          "coreElements": ["Håndverk og design", "Kunst og visuell kommunikasjon"]
+          "coreElements": [
+            "Håndverk og design",
+            "Kunst og visuell kommunikasjon"
+          ]
         },
         {
           "code": "KHV-14",
           "text": "samtale om bruk, funksjon og materialvalg i ulike bygninger og lage skisser med forslag til ny arkitektur",
-          "coreElements": ["Arkitektur", "Håndverk og design"]
+          "coreElements": [
+            "Arkitektur",
+            "Håndverk og design"
+          ]
         },
         {
           "code": "KHV-15",
           "text": "tolke former og symboler fra ulike kulturer og bruke disse i visuelle uttrykk",
-          "coreElements": ["Kunst og visuell kommunikasjon", "Visuelle uttrykksformer"]
+          "coreElements": [
+            "Kunst og visuell kommunikasjon",
+            "Visuelle uttrykksformer"
+          ]
         },
         {
           "code": "KHV-16",
           "text": "tegne form og dybde ved bruk av virkemidler som overlapping og forminskning",
-          "coreElements": ["Visuelle uttrykksformer", "Kunst og visuell kommunikasjon"]
+          "coreElements": [
+            "Visuelle uttrykksformer",
+            "Kunst og visuell kommunikasjon"
+          ]
         },
         {
           "code": "KHV-17",
           "text": "bruke enkle komposisjonsprinsipper i fotografi og digitale verktøy",
-          "coreElements": ["Visuelle uttrykksformer", "Kunst og visuell kommunikasjon"]
+          "coreElements": [
+            "Visuelle uttrykksformer",
+            "Kunst og visuell kommunikasjon"
+          ]
         },
         {
           "code": "KHV-18",
           "text": "utforske mangfold i motiver og visuelle uttrykk i kunst fra ulike verdensdeler og lage en digital presentasjon",
-          "coreElements": ["Kunst og visuell kommunikasjon", "Visuelle uttrykksformer"]
+          "coreElements": [
+            "Kunst og visuell kommunikasjon",
+            "Visuelle uttrykksformer"
+          ]
         },
         {
           "code": "KHV-19",
           "text": "formidle og vise fram eget arbeid gjennom utstilling",
-          "coreElements": ["Kunst og visuell kommunikasjon", "Håndverk og design"]
+          "coreElements": [
+            "Kunst og visuell kommunikasjon",
+            "Håndverk og design"
+          ]
         }
       ],
       "7": [
         {
           "code": "KHV-20",
           "text": "bruke ulike håndverktøy og elektriske verktøy for å bearbeide og sammenføye harde, plastiske og myke materialer på en trygg og miljøbevisst måte",
-          "coreElements": ["Håndverk og design", "Visuelle uttrykksformer"]
+          "coreElements": [
+            "Håndverk og design",
+            "Visuelle uttrykksformer"
+          ]
         },
         {
           "code": "KHV-21",
           "text": "undersøke materialene i ulike gjenstander og vurdere funksjon, holdbarhet og muligheter for reparasjon og gjenbruk",
-          "coreElements": ["Håndverk og design", "Kunst og visuell kommunikasjon"]
+          "coreElements": [
+            "Håndverk og design",
+            "Kunst og visuell kommunikasjon"
+          ]
         },
         {
           "code": "KHV-22",
           "text": "bygge og eksperimentere med stabile konstruksjoner",
-          "coreElements": ["Håndverk og design", "Arkitektur"]
+          "coreElements": [
+            "Håndverk og design",
+            "Arkitektur"
+          ]
         },
         {
           "code": "KHV-23",
           "text": "bruke ulike strategier for idéutvikling og problemløsing",
-          "coreElements": ["Håndverk og design", "Visuelle uttrykksformer"]
+          "coreElements": [
+            "Håndverk og design",
+            "Visuelle uttrykksformer"
+          ]
         },
         {
           "code": "KHV-24",
           "text": "bruke digitale verktøy til å planlegge og presentere prosesser og produkter",
-          "coreElements": ["Håndverk og design", "Kunst og visuell kommunikasjon"]
+          "coreElements": [
+            "Håndverk og design",
+            "Kunst og visuell kommunikasjon"
+          ]
         },
         {
           "code": "KHV-25",
           "text": "tegne form, flate og rom ved hjelp av virkemidler som kontraster, skygge, proporsjoner og perspektiv",
-          "coreElements": ["Visuelle uttrykksformer", "Kunst og visuell kommunikasjon"]
+          "coreElements": [
+            "Visuelle uttrykksformer",
+            "Kunst og visuell kommunikasjon"
+          ]
         },
         {
           "code": "KHV-26",
           "text": "utforske og reflektere over hvordan følelser og meninger vises i kunst, og bruke symbolikk og farge til å uttrykke følelser og meninger i egne arbeider",
-          "coreElements": ["Kunst og visuell kommunikasjon", "Visuelle uttrykksformer"]
+          "coreElements": [
+            "Kunst og visuell kommunikasjon",
+            "Visuelle uttrykksformer"
+          ]
         },
         {
           "code": "KHV-27",
           "text": "analysere visuelle virkemidler i ulike medier og belyse et aktuelt tema gjennom foto eller infografikk",
-          "coreElements": ["Kunst og visuell kommunikasjon", "Visuelle uttrykksformer"]
+          "coreElements": [
+            "Kunst og visuell kommunikasjon",
+            "Visuelle uttrykksformer"
+          ]
         },
         {
           "code": "KHV-28",
           "text": "beskrive mangfoldet i klestradisjoner eller gjenstander, inkludert samiske, og lage et produkt med inspirasjon fra kulturarv",
-          "coreElements": ["Håndverk og design", "Kunst og visuell kommunikasjon"]
+          "coreElements": [
+            "Håndverk og design",
+            "Kunst og visuell kommunikasjon"
+          ]
         },
         {
           "code": "KHV-29",
           "text": "undersøke hvordan kjønnsroller vises i kulturelle uttrykk før og nå, og lage visuelle uttrykk som utfordrer stereotypier",
-          "coreElements": ["Kunst og visuell kommunikasjon", "Visuelle uttrykksformer"]
+          "coreElements": [
+            "Kunst og visuell kommunikasjon",
+            "Visuelle uttrykksformer"
+          ]
         },
         {
           "code": "KHV-30",
           "text": "bruke programmering til å skape interaktivitet og visuelle uttrykk",
-          "coreElements": ["Visuelle uttrykksformer", "Håndverk og design"]
+          "coreElements": [
+            "Visuelle uttrykksformer",
+            "Håndverk og design"
+          ]
         },
         {
           "code": "KHV-31",
           "text": "designe og lage en utstilling som viser fram prosess og produkt",
-          "coreElements": ["Kunst og visuell kommunikasjon", "Håndverk og design"]
+          "coreElements": [
+            "Kunst og visuell kommunikasjon",
+            "Håndverk og design"
+          ]
         }
       ],
       "10": [
         {
           "code": "KHV-32",
           "text": "utforske muligheter innenfor håndverksteknikker og egnet teknologi ved å bearbeide og sammenføye harde, plastiske og myke materialer",
-          "coreElements": ["Håndverk og design", "Visuelle uttrykksformer"]
+          "coreElements": [
+            "Håndverk og design",
+            "Visuelle uttrykksformer"
+          ]
         },
         {
           "code": "KHV-33",
           "text": "vurdere materialers holdbarhet og muligheter for reparasjon og gjenbruk, og bruke ulike verktøy og materialer på en hensiktsmessig og miljøbevisst måte",
-          "coreElements": ["Håndverk og design", "Kunst og visuell kommunikasjon"]
+          "coreElements": [
+            "Håndverk og design",
+            "Kunst og visuell kommunikasjon"
+          ]
         },
         {
           "code": "KHV-34",
           "text": "utvikle løsninger gjennom en stegvis designprosess og vurdere holdbarhet, funksjon og estetisk uttrykk",
-          "coreElements": ["Håndverk og design", "Visuelle uttrykksformer"]
+          "coreElements": [
+            "Håndverk og design",
+            "Visuelle uttrykksformer"
+          ]
         },
         {
           "code": "KHV-35",
           "text": "utforske hvordan digitale verktøy og ny teknologi kan gi muligheter for kommunikasjonsformer og opplevelser i skapende prosesser og produkter",
-          "coreElements": ["Kunst og visuell kommunikasjon", "Håndverk og design"]
+          "coreElements": [
+            "Kunst og visuell kommunikasjon",
+            "Håndverk og design"
+          ]
         },
         {
           "code": "KHV-36",
           "text": "visualisere form ved hjelp av frihåndstegninger, arbeidstegninger, modeller og digitale verktøy",
-          "coreElements": ["Visuelle uttrykksformer", "Håndverk og design"]
+          "coreElements": [
+            "Visuelle uttrykksformer",
+            "Håndverk og design"
+          ]
         },
         {
           "code": "KHV-37",
           "text": "analysere hvordan identitet og stedstilhørighet kommuniseres i arkitektur, klestradisjoner, kunst eller gjenstander, og integrere kulturelle referanser i eget skapende arbeid",
-          "coreElements": ["Kunst og visuell kommunikasjon", "Arkitektur"]
+          "coreElements": [
+            "Kunst og visuell kommunikasjon",
+            "Arkitektur"
+          ]
         },
         {
           "code": "KHV-38",
           "text": "undersøke hvordan kunst, inkludert samisk kunst, kan bidra i samfunnskritikk, og skape kunstuttrykk som belyser utfordringer i egen samtid",
-          "coreElements": ["Kunst og visuell kommunikasjon", "Visuelle uttrykksformer"]
+          "coreElements": [
+            "Kunst og visuell kommunikasjon",
+            "Visuelle uttrykksformer"
+          ]
         },
         {
           "code": "KHV-39",
           "text": "reflektere kritisk over visuelle virkemidler og eksperimentere med ulike visuelle uttrykk i en skapende prosess",
-          "coreElements": ["Kunst og visuell kommunikasjon", "Visuelle uttrykksformer"]
+          "coreElements": [
+            "Kunst og visuell kommunikasjon",
+            "Visuelle uttrykksformer"
+          ]
         },
         {
           "code": "KHV-40",
           "text": "lage skisser til fornyelse av lokale omgivelser og modellere arkitektoniske løsninger som ivaretar ulike behov og interesser",
-          "coreElements": ["Arkitektur", "Håndverk og design"]
+          "coreElements": [
+            "Arkitektur",
+            "Håndverk og design"
+          ]
         },
         {
           "code": "KHV-41",
           "text": "fordype seg i en visuell uttrykksform og/eller en håndverksteknikk, utforske muligheter gjennom praktisk skapende arbeid og presentere valg fra idé til ferdig resultat",
-          "coreElements": ["Håndverk og design", "Kunst og visuell kommunikasjon"]
+          "coreElements": [
+            "Håndverk og design",
+            "Kunst og visuell kommunikasjon"
+          ]
         }
       ]
     }
@@ -987,148 +1864,232 @@
         {
           "code": "MUS-01",
           "text": "utøve et repertoar av sangleker, sanger og danser hentet fra elevenes nære musikkultur og fra kulturarven",
-          "coreElements": ["Musisere", "Komponere"]
+          "coreElements": [
+            "Musisere",
+            "Komponere"
+          ]
         },
         {
           "code": "MUS-02",
           "text": "utforske og eksperimentere med puls, rytme, tempo, klang, melodi, dynamikk, harmoni og form i dans, med stemmen og i spill på instrumenter",
-          "coreElements": ["Musisere", "Lytte"]
+          "coreElements": [
+            "Musisere",
+            "Lytte"
+          ]
         },
         {
           "code": "MUS-03",
           "text": "leke med musikkens grunnelementer gjennom lyd og stemme, lage mønstre og sette sammen mønstrene til enkle improvisasjoner og komposisjoner, også med digitale verktøy",
-          "coreElements": ["Komponere", "Musisere"]
+          "coreElements": [
+            "Komponere",
+            "Musisere"
+          ]
         },
         {
           "code": "MUS-04",
           "text": "formidle opplevelser av ulike musikalske uttrykk gjennom samtale og kunstneriske uttrykksformer",
-          "coreElements": ["Lytte", "Komponere"]
+          "coreElements": [
+            "Lytte",
+            "Komponere"
+          ]
         }
       ],
       "4": [
         {
           "code": "MUS-05",
           "text": "utøve og utforske et repertoar av sanger og danser fra ulike musikkulturer, inkludert samisk musikkultur",
-          "coreElements": ["Musisere", "Lytte"]
+          "coreElements": [
+            "Musisere",
+            "Lytte"
+          ]
         },
         {
           "code": "MUS-06",
           "text": "synge og spille på instrumenter alene og sammen med andre ved bruk av gehør og enkel notasjon",
-          "coreElements": ["Musisere", "Komponere"]
+          "coreElements": [
+            "Musisere",
+            "Komponere"
+          ]
         },
         {
           "code": "MUS-07",
           "text": "eksperimentere med rytmer, melodier og andre grunnelementer, sette sammen mønstre til komposisjoner, også ved bruk av digitale verktøy, og beskrive arbeidsprosesser og resultater",
-          "coreElements": ["Komponere", "Lytte"]
+          "coreElements": [
+            "Komponere",
+            "Lytte"
+          ]
         },
         {
           "code": "MUS-08",
           "text": "formidle egne musikkopplevelser og beskrive bruk av musikalske virkemidler ved hjelp av enkle fagbegreper",
-          "coreElements": ["Lytte", "Musisere"]
+          "coreElements": [
+            "Lytte",
+            "Musisere"
+          ]
         },
         {
           "code": "MUS-09",
           "text": "samtale om og reflektere over hvordan musikk skaper mening når den brukes i ulike sosiale sammenhenger",
-          "coreElements": ["Lytte", "Komponere"]
+          "coreElements": [
+            "Lytte",
+            "Komponere"
+          ]
         }
       ],
       "7": [
         {
           "code": "MUS-10",
           "text": "utøve et repertoar av musikk, sang, andre vokale uttrykk og dans fra samtiden og historien",
-          "coreElements": ["Musisere", "Lytte"]
+          "coreElements": [
+            "Musisere",
+            "Lytte"
+          ]
         },
         {
           "code": "MUS-11",
           "text": "utforske og drøfte hvordan musikk fra fortiden påvirker dagens musikk",
-          "coreElements": ["Lytte", "Komponere"]
+          "coreElements": [
+            "Lytte",
+            "Komponere"
+          ]
         },
         {
           "code": "MUS-12",
           "text": "øve inn og framføre sang og musikk, i samspill eller individuelt, gehørbasert og ved bruk av enkle notasjonsteknikker",
-          "coreElements": ["Musisere", "Komponere"]
+          "coreElements": [
+            "Musisere",
+            "Komponere"
+          ]
         },
         {
           "code": "MUS-13",
           "text": "lytte, eksperimentere og skape nye uttrykk med instrumenter, kropp, stemme eller lyd fra andre kilder, og presentere resultatet",
-          "coreElements": ["Komponere", "Lytte"]
+          "coreElements": [
+            "Komponere",
+            "Lytte"
+          ]
         },
         {
           "code": "MUS-14",
           "text": "bruke teknologi og digitale verktøy til å skape, øve inn og bearbeide musikk",
-          "coreElements": ["Komponere", "Musisere"]
+          "coreElements": [
+            "Komponere",
+            "Musisere"
+          ]
         },
         {
           "code": "MUS-15",
           "text": "bruke fagbegreper i beskrivelse av og refleksjon over arbeidsprosesser, resultater, musikalske uttrykk og virkemidler",
-          "coreElements": ["Lytte", "Komponere"]
+          "coreElements": [
+            "Lytte",
+            "Komponere"
+          ]
         },
         {
           "code": "MUS-16",
           "text": "utforske og formidle musikalske opplevelser og erfaringer",
-          "coreElements": ["Lytte", "Musisere"]
+          "coreElements": [
+            "Lytte",
+            "Musisere"
+          ]
         },
         {
           "code": "MUS-17",
           "text": "undersøke hvordan kjønn, kjønnsroller og seksualitet fremstilles i musikk og dans i det offentlige rom, og skape uttrykk som utfordrer stereotypier",
-          "coreElements": ["Lytte", "Komponere"]
+          "coreElements": [
+            "Lytte",
+            "Komponere"
+          ]
         },
         {
           "code": "MUS-18",
           "text": "reflektere over hvordan musikk kan spille ulike roller for utvikling av individer og gruppers identitet",
-          "coreElements": ["Lytte", "Musisere"]
+          "coreElements": [
+            "Lytte",
+            "Musisere"
+          ]
         }
       ],
       "10": [
         {
           "code": "MUS-19",
           "text": "utøve et variert repertoar av musikk, sang, andre vokale uttrykk og dans",
-          "coreElements": ["Musisere", "Komponere"]
+          "coreElements": [
+            "Musisere",
+            "Komponere"
+          ]
         },
         {
           "code": "MUS-20",
           "text": "reflektere over hvordan musikalske tradisjoner, inkludert samiske musikktradisjoner, bevares og fornyes",
-          "coreElements": ["Lytte", "Musisere"]
+          "coreElements": [
+            "Lytte",
+            "Musisere"
+          ]
         },
         {
           "code": "MUS-21",
           "text": "samarbeide med andre om å planlegge og gjennomføre øvingsprosesser hvor det inngår selvvalgt sang, andre vokale uttrykk, spill på instrumenter eller dans, og formidle resultatet i gruppe eller individuelt",
-          "coreElements": ["Musisere", "Komponere"]
+          "coreElements": [
+            "Musisere",
+            "Komponere"
+          ]
         },
         {
           "code": "MUS-22",
           "text": "skape og programmere musikalske forløp ved å eksperimentere med lyd fra ulike kilder",
-          "coreElements": ["Komponere", "Musisere"]
+          "coreElements": [
+            "Komponere",
+            "Musisere"
+          ]
         },
         {
           "code": "MUS-23",
           "text": "utforske og formidle musikalske opplevelser og erfaringer, og reflektere over bruk av musikalske virkemidler",
-          "coreElements": ["Lytte", "Komponere"]
+          "coreElements": [
+            "Lytte",
+            "Komponere"
+          ]
         },
         {
           "code": "MUS-24",
           "text": "lytte og prøve ut ulike uttrykk og begrunne valg i skapende prosesser fra idé til ferdig resultat",
-          "coreElements": ["Komponere", "Lytte"]
+          "coreElements": [
+            "Komponere",
+            "Lytte"
+          ]
         },
         {
           "code": "MUS-25",
           "text": "bruke gehør og notasjonsteknikker som støtte i skapende arbeid",
-          "coreElements": ["Komponere", "Musisere"]
+          "coreElements": [
+            "Komponere",
+            "Musisere"
+          ]
         },
         {
           "code": "MUS-26",
           "text": "bruke relevante fagbegreper i skapende arbeid og i refleksjon over prosesser og resultater",
-          "coreElements": ["Komponere", "Lytte"]
+          "coreElements": [
+            "Komponere",
+            "Lytte"
+          ]
         },
         {
           "code": "MUS-27",
           "text": "utforske og reflektere over hvordan musikk, sang og dans som estetiske uttrykk er påvirket av og uttrykk for historiske og samfunnsmessige forhold, og skape musikalske uttrykk som tar opp utfordringer i samtiden",
-          "coreElements": ["Lytte", "Komponere"]
+          "coreElements": [
+            "Lytte",
+            "Komponere"
+          ]
         },
         {
           "code": "MUS-28",
           "text": "utforske og drøfte musikkens og dansens betydning i samfunnet og etiske problemstillinger knyttet til musikalske ytringer og musikkulturer",
-          "coreElements": ["Lytte", "Musisere"]
+          "coreElements": [
+            "Lytte",
+            "Musisere"
+          ]
         }
       ]
     }
@@ -1140,141 +2101,222 @@
         {
           "code": "MAH-01",
           "text": "følge prinsipper for god hygiene i forbindelse med matlaging",
-          "coreElements": ["Mat og måltider", "Mat og helse"]
+          "coreElements": [
+            "Mat og måltider",
+            "Mat og helse"
+          ]
         },
         {
           "code": "MAH-02",
           "text": "bruke redskaper, rom- og vektmål og enkle teknikker i forbindelse med matlaging",
-          "coreElements": ["Mat og måltider", "Mat og livsstil"]
+          "coreElements": [
+            "Mat og måltider",
+            "Mat og livsstil"
+          ]
         },
         {
           "code": "MAH-03",
           "text": "kjenne igjen smaker i mat og undre seg over hvorfor smak er noe vi opplever ulikt",
-          "coreElements": ["Mat og måltider", "Mat og kultur"]
+          "coreElements": [
+            "Mat og måltider",
+            "Mat og kultur"
+          ]
         },
         {
           "code": "MAH-04",
           "text": "fortelle om hva som kjennetegner sunn og variert mat, og hvorfor det er viktig for helsen",
-          "coreElements": ["Mat og helse", "Mat og livsstil"]
+          "coreElements": [
+            "Mat og helse",
+            "Mat og livsstil"
+          ]
         },
         {
           "code": "MAH-05",
           "text": "utnytte lokale matvarer i matlaging og presentere leddene i produksjonskjeden fra råvare til måltid",
-          "coreElements": ["Mat og forbruk", "Mat og kultur"]
+          "coreElements": [
+            "Mat og forbruk",
+            "Mat og kultur"
+          ]
         },
         {
           "code": "MAH-06",
           "text": "sortere avfall i forbindelse med matlaging og forklare hvorfor det er viktig å gjøre det",
-          "coreElements": ["Mat og forbruk", "Mat og helse"]
+          "coreElements": [
+            "Mat og forbruk",
+            "Mat og helse"
+          ]
         },
         {
           "code": "MAH-07",
           "text": "lage enkle måltider og bidra til å skape en trivelig ramme rundt måltider sammen med andre",
-          "coreElements": ["Mat og måltider", "Mat og kultur"]
+          "coreElements": [
+            "Mat og måltider",
+            "Mat og kultur"
+          ]
         },
         {
           "code": "MAH-08",
           "text": "samtale om måltidsskikker fra norsk og samisk kultur og fra andre kulturer, og om verdien av å spise sammen med andre",
-          "coreElements": ["Mat og kultur", "Mat og måltider"]
+          "coreElements": [
+            "Mat og kultur",
+            "Mat og måltider"
+          ]
         },
         {
           "code": "MAH-09",
           "text": "samtale om hvordan skolemåltidet kan bidra til en god skolehverdag",
-          "coreElements": ["Mat og helse", "Mat og kultur"]
+          "coreElements": [
+            "Mat og helse",
+            "Mat og kultur"
+          ]
         }
       ],
       "7": [
         {
           "code": "MAH-10",
           "text": "bruke redskaper, grunnleggende teknikker og matlagingsmetoder til å lage trygg og bærekraftig mat som gir grunnlag for god helse",
-          "coreElements": ["Mat og måltider", "Mat og helse"]
+          "coreElements": [
+            "Mat og måltider",
+            "Mat og helse"
+          ]
         },
         {
           "code": "MAH-11",
           "text": "bruke sansene til å utforske og vurdere matens smak og tekstur og til å utforske anretning av mat",
-          "coreElements": ["Mat og måltider", "Mat og kultur"]
+          "coreElements": [
+            "Mat og måltider",
+            "Mat og kultur"
+          ]
         },
         {
           "code": "MAH-12",
           "text": "kjenne igjen og gjøre rede for grunnsmaker i matvarer og fortelle om og diskutere hvordan smak kan påvirke matpreferanser og matvalg",
-          "coreElements": ["Mat og kultur", "Mat og livsstil"]
+          "coreElements": [
+            "Mat og kultur",
+            "Mat og livsstil"
+          ]
         },
         {
           "code": "MAH-13",
           "text": "bruke oppskrifter i matlaging og regne ut og vurdere mengden i porsjonene både med og uten bruk av digitale ressurser",
-          "coreElements": ["Mat og måltider", "Mat og livsstil"]
+          "coreElements": [
+            "Mat og måltider",
+            "Mat og livsstil"
+          ]
         },
         {
           "code": "MAH-14",
           "text": "vise sammenhenger mellom matvaregrupper og næringsstoffer som er viktige for god helse",
-          "coreElements": ["Mat og helse", "Mat og livsstil"]
+          "coreElements": [
+            "Mat og helse",
+            "Mat og livsstil"
+          ]
         },
         {
           "code": "MAH-15",
           "text": "bruke matmerking og kostmodeller til å sette sammen et sunt, variert og bærekraftig kosthold og reflektere over valgene sine",
-          "coreElements": ["Mat og helse", "Mat og forbruk"]
+          "coreElements": [
+            "Mat og helse",
+            "Mat og forbruk"
+          ]
         },
         {
           "code": "MAH-16",
           "text": "bruke digitale ressurser til å sammenligne og drøfte produktinformasjon og reklame i ulike medier",
-          "coreElements": ["Mat og forbruk", "Mat og livsstil"]
+          "coreElements": [
+            "Mat og forbruk",
+            "Mat og livsstil"
+          ]
         },
         {
           "code": "MAH-17",
           "text": "utnytte matvarer og rester fra matlaging og reflektere over eget matforbruk",
-          "coreElements": ["Mat og forbruk", "Mat og helse"]
+          "coreElements": [
+            "Mat og forbruk",
+            "Mat og helse"
+          ]
         },
         {
           "code": "MAH-18",
           "text": "utforske og presentere tradisjonelle norske og samiske metoder for å konservere mat og fortelle om råvarene som blir konservert",
-          "coreElements": ["Mat og kultur", "Mat og forbruk"]
+          "coreElements": [
+            "Mat og kultur",
+            "Mat og forbruk"
+          ]
         },
         {
           "code": "MAH-19",
           "text": "lage måltider fra ulike kulturer og fortelle om og utforske hvordan sosialt fellesskap og samhandling kan være med på å styrke god helse",
-          "coreElements": ["Mat og kultur", "Mat og helse"]
+          "coreElements": [
+            "Mat og kultur",
+            "Mat og helse"
+          ]
         }
       ],
       "10": [
         {
           "code": "MAH-20",
           "text": "planlegge og bruke egnede redskaper, teknikker og matlagingsmetoder til å lage trygg og bærekraftig mat som gir grunnlag for god helse",
-          "coreElements": ["Mat og måltider", "Mat og helse"]
+          "coreElements": [
+            "Mat og måltider",
+            "Mat og helse"
+          ]
         },
         {
           "code": "MAH-21",
           "text": "bruke sansene til å vurdere kvaliteten på matvarer, utforske og kombinere smaker i matlagingen og forbedre oppskrifter, menyer og anretning av mat",
-          "coreElements": ["Mat og måltider", "Mat og kultur"]
+          "coreElements": [
+            "Mat og måltider",
+            "Mat og kultur"
+          ]
         },
         {
           "code": "MAH-22",
           "text": "drøfte hvordan kosthold kan bidra til god helse, og bruke digitale ressurser til å vurdere eget kosthold og til å velge sunne og varierte matvarer i forbindelse med matlaging",
-          "coreElements": ["Mat og helse", "Mat og livsstil"]
+          "coreElements": [
+            "Mat og helse",
+            "Mat og livsstil"
+          ]
         },
         {
           "code": "MAH-23",
           "text": "gjøre rede for og kritisk vurdere påstander, råd og informasjon om kosthold og helse",
-          "coreElements": ["Mat og helse", "Mat og forbruk"]
+          "coreElements": [
+            "Mat og helse",
+            "Mat og forbruk"
+          ]
         },
         {
           "code": "MAH-24",
           "text": "kritisk vurdere informasjon om matproduksjon og drøfte hvordan forbrukermakt kan påvirke lokal og global matproduksjon",
-          "coreElements": ["Mat og forbruk", "Mat og kultur"]
+          "coreElements": [
+            "Mat og forbruk",
+            "Mat og kultur"
+          ]
         },
         {
           "code": "MAH-25",
           "text": "utforske klimaavtrykket til matvarer og gjøre rede for hvordan matvalg og matforbruk kan påvirke miljøet, klimaet og matsikkerheten",
-          "coreElements": ["Mat og forbruk", "Mat og helse"]
+          "coreElements": [
+            "Mat og forbruk",
+            "Mat og helse"
+          ]
         },
         {
           "code": "MAH-26",
           "text": "lage mat fra norsk og samisk kultur og fra andre kulturer og sammenligne og utforske råvarer og matlagingsmetoder som brukes i ulike matkulturer",
-          "coreElements": ["Mat og kultur", "Mat og måltider"]
+          "coreElements": [
+            "Mat og kultur",
+            "Mat og måltider"
+          ]
         },
         {
           "code": "MAH-27",
           "text": "vise gjennom matlaging og måltider hvordan identitet og fellesskap blir formidlet i ulike kulturer",
-          "coreElements": ["Mat og kultur", "Mat og helse"]
+          "coreElements": [
+            "Mat og kultur",
+            "Mat og helse"
+          ]
         }
       ]
     }
