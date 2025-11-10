@@ -3426,59 +3426,52 @@
       "2": [
         {
           "code": "MUS-01",
-          "text": "utøve et repertoar av sangleker, sanger og danser hentet fra elevenes nære musikkultur og fra kulturarven",
+          "text": "ut¿ve et repertoar av sangleker, sanger og danser hentet fra elevenes n¾re musikkultur og fra kulturarven",
           "coreElements": [
-            "Musisere",
             "Komponere"
           ]
         },
         {
           "code": "MUS-02",
-          "text": "utforske og eksperimentere med puls, rytme, tempo, klang, melodi, dynamikk, harmoni og form i dans, med stemmen og i spill på instrumenter",
+          "text": "utforske og eksperimentere med puls, rytme, tempo, klang, melodi, dynamikk, harmoni og form i dans, med stemmen og i spill pŒ instrumenter",
           "coreElements": [
-            "Musisere",
-            "Lytte"
+            "Komponere"
           ]
         },
         {
           "code": "MUS-03",
-          "text": "leke med musikkens grunnelementer gjennom lyd og stemme, lage mønstre og sette sammen mønstrene til enkle improvisasjoner og komposisjoner, også med digitale verktøy",
+          "text": "leke med musikkens grunnelementer gjennom lyd og stemme, lage m¿nstre og sette sammen m¿nstrene til enkle improvisasjoner og komposisjoner, ogsŒ med digitale verkt¿y",
           "coreElements": [
-            "Komponere",
-            "Musisere"
+            "Lytte"
           ]
         },
         {
           "code": "MUS-04",
           "text": "formidle opplevelser av ulike musikalske uttrykk gjennom samtale og kunstneriske uttrykksformer",
           "coreElements": [
-            "Lytte",
-            "Komponere"
+            "Musisere"
           ]
         }
       ],
       "4": [
         {
           "code": "MUS-05",
-          "text": "utøve og utforske et repertoar av sanger og danser fra ulike musikkulturer, inkludert samisk musikkultur",
+          "text": "ut¿ve og utforske et repertoar av sanger og danser fra ulike musikkulturer, inkludert samisk musikkultur",
           "coreElements": [
-            "Musisere",
-            "Lytte"
-          ]
-        },
-        {
-          "code": "MUS-06",
-          "text": "synge og spille på instrumenter alene og sammen med andre ved bruk av gehør og enkel notasjon",
-          "coreElements": [
-            "Musisere",
             "Komponere"
           ]
         },
         {
-          "code": "MUS-07",
-          "text": "eksperimentere med rytmer, melodier og andre grunnelementer, sette sammen mønstre til komposisjoner, også ved bruk av digitale verktøy, og beskrive arbeidsprosesser og resultater",
+          "code": "MUS-06",
+          "text": "synge og spille pŒ instrumenter alene og sammen med andre ved bruk av geh¿r og enkel notasjon",
           "coreElements": [
-            "Komponere",
+            "Musisere"
+          ]
+        },
+        {
+          "code": "MUS-07",
+          "text": "eksperimentere med rytmer, melodier og andre grunnelementer, sette sammen m¿nstre til komposisjoner, ogsŒ ved bruk av digitale verkt¿y, og beskrive arbeidsprosesser og resultater",
+          "coreElements": [
             "Lytte"
           ]
         },
@@ -3486,65 +3479,61 @@
           "code": "MUS-08",
           "text": "formidle egne musikkopplevelser og beskrive bruk av musikalske virkemidler ved hjelp av enkle fagbegreper",
           "coreElements": [
-            "Lytte",
             "Musisere"
           ]
         },
         {
           "code": "MUS-09",
-          "text": "samtale om og reflektere over hvordan musikk skaper mening når den brukes i ulike sosiale sammenhenger",
+          "text": "samtale om og reflektere over hvordan musikk skaper mening nŒr den brukes i ulike sosiale sammenhenger",
           "coreElements": [
-            "Lytte",
-            "Komponere"
+            "Komponere",
+            "Musisere"
           ]
         }
       ],
       "7": [
         {
           "code": "MUS-10",
-          "text": "utøve et repertoar av musikk, sang, andre vokale uttrykk og dans fra samtiden og historien",
+          "text": "ut¿ve et repertoar av musikk, sang, andre vokale uttrykk og dans fra samtiden og historien",
           "coreElements": [
-            "Musisere",
             "Lytte"
           ]
         },
         {
           "code": "MUS-11",
-          "text": "utforske og drøfte hvordan musikk fra fortiden påvirker dagens musikk",
+          "text": "utforske og dr¿fte hvordan musikk fra fortiden pŒvirker dagens musikk",
           "coreElements": [
-            "Lytte",
-            "Komponere"
+            "Lytte"
           ]
         },
         {
           "code": "MUS-12",
-          "text": "øve inn og framføre sang og musikk, i samspill eller individuelt, gehørbasert og ved bruk av enkle notasjonsteknikker",
+          "text": "¿ve inn og framf¿re sang og musikk, i samspill eller individuelt, geh¿rbasert og ved bruk av enkle notasjonsteknikker",
           "coreElements": [
-            "Musisere",
-            "Komponere"
+            "Lytte",
+            "Musisere"
           ]
         },
         {
           "code": "MUS-13",
           "text": "lytte, eksperimentere og skape nye uttrykk med instrumenter, kropp, stemme eller lyd fra andre kilder, og presentere resultatet",
           "coreElements": [
-            "Komponere",
-            "Lytte"
+            "Lytte",
+            "Komponere"
           ]
         },
         {
           "code": "MUS-14",
-          "text": "bruke teknologi og digitale verktøy til å skape, øve inn og bearbeide musikk",
+          "text": "bruke teknologi og digitale verkt¿y til Œ skape, ¿ve inn og bearbeide musikk",
           "coreElements": [
-            "Komponere",
-            "Musisere"
+            "Musisere",
+            "Lytte"
           ]
         },
         {
           "code": "MUS-15",
           "text": "bruke fagbegreper i beskrivelse av og refleksjon over arbeidsprosesser, resultater, musikalske uttrykk og virkemidler",
           "coreElements": [
-            "Lytte",
             "Komponere"
           ]
         },
@@ -3552,15 +3541,13 @@
           "code": "MUS-16",
           "text": "utforske og formidle musikalske opplevelser og erfaringer",
           "coreElements": [
-            "Lytte",
-            "Musisere"
+            "Komponere"
           ]
         },
         {
           "code": "MUS-17",
-          "text": "undersøke hvordan kjønn, kjønnsroller og seksualitet fremstilles i musikk og dans i det offentlige rom, og skape uttrykk som utfordrer stereotypier",
+          "text": "unders¿ke hvordan kj¿nn, kj¿nnsroller og seksualitet fremstilles i musikk og dans i det offentlige rom, og skape uttrykk som utfordrer stereotypier",
           "coreElements": [
-            "Lytte",
             "Komponere"
           ]
         },
@@ -3568,65 +3555,60 @@
           "code": "MUS-18",
           "text": "reflektere over hvordan musikk kan spille ulike roller for utvikling av individer og gruppers identitet",
           "coreElements": [
-            "Lytte",
-            "Musisere"
+            "Komponere"
           ]
         }
       ],
       "10": [
         {
           "code": "MUS-19",
-          "text": "utøve et variert repertoar av musikk, sang, andre vokale uttrykk og dans",
+          "text": "ut¿ve et variert repertoar av musikk, sang, andre vokale uttrykk og dans",
           "coreElements": [
-            "Musisere",
-            "Komponere"
+            "Musisere"
           ]
         },
         {
           "code": "MUS-20",
           "text": "reflektere over hvordan musikalske tradisjoner, inkludert samiske musikktradisjoner, bevares og fornyes",
           "coreElements": [
-            "Lytte",
-            "Musisere"
+            "Lytte"
           ]
         },
         {
           "code": "MUS-21",
-          "text": "samarbeide med andre om å planlegge og gjennomføre øvingsprosesser hvor det inngår selvvalgt sang, andre vokale uttrykk, spill på instrumenter eller dans, og formidle resultatet i gruppe eller individuelt",
+          "text": "samarbeide med andre om Œ planlegge og gjennomf¿re ¿vingsprosesser hvor det inngŒr selvvalgt sang, andre vokale uttrykk, spill pŒ instrumenter eller dans, og formidle resultatet i gruppe eller individuelt",
           "coreElements": [
-            "Musisere",
             "Komponere"
           ]
         },
         {
           "code": "MUS-22",
-          "text": "skape og programmere musikalske forløp ved å eksperimentere med lyd fra ulike kilder",
+          "text": "skape og programmere musikalske forl¿p ved Œ eksperimentere med lyd fra ulike kilder",
           "coreElements": [
-            "Komponere",
-            "Musisere"
+            "Komponere"
           ]
         },
         {
           "code": "MUS-23",
           "text": "utforske og formidle musikalske opplevelser og erfaringer, og reflektere over bruk av musikalske virkemidler",
           "coreElements": [
-            "Lytte",
+            "Musisere",
             "Komponere"
           ]
         },
         {
           "code": "MUS-24",
-          "text": "lytte og prøve ut ulike uttrykk og begrunne valg i skapende prosesser fra idé til ferdig resultat",
+          "text": "lytte og pr¿ve ut ulike uttrykk og begrunne valg i skapende prosesser fra idŽ til ferdig resultat",
           "coreElements": [
-            "Komponere",
-            "Lytte"
+            "Lytte",
+            "Komponere"
           ]
         },
         {
           "code": "MUS-25",
-          "text": "bruke gehør og notasjonsteknikker som støtte i skapende arbeid",
+          "text": "bruke geh¿r og notasjonsteknikker som st¿tte i skapende arbeid",
           "coreElements": [
-            "Komponere",
+            "Lytte",
             "Musisere"
           ]
         },
@@ -3634,24 +3616,24 @@
           "code": "MUS-26",
           "text": "bruke relevante fagbegreper i skapende arbeid og i refleksjon over prosesser og resultater",
           "coreElements": [
-            "Komponere",
-            "Lytte"
+            "Lytte",
+            "Musisere"
           ]
         },
         {
           "code": "MUS-27",
-          "text": "utforske og reflektere over hvordan musikk, sang og dans som estetiske uttrykk er påvirket av og uttrykk for historiske og samfunnsmessige forhold, og skape musikalske uttrykk som tar opp utfordringer i samtiden",
+          "text": "utforske og reflektere over hvordan musikk, sang og dans som estetiske uttrykk er pŒvirket av og uttrykk for historiske og samfunnsmessige forhold, og skape musikalske uttrykk som tar opp utfordringer i samtiden",
           "coreElements": [
-            "Lytte",
-            "Komponere"
+            "Musisere",
+            "Lytte"
           ]
         },
         {
           "code": "MUS-28",
-          "text": "utforske og drøfte musikkens og dansens betydning i samfunnet og etiske problemstillinger knyttet til musikalske ytringer og musikkulturer",
+          "text": "utforske og dr¿fte musikkens og dansens betydning i samfunnet og etiske problemstillinger knyttet til musikalske ytringer og musikkulturer L¾replan i musikk L¾replankode: MUS01-02 L¾replankode: MUS01-02",
           "coreElements": [
             "Lytte",
-            "Musisere"
+            "Komponere"
           ]
         }
       ]
