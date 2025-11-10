@@ -5,157 +5,161 @@
       "2": [
         {
           "code": "MAT-01",
-          "text": "utforske tal som mengde, rekkjefølgje, plassering og som mengde i praktiske samanhengar og presentere resultatet på varierte måtar",
+          "text": "ordne tall, mengder og former ut fra egenskaper, sammenligne dem og reflektere over om det kan gj¿res pŒ flere mŒter",
           "coreElements": [
-            "Utforsking og problemløsning",
-            "Representasjon og kommunikasjon"
-          ]
-        },
-        {
-          "code": "MAT-02",
-          "text": "utforske og bruke plassverdisystemet for å beskrive oppbygnad av tal, og samanlikne og ordne heile tal",
-          "coreElements": [
-            "Utforsking og problemløsning",
-            "Abstraksjon og generalisering"
-          ]
-        },
-        {
-          "code": "MAT-03",
-          "text": "utforske og beskrive strukturar og mønster i leik og daglegliv",
-          "coreElements": [
-            "Utforsking og problemløsning",
+            "Resonnering og argumentasjon",
+            "Representasjon og kommunikasjon",
             "Modellering og anvendelse"
           ]
         },
         {
-          "code": "MAT-04",
-          "text": "utforske, lage, beskrive og samanlikne todimenasjonale figurar og tremedimensjonale formar ved å bruke materiell og digitale verktøy",
+          "code": "MAT-02",
+          "text": "utforske tall, mengder og telling i lek, natur, billedkunst, musikk og barnelitteratur, representere tallene pŒ ulike mŒter og oversette mellom de ulike representasjonene",
           "coreElements": [
-            "Utforsking og problemløsning",
+            "Representasjon og kommunikasjon",
+            "Resonnering og argumentasjon",
+            "Modellering og anvendelse"
+          ]
+        },
+        {
+          "code": "MAT-03",
+          "text": "eksperimentere med telling bŒde forlengs og baklengs, velge ulike startpunkter og ulik differanse og beskrive m¿nstre i tellingene",
+          "coreElements": [
+            "Modellering og anvendelse",
+            "Abstraksjon og generalisering",
+            "Utforsking og problemløsning"
+          ]
+        },
+        {
+          "code": "MAT-04",
+          "text": "utforske og beskrive generelle egenskaper ved partall og oddetall",
+          "coreElements": [
+            "Abstraksjon og generalisering",
             "Representasjon og kommunikasjon"
           ]
         },
         {
           "code": "MAT-05",
-          "text": "måle og samanlikne lengder, areal, volum, massar, temperaturar og tidsrom med kroppen, naturlege måleiningar og målereiskapar",
+          "text": "beskrive posisjonssystemet ved hjelp av ulike representasjoner",
           "coreElements": [
+            "Abstraksjon og generalisering",
             "Modellering og anvendelse",
-            "Representasjon og kommunikasjon"
+            "Resonnering og argumentasjon"
           ]
-        }
-      ],
-      "4": [
+        },
         {
           "code": "MAT-06",
-          "text": "utforske samanhengar mellom addisjon og subtraksjon, multiplikasjon og divisjon, og bruke dei i hovudrekning og overslagsrekning",
+          "text": "plassere tall pŒ tallinjen og bruke tallinjen i regning og probleml¿sing",
           "coreElements": [
-            "Utforsking og problemløsning",
+            "Resonnering og argumentasjon",
             "Abstraksjon og generalisering"
           ]
         },
         {
           "code": "MAT-07",
-          "text": "utvikle, bruke og gi grunngjevingar for eigne prosedyrar for addisjon, subtraksjon, multiplikasjon og divisjon med heile tal",
+          "text": "utforske addisjon og subtraksjon og bruke dette til Œ formulere og l¿se problemer fra lek og egen hverdag",
+          "coreElements": [
+            "Resonnering og argumentasjon",
+            "Utforsking og problemløsning"
+          ]
+        },
+        {
+          "code": "MAT-08",
+          "text": "utforske den kommutative og den assosiative egenskapen ved addisjon og bruke dette i hoderegning",
           "coreElements": [
             "Utforsking og problemløsning",
             "Resonnering og argumentasjon"
           ]
         },
         {
-          "code": "MAT-08",
-          "text": "utforske og beskrive strukturar og mønster i tal og geometri",
-          "coreElements": [
-            "Utforsking og problemløsning",
-            "Abstraksjon og generalisering"
-          ]
-        },
-        {
           "code": "MAT-09",
-          "text": "utforske og bruke posisjonssystemet for å beskrive oppbygnaden av tal, og samanlikne og ordne positive og negative heile tal, desimaltal og brøkar",
+          "text": "kjenne igjen og beskrive repeterende enheter i m¿nstre og lage egne m¿nstre",
           "coreElements": [
-            "Abstraksjon og generalisering",
+            "Modellering og anvendelse",
+            "Resonnering og argumentasjon",
             "Representasjon og kommunikasjon"
           ]
         },
         {
           "code": "MAT-10",
-          "text": "gjere overslag over svar, utføre berekningar med dei fire rekneartane og vurdere kor rimelege svara er",
+          "text": "utforske, tegne og beskrive geometriske figurer fra sitt eget n¾rmilj¿ og argumentere for mŒter Œ sortere dem pŒ etter egenskaper",
           "coreElements": [
             "Utforsking og problemløsning",
-            "Modellering og anvendelse"
-          ]
-        }
-      ],
-      "7": [
-        {
-          "code": "MAT-11",
-          "text": "utforske samanhengar mellom brøk, desimaltal og prosent, og bruke ulike representasjonar av rasjonale tal i praktiske og matematiske samanhengar",
-          "coreElements": [
             "Abstraksjon og generalisering",
             "Representasjon og kommunikasjon"
           ]
         },
         {
-          "code": "MAT-12",
-          "text": "utforske strategiar for hovudrekning, overslagsrekning og skriftleg rekning og bruke digitale verktøy i berekning",
+          "code": "MAT-11",
+          "text": "mŒle og sammenligne st¿rrelser som gjelder lengde og areal, ved hjelp av ikke-standardiserte og standardiserte mŒleenheter, beskrive hvordan og samtale om resultatene",
           "coreElements": [
-            "Utforsking og problemløsning",
-            "Modellering og anvendelse"
+            "Abstraksjon og generalisering",
+            "Resonnering og argumentasjon"
+          ]
+        },
+        {
+          "code": "MAT-12",
+          "text": "forklare hvordan man kan beskrive tid ved hjelp av klokke og kalender",
+          "coreElements": [
+            "Representasjon og kommunikasjon",
+            "Resonnering og argumentasjon",
+            "Utforsking og problemløsning"
           ]
         },
         {
           "code": "MAT-13",
-          "text": "utforske matematiske eigenskapar og samanhengar ved å bruke variablar, likningar, funksjonar og geometriske forhold",
+          "text": "lage og f¿lge regler og trinnvise instruksjoner i lek og spill",
           "coreElements": [
-            "Utforsking og problemløsning",
-            "Abstraksjon og generalisering"
-          ]
-        },
-        {
-          "code": "MAT-14",
-          "text": "formulere og løyse problem ved å bruke matematiske metodar, og vurdere og presentere løysingane",
-          "coreElements": [
-            "Modellering og anvendelse",
+            "Abstraksjon og generalisering",
             "Resonnering og argumentasjon"
-          ]
-        },
-        {
-          "code": "MAT-15",
-          "text": "utforske, beskrive og presentere strukturar og utviklingar i geometriske mønster og i tal",
-          "coreElements": [
-            "Utforsking og problemløsning",
-            "Representasjon og kommunikasjon"
           ]
         }
       ],
-      "10": [
+      "4": [
         {
-          "code": "MAT-16",
-          "text": "utforske samanhengar mellom mengder i praktiske situasjonar, og beskrive og generalisere samanhengar ved å bruke variablar, funksjonar, likningar og ulikskapar",
+          "code": "MAT-14",
+          "text": "utforske og bruke mŒlings- og delingsdivisjon i praktiske situasjoner",
           "coreElements": [
-            "Modellering og anvendelse",
-            "Abstraksjon og generalisering"
-          ]
-        },
-        {
-          "code": "MAT-17",
-          "text": "utforske korleis algoritmar skapar, sorterer, søkjer i og presenterer data",
-          "coreElements": [
+            "Resonnering og argumentasjon",
             "Utforsking og problemløsning",
             "Modellering og anvendelse"
           ]
         },
         {
-          "code": "MAT-18",
-          "text": "formulere og løyse problem ved å bruke ulike strategiar, verktøy og formell matematikk",
+          "code": "MAT-15",
+          "text": "representere divisjon pŒ ulike mŒter og oversette mellom de ulike representasjonene",
           "coreElements": [
             "Utforsking og problemløsning",
+            "Abstraksjon og generalisering"
+          ]
+        },
+        {
+          "code": "MAT-16",
+          "text": "utforske, bruke og beskrive ulike divisjonsstrategier",
+          "coreElements": [
+            "Modellering og anvendelse",
             "Resonnering og argumentasjon"
           ]
         },
         {
+          "code": "MAT-17",
+          "text": "utforske og forklare sammenhenger mellom de fire regneartene og bruke sammenhengene hensiktsmessig i utregninger",
+          "coreElements": [
+            "Modellering og anvendelse",
+            "Abstraksjon og generalisering"
+          ]
+        },
+        {
+          "code": "MAT-18",
+          "text": "modellere situasjoner fra sin egen hverdag og forklare tenkemŒtene sine",
+          "coreElements": [
+            "Abstraksjon og generalisering",
+            "Utforsking og problemløsning"
+          ]
+        },
+        {
           "code": "MAT-19",
-          "text": "utforske matematiske metodar og verktøy, og vurdere deira moglegheiter og avgrensingar",
+          "text": "lage regneuttrykk til praktiske situasjoner og finne praktiske situasjoner som passer til oppgitte regneuttrykk",
           "coreElements": [
             "Utforsking og problemløsning",
             "Resonnering og argumentasjon"
@@ -163,10 +167,209 @@
         },
         {
           "code": "MAT-20",
-          "text": "presentere og grunngje analysar og resultat med omgrep, representasjonar og beringar som er tilpassa emne og mottakar",
+          "text": "utforske, beskrive og sammenligne egenskaper ved to- og tredimensjonale figurer ved Œ bruke vinkler, kanter og hj¿rner",
+          "coreElements": [
+            "Resonnering og argumentasjon",
+            "Utforsking og problemløsning",
+            "Abstraksjon og generalisering"
+          ]
+        },
+        {
+          "code": "MAT-21",
+          "text": "bruke ikke-standardiserte mŒleenheter for areal og volum i praktiske situasjoner og begrunne valget av mŒleenhet",
+          "coreElements": [
+            "Modellering og anvendelse",
+            "Resonnering og argumentasjon"
+          ]
+        },
+        {
+          "code": "MAT-22",
+          "text": "utforske og beskrive strukturer og m¿nstre i lek og spill",
           "coreElements": [
             "Representasjon og kommunikasjon",
+            "Resonnering og argumentasjon",
+            "Utforsking og problemløsning"
+          ]
+        },
+        {
+          "code": "MAT-23",
+          "text": "lage algoritmer og uttrykke dem ved bruk av variabler, vilkŒr og l¿kker",
+          "coreElements": [
+            "Representasjon og kommunikasjon",
+            "Utforsking og problemløsning"
+          ]
+        }
+      ],
+      "7": [
+        {
+          "code": "MAT-24",
+          "text": "utvikle og bruke hensiktsmessige strategier i regning med br¿k, desimaltall og prosent og forklare tenkemŒtene sine",
+          "coreElements": [
+            "Abstraksjon og generalisering",
+            "Resonnering og argumentasjon",
+            "Modellering og anvendelse"
+          ]
+        },
+        {
+          "code": "MAT-25",
+          "text": "representere og bruke br¿k, desimaltall og prosent pŒ ulike mŒter og utforske de matematiske sammenhengene mellom disse representasjonsformene",
+          "coreElements": [
+            "Representasjon og kommunikasjon",
+            "Abstraksjon og generalisering",
+            "Utforsking og problemløsning"
+          ]
+        },
+        {
+          "code": "MAT-26",
+          "text": "utforske negative tall i praktiske situasjoner",
+          "coreElements": [
+            "Resonnering og argumentasjon",
+            "Utforsking og problemløsning"
+          ]
+        },
+        {
+          "code": "MAT-27",
+          "text": "bruke tallinje i regning med positive og negative tall",
+          "coreElements": [
+            "Resonnering og argumentasjon",
+            "Abstraksjon og generalisering"
+          ]
+        },
+        {
+          "code": "MAT-28",
+          "text": "bruke sammensatte regneuttrykk til Œ beskrive og utf¿re utregninger",
+          "coreElements": [
+            "Representasjon og kommunikasjon",
+            "Modellering og anvendelse",
             "Resonnering og argumentasjon"
+          ]
+        },
+        {
+          "code": "MAT-29",
+          "text": "bruke ulike strategier for Œ l¿se line¾re ligninger og ulikheter og vurdere om l¿sninger er gyldige",
+          "coreElements": [
+            "Resonnering og argumentasjon",
+            "Representasjon og kommunikasjon"
+          ]
+        },
+        {
+          "code": "MAT-30",
+          "text": "utforske og bruke hensiktsmessige sentralmŒl i egne og andres statistiske unders¿kelser",
+          "coreElements": [
+            "Representasjon og kommunikasjon",
+            "Utforsking og problemløsning"
+          ]
+        },
+        {
+          "code": "MAT-31",
+          "text": "logge, sortere, presentere og lese data i tabeller og diagrammer og begrunne valget av framstilling",
+          "coreElements": [
+            "Abstraksjon og generalisering",
+            "Resonnering og argumentasjon",
+            "Utforsking og problemløsning"
+          ]
+        },
+        {
+          "code": "MAT-32",
+          "text": "lage og vurdere budsjett og regnskap ved Œ bruke regneark med cellereferanser og formler",
+          "coreElements": [
+            "Utforsking og problemløsning",
+            "Resonnering og argumentasjon"
+          ]
+        },
+        {
+          "code": "MAT-33",
+          "text": "bruke programmering til Œ utforske data i tabeller og datasett",
+          "coreElements": [
+            "Utforsking og problemløsning",
+            "Resonnering og argumentasjon",
+            "Representasjon og kommunikasjon"
+          ]
+        }
+      ],
+      "10": [
+        {
+          "code": "MAT-34",
+          "text": "utforske og generalisere multiplikasjon av polynomer algebraisk og geometrisk",
+          "coreElements": [
+            "Representasjon og kommunikasjon",
+            "Modellering og anvendelse",
+            "Utforsking og problemløsning"
+          ]
+        },
+        {
+          "code": "MAT-35",
+          "text": "utforske og sammenligne egenskaper ved ulike funksjoner ved Œ bruke digitale verkt¿y",
+          "coreElements": [
+            "Resonnering og argumentasjon",
+            "Abstraksjon og generalisering"
+          ]
+        },
+        {
+          "code": "MAT-36",
+          "text": "lage, l¿se og forklare ligningssett knyttet til praktiske situasjoner",
+          "coreElements": [
+            "Abstraksjon og generalisering",
+            "Representasjon og kommunikasjon",
+            "Resonnering og argumentasjon"
+          ]
+        },
+        {
+          "code": "MAT-37",
+          "text": "regne ut stigningstallet til en line¾r funksjon og bruke det til Œ forklare begrepene endring per enhet og gjennomsnittsfart",
+          "coreElements": [
+            "Resonnering og argumentasjon",
+            "Abstraksjon og generalisering",
+            "Representasjon og kommunikasjon"
+          ]
+        },
+        {
+          "code": "MAT-38",
+          "text": "utforske sammenhengen mellom konstant prosentvis endring, vekstfaktor og eksponentialfunksjoner",
+          "coreElements": [
+            "Utforsking og problemløsning",
+            "Representasjon og kommunikasjon"
+          ]
+        },
+        {
+          "code": "MAT-39",
+          "text": "hente ut og tolke relevant informasjon fra tekster om kj¿p og salg og ulike typer lŒn og bruke det til Œ formulere og l¿se problemer",
+          "coreElements": [
+            "Modellering og anvendelse",
+            "Representasjon og kommunikasjon"
+          ]
+        },
+        {
+          "code": "MAT-40",
+          "text": "planlegge, utf¿re og presentere et utforskende arbeid knyttet til personlig ¿konomi",
+          "coreElements": [
+            "Resonnering og argumentasjon",
+            "Utforsking og problemløsning",
+            "Modellering og anvendelse"
+          ]
+        },
+        {
+          "code": "MAT-41",
+          "text": "bruke funksjoner i modellering og argumentere for framgangsmŒter og resultater",
+          "coreElements": [
+            "Utforsking og problemløsning",
+            "Resonnering og argumentasjon"
+          ]
+        },
+        {
+          "code": "MAT-42",
+          "text": "modellere situasjoner knyttet til reelle datasett, presentere resultatene og argumentere for at modellene er gyldige",
+          "coreElements": [
+            "Abstraksjon og generalisering",
+            "Representasjon og kommunikasjon"
+          ]
+        },
+        {
+          "code": "MAT-43",
+          "text": "utforske matematiske egenskaper og sammenhenger ved Œ bruke programmering L¾replan i matematikk 1.Ð10. trinn L¾replankode: MAT01-05 L¾replankode: MAT01-05",
+          "coreElements": [
+            "Representasjon og kommunikasjon",
+            "Utforsking og problemløsning"
           ]
         }
       ]
