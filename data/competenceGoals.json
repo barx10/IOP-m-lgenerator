@@ -1055,97 +1055,533 @@
   "SAF": {
     "name": "Samfunnsfag",
     "levels": {
-      "4": [
+      "2": [
         {
           "code": "SAF-01",
-          "text": "utforske nærmiljøet og samtale om steder og plasseringer ved hjelp av kart og digitale verktøy",
+          "text": "utvikle og presentere samfunnsfaglige sp¿rsmŒl",
           "coreElements": [
-            "Geografi",
-            "Utforsking og undersøkelse"
+            "Analysere samfunnsfaglig informasjon",
+            "Utforske samfunnsfaglige temaer"
           ]
         },
         {
           "code": "SAF-02",
-          "text": "utforske hvordan livet til barn og unge i dag er likt og ulikt livet i ulike tider og steder",
+          "text": "samtale om hvordan ulike kilder, inkludert kart, kan gi informasjon om samfunnsfaglige sp¿rsmŒl",
           "coreElements": [
-            "Historie",
-            "Forståelse av tid og sammenhenger"
+            "Utøve demokratisk medborgarskap",
+            "Analysere samfunnsfaglig informasjon",
+            "Tenke kritisk og håndtere uenighet"
           ]
         },
         {
           "code": "SAF-03",
-          "text": "samtale om rettigheter og plikter i skolen og hva det betyr å være en god venn",
+          "text": "utforske og beskrive kulturminner og kultur- og naturlandskapet i n¾rmilj¿et",
           "coreElements": [
-            "Samfunnsvitskap",
-            "Demokratisk kompetanse"
+            "Utøve demokratisk medborgarskap",
+            "Utforske samfunnsfaglige temaer"
+          ]
+        },
+        {
+          "code": "SAF-04",
+          "text": "utforske og presentere hvordan mennesker levde for Žn til to menneskealdre siden",
+          "coreElements": [
+            "Analysere samfunnsfaglig informasjon",
+            "Utøve demokratisk medborgarskap",
+            "Utforske sammenhengar i tid og rom"
+          ]
+        },
+        {
+          "code": "SAF-05",
+          "text": "reflektere over hvorfor mennesker har ulike meninger og tar ulike valg",
+          "coreElements": [
+            "Utforske samfunnsfaglige temaer",
+            "Tenke kritisk og håndtere uenighet",
+            "Utforske sammenhengar i tid og rom"
+          ]
+        },
+        {
+          "code": "SAF-06",
+          "text": "samtale om vennskap, tilh¿righet og hva som pŒvirker relasjoner",
+          "coreElements": [
+            "Utforske sammenhengar i tid og rom",
+            "Utforske samfunnsfaglige temaer"
+          ]
+        },
+        {
+          "code": "SAF-07",
+          "text": "beskrive og gi eksempler pŒ mangfold i Norge, med vekt pŒ ulike familieformer og folkegrupper, inkludert det samiske urfolket",
+          "coreElements": [
+            "Utøve demokratisk medborgarskap",
+            "Utforske samfunnsfaglige temaer",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-08",
+          "text": "utforske og gi eksempler pŒ hvordan mennesker pŒvirker klima og milj¿, og dokumentere hvordan pŒvirkningene kommer til syne i n¾rmilj¿et",
+          "coreElements": [
+            "Utøve demokratisk medborgarskap",
+            "Utforske sammenhengar i tid og rom",
+            "Analysere samfunnsfaglig informasjon"
+          ]
+        },
+        {
+          "code": "SAF-09",
+          "text": "presentere og gi eksempler pŒ rettigheter barn har i Norge og verden, og hva barn kan gj¿re ved brudd pŒ disse rettighetene",
+          "coreElements": [
+            "Utforske samfunnsfaglige temaer",
+            "Analysere samfunnsfaglig informasjon",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-10",
+          "text": "utforske og gi eksempler pŒ hvordan barn kan pŒvirke beslutninger og samarbeide om demokratiske prosesser",
+          "coreElements": [
+            "Utøve demokratisk medborgarskap",
+            "Analysere samfunnsfaglig informasjon",
+            "Utforske samfunnsfaglige temaer"
+          ]
+        },
+        {
+          "code": "SAF-11",
+          "text": "samtale om muligheter og utfordringer ved digital samhandling",
+          "coreElements": [
+            "Utforske samfunnsfaglige temaer",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-12",
+          "text": "samtale om f¿lelser, kropp, kj¿nn og seksualitet og hvordan egne og andres grenser kan uttrykkes og respekteres",
+          "coreElements": [
+            "Tenke kritisk og håndtere uenighet",
+            "Utøve demokratisk medborgarskap",
+            "Utforske samfunnsfaglige temaer"
+          ]
+        },
+        {
+          "code": "SAF-13",
+          "text": "utforske og gi eksempler pŒ hvordan mennesker i ulike deler av verden pŒvirker hverandres liv",
+          "coreElements": [
+            "Utforske samfunnsfaglige temaer",
+            "Utforske sammenhengar i tid og rom",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        }
+      ],
+      "4": [
+        {
+          "code": "SAF-14",
+          "text": "utforske og presentere samfunnsfaglige sp¿rsmŒl, s¿ke etter informasjon i ulike kilder og vurdere hvor nyttig informasjonen er til Œ belyse sp¿rsmŒlene",
+          "coreElements": [
+            "Utøve demokratisk medborgarskap",
+            "Utforske samfunnsfaglige temaer",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-15",
+          "text": "utforske kulturminner og hvordan mennesker levde i den tiden kulturminnene er fra, og sammenligne med hvordan vi lever i dag",
+          "coreElements": [
+            "Analysere samfunnsfaglig informasjon",
+            "Utøve demokratisk medborgarskap",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-16",
+          "text": "beskrive kultur- og naturlandskap i Norge og samtale om hvordan historiske og geografiske kilder, inkludert kart, kan gi informasjon om landskap",
+          "coreElements": [
+            "Tenke kritisk og håndtere uenighet",
+            "Utøve demokratisk medborgarskap",
+            "Utforske samfunnsfaglige temaer"
+          ]
+        },
+        {
+          "code": "SAF-17",
+          "text": "samtale om hvorfor det oppstŒr konflikter i skole- og n¾rmilj¿et, lytte til andres mening og samarbeide med andre om Œ finne konstruktive l¿sninger",
+          "coreElements": [
+            "Utforske samfunnsfaglige temaer",
+            "Utforske sammenhengar i tid og rom"
+          ]
+        },
+        {
+          "code": "SAF-18",
+          "text": "presentere menneskerettigheter og rettigheter som barn har, og reflektere over hvorfor disse rettighetene finnes",
+          "coreElements": [
+            "Utforske sammenhengar i tid og rom",
+            "Analysere samfunnsfaglig informasjon",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-19",
+          "text": "presentere Œrsaker til at samene har urfolksstatus i Norge, og beskrive forskjellige former for samisk kultur- og samfunnsliv f¿r og nŒ",
+          "coreElements": [
+            "Utforske sammenhengar i tid og rom",
+            "Analysere samfunnsfaglig informasjon"
+          ]
+        },
+        {
+          "code": "SAF-20",
+          "text": "utforske og gi eksempler pŒ noen sider ved b¾rekraftig utvikling",
+          "coreElements": [
+            "Tenke kritisk og håndtere uenighet",
+            "Utøve demokratisk medborgarskap"
+          ]
+        },
+        {
+          "code": "SAF-21",
+          "text": "reflektere over sammenhengen mellom personlig ¿konomi og forbruk hos den enkelte",
+          "coreElements": [
+            "Utforske samfunnsfaglige temaer",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-22",
+          "text": "samtale om identitet, mangfold og fellesskap og reflektere over hvordan det kan oppleves ikke Œ v¾re del av fellesskapet",
+          "coreElements": [
+            "Analysere samfunnsfaglig informasjon",
+            "Utøve demokratisk medborgarskap",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-23",
+          "text": "samtale om regler og normer for personvern, om deling og beskyttelse av informasjon og om hva det vil si Œ bruke d¿mmekraft i digital samhandling",
+          "coreElements": [
+            "Analysere samfunnsfaglig informasjon",
+            "Utforske samfunnsfaglige temaer",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-24",
+          "text": "samtale om grenser knyttet til kropp, hva vold og seksuelle overgrep er, og hvor man kan fŒ hjelp hvis man blir utsatt for vold og seksuelle overgrep",
+          "coreElements": [
+            "Utøve demokratisk medborgarskap",
+            "Utforske sammenhengar i tid og rom"
+          ]
+        },
+        {
+          "code": "SAF-25",
+          "text": "reflektere over hvem som har makt, og hva et demokrati er, og utvikle forslag til hvordan man kan v¾re med pŒ Œ pŒvirke beslutninger",
+          "coreElements": [
+            "Analysere samfunnsfaglig informasjon",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-26",
+          "text": "samtale om noen viktige offentlige institusjoner og virksomheter i Norge og reflektere over hva de betyr i livet til mennesker",
+          "coreElements": [
+            "Analysere samfunnsfaglig informasjon",
+            "Utforske samfunnsfaglige temaer",
+            "Utforske sammenhengar i tid og rom"
           ]
         }
       ],
       "7": [
         {
-          "code": "SAF-04",
-          "text": "stille spørsmål og undersøke forhold som angår samfunnet lokalt og globalt",
+          "code": "SAF-27",
+          "text": "gjennomf¿re en samfunnsfaglig unders¿kelse og presentere resultatene ved hjelp av egnede digitale verkt¿y",
           "coreElements": [
-            "Utforsking og undersøkelse",
-            "Kritisk tenkning"
+            "Analysere samfunnsfaglig informasjon",
+            "Tenke kritisk og håndtere uenighet"
           ]
         },
         {
-          "code": "SAF-05",
-          "text": "bruke ulike kilder kritisk og belegge påstander",
+          "code": "SAF-28",
+          "text": "presentere en aktuell nyhetssak og reflektere over forskjeller mellom fakta, meninger og kommersielt budskap i mediebildet",
           "coreElements": [
-            "Kritisk tenkning",
-            "Kommunikasjon og deltaking"
+            "Utforske sammenhengar i tid og rom",
+            "Analysere samfunnsfaglig informasjon"
           ]
         },
         {
-          "code": "SAF-06",
-          "text": "beskrive og vurdere menneskerettigheter og demokratiske prinsipper og rettigheter i skolen og samfunnet",
+          "code": "SAF-29",
+          "text": "sammenligne hvordan ulike kilder kan gi ulik informasjon om samme tema, og reflektere over hvordan kilder kan brukes til Œ pŒvirke og fremme bestemte syn",
           "coreElements": [
-            "Samfunnsvitskap",
-            "Demokratisk kompetanse"
+            "Utøve demokratisk medborgarskap",
+            "Tenke kritisk og håndtere uenighet",
+            "Utforske sammenhengar i tid og rom"
           ]
         },
         {
-          "code": "SAF-07",
-          "text": "utforske hvordan geografiske forhold påvirker og påvirkes av mennesker",
+          "code": "SAF-30",
+          "text": "utforske hvordan mennesker i fortiden livn¾rte seg, og samtale om hvordan sentrale endringer i livsgrunnlag og teknologi har pŒvirket og pŒvirker demografi, levekŒr og bosettingsm¿nstre",
           "coreElements": [
-            "Geografi",
-            "Forståelse av sammenhenger"
+            "Tenke kritisk og håndtere uenighet",
+            "Analysere samfunnsfaglig informasjon",
+            "Utøve demokratisk medborgarskap"
+          ]
+        },
+        {
+          "code": "SAF-31",
+          "text": "beskrive geografiske hovedtrekk i ulike deler av verden og reflektere over hvordan disse hovedtrekkene pŒvirker menneskene som bor der",
+          "coreElements": [
+            "Utforske sammenhengar i tid og rom",
+            "Utøve demokratisk medborgarskap"
+          ]
+        },
+        {
+          "code": "SAF-32",
+          "text": "reflektere over hvorfor konflikter oppstŒr, og dr¿fte hvordan den enkelte og samfunnet kan hŒndtere konflikter",
+          "coreElements": [
+            "Tenke kritisk og håndtere uenighet",
+            "Utforske sammenhengar i tid og rom"
+          ]
+        },
+        {
+          "code": "SAF-33",
+          "text": "utforske ulike sider ved mangfold i Norge og reflektere over menneskers behov for Œ v¾re seg selv og for Œ h¿re til i fellesskap",
+          "coreElements": [
+            "Utforske samfunnsfaglige temaer",
+            "Analysere samfunnsfaglig informasjon"
+          ]
+        },
+        {
+          "code": "SAF-34",
+          "text": "dr¿fte hva likeverd og likestilling betyr for et demokrati, og utvikle forslag til hvordan man kan motarbeide fordommer, rasisme og diskriminering",
+          "coreElements": [
+            "Utøve demokratisk medborgarskap",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-35",
+          "text": "samtale om menneske- og likeverd og sammenligne hvordan menneskerettighetene er blitt og blir ivaretatt i ulike land",
+          "coreElements": [
+            "Utforske samfunnsfaglige temaer",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-36",
+          "text": "utforske hovedtrekk ved historien til samene og de nasjonale minoritetene i Norge og presentere rettigheter samene og de nasjonale minoritetene i Norge har i dag",
+          "coreElements": [
+            "Utforske samfunnsfaglige temaer",
+            "Analysere samfunnsfaglig informasjon",
+            "Utforske sammenhengar i tid og rom"
+          ]
+        },
+        {
+          "code": "SAF-37",
+          "text": "reflektere over hvordan kommersiell pŒvirkning kan virke inn pŒ forbruk, personlig ¿konomi og selvbilde",
+          "coreElements": [
+            "Utforske samfunnsfaglige temaer",
+            "Utøve demokratisk medborgarskap",
+            "Utforske sammenhengar i tid og rom"
+          ]
+        },
+        {
+          "code": "SAF-38",
+          "text": "utforske og presentere en global utfordring ved b¾rekraftig utvikling og hvilke konsekvenser den kan ha, og utvikle forslag til hvordan man kan v¾re med pŒ Œ motvirke utfordringen, og hvordan samarbeid mellom land kan bidra",
+          "coreElements": [
+            "Utøve demokratisk medborgarskap",
+            "Utforske sammenhengar i tid og rom"
+          ]
+        },
+        {
+          "code": "SAF-39",
+          "text": "reflektere over hvordan egen og andre deltar i digital samhandling og dr¿fte hva det vil si Œ bruke d¿mmekraft, sett i lys av regler, normer og grenser",
+          "coreElements": [
+            "Utforske samfunnsfaglige temaer",
+            "Utforske sammenhengar i tid og rom"
+          ]
+        },
+        {
+          "code": "SAF-40",
+          "text": "reflektere over variasjoner i identiteter, seksuell orientering og kj¿nnsuttrykk og egne og andres grenser knyttet til f¿lelser, kropp, kj¿nn og seksualitet og dr¿fte hva man kan gj¿re om grenser blir brutt",
+          "coreElements": [
+            "Utforske sammenhengar i tid og rom",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-41",
+          "text": "beskrive sentrale hendelser som har f¿rt til det demokratiet vi har i Norge i dag, og sammenligne hvordan enkeltmennesker har mulighet til Œ pŒvirke i ulike styresett",
+          "coreElements": [
+            "Tenke kritisk og håndtere uenighet",
+            "Utøve demokratisk medborgarskap"
+          ]
+        },
+        {
+          "code": "SAF-42",
+          "text": "gi eksempler pŒ hva lover, regler og normer er, og hvilken funksjon de har i samfunnet, og reflektere over konsekvenser av Œ bryte dem",
+          "coreElements": [
+            "Utøve demokratisk medborgarskap",
+            "Utforske samfunnsfaglige temaer"
+          ]
+        },
+        {
+          "code": "SAF-43",
+          "text": "reflektere over hvordan m¿ter mellom mennesker har bidratt til Œ endre hvordan mennesker har tenkt og samfunn har v¾rt organisert",
+          "coreElements": [
+            "Utforske sammenhengar i tid og rom",
+            "Tenke kritisk og håndtere uenighet"
           ]
         }
       ],
       "10": [
         {
-          "code": "SAF-08",
-          "text": "formulere samfunnsfaglige spørsmål, innhente og bearbeide informasjon fra ulike kilder, vurdere kildenes relevans og troverdighet og referere på korrekt måte",
+          "code": "SAF-44",
+          "text": "bruke samfunnsfaglige metoder og digitale ressurser i egne unders¿kelser, presentere funn ved hjelp av digitale verkt¿y og dr¿fte hvor gyldige og relevante funnene er",
           "coreElements": [
-            "Utforsking og undersøkelse",
-            "Kritisk tenkning"
+            "Utforske sammenhengar i tid og rom",
+            "Tenke kritisk og håndtere uenighet"
           ]
         },
         {
-          "code": "SAF-09",
-          "text": "vurdere og ta bevisste etiske valg basert på kunnskap om menneskerettigheter",
+          "code": "SAF-45",
+          "text": "vurdere pŒ hvilke mŒter ulike kilder gir informasjon om et samfunnsfaglig tema, og reflektere over hvordan algoritmer, ensrettede kilder eller mangel pŒ kilder kan prege forstŒelsen vŒr",
           "coreElements": [
-            "Samfunnsvitskap",
-            "Demokratisk kompetanse"
+            "Utforske sammenhengar i tid og rom",
+            "Analysere samfunnsfaglig informasjon"
           ]
         },
         {
-          "code": "SAF-10",
-          "text": "drøfte årsaker til og konsekvenser av sentrale samfunnsendringer og historiske hendelser",
+          "code": "SAF-46",
+          "text": "dr¿fte hvordan framstillinger av fortiden, hendelser og grupper har pŒvirket og pŒvirker folks holdninger og handlinger",
           "coreElements": [
-            "Historie",
-            "Forståelse av tid og sammenhenger"
+            "Tenke kritisk og håndtere uenighet",
+            "Utforske samfunnsfaglige temaer"
           ]
         },
         {
-          "code": "SAF-11",
-          "text": "analysere hvordan geografiske forhold påvirker levekår og samfunnsutvikling",
+          "code": "SAF-47",
+          "text": "utforske hvordan teknologi har v¾rt og fremdeles er en endringsfaktor, og dr¿fte innvirkningen teknologien har hatt og har pŒ enkeltmennesker, samfunn og natur",
           "coreElements": [
-            "Geografi",
-            "Kritisk tenkning"
+            "Tenke kritisk og håndtere uenighet",
+            "Utforske samfunnsfaglige temaer"
+          ]
+        },
+        {
+          "code": "SAF-48",
+          "text": "reflektere over hvordan mennesker har kjempet og kjemper for forandringer i samfunnet og samtidig har v¾rt og er pŒvirket av geografiske forhold og historisk kontekst",
+          "coreElements": [
+            "Utøve demokratisk medborgarskap",
+            "Analysere samfunnsfaglig informasjon"
+          ]
+        },
+        {
+          "code": "SAF-49",
+          "text": "sammenligne hvordan politiske, geografiske og historiske forhold pŒvirker levekŒr, bosettingsm¿nstre og demografi i forskjellige deler av verden i dag",
+          "coreElements": [
+            "Utforske sammenhengar i tid og rom",
+            "Utforske samfunnsfaglige temaer"
+          ]
+        },
+        {
+          "code": "SAF-50",
+          "text": "gj¿re rede for Œrsaker til og konsekvenser av sentrale historiske og nŒtidige konflikter og reflektere over om endringer av noen forutsetninger kunne ha hindret konfliktene",
+          "coreElements": [
+            "Utforske sammenhengar i tid og rom",
+            "Utforske samfunnsfaglige temaer",
+            "Utøve demokratisk medborgarskap"
+          ]
+        },
+        {
+          "code": "SAF-51",
+          "text": "gj¿re rede for Œrsaker til og konsekvenser av terrorhandlinger og folkemord, som holocaust, og reflektere over hvordan ekstreme holdninger og ekstreme handlinger kan forebygges",
+          "coreElements": [
+            "Utforske samfunnsfaglige temaer",
+            "Utøve demokratisk medborgarskap"
+          ]
+        },
+        {
+          "code": "SAF-52",
+          "text": "utforske og beskrive hvordan menneske- og urfolksrettigheter og andre internasjonale avtaler og samarbeid har betydning for nasjonal politikk, menneskers liv og likestilling og likeverd",
+          "coreElements": [
+            "Analysere samfunnsfaglig informasjon",
+            "Tenke kritisk og håndtere uenighet",
+            "Utforske samfunnsfaglige temaer"
+          ]
+        },
+        {
+          "code": "SAF-53",
+          "text": "gj¿re rede for fornorskningen av samene og de nasjonale minoritetene og urettferdigheten de har blitt utsatt for, og reflektere over hvilke konsekvenser det har hatt og har pŒ individ- og samfunnsnivŒ",
+          "coreElements": [
+            "Utøve demokratisk medborgarskap",
+            "Analysere samfunnsfaglig informasjon"
+          ]
+        },
+        {
+          "code": "SAF-54",
+          "text": "beskrive ulike dimensjoner ved b¾rekraftig utvikling og hvordan de pŒvirker hverandre, og presentere tiltak for mer b¾rekraftige samfunn",
+          "coreElements": [
+            "Utforske samfunnsfaglige temaer",
+            "Utøve demokratisk medborgarskap",
+            "Utforske sammenhengar i tid og rom"
+          ]
+        },
+        {
+          "code": "SAF-55",
+          "text": "vurdere hvordan arbeid, inntekt og forbruk kan pŒvirke personlig ¿konomi, levestandard og livskvalitet",
+          "coreElements": [
+            "Tenke kritisk og håndtere uenighet",
+            "Utøve demokratisk medborgarskap"
+          ]
+        },
+        {
+          "code": "SAF-56",
+          "text": "reflektere over likheter og ulikheter i identiteter, levesett og kulturuttrykk og dr¿fte muligheter og utfordringer ved mangfold",
+          "coreElements": [
+            "Utforske sammenhengar i tid og rom",
+            "Utforske samfunnsfaglige temaer"
+          ]
+        },
+        {
+          "code": "SAF-57",
+          "text": "utforske og reflektere over egne digitale spor og muligheten for Œ fŒ slettet sporene og verne om egen og andres rett til privatliv, personvern og opphavsrett",
+          "coreElements": [
+            "Utforske samfunnsfaglige temaer",
+            "Analysere samfunnsfaglig informasjon",
+            "Utøve demokratisk medborgarskap"
+          ]
+        },
+        {
+          "code": "SAF-58",
+          "text": "reflektere over hvordan identitet, selvbilde og egne grenser utvikles og utfordres i ulike fellesskap, og presentere forslag til hvordan man kan hŒndtere pŒvirkning og u¿nskede hendelser",
+          "coreElements": [
+            "Tenke kritisk og håndtere uenighet",
+            "Utøve demokratisk medborgarskap",
+            "Utforske sammenhengar i tid og rom"
+          ]
+        },
+        {
+          "code": "SAF-59",
+          "text": "reflektere over hvilke akt¿rer som har makt i samfunnet i dag, og hvordan de begrunner standpunktene sine",
+          "coreElements": [
+            "Utøve demokratisk medborgarskap",
+            "Analysere samfunnsfaglig informasjon"
+          ]
+        },
+        {
+          "code": "SAF-60",
+          "text": "utforske ulike plattformer for digital samhandling og reflektere over hvordan digital deltakelse og samhandling pŒvirker formen pŒ og innholdet i samfunnsdebatten",
+          "coreElements": [
+            "Tenke kritisk og håndtere uenighet",
+            "Utforske sammenhengar i tid og rom"
+          ]
+        },
+        {
+          "code": "SAF-61",
+          "text": "beskrive sentrale lover, regler og normer og dr¿fte hvilke konsekvenser brudd pŒ disse kan ha for den enkelte og for samfunnet pŒ kort og lang sikt",
+          "coreElements": [
+            "Analysere samfunnsfaglig informasjon",
+            "Utforske samfunnsfaglige temaer",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-62",
+          "text": "beskrive trekk ved det politiske systemet og velferdssamfunnet i Norge i dag og reflektere over sentrale utfordringer L¾replan i samfunnsfag L¾replankode: SAF01-04 L¾replankode: SAF01-04",
+          "coreElements": [
+            "Analysere samfunnsfaglig informasjon",
+            "Utforske samfunnsfaglige temaer"
           ]
         }
       ]
