@@ -394,9 +394,9 @@ const App: React.FC = () => {
                     <button
                         onClick={() => setShowAboutModal(true)}
                         className="inline-flex items-center gap-2 px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 hover:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue"
-                        title="Om IOP-målgenerator"
+                        title="Info og retningslinjer"
                     >
-                        ℹ️ Om
+                        ℹ️ Info og retningslinjer
                     </button>
                 </div>
 
