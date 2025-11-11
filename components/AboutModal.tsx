@@ -36,7 +36,7 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
                                     : 'text-gray-500 hover:text-gray-700'
                             }`}
                         >
-                            Om appen
+                            Info og retningslinjer
                         </button>
                         <button
                             onClick={() => setActiveTab('retningslinjer')}
@@ -56,7 +56,7 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
                         <>
                             {/* Om appen */}
                             <section>
-                                <h3 className="text-xl font-semibold text-gray-900 mb-3">Om appen</h3>
+                                <h3 className="text-xl font-semibold text-gray-900 mb-3">Info og retningslinjer</h3>
                                 <div className="text-gray-700 space-y-2">
                                     <p>
                                         IOP-målbygger er et verktøy som hjelper lærere og spesialpedagoger med å lage 
