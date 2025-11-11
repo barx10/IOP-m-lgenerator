@@ -121,7 +121,7 @@ export const CompetenceGoalLibrary: React.FC<CompetenceGoalLibraryProps> = ({
         return (
             <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 text-sm text-yellow-800">
                 <p className="font-medium mb-1">⚠️ Ingen kompetansemål tilgjengelig</p>
-                <p>Det finnes ingen kompetansemål for {selectedSubject} på nivå {selectedLevel} i biblioteket ennå.</p>
+                <p>Det finnes ingen kompetansemål for {selectedSubject} på nivå {selectedLevel}.</p>
             </div>
         );
     }
