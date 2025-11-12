@@ -758,6 +758,41 @@ const App: React.FC = () => {
                                                 {saved.overallBenefit.evaluation && <p><span className="font-semibold">Evaluering av utvikling:</span> {saved.overallBenefit.evaluation}</p>}
                                             </div>
                                         </div>
+
+                                        {/* Social Goals in Print */}
+                                        {saved.profile.selectedSocialGoals && saved.profile.selectedSocialGoals.length > 0 && (
+                                            <div className="mt-6">
+                                                <h3 className="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">Sosiale mål for perioden</h3>
+                                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                                    {saved.profile.selectedSocialGoals.map((goalId) => {
+                                                        const goal = socialGoalsData.categories.find((g: any) => g.id === goalId);
+                                                        return goal ? (
+                                                            <div key={goalId} className="p-4 bg-purple-50 border-2 border-purple-200 rounded-lg">
+                                                                <div className="flex items-center gap-2 mb-2">
+                                                                    <span className="text-xl">{goal.icon}</span>
+                                                                    <span className="font-semibold text-gray-900 text-sm">{goal.name}</span>
+                                                                </div>
+                                                                <p className="text-xs text-gray-600 mb-2">{goal.description}</p>
+                                                                <div className="mt-2 pt-2 border-t border-purple-200">
+                                                                    <p className="text-xs font-semibold text-purple-700 mb-1">Eksempler:</p>
+                                                                    <ul className="text-xs text-gray-600 space-y-1">
+                                                                        {goal.examples.slice(0, 3).map((example: string, idx: number) => (
+                                                                            <li key={idx} className="flex items-start">
+                                                                                <span className="mr-1">•</span>
+                                                                                <span>{example}</span>
+                                                                            </li>
+                                                                        ))}
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        ) : null;
+                                                    })}
+                                                </div>
+                                                <p className="mt-3 text-xs text-gray-500 italic">
+                                                    💡 Disse sosiale målene er vevd inn i ferdighetsmål og kunnskapsmål ovenfor
+                                                </p>
+                                            </div>
+                                        )}
                                     </div>
                                 ))}
                             </div>
