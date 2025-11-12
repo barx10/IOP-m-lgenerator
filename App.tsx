@@ -18,6 +18,7 @@ import { CoreElementsModal } from './components/CoreElementsModal';
 import { AboutModal } from './components/AboutModal';
 import { Footer } from './components/Footer';
 import { SocialGoalsSelector } from './components/SocialGoalsSelector';
+import socialGoalsData from './data/socialGoals.json';
 
 import { DocumentIcon } from './components/icons/DocumentIcon';
 import { CalendarIcon } from './components/icons/CalendarIcon';
@@ -357,7 +358,6 @@ const App: React.FC = () => {
                     <Card title="Sosiale mål for perioden" icon={<span className="text-2xl">👥</span>}>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                             {profile.selectedSocialGoals.map((goalId) => {
-                                const socialGoalsData = require('./data/socialGoals.json');
                                 const goal = socialGoalsData.categories.find((g: any) => g.id === goalId);
                                 return goal ? (
                                     <div key={goalId} className="p-4 bg-purple-50 border-2 border-purple-200 rounded-xl">
