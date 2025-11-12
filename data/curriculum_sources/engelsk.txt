@@ -1,0 +1,139 @@
+﻿"ENG": { 
+  "name": "Engelsk", 
+  "levels": { 
+    "2": [ 
+      { 
+        "code": "ENG-01", 
+        "text": "bruke digitale ressurser for å oppleve språket via autentiske språkmodeller og samtalepartnere", 
+        "coreElements": ["Språklæring", "Kommunikasjon"] 
+      }, 
+      { 
+        "code": "ENG-02", 
+        "text": "lytte til og gjenkjenne språklyder og stavelser i ord", 
+        "coreElements": ["Arbeid med tekst i sjangre"] 
+      }, 
+      { 
+        "code": "ENG-03", 
+        "text": "koble språklyder til bokstaver og stavemønstre og trekke bokstavlyder sammen til ord", 
+        "coreElements": ["Kommunikasjon"] 
+      }, 
+      { 
+        "code": "ENG-04", 
+        "text": "lytte til og utforske det engelske alfabetet og uttalemønstre i lek- og sangaktiviteter", 
+        "coreElements": ["Kommunikasjon", "Språklæring"] 
+      }, 
+      { 
+        "code": "ENG-05", 
+        "text": "oppdage høyfrekvente ord og fraser i ulike typer tekster", 
+        "coreElements": ["Kommunikasjon", "Arbeid med tekst i sjangre"] 
+      }, 
+      { 
+        "code": "ENG-06", 
+        "text": "stille og svare på enkle spørsmål, følge enkle instruksjoner og bruke noen høflighetsuttrykk", 
+        "coreElements": ["Arbeid med tekst i sjangre", "Kommunikasjon"] 
+      }, 
+      { 
+        "code": "ENG-07", 
+        "text": "delta i innøvde dialoger og spontane samtaler om egne behov og følelser, dagligliv og interesser", 
+        "coreElements": ["Språklæring"] 
+      }, 
+      { 
+        "code": "ENG-08", 
+        "text": "oppdage ord som er felles for engelsk og andre språk eleven kjenner til", 
+        "coreElements": ["Kommunikasjon"] 
+      }, 
+      { 
+        "code": "ENG-09", 
+        "text": "lytte til, lese og samtale om innhold i enkle tekster, inkludert bildebøker", 
+        "coreElements": ["Kommunikasjon"] 
+      }, 
+      { 
+        "code": "ENG-10", 
+        "text": "lese og eksperimentere med å skrive kjente ord, fraser og enkle setninger", 
+        "coreElements": ["Kommunikasjon"] 
+      }, 
+      { 
+        "code": "ENG-11", 
+        "text": "tilegne seg ord og kulturell kunnskap gjennom engelskspråklig barnelitteratur og barnekultur", 
+        "coreElements": ["Språklæring", "Kommunikasjon"] 
+      } 
+    ], 
+    "4": [ 
+      { 
+        "code": "ENG-12", 
+        "text": "utforske ulike ordbøker og hvordan de kan brukes i språklæring", 
+        "coreElements": ["Arbeid med tekst i sjangre"] 
+      }, 
+      { 
+        "code": "ENG-13", 
+        "text": "bruke digitale ressurser til å utforske språket og samhandle med andre", 
+        "coreElements": ["Språklæring", "Arbeid med tekst i sjangre"] 
+      }, 
+      { 
+        "code": "ENG-14", 
+        "text": "utforske og bruke det engelske alfabetet og uttalemønstre i varierte lek-, sang- og språklæringsaktiviteter", 
+        "coreElements": ["Språklæring"] 
+      }, 
+      { 
+        "code": "ENG-15", 
+        "text": "lytte til og forstå ord og uttrykk i tilpassede tekster", 
+        "coreElements": ["Kommunikasjon"] 
+      }, 
+      { 
+        "code": "ENG-16", 
+        "text": "bruke noen vanlige småord, høflighetsuttrykk og enkle fraser og setninger for å få hjelp til å forstå og bli forstått", 
+        "coreElements": ["Språklæring"] 
+      }, 
+      { 
+        "code": "ENG-17", 
+        "text": "delta i samtaler om egne og andres behov, følelser, dagligliv og interesser og bruke samtaleregler", 
+        "coreElements": ["Språklæring"] 
+      }, 
+      { 
+        "code": "ENG-18", 
+        "text": "oppdage og leke med ord og uttrykk som er felles for engelsk og andre språk eleven kjenner til", 
+        "coreElements": ["Arbeid med tekst i sjangre"] 
+      }, 
+      { 
+        "code": "ENG-19", 
+        "text": "identifisere ordklasser i tilpassede tekster", 
+        "coreElements": ["Språklæring", "Arbeid med tekst i sjangre"] 
+      }, 
+      { 
+        "code": "ENG-20", 
+        "text": "følge enkle regler for rettskriving og setningsstruktur", 
+        "coreElements": ["Kommunikasjon"] 
+      }, 
+      { 
+        "code": "ENG-21", 
+        "text": "lese og forstå tekster med lydrette ord og kjente og ukjente ordbilder", 
+        "coreElements": ["Arbeid med tekst i sjangre"] 
+      }, 
+      { 
+        "code": "ENG-22", 
+        "text": "lese og forstå betydningen av kjente og ukjente ord, fraser og setninger ut fra sammenhengen i selvvalgte tekster", 
+        "coreElements": ["Språklæring", "Kommunikasjon"] 
+      }, 
+      { 
+        "code": "ENG-23", 
+        "text": "lese og samtale om innhold i ulike typer tekster, inkludert bildebøker", 
+        "coreElements": ["Arbeid med tekst i sjangre"] 
+      }, 
+      { 
+        "code": "ENG-24", 
+        "text": "skrive enkle tekster som uttrykker tanker og meninger", 
+        "coreElements": ["Kommunikasjon"] 
+      }, 
+      { 
+        "code": "ENG-25", 
+        "text": "samtale om noen sider ved ulike levemåter, tradisjoner og skikker i den engelskspråklige verden og i Norge", 
+        "coreElements": ["Språklæring"] 
+      }, 
+      { 
+        "code": "ENG-26", 
+        "text": "tilegne seg ord, fraser og kulturell kunnskap gjennom engelskspråklig litteratur og barnekultur", 
+        "coreElements": ["Språklæring"] 
+      } 
+    ] 
+  } 
+}

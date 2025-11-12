@@ -1,0 +1,120 @@
+{
+  "MAT": {
+    "name": "Matematikk",
+    "levels": {
+      "2": [
+        {
+          "code": "MAT-01",
+          "text": "ordne tall, mengder og former ut fra egenskaper, sammenligne dem og reflektere over om det kan gjøres på flere måter",
+          "coreElements": [
+            "Resonnering og argumentasjon",
+            "Representasjon og kommunikasjon",
+            "Modellering og anvendelse"
+          ]
+        },
+        {
+          "code": "MAT-02",
+          "text": "utforske tall, mengder og telling i lek, natur, billedkunst, musikk og barnelitteratur, representere tallene på ulike måter og oversette mellom de ulike representasjonene",
+          "coreElements": [
+            "Representasjon og kommunikasjon",
+            "Resonnering og argumentasjon",
+            "Modellering og anvendelse"
+          ]
+        },
+        {
+          "code": "MAT-03",
+          "text": "eksperimentere med telling både forlengs og baklengs, velge ulike startpunkter og ulik differanse og beskrive mønstre i tellingene",
+          "coreElements": [
+            "Modellering og anvendelse",
+            "Abstraksjon og generalisering",
+            "Utforsking og problemløsning"
+          ]
+        },
+        {
+          "code": "MAT-04",
+          "text": "utforske og beskrive generelle egenskaper ved partall og oddetall",
+          "coreElements": [
+            "Abstraksjon og generalisering",
+            "Representasjon og kommunikasjon"
+          ]
+        },
+        {
+          "code": "MAT-05",
+          "text": "beskrive posisjonssystemet ved hjelp av ulike representasjoner",
+          "coreElements": [
+            "Abstraksjon og generalisering",
+            "Modellering og anvendelse",
+            "Resonnering og argumentasjon"
+          ]
+        },
+        {
+          "code": "MAT-06",
+          "text": "plassere tall på tallinjen og bruke tallinjen i regning og problemløsning",
+          "coreElements": [
+            "Resonnering og argumentasjon",
+            "Abstraksjon og generalisering"
+          ]
+        },
+        {
+          "code": "MAT-07",
+          "text": "utforske addisjon og subtraksjon og bruke dette til å formulere og løse problemer fra lek og egen hverdag",
+          "coreElements": [
+            "Resonnering og argumentasjon",
+            "Utforsking og problemløsning"
+          ]
+        },
+        {
+          "code": "MAT-08",
+          "text": "utforske den kommutative og den assosiative egenskapen ved addisjon og bruke dette i hoderegning",
+          "coreElements": [
+            "Utforsking og problemløsning",
+            "Resonnering og argumentasjon"
+          ]
+        },
+        {
+          "code": "MAT-09",
+          "text": "kjenne igjen og beskrive repeterende enheter i mønstre og lage egne mønstre",
+          "coreElements": [
+            "Modellering og anvendelse",
+            "Resonnering og argumentasjon",
+            "Representasjon og kommunikasjon"
+          ]
+        },
+        {
+          "code": "MAT-10",
+          "text": "utforske, tegne og beskrive geometriske figurer fra sitt eget nærmiljø og argumentere for måter å sortere dem på etter egenskaper",
+          "coreElements": [
+            "Utforsking og problemløsning",
+            "Abstraksjon og generalisering",
+            "Representasjon og kommunikasjon"
+          ]
+        },
+        {
+          "code": "MAT-11",
+          "text": "måle og sammenligne størrelser som gjelder lengde og areal ved hjelp av ikke-standardiserte og standardiserte måleenheter, beskrive hvordan og samtale om resultatene",
+          "coreElements": [
+            "Abstraksjon og generalisering",
+            "Resonnering og argumentasjon"
+          ]
+        },
+        {
+          "code": "MAT-12",
+          "text": "forklare hvordan man kan beskrive tid ved hjelp av klokke og kalender",
+          "coreElements": [
+            "Representasjon og kommunikasjon",
+            "Resonnering og argumentasjon",
+            "Utforsking og problemløsning"
+          ]
+        },
+        {
+          "code": "MAT-13",
+          "text": "lage og følge regler og trinnvise instruksjoner i lek og spill",
+          "coreElements": [
+            "Abstraksjon og generalisering",
+            "Resonnering og argumentasjon"
+          ]
+        }
+      ]
+    }
+  }
+}

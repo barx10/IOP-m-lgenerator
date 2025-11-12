@@ -1,0 +1,84 @@
+﻿  },
+  "NAT": {
+    "name": "Naturfag",
+    "levels": {
+      "2": [
+        {
+          "code": "NAT-01",
+          "text": "undre seg, utforske og lage spørsmål, og knytte dette til egne eller andres erfaringer",
+          "coreElements": [
+            "Teknologiske prosesser",
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-02",
+          "text": "presentere funnene sine og beskrive hvordan eleven har kommet fram til dem",
+          "coreElements": [
+            "Systemtenkning",
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-03",
+          "text": "presentere egne ideer til teknologiske oppfinnelser",
+          "coreElements": [
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-04",
+          "text": "utforske og beskrive observerbare egenskaper til ulike objekter, materialer og stoffer og sortere etter egenskaper",
+          "coreElements": [
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-05",
+          "text": "samtale om hvordan vi kan ta miljøbevisste valg og gjennomføre lokale miljøtiltak",
+          "coreElements": [
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-06",
+          "text": "utforske et naturområde i nærmiljøet og beskrive hvordan noen organismer er tilpasset området og hverandre",
+          "coreElements": [
+            "Systemtenkning",
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-07",
+          "text": "oppleve naturen til ulike årstider, reflektere over hvordan naturen er i endring, og hvorfor året deles inn på ulike måter i norsk og samisk tradisjon",
+          "coreElements": [
+            "Teknologiske prosesser",
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-08",
+          "text": "planlegge og gjennomføre undersøkelser av vær og himmelfenomener og sammenligne målinger, observasjoner og værtegn gjennom året",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-09",
+          "text": "utforske sansene gjennom lek ute og inne og samtale om hvordan sansene brukes til å samle informasjon",
+          "coreElements": [
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-10",
+          "text": "gi eksempler på noen vanlige sykdommer og samtale om hva man kan gjøre for å verne kroppen mot smittsomme sykdommer",
+          "coreElements": [
+            "Teknologiske prosesser",
+            "Systemtenkning"
+          ]
+        }
+      ]
+    }
+  }

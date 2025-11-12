@@ -1,0 +1,95 @@
+﻿  },
+  "SAF": {
+    "name": "Samfunnsfag",
+    "levels": {
+      "2": [
+        {
+          "code": "SAF-01",
+          "text": "utvikle og presentere samfunnsfaglige spørsmål",
+          "coreElements": [
+            "Analysere samfunnsfaglig informasjon",
+            "Utforske samfunnsfaglige temaer"
+          ]
+        },
+        {
+          "code": "SAF-02",
+          "text": "samtale om hvordan ulike kilder, inkludert kart, kan gi informasjon om samfunnsfaglige spørsmål",
+          "coreElements": [
+            "Utøve demokratisk medborgarskap",
+            "Analysere samfunnsfaglig informasjon",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-03",
+          "text": "utforske og beskrive kulturminner og kultur- og naturlandskapet i nærmiljøet",
+          "coreElements": [
+            "Utøve demokratisk medborgarskap",
+            "Utforske samfunnsfaglige temaer"
+          ]
+        },
+        {
+          "code": "SAF-04",
+          "text": "utforske og presentere hvordan mennesker levde for én til to menneskealdre siden",
+          "coreElements": [
+            "Analysere samfunnsfaglig informasjon",
+            "Utøve demokratisk medborgarskap",
+            "Utforske sammenhenger i tid og rom"
+          ]
+        },
+        {
+          "code": "SAF-05",
+          "text": "reflektere over hvorfor mennesker har ulike meninger og tar ulike valg",
+          "coreElements": [
+            "Utforske samfunnsfaglige temaer",
+            "Tenke kritisk og håndtere uenighet",
+            "Utforske sammenhenger i tid og rom"
+          ]
+        },
+        {
+          "code": "SAF-06",
+          "text": "samtale om vennskap, tilhørighet og hva som påvirker relasjoner",
+          "coreElements": [
+            "Utforske sammenhenger i tid og rom",
+            "Utforske samfunnsfaglige temaer"
+          ]
+        },
+        {
+          "code": "SAF-07",
+          "text": "beskrive og gi eksempler på mangfold i Norge, med vekt på ulike familieformer og folkegrupper, inkludert det samiske urfolket",
+          "coreElements": [
+            "Utøve demokratisk medborgarskap",
+            "Utforske samfunnsfaglige temaer",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-08",
+          "text": "utforske og gi eksempler på hvordan mennesker påvirker klima og miljø, og dokumentere hvordan påvirkningene kommer til syne i nærmiljøet",
+          "coreElements": [
+            "Utøve demokratisk medborgarskap",
+            "Utforske sammenhenger i tid og rom",
+            "Analysere samfunnsfaglig informasjon"
+          ]
+        },
+        {
+          "code": "SAF-09",
+          "text": "presentere og gi eksempler på rettigheter barn har i Norge og verden, og hva barn kan gjøre ved brudd på disse rettighetene",
+          "coreElements": [
+            "Utforske samfunnsfaglige temaer",
+            "Analysere samfunnsfaglig informasjon",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-10",
+          "text": "utforske og gi eksempler på hvordan barn kan påvirke beslutninger og samarbeide om demokratiske prosesser",
+          "coreElements": [
+            "Utøve demokratisk medborgarskap",
+            "Analysere samfunnsfaglig informasjon",
+            "Utforske samfunnsfaglige temaer"
+          ]
+        }
+      ]
+    }
+  }
