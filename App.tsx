@@ -17,6 +17,7 @@ import { TextAreaField } from './components/TextAreaField';
 import { CoreElementsModal } from './components/CoreElementsModal';
 import { AboutModal } from './components/AboutModal';
 import { Footer } from './components/Footer';
+import { SocialGoalsSelector } from './components/SocialGoalsSelector';
 
 import { DocumentIcon } from './components/icons/DocumentIcon';
 import { CalendarIcon } from './components/icons/CalendarIcon';
@@ -39,6 +40,7 @@ const initialProfile: StudentProfile = {
   topic: '',
   selectedCoreElement: '',
   selectedCrossCurricularTheme: '',
+  selectedSocialGoals: [],
 };
 
 const initialFramework: Framework = {
@@ -349,6 +351,41 @@ const App: React.FC = () => {
                         <p className="text-gray-500">Forslag til IOP-mål kunne ikke genereres.</p>
                     )}
                 </Card>
+
+                {/* Show selected social goals if any */}
+                {profile.selectedSocialGoals && profile.selectedSocialGoals.length > 0 && (
+                    <Card title="Sosiale mål for perioden" icon={<span className="text-2xl">👥</span>}>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                            {profile.selectedSocialGoals.map((goalId) => {
+                                const socialGoalsData = require('./data/socialGoals.json');
+                                const goal = socialGoalsData.categories.find((g: any) => g.id === goalId);
+                                return goal ? (
+                                    <div key={goalId} className="p-4 bg-purple-50 border-2 border-purple-200 rounded-xl">
+                                        <div className="flex items-center gap-2 mb-2">
+                                            <span className="text-2xl">{goal.icon}</span>
+                                            <span className="font-semibold text-gray-900">{goal.name}</span>
+                                        </div>
+                                        <p className="text-sm text-gray-600 mb-3">{goal.description}</p>
+                                        <div className="mt-3 pt-3 border-t border-purple-200">
+                                            <p className="text-xs font-semibold text-purple-700 mb-2">Eksempler på hvordan eleven jobber med dette:</p>
+                                            <ul className="text-xs text-gray-600 space-y-1">
+                                                {goal.examples.slice(0, 3).map((example: string, idx: number) => (
+                                                    <li key={idx} className="flex items-start">
+                                                        <span className="mr-1">•</span>
+                                                        <span>{example}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                ) : null;
+                            })}
+                        </div>
+                        <p className="mt-4 text-sm text-gray-500 italic">
+                            💡 Disse sosiale målene er vevd inn i ferdighetsmål og kunnskapsmål ovenfor
+                        </p>
+                    </Card>
+                )}
             </div>
         );
     };
@@ -566,6 +603,15 @@ const App: React.FC = () => {
                                 </div>
                             </Card>
                         )}
+
+                        {/* Social Goals */}
+                        <Card title="Sosiale mål" icon={<span className="text-2xl">👥</span>}>
+                            <SocialGoalsSelector
+                                selectedGoals={profile.selectedSocialGoals || []}
+                                onSelectionChange={(goals) => setProfile(prev => ({ ...prev, selectedSocialGoals: goals }))}
+                                maxSelections={3}
+                            />
+                        </Card>
 
                         {/* Competence Goals */}
                         <CompetenceGoalSelector

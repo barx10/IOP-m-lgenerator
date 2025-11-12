@@ -27,6 +27,8 @@ For både ferdighetsmål og kunnskapsmål skal du lage:
 - Ett Tilpasset nivå (realistisk oppnåelig med støtte)
 - Ett Utfordrende nivå (strekker eleven videre)
 
+Hvis sosiale mål er oppgitt, skal du integrere disse naturlig i ferdighetsmål og kunnskapsmål der det er relevant. Sosiale mål kan handle om samarbeid, kommunikasjon, selvregulering, empati, selvstendighet, konfliktløsning, struktur/rutiner og inkludering.
+
 VIKTIG: Skriv BARE selve målet i 'goal'-feltet, IKKE inkluder nivå-teksten "Tilpasset" eller "Utfordrende" i målteksten.`;
 
   const goalsList = selectedGoals.map(goal => `- ${goal}`).join('\n');
@@ -51,11 +53,23 @@ VIKTIG: Skriv BARE selve målet i 'goal'-feltet, IKKE inkluder nivå-teksten "Ti
     }
   }
 
+  // Get social goals (if selected)
+  let socialGoalsText = '';
+  if (profile.selectedSocialGoals && profile.selectedSocialGoals.length > 0) {
+    const socialGoalsData = await import('../data/socialGoals.json');
+    const selectedGoalNames = profile.selectedSocialGoals
+      .map(id => socialGoalsData.categories.find((g: any) => g.id === id))
+      .filter(Boolean)
+      .map((g: any) => `${g.icon} ${g.name} - ${g.description}`)
+      .join('\n');
+    socialGoalsText = selectedGoalNames ? `**Sosiale mål:**\n${selectedGoalNames}\n` : '';
+  }
+
   const userPrompt = `
 **Trinn:** ${profile.grade} (ca. ${parseInt(profile.grade) + 5} år)
 **Fag:** ${profile.subject}
 **Tema:** ${profile.topic}
-${expertAssessment ? `**Sakkyndig:** ${expertAssessment}\n` : ''}${coreElementText ? `**Kjerneelement:** ${coreElementText}\n` : ''}${crossCurricularText ? `**Tverrfaglig tema:** ${crossCurricularText}\n` : ''}**Kompetansemål:**
+${expertAssessment ? `**Sakkyndig:** ${expertAssessment}\n` : ''}${coreElementText ? `**Kjerneelement:** ${coreElementText}\n` : ''}${crossCurricularText ? `**Tverrfaglig tema:** ${crossCurricularText}\n` : ''}${socialGoalsText}**Kompetansemål:**
 ${goalsList}
 `.trim();
 

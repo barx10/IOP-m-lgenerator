@@ -14,6 +14,7 @@ export interface StudentProfile {
   topic: string;
   selectedCoreElement: string; // Changed from array to single string
   selectedCrossCurricularTheme: string; // Added for cross-curricular themes
+  selectedSocialGoals?: string[]; // Added for social goals (max 3)
 }
 
 export interface Framework {

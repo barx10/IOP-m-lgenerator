@@ -1,0 +1,92 @@
+{
+  "categories": [
+    {
+      "id": "samarbeid",
+      "name": "Samarbeid",
+      "icon": "👥",
+      "description": "Evne til å jobbe sammen med andre, dele oppgaver og bidra i gruppearbeid",
+      "examples": [
+        "Arbeide i gruppe med felles mål",
+        "Ta hensyn til andres ideer og forslag",
+        "Dele materiell og ressurser med medelever"
+      ]
+    },
+    {
+      "id": "kommunikasjon",
+      "name": "Kommunikasjon",
+      "icon": "💬",
+      "description": "Evne til å uttrykke seg og lytte til andre på en konstruktiv måte",
+      "examples": [
+        "Uttrykke egne behov og meninger",
+        "Lytte aktivt til andre",
+        "Stille spørsmål når noe er uklart"
+      ]
+    },
+    {
+      "id": "selvregulering",
+      "name": "Selvregulering",
+      "icon": "🧘",
+      "description": "Evne til å håndtere egne følelser, impulser og reaksjoner",
+      "examples": [
+        "Bruke strategier for å roe seg ned",
+        "Be om pause når det trengs",
+        "Gjenkjenne og navngi egne følelser"
+      ]
+    },
+    {
+      "id": "empati",
+      "name": "Empati",
+      "icon": "❤️",
+      "description": "Evne til å forstå og ta hensyn til andres følelser og perspektiver",
+      "examples": [
+        "Vise omtanke for medelever",
+        "Gjenkjenne når andre trenger hjelp",
+        "Respektere andres følelser og grenser"
+      ]
+    },
+    {
+      "id": "selvstaendighet",
+      "name": "Selvstendighet",
+      "icon": "🎯",
+      "description": "Evne til å ta initiativ og jobbe selvstendig med oppgaver",
+      "examples": [
+        "Starte med oppgaver uten påminnelse",
+        "Bruke hjelpemidler og strategier selv",
+        "Be om hjelp når det trengs"
+      ]
+    },
+    {
+      "id": "konfliktlosning",
+      "name": "Konfliktløsning",
+      "icon": "🤝",
+      "description": "Evne til å håndtere uenigheter og finne løsninger sammen med andre",
+      "examples": [
+        "Bruke ord i stedet for fysisk respons",
+        "Finne kompromisser i uenigheter",
+        "Søke hjelp fra voksne ved behov"
+      ]
+    },
+    {
+      "id": "rutiner",
+      "name": "Struktur og rutiner",
+      "icon": "📋",
+      "description": "Evne til å følge daglige rutiner og strukturer i skolehverdagen",
+      "examples": [
+        "Følge timeplan og daglige rutiner",
+        "Organisere skolearbeid og materiell",
+        "Forberede seg til ulike aktiviteter"
+      ]
+    },
+    {
+      "id": "inkludering",
+      "name": "Inkludering",
+      "icon": "🌟",
+      "description": "Evne til å inkludere andre og være en del av fellesskapet",
+      "examples": [
+        "Invitere andre med i lek og aktiviteter",
+        "Delta i fellesaktiviteter",
+        "Respektere mangfold og forskjeller"
+      ]
+    }
+  ]
+}
