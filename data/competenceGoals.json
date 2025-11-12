@@ -1,657 +1,4 @@
 {
-  "NOR": {
-    "name": "Norsk",
-    "levels": {
-      "2": [
-        {
-          "code": "NOR-01",
-          "text": "lytte til og samtale om skjønnlitteratur og sakprosa på bokmål og nynorsk",
-          "coreElements": [
-            "Språk og språkbruk",
-            "Sammensatte tekster",
-            "Lese og skrive"
-          ]
-        },
-        {
-          "code": "NOR-02",
-          "text": "låne og lese bøker fra biblioteket",
-          "coreElements": [
-            "Sammensatte tekster",
-            "Muntlige tekster",
-            "Tekstkompetanse"
-          ]
-        },
-        {
-          "code": "NOR-03",
-          "text": "uttrykke tekstopplevelser gjennom lek, sang, tegning, skriving og andre kreative aktiviteter",
-          "coreElements": [
-            "Sammensatte tekster",
-            "Lese og skrive",
-            "Muntlige tekster"
-          ]
-        },
-        {
-          "code": "NOR-04",
-          "text": "samtale om og beskrive hvordan ord vi bruker, kan påvirke andre",
-          "coreElements": [
-            "Sammensatte tekster",
-            "Språk og språkbruk"
-          ]
-        },
-        {
-          "code": "NOR-05",
-          "text": "leke med rim og rytme og lytte ut språklyder og stavelser i ord",
-          "coreElements": [
-            "Tekstkompetanse",
-            "Språk og språkbruk"
-          ]
-        },
-        {
-          "code": "NOR-06",
-          "text": "trekke bokstavlyder sammen til ord under lesing og skriving",
-          "coreElements": [
-            "Muntlige tekster",
-            "Språk og språkbruk",
-            "Tekstkompetanse"
-          ]
-        },
-        {
-          "code": "NOR-07",
-          "text": "lese med sammenheng og forståelse på papir og digitalt og bruke enkle strategier for leseforståelse",
-          "coreElements": [
-            "Språk og språkbruk",
-            "Tekstkompetanse"
-          ]
-        },
-        {
-          "code": "NOR-08",
-          "text": "lytte, ta ordet etter tur og begrunne egne meninger i samtaler",
-          "coreElements": [
-            "Sammensatte tekster",
-            "Muntlige tekster",
-            "Tekstkompetanse"
-          ]
-        },
-        {
-          "code": "NOR-09",
-          "text": "beskrive og fortelle muntlig og skriftlig",
-          "coreElements": [
-            "Sammensatte tekster",
-            "Muntlige tekster",
-            "Tekstkompetanse"
-          ]
-        },
-        {
-          "code": "NOR-10",
-          "text": "skrive tekster for hånd og med tastatur",
-          "coreElements": [
-            "Lese og skrive",
-            "Tekstkompetanse",
-            "Sammensatte tekster"
-          ]
-        },
-        {
-          "code": "NOR-11",
-          "text": "bruke store og små bokstaver, punktum, spørsmålstegn og utropstegn i tekster og samtale om egne og andres tekster",
-          "coreElements": [
-            "Sammensatte tekster",
-            "Muntlige tekster"
-          ]
-        },
-        {
-          "code": "NOR-12",
-          "text": "lage tekster som kombinerer skrift med bilder",
-          "coreElements": [
-            "Muntlige tekster",
-            "Lese og skrive"
-          ]
-        },
-        {
-          "code": "NOR-13",
-          "text": "utforske og samtale om oppbygningen av og betydningen til ord og uttrykk",
-          "coreElements": [
-            "Språk og språkbruk",
-            "Lese og skrive",
-            "Sammensatte tekster"
-          ]
-        },
-        {
-          "code": "NOR-14",
-          "text": "utforske eget talespråk og samtale om forskjeller og likheter mellom talespråk og skriftspråk",
-          "coreElements": [
-            "Lese og skrive",
-            "Språk og språkbruk",
-            "Tekstkompetanse"
-          ]
-        }
-      ],
-      "4": [
-        {
-          "code": "NOR-15",
-          "text": "lese og lytte til fortellinger, eventyr, sangtekster, faktabøker og andre tekster på bokmål og nynorsk og i oversettelse fra samiske og andre språk, og samtale om hva tekstene betyr for eleven",
-          "coreElements": [
-            "Sammensatte tekster",
-            "Språk og språkbruk"
-          ]
-        },
-        {
-          "code": "NOR-16",
-          "text": "velge bøker fra bibliotek ut fra egne interesser og leseferdigheter",
-          "coreElements": [
-            "Språk og språkbruk",
-            "Lese og skrive",
-            "Tekstkompetanse"
-          ]
-        },
-        {
-          "code": "NOR-17",
-          "text": "lese tekster med flyt og forståelse og bruke lesestrategier målrettet for å lære",
-          "coreElements": [
-            "Tekstkompetanse",
-            "Lese og skrive",
-            "Språk og språkbruk"
-          ]
-        },
-        {
-          "code": "NOR-18",
-          "text": "utforske og formidle tekster gjennom samtale, skriving, lek, bevegelse og andre kreative uttrykk",
-          "coreElements": [
-            "Språk og språkbruk",
-            "Muntlige tekster"
-          ]
-        },
-        {
-          "code": "NOR-19",
-          "text": "samtale om forskjellen mellom meninger og fakta i tekster",
-          "coreElements": [
-            "Tekstkompetanse",
-            "Muntlige tekster"
-          ]
-        },
-        {
-          "code": "NOR-20",
-          "text": "holde muntlige presentasjoner med og uten digitale ressurser",
-          "coreElements": [
-            "Muntlige tekster",
-            "Språk og språkbruk",
-            "Tekstkompetanse"
-          ]
-        },
-        {
-          "code": "NOR-21",
-          "text": "kombinere ulike uttrykksformer i sammensatte tekster",
-          "coreElements": [
-            "Muntlige tekster",
-            "Sammensatte tekster"
-          ]
-        },
-        {
-          "code": "NOR-22",
-          "text": "følge opp innspill fra andre i faglige samtaler og stille oppklarende og utdypende spørsmål",
-          "coreElements": [
-            "Lese og skrive",
-            "Muntlige tekster",
-            "Sammensatte tekster"
-          ]
-        },
-        {
-          "code": "NOR-23",
-          "text": "beskrive, fortelle og argumentere muntlig og skriftlig og bruke språket på kreative måter",
-          "coreElements": [
-            "Språk og språkbruk",
-            "Muntlige tekster",
-            "Tekstkompetanse"
-          ]
-        },
-        {
-          "code": "NOR-24",
-          "text": "skrive tekster med funksjonell håndskrift og med tastatur",
-          "coreElements": [
-            "Muntlige tekster",
-            "Lese og skrive",
-            "Språk og språkbruk"
-          ]
-        },
-        {
-          "code": "NOR-25",
-          "text": "bruke komma og andre skilletegn i tekster",
-          "coreElements": [
-            "Sammensatte tekster",
-            "Muntlige tekster"
-          ]
-        },
-        {
-          "code": "NOR-26",
-          "text": "bruke fagspråk om setningsoppbygning og bøying av verb, substantiv og adjektiv i samtaler om språk og om egne og andres tekster",
-          "coreElements": [
-            "Muntlige tekster",
-            "Tekstkompetanse"
-          ]
-        },
-        {
-          "code": "NOR-27",
-          "text": "reflektere over hvordan språkbruken vår påvirker andre, og hvordan vi tilpasser og endrer språket i ulike situasjoner",
-          "coreElements": [
-            "Muntlige tekster",
-            "Tekstkompetanse",
-            "Språk og språkbruk"
-          ]
-        },
-        {
-          "code": "NOR-28",
-          "text": "sammenligne ord og uttrykk i norsk og andre språk",
-          "coreElements": [
-            "Språk og språkbruk",
-            "Tekstkompetanse"
-          ]
-        },
-        {
-          "code": "NOR-29",
-          "text": "utforske og samtale om språklig variasjon og mangfold i nærmiljøet og utforske forskjeller og likheter mellom skriving på hovedmål og sidemål",
-          "coreElements": [
-            "Språk og språkbruk",
-            "Lese og skrive"
-          ]
-        }
-      ],
-      "7": [
-        {
-          "code": "NOR-30",
-          "text": "lese lyrikk, noveller, fagtekster og annen skjønnlitteratur og sakprosa på bokmål og nynorsk, svensk og dansk og samtale om formål, form og innhold",
-          "coreElements": [
-            "Muntlige tekster",
-            "Lese og skrive"
-          ]
-        },
-        {
-          "code": "NOR-31",
-          "text": "lese samiske tekster på norsk og samtale om verdiene som kommer til uttrykk, og hvordan stedsnavn og personnavn som inneholder de samiske bokstavene, uttales",
-          "coreElements": [
-            "Lese og skrive",
-            "Muntlige tekster",
-            "Språk og språkbruk"
-          ]
-        },
-        {
-          "code": "NOR-32",
-          "text": "orientere seg i faglige kilder på bibliotek og digitalt, vurdere hvor pålitelige kildene er, og vise til kilder i egne tekster",
-          "coreElements": [
-            "Tekstkompetanse",
-            "Muntlige tekster",
-            "Sammensatte tekster"
-          ]
-        },
-        {
-          "code": "NOR-33",
-          "text": "bruke lesestrategier tilpasset formålet med lesingen",
-          "coreElements": [
-            "Tekstkompetanse",
-            "Muntlige tekster"
-          ]
-        },
-        {
-          "code": "NOR-34",
-          "text": "skrive tekster med funksjonell håndskrift og med flyt på tastatur",
-          "coreElements": [
-            "Lese og skrive",
-            "Tekstkompetanse",
-            "Muntlige tekster"
-          ]
-        },
-        {
-          "code": "NOR-35",
-          "text": "lytte til og videreutvikle innspill fra andre og begrunne egne standpunkter i samtaler",
-          "coreElements": [
-            "Språk og språkbruk",
-            "Tekstkompetanse"
-          ]
-        },
-        {
-          "code": "NOR-36",
-          "text": "reflektere etisk over hvordan eleven framstiller seg selv og andre i digitale medier",
-          "coreElements": [
-            "Språk og språkbruk",
-            "Lese og skrive"
-          ]
-        },
-        {
-          "code": "NOR-37",
-          "text": "presentere faglige emner muntlig med og uten digitale ressurser",
-          "coreElements": [
-            "Lese og skrive",
-            "Muntlige tekster",
-            "Tekstkompetanse"
-          ]
-        },
-        {
-          "code": "NOR-38",
-          "text": "leke med språket og prøve ut ulike virkemidler og framstillingsmåter i muntlige og skriftlige tekster",
-          "coreElements": [
-            "Tekstkompetanse",
-            "Lese og skrive"
-          ]
-        },
-        {
-          "code": "NOR-39",
-          "text": "beskrive, fortelle, argumentere og reflektere i ulike muntlige og skriftlige sjangre og for ulike formål",
-          "coreElements": [
-            "Muntlige tekster",
-            "Lese og skrive",
-            "Tekstkompetanse"
-          ]
-        },
-        {
-          "code": "NOR-40",
-          "text": "skrive tekster med tydelig struktur og mestre sentrale regler for rettskriving, ordbøying og tegnsetting",
-          "coreElements": [
-            "Tekstkompetanse",
-            "Sammensatte tekster"
-          ]
-        },
-        {
-          "code": "NOR-41",
-          "text": "gi tilbakemelding på medelevers tekster ut fra kriterier og bruke tilbakemeldinger i bearbeiding av egne tekster",
-          "coreElements": [
-            "Tekstkompetanse",
-            "Sammensatte tekster",
-            "Muntlige tekster"
-          ]
-        },
-        {
-          "code": "NOR-42",
-          "text": "bruke fagspråk og kunnskap om ordklasser og setningsoppbygning i samtale om egne og andres tekster",
-          "coreElements": [
-            "Lese og skrive",
-            "Muntlige tekster",
-            "Sammensatte tekster"
-          ]
-        },
-        {
-          "code": "NOR-43",
-          "text": "utforske og beskrive samspillet mellom skrift, bilder og andre uttrykksformer og lage egne sammensatte tekster",
-          "coreElements": [
-            "Tekstkompetanse",
-            "Muntlige tekster"
-          ]
-        },
-        {
-          "code": "NOR-44",
-          "text": "prøve ut skriving av tekster på sidemål",
-          "coreElements": [
-            "Språk og språkbruk",
-            "Lese og skrive",
-            "Sammensatte tekster"
-          ]
-        },
-        {
-          "code": "NOR-45",
-          "text": "sammenligne talespråk i nærmiljøet med andre talespråkvarianter i Norge og med nabospråk",
-          "coreElements": [
-            "Språk og språkbruk",
-            "Muntlige tekster"
-          ]
-        },
-        {
-          "code": "NOR-46",
-          "text": "utforske og reflektere over sammenhengen mellom språk og identitet",
-          "coreElements": [
-            "Sammensatte tekster",
-            "Lese og skrive",
-            "Tekstkompetanse"
-          ]
-        }
-      ],
-      "10": [
-        {
-          "code": "NOR-47",
-          "text": "sammenligne og tolke romaner, noveller, lyrikk og andre tekster ut fra historisk kontekst og egen samtid",
-          "coreElements": [
-            "Tekstkompetanse",
-            "Sammensatte tekster",
-            "Språk og språkbruk"
-          ]
-        },
-        {
-          "code": "NOR-48",
-          "text": "beskrive og reflektere over egen bruk av lesestrategier i lesing av skjønnlitteratur og sakprosa",
-          "coreElements": [
-            "Språk og språkbruk",
-            "Tekstkompetanse"
-          ]
-        },
-        {
-          "code": "NOR-49",
-          "text": "lytte til og lese tekster på svensk og dansk og gjøre rede for innhold og språklige trekk",
-          "coreElements": [
-            "Lese og skrive",
-            "Språk og språkbruk"
-          ]
-        },
-        {
-          "code": "NOR-50",
-          "text": "utforske og reflektere over hvordan tekster framstiller unges livssituasjon",
-          "coreElements": [
-            "Lese og skrive",
-            "Språk og språkbruk",
-            "Muntlige tekster"
-          ]
-        },
-        {
-          "code": "NOR-51",
-          "text": "gjenkjenne og bruke språklige virkemidler og retoriske appellformer",
-          "coreElements": [
-            "Lese og skrive",
-            "Språk og språkbruk"
-          ]
-        },
-        {
-          "code": "NOR-52",
-          "text": "bruke kilder på en kritisk måte, markere sitater og vise til kilder på en etterrettelig måte i egne tekster",
-          "coreElements": [
-            "Språk og språkbruk",
-            "Tekstkompetanse",
-            "Lese og skrive"
-          ]
-        },
-        {
-          "code": "NOR-53",
-          "text": "utforske og vurdere hvordan digitale medier påvirker og endrer språk og kommunikasjon",
-          "coreElements": [
-            "Språk og språkbruk",
-            "Tekstkompetanse"
-          ]
-        },
-        {
-          "code": "NOR-54",
-          "text": "bruke fagspråk og argumentere saklig i diskusjoner, samtaler, muntlige presentasjoner og skriftlige framstillinger om norskfaglige og tverrfaglige temaer",
-          "coreElements": [
-            "Lese og skrive",
-            "Muntlige tekster"
-          ]
-        },
-        {
-          "code": "NOR-55",
-          "text": "informere, fortelle, argumentere og reflektere i ulike muntlige og skriftlige sjangre og for ulike formål tilpasset mottaker og medium",
-          "coreElements": [
-            "Muntlige tekster",
-            "Lese og skrive",
-            "Språk og språkbruk"
-          ]
-        },
-        {
-          "code": "NOR-56",
-          "text": "skrive tekster med funksjonell tekstbinding og riktig tegnsetting og mestre rettskriving og ordbøying på hovedmål og sidemål",
-          "coreElements": [
-            "Tekstkompetanse",
-            "Lese og skrive",
-            "Språk og språkbruk"
-          ]
-        },
-        {
-          "code": "NOR-57",
-          "text": "bruke fagspråk og kunnskap om grammatikk, tekststruktur og sjanger i samtale om og bearbeiding av tekster",
-          "coreElements": [
-            "Muntlige tekster",
-            "Tekstkompetanse",
-            "Sammensatte tekster"
-          ]
-        },
-        {
-          "code": "NOR-58",
-          "text": "uttrykke seg i ulike sjangre og eksperimentere med sjangre på kreative måter",
-          "coreElements": [
-            "Lese og skrive",
-            "Språk og språkbruk",
-            "Sammensatte tekster"
-          ]
-        },
-        {
-          "code": "NOR-59",
-          "text": "lage sammensatte tekster og begrunne valg av uttrykksformer",
-          "coreElements": [
-            "Språk og språkbruk",
-            "Lese og skrive",
-            "Muntlige tekster"
-          ]
-        },
-        {
-          "code": "NOR-60",
-          "text": "forklare den historiske bakgrunnen for bokmål og nynorsk og reflektere over statusen til de offisielle språkene i Norge i dag",
-          "coreElements": [
-            "Språk og språkbruk",
-            "Lese og skrive",
-            "Tekstkompetanse"
-          ]
-        },
-        {
-          "code": "NOR-61",
-          "text": "utforske språklig variasjon og mangfold i Norge og reflektere over kompetansemål og vurdering i vg2 yrkesfaglige utdanningsprogram i læreplan i norsk (NOR01-07)",
-          "coreElements": [
-            "Sammensatte tekster",
-            "Lese og skrive"
-          ]
-        }
-      ]
-    }
-  },
-  "MAT": {
-    "name": "Matematikk",
-    "levels": {
-      "2": [
-        {
-          "code": "MAT-01",
-          "text": "ordne tall, mengder og former ut fra egenskaper, sammenligne dem og reflektere over om det kan gj�res p� flere m�ter",
-          "coreElements": [
-            "Resonnering og argumentasjon",
-            "Representasjon og kommunikasjon",
-            "Modellering og anvendelse"
-          ]
-        },
-        {
-          "code": "MAT-02",
-          "text": "utforske tall, mengder og telling i lek, natur, billedkunst, musikk og barnelitteratur, representere tallene p� ulike m�ter og oversette mellom de ulike representasjonene",
-          "coreElements": [
-            "Representasjon og kommunikasjon",
-            "Resonnering og argumentasjon",
-            "Modellering og anvendelse"
-          ]
-        },
-        {
-          "code": "MAT-03",
-          "text": "eksperimentere med telling b�de forlengs og baklengs, velge ulike startpunkter og ulik differanse og beskrive m�nstre i tellingene",
-          "coreElements": [
-            "Modellering og anvendelse",
-            "Abstraksjon og generalisering",
-            "Utforsking og probleml�sning"
-          ]
-        },
-        {
-          "code": "MAT-04",
-          "text": "utforske og beskrive generelle egenskaper ved partall og oddetall",
-          "coreElements": [
-            "Abstraksjon og generalisering",
-            "Representasjon og kommunikasjon"
-          ]
-        },
-        {
-          "code": "MAT-05",
-          "text": "beskrive posisjonssystemet ved hjelp av ulike representasjoner",
-          "coreElements": [
-            "Abstraksjon og generalisering",
-            "Modellering og anvendelse",
-            "Resonnering og argumentasjon"
-          ]
-        },
-        {
-          "code": "MAT-06",
-          "text": "plassere tall p� tallinjen og bruke tallinjen i regning og probleml�sning",
-          "coreElements": [
-            "Resonnering og argumentasjon",
-            "Abstraksjon og generalisering"
-          ]
-        },
-        {
-          "code": "MAT-07",
-          "text": "utforske addisjon og subtraksjon og bruke dette til � formulere og l�se problemer fra lek og egen hverdag",
-          "coreElements": [
-            "Resonnering og argumentasjon",
-            "Utforsking og probleml�sning"
-          ]
-        },
-        {
-          "code": "MAT-08",
-          "text": "utforske den kommutative og den assosiative egenskapen ved addisjon og bruke dette i hoderegning",
-          "coreElements": [
-            "Utforsking og probleml�sning",
-            "Resonnering og argumentasjon"
-          ]
-        },
-        {
-          "code": "MAT-09",
-          "text": "kjenne igjen og beskrive repeterende enheter i m�nstre og lage egne m�nstre",
-          "coreElements": [
-            "Modellering og anvendelse",
-            "Resonnering og argumentasjon",
-            "Representasjon og kommunikasjon"
-          ]
-        },
-        {
-          "code": "MAT-10",
-          "text": "utforske, tegne og beskrive geometriske figurer fra sitt eget n�rmilj� og argumentere for m�ter � sortere dem p� etter egenskaper",
-          "coreElements": [
-            "Utforsking og probleml�sning",
-            "Abstraksjon og generalisering",
-            "Representasjon og kommunikasjon"
-          ]
-        },
-        {
-          "code": "MAT-11",
-          "text": "m�le og sammenligne st�rrelser som gjelder lengde og areal ved hjelp av ikke-standardiserte og standardiserte m�leenheter, beskrive hvordan og samtale om resultatene",
-          "coreElements": [
-            "Abstraksjon og generalisering",
-            "Resonnering og argumentasjon"
-          ]
-        },
-        {
-          "code": "MAT-12",
-          "text": "forklare hvordan man kan beskrive tid ved hjelp av klokke og kalender",
-          "coreElements": [
-            "Representasjon og kommunikasjon",
-            "Resonnering og argumentasjon",
-            "Utforsking og probleml�sning"
-          ]
-        },
-        {
-          "code": "MAT-13",
-          "text": "lage og f�lge regler og trinnvise instruksjoner i lek og spill",
-          "coreElements": [
-            "Abstraksjon og generalisering",
-            "Resonnering og argumentasjon"
-          ]
-        }
-      ]
-    }
-  },
   "ENG": {
     "name": "Engelsk",
     "levels": {
@@ -848,10 +195,277 @@
             "Språklæring"
           ]
         }
+      ],
+      "7": [
+        {
+          "code": "ENG-27",
+          "text": "bruke enkle strategier i språklæring, tekstskaping og kommunikasjon",
+          "coreElements": [
+            "Kommunikasjon",
+            "Språklæring"
+          ]
+        },
+        {
+          "code": "ENG-28",
+          "text": "bruke digitale ressurser og ulike ordbøker i språklæring, tekstskaping og samhandling",
+          "coreElements": [
+            "Arbeid med tekst i sjangre"
+          ]
+        },
+        {
+          "code": "ENG-29",
+          "text": "utforske og bruke uttalemønstre og ord og uttrykk i lek, sang og rollespill",
+          "coreElements": [
+            "Språklæring"
+          ]
+        },
+        {
+          "code": "ENG-30",
+          "text": "lytte til og forstå ord og uttrykk i tilpassede og autentiske tekster",
+          "coreElements": [
+            "Kommunikasjon"
+          ]
+        },
+        {
+          "code": "ENG-31",
+          "text": "uttrykke seg forståelig med et variert ordforråd og høflighetsuttrykk tilpasset mottaker og situasjon",
+          "coreElements": [
+            "Arbeid med tekst i sjangre",
+            "Kommunikasjon"
+          ]
+        },
+        {
+          "code": "ENG-32",
+          "text": "innlede, holde i gang og avslutte samtaler om egne interesser og aktuelle emner",
+          "coreElements": [
+            "Arbeid med tekst i sjangre",
+            "Språklæring"
+          ]
+        },
+        {
+          "code": "ENG-33",
+          "text": "utforske og samtale om noen språklige likheter mellom engelsk og andre språk eleven kjenner til, og bruke dette i egen språklæring",
+          "coreElements": [
+            "Arbeid med tekst i sjangre"
+          ]
+        },
+        {
+          "code": "ENG-34",
+          "text": "identifisere setningsledd i ulike typer setninger og bruke kunnskap om bøying av verb, substantiv og adjektiv i arbeid med egne muntlige og skriftlige tekster",
+          "coreElements": [
+            "Kommunikasjon",
+            "Arbeid med tekst i sjangre"
+          ]
+        },
+        {
+          "code": "ENG-35",
+          "text": "følge regler for rettskriving, ordbøying og setningsstruktur",
+          "coreElements": [
+            "Arbeid med tekst i sjangre",
+            "Språklæring"
+          ]
+        },
+        {
+          "code": "ENG-36",
+          "text": "lese og videreformidle innhold fra ulike typer tekster, inkludert selvvalgte tekster",
+          "coreElements": [
+            "Språklæring"
+          ]
+        },
+        {
+          "code": "ENG-37",
+          "text": "lese og lytte til engelskspråklige sakprosatekster og engelskspråklig barne- og ungdomslitteratur og skrive og samtale om innholdet",
+          "coreElements": [
+            "Kommunikasjon",
+            "Språklæring"
+          ]
+        },
+        {
+          "code": "ENG-38",
+          "text": "samtale om ulike kilders pålitelighet og velge kilder til eget bruk",
+          "coreElements": [
+            "Språklæring",
+            "Arbeid med tekst i sjangre"
+          ]
+        },
+        {
+          "code": "ENG-39",
+          "text": "skrive sammenhengende tekster, inkludert sammensatte, som gjenforteller, forteller, spør og uttrykker meninger og interesser, tilpasset mottaker",
+          "coreElements": [
+            "Arbeid med tekst i sjangre"
+          ]
+        },
+        {
+          "code": "ENG-40",
+          "text": "bearbeide egne tekster ut fra tilbakemeldinger",
+          "coreElements": [
+            "Arbeid med tekst i sjangre",
+            "Språklæring"
+          ]
+        },
+        {
+          "code": "ENG-41",
+          "text": "reflektere over og samtale om rollen engelsk har i eget liv",
+          "coreElements": [
+            "Arbeid med tekst i sjangre"
+          ]
+        },
+        {
+          "code": "ENG-42",
+          "text": "utforske levemåter og tradisjoner i ulike samfunn i den engelskspråklige verden og i Norge og reflektere over identitet og kulturell tilhørighet",
+          "coreElements": [
+            "Kommunikasjon"
+          ]
+        }
+      ],
+      "10": [
+        {
+          "code": "ENG-44",
+          "text": "bruke varierte strategier i språklæring, tekstskaping og kommunikasjon",
+          "coreElements": [
+            "Kommunikasjon"
+          ]
+        },
+        {
+          "code": "ENG-45",
+          "text": "bruke ulike digitale ressurser og andre hjelpemidler i språklæring, tekstskaping og samhandling",
+          "coreElements": [
+            "Kommunikasjon"
+          ]
+        },
+        {
+          "code": "ENG-46",
+          "text": "bruke sentrale mønstre for uttale i kommunikasjon",
+          "coreElements": [
+            "Språklæring"
+          ]
+        },
+        {
+          "code": "ENG-47",
+          "text": "lytte til og forstå ord og uttrykk i varianter av engelsk",
+          "coreElements": [
+            "Kommunikasjon"
+          ]
+        },
+        {
+          "code": "ENG-48",
+          "text": "uttrykke seg med flyt og sammenheng med et variert ordforråd og idiomatiske uttrykk tilpasset formål, mottaker og situasjon",
+          "coreElements": [
+            "Språklæring",
+            "Arbeid med tekst i sjangre"
+          ]
+        },
+        {
+          "code": "ENG-49",
+          "text": "stille spørsmål og følge opp innspill i samtaler om ulike emner tilpasset ulike formål, mottakere og situasjoner",
+          "coreElements": [
+            "Arbeid med tekst i sjangre"
+          ]
+        },
+        {
+          "code": "ENG-50",
+          "text": "utforske og beskrive noen språklige likheter og ulikheter mellom engelsk og andre språk eleven kjenner til, og bruke dette i egen språklæring",
+          "coreElements": [
+            "Arbeid med tekst i sjangre",
+            "Språklæring"
+          ]
+        },
+        {
+          "code": "ENG-51",
+          "text": "bruke kunnskap om ordklasser og setningsstruktur i arbeid med egne muntlige og skriftlige tekster",
+          "coreElements": [
+            "Arbeid med tekst i sjangre",
+            "Kommunikasjon"
+          ]
+        },
+        {
+          "code": "ENG-52",
+          "text": "følge regler for rettskriving, ordbøying, setningsstruktur og tekststruktur",
+          "coreElements": [
+            "Kommunikasjon"
+          ]
+        },
+        {
+          "code": "ENG-53",
+          "text": "lese, diskutere og videreformidle innhold fra ulike typer tekster, inkludert selvvalgte tekster",
+          "coreElements": [
+            "Arbeid med tekst i sjangre"
+          ]
+        },
+        {
+          "code": "ENG-54",
+          "text": "lese, tolke og reflektere over engelskspråklig skjønnlitteratur, inkludert ungdomslitteratur",
+          "coreElements": [
+            "Språklæring",
+            "Arbeid med tekst i sjangre"
+          ]
+        },
+        {
+          "code": "ENG-55",
+          "text": "lese sakprosatekster og vurdere hvor pålitelige kildene er",
+          "coreElements": [
+            "Språklæring"
+          ]
+        },
+        {
+          "code": "ENG-56",
+          "text": "bruke kilder på en kritisk og etterrettelig måte",
+          "coreElements": [
+            "Kommunikasjon",
+            "Språklæring"
+          ]
+        },
+        {
+          "code": "ENG-57",
+          "text": "skrive formelle og uformelle tekster, inkludert sammensatte, med struktur og sammenheng som beskriver, forteller og reflekterer tilpasset formål, mottaker og situasjon",
+          "coreElements": [
+            "Språklæring",
+            "Kommunikasjon"
+          ]
+        },
+        {
+          "code": "ENG-58",
+          "text": "bearbeide egne tekster ut fra tilbakemeldinger og kunnskap om språk",
+          "coreElements": [
+            "Kommunikasjon",
+            "Språklæring"
+          ]
+        },
+        {
+          "code": "ENG-59",
+          "text": "beskrive og reflektere over rollen engelsk har i Norge og i verden",
+          "coreElements": [
+            "Språklæring",
+            "Kommunikasjon"
+          ]
+        },
+        {
+          "code": "ENG-60",
+          "text": "utforske og reflektere over situasjonen til urfolk i den engelskspråklige verden og i Norge",
+          "coreElements": [
+            "Språklæring"
+          ]
+        },
+        {
+          "code": "ENG-61",
+          "text": "utforske og beskrive levemåter, tenkesett, kommunikasjonsmønstre og mangfold i den engelskspråklige verden",
+          "coreElements": [
+            "Språklæring",
+            "Arbeid med tekst i sjangre"
+          ]
+        },
+        {
+          "code": "ENG-62",
+          "text": "utforske og videreformidle innhold i engelskspråklige kulturelle uttrykksformer fra ulike medier knyttet til egne interesser",
+          "coreElements": [
+            "Språklæring",
+            "Arbeid med tekst i sjangre"
+          ]
+        }
       ]
     }
   },
-  "KRL": {
+  "RLE": {
     "name": "KRLE",
     "levels": {
       "4": [
@@ -1817,225 +1431,6 @@
       ]
     }
   },
-  "MUS": {
-    "name": "Musikk",
-    "levels": {
-      "2": [
-        {
-          "code": "MUS-01",
-          "text": "utøve et repertoar av sangleker, sanger og danser hentet fra elevenes nære musikkultur og fra kulturarven",
-          "coreElements": [
-            "Komponere"
-          ]
-        },
-        {
-          "code": "MUS-02",
-          "text": "utforske og eksperimentere med puls, rytme, tempo, klang, melodi, dynamikk, harmoni og form i dans, med stemmen og i spill på instrumenter",
-          "coreElements": [
-            "Komponere"
-          ]
-        },
-        {
-          "code": "MUS-03",
-          "text": "leke med musikkens grunnelementer gjennom lyd og stemme, lage mønstre og sette sammen mønstrene til enkle improvisasjoner og komposisjoner, også med digitale verktøy",
-          "coreElements": [
-            "Lytte"
-          ]
-        },
-        {
-          "code": "MUS-04",
-          "text": "formidle opplevelser av ulike musikalske uttrykk gjennom samtale og kunstneriske uttrykksformer",
-          "coreElements": [
-            "Musisere"
-          ]
-        }
-      ],
-      "4": [
-        {
-          "code": "MUS-05",
-          "text": "utøve og utforske et repertoar av sanger og danser fra ulike musikkulturer, inkludert samisk musikkultur",
-          "coreElements": [
-            "Komponere"
-          ]
-        },
-        {
-          "code": "MUS-06",
-          "text": "synge og spille på instrumenter alene og sammen med andre ved bruk av gehør og enkel notasjon",
-          "coreElements": [
-            "Musisere"
-          ]
-        },
-        {
-          "code": "MUS-07",
-          "text": "eksperimentere med rytmer, melodier og andre grunnelementer, sette sammen mønstre til komposisjoner, også ved bruk av digitale verktøy, og beskrive arbeidsprosesser og resultater",
-          "coreElements": [
-            "Lytte"
-          ]
-        },
-        {
-          "code": "MUS-08",
-          "text": "formidle egne musikkopplevelser og beskrive bruk av musikalske virkemidler ved hjelp av enkle fagbegreper",
-          "coreElements": [
-            "Musisere"
-          ]
-        },
-        {
-          "code": "MUS-09",
-          "text": "samtale om og reflektere over hvordan musikk skaper mening når den brukes i ulike sosiale sammenhenger",
-          "coreElements": [
-            "Komponere",
-            "Musisere"
-          ]
-        }
-      ],
-      "7": [
-        {
-          "code": "MUS-10",
-          "text": "utøve et repertoar av musikk, sang, andre vokale uttrykk og dans fra samtiden og historien",
-          "coreElements": [
-            "Lytte"
-          ]
-        },
-        {
-          "code": "MUS-11",
-          "text": "utforske og drøfte hvordan musikk fra fortiden påvirker dagens musikk",
-          "coreElements": [
-            "Lytte"
-          ]
-        },
-        {
-          "code": "MUS-12",
-          "text": "øve inn og framføre sang og musikk, i samspill eller individuelt, gehørbasert og ved bruk av enkle notasjonsteknikker",
-          "coreElements": [
-            "Lytte",
-            "Musisere"
-          ]
-        },
-        {
-          "code": "MUS-13",
-          "text": "lytte, eksperimentere og skape nye uttrykk med instrumenter, kropp, stemme eller lyd fra andre kilder, og presentere resultatet",
-          "coreElements": [
-            "Lytte",
-            "Komponere"
-          ]
-        },
-        {
-          "code": "MUS-14",
-          "text": "bruke teknologi og digitale verktøy til å skape, øve inn og bearbeide musikk",
-          "coreElements": [
-            "Musisere",
-            "Lytte"
-          ]
-        },
-        {
-          "code": "MUS-15",
-          "text": "bruke fagbegreper i beskrivelse av og refleksjon over arbeidsprosesser, resultater, musikalske uttrykk og virkemidler",
-          "coreElements": [
-            "Komponere"
-          ]
-        },
-        {
-          "code": "MUS-16",
-          "text": "utforske og formidle musikalske opplevelser og erfaringer",
-          "coreElements": [
-            "Komponere"
-          ]
-        },
-        {
-          "code": "MUS-17",
-          "text": "undersøke hvordan kjønn, kjønnsroller og seksualitet fremstilles i musikk og dans i det offentlige rom, og skape uttrykk som utfordrer stereotypier",
-          "coreElements": [
-            "Komponere"
-          ]
-        },
-        {
-          "code": "MUS-18",
-          "text": "reflektere over hvordan musikk kan spille ulike roller for utvikling av individer og gruppers identitet",
-          "coreElements": [
-            "Komponere"
-          ]
-        }
-      ],
-      "10": [
-        {
-          "code": "MUS-19",
-          "text": "utøve et variert repertoar av musikk, sang, andre vokale uttrykk og dans",
-          "coreElements": [
-            "Musisere"
-          ]
-        },
-        {
-          "code": "MUS-20",
-          "text": "reflektere over hvordan musikalske tradisjoner, inkludert samiske musikktradisjoner, bevares og fornyes",
-          "coreElements": [
-            "Lytte"
-          ]
-        },
-        {
-          "code": "MUS-21",
-          "text": "samarbeide med andre om å planlegge og gjennomføre øvingsprosesser hvor det inngår selvvalgt sang, andre vokale uttrykk, spill på instrumenter eller dans, og formidle resultatet i gruppe eller individuelt",
-          "coreElements": [
-            "Komponere"
-          ]
-        },
-        {
-          "code": "MUS-22",
-          "text": "skape og programmere musikalske forløp ved å eksperimentere med lyd fra ulike kilder",
-          "coreElements": [
-            "Komponere"
-          ]
-        },
-        {
-          "code": "MUS-23",
-          "text": "utforske og formidle musikalske opplevelser og erfaringer, og reflektere over bruk av musikalske virkemidler",
-          "coreElements": [
-            "Musisere",
-            "Komponere"
-          ]
-        },
-        {
-          "code": "MUS-24",
-          "text": "lytte og prøve ut ulike uttrykk og begrunne valg i skapende prosesser fra idé til ferdig resultat",
-          "coreElements": [
-            "Lytte",
-            "Komponere"
-          ]
-        },
-        {
-          "code": "MUS-25",
-          "text": "bruke gehør og notasjonsteknikker som støtte i skapende arbeid",
-          "coreElements": [
-            "Lytte",
-            "Musisere"
-          ]
-        },
-        {
-          "code": "MUS-26",
-          "text": "bruke relevante fagbegreper i skapende arbeid og i refleksjon over prosesser og resultater",
-          "coreElements": [
-            "Lytte",
-            "Musisere"
-          ]
-        },
-        {
-          "code": "MUS-27",
-          "text": "utforske og reflektere over hvordan musikk, sang og dans som estetiske uttrykk er påvirket av og uttrykk for historiske og samfunnsmessige forhold, og skape musikalske uttrykk som tar opp utfordringer i samtiden",
-          "coreElements": [
-            "Musisere",
-            "Lytte"
-          ]
-        },
-        {
-          "code": "MUS-28",
-          "text": "utforske og drøfte musikkens og dansens betydning i samfunnet og etiske problemstillinger knyttet til musikalske ytringer og musikkulturer Læreplan i musikk Læreplankode: MUS01-02 Læreplankode: MUS01-02",
-          "coreElements": [
-            "Lytte",
-            "Komponere"
-          ]
-        }
-      ]
-    }
-  },
   "MAH": {
     "name": "Mat og helse",
     "levels": {
@@ -2276,6 +1671,601 @@
       ]
     }
   },
+  "MAT": {
+    "name": "Matematikk",
+    "levels": {
+      "2": [
+        {
+          "code": "MAT-01",
+          "text": "ordne tall, mengder og former ut fra egenskaper, sammenligne dem og reflektere over om det kan gjøres på flere måter",
+          "coreElements": [
+            "Resonnering og argumentasjon",
+            "Representasjon og kommunikasjon",
+            "Modellering og anvendelse"
+          ]
+        },
+        {
+          "code": "MAT-02",
+          "text": "utforske tall, mengder og telling i lek, natur, billedkunst, musikk og barnelitteratur, representere tallene på ulike måter og oversette mellom de ulike representasjonene",
+          "coreElements": [
+            "Representasjon og kommunikasjon",
+            "Resonnering og argumentasjon",
+            "Modellering og anvendelse"
+          ]
+        },
+        {
+          "code": "MAT-03",
+          "text": "eksperimentere med telling både forlengs og baklengs, velge ulike startpunkter og ulik differanse og beskrive mønstre i tellingene",
+          "coreElements": [
+            "Modellering og anvendelse",
+            "Abstraksjon og generalisering",
+            "Utforsking og problemløsning"
+          ]
+        },
+        {
+          "code": "MAT-04",
+          "text": "utforske og beskrive generelle egenskaper ved partall og oddetall",
+          "coreElements": [
+            "Abstraksjon og generalisering",
+            "Representasjon og kommunikasjon"
+          ]
+        },
+        {
+          "code": "MAT-05",
+          "text": "beskrive posisjonssystemet ved hjelp av ulike representasjoner",
+          "coreElements": [
+            "Abstraksjon og generalisering",
+            "Modellering og anvendelse",
+            "Resonnering og argumentasjon"
+          ]
+        },
+        {
+          "code": "MAT-06",
+          "text": "plassere tall på tallinjen og bruke tallinjen i regning og problemløsing",
+          "coreElements": [
+            "Resonnering og argumentasjon",
+            "Abstraksjon og generalisering"
+          ]
+        },
+        {
+          "code": "MAT-07",
+          "text": "utforske addisjon og subtraksjon og bruke dette til å formulere og løse problemer fra lek og egen hverdag",
+          "coreElements": [
+            "Resonnering og argumentasjon",
+            "Utforsking og problemløsning"
+          ]
+        },
+        {
+          "code": "MAT-08",
+          "text": "utforske den kommutative og den assosiative egenskapen ved addisjon og bruke dette i hoderegning",
+          "coreElements": [
+            "Utforsking og problemløsning",
+            "Resonnering og argumentasjon"
+          ]
+        },
+        {
+          "code": "MAT-09",
+          "text": "kjenne igjen og beskrive repeterende enheter i mønstre og lage egne mønstre",
+          "coreElements": [
+            "Modellering og anvendelse",
+            "Resonnering og argumentasjon",
+            "Representasjon og kommunikasjon"
+          ]
+        },
+        {
+          "code": "MAT-10",
+          "text": "utforske, tegne og beskrive geometriske figurer fra sitt eget nærmiljø og argumentere for måter å sortere dem på etter egenskaper",
+          "coreElements": [
+            "Utforsking og problemløsning",
+            "Abstraksjon og generalisering",
+            "Representasjon og kommunikasjon"
+          ]
+        },
+        {
+          "code": "MAT-11",
+          "text": "måle og sammenligne størrelser som gjelder lengde og areal, ved hjelp av ikke-standardiserte og standardiserte måleenheter, beskrive hvordan og samtale om resultatene",
+          "coreElements": [
+            "Abstraksjon og generalisering",
+            "Resonnering og argumentasjon"
+          ]
+        },
+        {
+          "code": "MAT-12",
+          "text": "forklare hvordan man kan beskrive tid ved hjelp av klokke og kalender",
+          "coreElements": [
+            "Representasjon og kommunikasjon",
+            "Resonnering og argumentasjon",
+            "Utforsking og problemløsning"
+          ]
+        },
+        {
+          "code": "MAT-13",
+          "text": "lage og følge regler og trinnvise instruksjoner i lek og spill",
+          "coreElements": [
+            "Abstraksjon og generalisering",
+            "Resonnering og argumentasjon"
+          ]
+        }
+      ],
+      "4": [
+        {
+          "code": "MAT-14",
+          "text": "utforske og bruke målings- og delingsdivisjon i praktiske situasjoner",
+          "coreElements": [
+            "Resonnering og argumentasjon",
+            "Utforsking og problemløsning",
+            "Modellering og anvendelse"
+          ]
+        },
+        {
+          "code": "MAT-15",
+          "text": "representere divisjon på ulike måter og oversette mellom de ulike representasjonene",
+          "coreElements": [
+            "Utforsking og problemløsning",
+            "Abstraksjon og generalisering"
+          ]
+        },
+        {
+          "code": "MAT-16",
+          "text": "utforske, bruke og beskrive ulike divisjonsstrategier",
+          "coreElements": [
+            "Modellering og anvendelse",
+            "Resonnering og argumentasjon"
+          ]
+        },
+        {
+          "code": "MAT-17",
+          "text": "utforske og forklare sammenhenger mellom de fire regneartene og bruke sammenhengene hensiktsmessig i utregninger",
+          "coreElements": [
+            "Modellering og anvendelse",
+            "Abstraksjon og generalisering"
+          ]
+        },
+        {
+          "code": "MAT-18",
+          "text": "modellere situasjoner fra sin egen hverdag og forklare tenkemåtene sine",
+          "coreElements": [
+            "Abstraksjon og generalisering",
+            "Utforsking og problemløsning"
+          ]
+        },
+        {
+          "code": "MAT-19",
+          "text": "lage regneuttrykk til praktiske situasjoner og finne praktiske situasjoner som passer til oppgitte regneuttrykk",
+          "coreElements": [
+            "Utforsking og problemløsning",
+            "Resonnering og argumentasjon"
+          ]
+        },
+        {
+          "code": "MAT-20",
+          "text": "utforske, beskrive og sammenligne egenskaper ved to- og tredimensjonale figurer ved å bruke vinkler, kanter og hjørner",
+          "coreElements": [
+            "Resonnering og argumentasjon",
+            "Utforsking og problemløsning",
+            "Abstraksjon og generalisering"
+          ]
+        },
+        {
+          "code": "MAT-21",
+          "text": "bruke ikke-standardiserte måleenheter for areal og volum i praktiske situasjoner og begrunne valget av måleenhet",
+          "coreElements": [
+            "Modellering og anvendelse",
+            "Resonnering og argumentasjon"
+          ]
+        },
+        {
+          "code": "MAT-22",
+          "text": "utforske og beskrive strukturer og mønstre i lek og spill",
+          "coreElements": [
+            "Representasjon og kommunikasjon",
+            "Resonnering og argumentasjon",
+            "Utforsking og problemløsning"
+          ]
+        },
+        {
+          "code": "MAT-23",
+          "text": "lage algoritmer og uttrykke dem ved bruk av variabler, vilkår og løkker",
+          "coreElements": [
+            "Representasjon og kommunikasjon",
+            "Utforsking og problemløsning"
+          ]
+        }
+      ],
+      "7": [
+        {
+          "code": "MAT-24",
+          "text": "utvikle og bruke hensiktsmessige strategier i regning med brøk, desimaltall og prosent og forklare tenkemåtene sine",
+          "coreElements": [
+            "Abstraksjon og generalisering",
+            "Resonnering og argumentasjon",
+            "Modellering og anvendelse"
+          ]
+        },
+        {
+          "code": "MAT-25",
+          "text": "representere og bruke brøk, desimaltall og prosent på ulike måter og utforske de matematiske sammenhengene mellom disse representasjonsformene",
+          "coreElements": [
+            "Representasjon og kommunikasjon",
+            "Abstraksjon og generalisering",
+            "Utforsking og problemløsning"
+          ]
+        },
+        {
+          "code": "MAT-26",
+          "text": "utforske negative tall i praktiske situasjoner",
+          "coreElements": [
+            "Resonnering og argumentasjon",
+            "Utforsking og problemløsning"
+          ]
+        },
+        {
+          "code": "MAT-27",
+          "text": "bruke tallinje i regning med positive og negative tall",
+          "coreElements": [
+            "Resonnering og argumentasjon",
+            "Abstraksjon og generalisering"
+          ]
+        },
+        {
+          "code": "MAT-28",
+          "text": "bruke sammensatte regneuttrykk til å beskrive og utføre utregninger",
+          "coreElements": [
+            "Representasjon og kommunikasjon",
+            "Modellering og anvendelse",
+            "Resonnering og argumentasjon"
+          ]
+        },
+        {
+          "code": "MAT-29",
+          "text": "bruke ulike strategier for å løse lineære ligninger og ulikheter og vurdere om løsninger er gyldige",
+          "coreElements": [
+            "Resonnering og argumentasjon",
+            "Representasjon og kommunikasjon"
+          ]
+        },
+        {
+          "code": "MAT-30",
+          "text": "utforske og bruke hensiktsmessige sentralmål i egne og andres statistiske undersøkelser",
+          "coreElements": [
+            "Representasjon og kommunikasjon",
+            "Utforsking og problemløsning"
+          ]
+        },
+        {
+          "code": "MAT-31",
+          "text": "logge, sortere, presentere og lese data i tabeller og diagrammer og begrunne valget av framstilling",
+          "coreElements": [
+            "Abstraksjon og generalisering",
+            "Resonnering og argumentasjon",
+            "Utforsking og problemløsning"
+          ]
+        },
+        {
+          "code": "MAT-32",
+          "text": "lage og vurdere budsjett og regnskap ved å bruke regneark med cellereferanser og formler",
+          "coreElements": [
+            "Utforsking og problemløsning",
+            "Resonnering og argumentasjon"
+          ]
+        },
+        {
+          "code": "MAT-33",
+          "text": "bruke programmering til å utforske data i tabeller og datasett",
+          "coreElements": [
+            "Utforsking og problemløsning",
+            "Resonnering og argumentasjon",
+            "Representasjon og kommunikasjon"
+          ]
+        }
+      ],
+      "10": [
+        {
+          "code": "MAT-34",
+          "text": "utforske og generalisere multiplikasjon av polynomer algebraisk og geometrisk",
+          "coreElements": [
+            "Representasjon og kommunikasjon",
+            "Modellering og anvendelse",
+            "Utforsking og problemløsning"
+          ]
+        },
+        {
+          "code": "MAT-35",
+          "text": "utforske og sammenligne egenskaper ved ulike funksjoner ved å bruke digitale verktøy",
+          "coreElements": [
+            "Resonnering og argumentasjon",
+            "Abstraksjon og generalisering"
+          ]
+        },
+        {
+          "code": "MAT-36",
+          "text": "lage, løse og forklare ligningssett knyttet til praktiske situasjoner",
+          "coreElements": [
+            "Abstraksjon og generalisering",
+            "Representasjon og kommunikasjon",
+            "Resonnering og argumentasjon"
+          ]
+        },
+        {
+          "code": "MAT-37",
+          "text": "regne ut stigningstallet til en lineær funksjon og bruke det til å forklare begrepene endring per enhet og gjennomsnittsfart",
+          "coreElements": [
+            "Resonnering og argumentasjon",
+            "Abstraksjon og generalisering",
+            "Representasjon og kommunikasjon"
+          ]
+        },
+        {
+          "code": "MAT-38",
+          "text": "utforske sammenhengen mellom konstant prosentvis endring, vekstfaktor og eksponentialfunksjoner",
+          "coreElements": [
+            "Utforsking og problemløsning",
+            "Representasjon og kommunikasjon"
+          ]
+        },
+        {
+          "code": "MAT-39",
+          "text": "hente ut og tolke relevant informasjon fra tekster om kjøp og salg og ulike typer lån og bruke det til å formulere og løse problemer",
+          "coreElements": [
+            "Modellering og anvendelse",
+            "Representasjon og kommunikasjon"
+          ]
+        },
+        {
+          "code": "MAT-40",
+          "text": "planlegge, utføre og presentere et utforskende arbeid knyttet til personlig økonomi",
+          "coreElements": [
+            "Resonnering og argumentasjon",
+            "Utforsking og problemløsning",
+            "Modellering og anvendelse"
+          ]
+        },
+        {
+          "code": "MAT-41",
+          "text": "bruke funksjoner i modellering og argumentere for framgangsmåter og resultater",
+          "coreElements": [
+            "Utforsking og problemløsning",
+            "Resonnering og argumentasjon"
+          ]
+        },
+        {
+          "code": "MAT-42",
+          "text": "modellere situasjoner knyttet til reelle datasett, presentere resultatene og argumentere for at modellene er gyldige",
+          "coreElements": [
+            "Abstraksjon og generalisering",
+            "Representasjon og kommunikasjon"
+          ]
+        },
+        {
+          "code": "MAT-43",
+          "text": "utforske matematiske egenskaper og sammenhenger ved å bruke programmering",
+          "coreElements": [
+            "Representasjon og kommunikasjon",
+            "Utforsking og problemløsning"
+          ]
+        }
+      ]
+    }
+  },
+  "MUS": {
+    "name": "Musikk",
+    "levels": {
+      "2": [
+        {
+          "code": "MUS-01",
+          "text": "utøve et repertoar av sangleker, sanger og danser hentet fra elevenes nære musikkultur og fra kulturarven",
+          "coreElements": [
+            "Komponere"
+          ]
+        },
+        {
+          "code": "MUS-02",
+          "text": "utforske og eksperimentere med puls, rytme, tempo, klang, melodi, dynamikk, harmoni og form i dans, med stemmen og i spill på instrumenter",
+          "coreElements": [
+            "Komponere"
+          ]
+        },
+        {
+          "code": "MUS-03",
+          "text": "leke med musikkens grunnelementer gjennom lyd og stemme, lage mønstre og sette sammen mønstrene til enkle improvisasjoner og komposisjoner, også med digitale verktøy",
+          "coreElements": [
+            "Lytte"
+          ]
+        },
+        {
+          "code": "MUS-04",
+          "text": "formidle opplevelser av ulike musikalske uttrykk gjennom samtale og kunstneriske uttrykksformer",
+          "coreElements": [
+            "Musisere"
+          ]
+        }
+      ],
+      "4": [
+        {
+          "code": "MUS-05",
+          "text": "utøve og utforske et repertoar av sanger og danser fra ulike musikkulturer, inkludert samisk musikkultur",
+          "coreElements": [
+            "Komponere"
+          ]
+        },
+        {
+          "code": "MUS-06",
+          "text": "synge og spille på instrumenter alene og sammen med andre ved bruk av gehør og enkel notasjon",
+          "coreElements": [
+            "Musisere"
+          ]
+        },
+        {
+          "code": "MUS-07",
+          "text": "eksperimentere med rytmer, melodier og andre grunnelementer, sette sammen mønstre til komposisjoner, også ved bruk av digitale verktøy, og beskrive arbeidsprosesser og resultater",
+          "coreElements": [
+            "Lytte"
+          ]
+        },
+        {
+          "code": "MUS-08",
+          "text": "formidle egne musikkopplevelser og beskrive bruk av musikalske virkemidler ved hjelp av enkle fagbegreper",
+          "coreElements": [
+            "Musisere"
+          ]
+        },
+        {
+          "code": "MUS-09",
+          "text": "samtale om og reflektere over hvordan musikk skaper mening når den brukes i ulike sosiale sammenhenger",
+          "coreElements": [
+            "Komponere",
+            "Musisere"
+          ]
+        }
+      ],
+      "7": [
+        {
+          "code": "MUS-10",
+          "text": "utøve et repertoar av musikk, sang, andre vokale uttrykk og dans fra samtiden og historien",
+          "coreElements": [
+            "Lytte"
+          ]
+        },
+        {
+          "code": "MUS-11",
+          "text": "utforske og drøfte hvordan musikk fra fortiden påvirker dagens musikk",
+          "coreElements": [
+            "Lytte"
+          ]
+        },
+        {
+          "code": "MUS-12",
+          "text": "øve inn og framføre sang og musikk, i samspill eller individuelt, gehørbasert og ved bruk av enkle notasjonsteknikker",
+          "coreElements": [
+            "Lytte",
+            "Musisere"
+          ]
+        },
+        {
+          "code": "MUS-13",
+          "text": "lytte, eksperimentere og skape nye uttrykk med instrumenter, kropp, stemme eller lyd fra andre kilder, og presentere resultatet",
+          "coreElements": [
+            "Lytte",
+            "Komponere"
+          ]
+        },
+        {
+          "code": "MUS-14",
+          "text": "bruke teknologi og digitale verktøy til å skape, øve inn og bearbeide musikk",
+          "coreElements": [
+            "Musisere",
+            "Lytte"
+          ]
+        },
+        {
+          "code": "MUS-15",
+          "text": "bruke fagbegreper i beskrivelse av og refleksjon over arbeidsprosesser, resultater, musikalske uttrykk og virkemidler",
+          "coreElements": [
+            "Komponere"
+          ]
+        },
+        {
+          "code": "MUS-16",
+          "text": "utforske og formidle musikalske opplevelser og erfaringer",
+          "coreElements": [
+            "Komponere"
+          ]
+        },
+        {
+          "code": "MUS-17",
+          "text": "undersøke hvordan kjønn, kjønnsroller og seksualitet fremstilles i musikk og dans i det offentlige rom, og skape uttrykk som utfordrer stereotypier",
+          "coreElements": [
+            "Komponere"
+          ]
+        },
+        {
+          "code": "MUS-18",
+          "text": "reflektere over hvordan musikk kan spille ulike roller for utvikling av individer og gruppers identitet",
+          "coreElements": [
+            "Komponere"
+          ]
+        }
+      ],
+      "10": [
+        {
+          "code": "MUS-19",
+          "text": "utøve et variert repertoar av musikk, sang, andre vokale uttrykk og dans",
+          "coreElements": [
+            "Musisere"
+          ]
+        },
+        {
+          "code": "MUS-20",
+          "text": "reflektere over hvordan musikalske tradisjoner, inkludert samiske musikktradisjoner, bevares og fornyes",
+          "coreElements": [
+            "Lytte"
+          ]
+        },
+        {
+          "code": "MUS-21",
+          "text": "samarbeide med andre om å planlegge og gjennomføre øvingsprosesser hvor det inngår selvvalgt sang, andre vokale uttrykk, spill på instrumenter eller dans, og formidle resultatet i gruppe eller individuelt",
+          "coreElements": [
+            "Komponere"
+          ]
+        },
+        {
+          "code": "MUS-22",
+          "text": "skape og programmere musikalske forløp ved å eksperimentere med lyd fra ulike kilder",
+          "coreElements": [
+            "Komponere"
+          ]
+        },
+        {
+          "code": "MUS-23",
+          "text": "utforske og formidle musikalske opplevelser og erfaringer, og reflektere over bruk av musikalske virkemidler",
+          "coreElements": [
+            "Musisere",
+            "Komponere"
+          ]
+        },
+        {
+          "code": "MUS-24",
+          "text": "lytte og prøve ut ulike uttrykk og begrunne valg i skapende prosesser fra idé til ferdig resultat",
+          "coreElements": [
+            "Lytte",
+            "Komponere"
+          ]
+        },
+        {
+          "code": "MUS-25",
+          "text": "bruke gehør og notasjonsteknikker som støtte i skapende arbeid",
+          "coreElements": [
+            "Lytte",
+            "Musisere"
+          ]
+        },
+        {
+          "code": "MUS-26",
+          "text": "bruke relevante fagbegreper i skapende arbeid og i refleksjon over prosesser og resultater",
+          "coreElements": [
+            "Lytte",
+            "Musisere"
+          ]
+        },
+        {
+          "code": "MUS-27",
+          "text": "utforske og reflektere over hvordan musikk, sang og dans som estetiske uttrykk er påvirket av og uttrykk for historiske og samfunnsmessige forhold, og skape musikalske uttrykk som tar opp utfordringer i samtiden",
+          "coreElements": [
+            "Musisere",
+            "Lytte"
+          ]
+        },
+        {
+          "code": "MUS-28",
+          "text": "utforske og drøfte musikkens og dansens betydning i samfunnet og etiske problemstillinger knyttet til musikalske ytringer og musikkulturer Læreplan i musikk Læreplankode: MUS01-02 Læreplankode: MUS01-02",
+          "coreElements": [
+            "Lytte",
+            "Komponere"
+          ]
+        }
+      ]
+    }
+  },
   "NAT": {
     "name": "Naturfag",
     "levels": {
@@ -2354,6 +2344,1001 @@
           "coreElements": [
             "Teknologiske prosesser",
             "Systemtenkning"
+          ]
+        }
+      ],
+      "4": [
+        {
+          "code": "NAT-11",
+          "text": "undre seg, stille spørsmål og lage hypoteser?og utforske disse for å finne svar",
+          "coreElements": [
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-12",
+          "text": "bruke tabeller og figurer til å organisere data, lage forklaringer basert på data og presentere funn",
+          "coreElements": [
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-13",
+          "text": "sammenligne modeller med observasjoner og samtale om hvorfor vi bruker modeller i naturfag",
+          "coreElements": [
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-14",
+          "text": "utforske teknologiske systemer som er satt sammen av ulike deler, og beskrive hvordan delene fungerer og virker sammen",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-15",
+          "text": "designe og lage et produkt basert på en kravspesifikasjon",
+          "coreElements": [
+            "Teknologiske prosesser",
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-16",
+          "text": "utforske og beskrive hvordan noen stoffer kan endre seg når de blandes med andre stoffer",
+          "coreElements": [
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-17",
+          "text": "utforske observerbare størrelser som fart og temperatur og knytte dem til energi",
+          "coreElements": [
+            "Teknologiske prosesser",
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-18",
+          "text": "samtale om hva energi er, og utforske ulike energikjeder",
+          "coreElements": [
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-19",
+          "text": "utforske et naturområde og drøfte bærekraftig bruk av området",
+          "coreElements": [
+            "Teknologiske prosesser",
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-20",
+          "text": "utforske og sammenligne ulike dyre- og plantearters tilpasninger til miljø og levesteder og drøfte hvorfor noen arter dør ut",
+          "coreElements": [
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-21",
+          "text": "delta i høsting og bruk av naturressurser og drøfte hvordan naturressurser kan brukes på en bærekraftig måte",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-22",
+          "text": "gi eksempler på god dyrevelferd og reflektere over hvordan dyrs behov kan ivaretas",
+          "coreElements": [
+            "Systemtenkning",
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-23",
+          "text": "utforske og beskrive vannets kretsløp og gjøre rede for hvorfor vann er viktig for livet på jorda",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-24",
+          "text": "samtale om hva fysisk og psykisk helse er, og drøfte hvordan livsstil og trivsel påvirker helse",
+          "coreElements": [
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-25",
+          "text": "samtale om likheter og ulikheter mellom kjønnene, om kjønnsidentitet og om menneskets reproduksjon",
+          "coreElements": [
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-26",
+          "text": "beskrive hvordan muskler og skjelett fungerer, og knytte dette til bevegelse",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-27",
+          "text": "beskrive funksjoner i kroppens ytre forsvar og samtale om hvordan dette verner mot sykdom",
+          "coreElements": [
+            "Systemtenkning",
+            "Teknologiske prosesser"
+          ]
+        }
+      ],
+      "7": [
+        {
+          "code": "NAT-28",
+          "text": "stille spørsmål og lage hypoteser om naturfaglige fenomener, identifisere variabler og samle data for å finne svar",
+          "coreElements": [
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-29",
+          "text": "skille mellom observasjoner og slutninger, organisere data, bruke årsak-virkning-argumenter, trekke slutninger, vurdere feilkilder og presentere funn",
+          "coreElements": [
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-30",
+          "text": "bruke og vurdere modeller som representerer fenomener man ikke kan observere direkte, og gjøre rede for hvorfor det brukes modeller i naturfag",
+          "coreElements": [
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-31",
+          "text": "lese og forstå faremerking og reflektere over hensikten med disse",
+          "coreElements": [
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-32",
+          "text": "gi eksempler på hvordan naturvitenskapelig kunnskap er utviklet og utvikler seg",
+          "coreElements": [
+            "Teknologiske prosesser",
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-33",
+          "text": "gi eksempler på hvordan tradisjonell kunnskap har bidratt og bidrar til naturvitenskapelig kunnskap",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-34",
+          "text": "utforske, lage og programmere teknologiske systemer som består av deler som virker sammen",
+          "coreElements": [
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-35",
+          "text": "designe og lage et produkt basert på brukerbehov",
+          "coreElements": [
+            "Teknologiske prosesser",
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-36",
+          "text": "reflektere over hvordan teknologi kan løse utfordringer, skape muligheter og føre til nye dilemmaer",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-37",
+          "text": "utforske faseoverganger og kjemiske reaksjoner og beskrive hva som kjennetegner dem",
+          "coreElements": [
+            "Systemtenkning",
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-38",
+          "text": "bruke partikkelmodellen til å forklare faseoverganger og egenskapene til faste stoffer, væsker og gasser",
+          "coreElements": [
+            "Teknologiske prosesser",
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-39",
+          "text": "utforske elektriske og magnetiske krefter gjennom forsøk og samtale om hvordan vi utnytter elektrisk energi i dagliglivet",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-40",
+          "text": "gjøre rede for hvordan organismer kan deles inn i hovedgrupper, og gi eksempler på ulike organismers særtrekk",
+          "coreElements": [
+            "Systemtenkning",
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-41",
+          "text": "gjøre rede for betydningen av biologisk mangfold og gjennomføre tiltak for å bevare det biologiske mangfoldet i nærmiljøet",
+          "coreElements": [
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-42",
+          "text": "foreslå tiltak for å bevare det biologiske mangfoldet i nordområdene og gi eksempler på betydningen av tradisjonell kunnskap i naturforvaltning",
+          "coreElements": [
+            "Teknologiske prosesser",
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-43",
+          "text": "utforske og beskrive ulike næringsnett og bruke dette til å diskutere samspill i naturen",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-44",
+          "text": "beskrive og visualisere hvordan døgn, månefaser og årstider oppstår, og samtale om hvordan dette påvirker livet på jorda",
+          "coreElements": [
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-45",
+          "text": "gjøre rede for jordas forutsetninger for liv og sammenligne med andre himmellegemer i universet",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-46",
+          "text": "gjøre rede for hvordan det geologiske kretsløpet, platetektonikk og ytre krefter er med på å forme og endre ulike landskap",
+          "coreElements": [
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-47",
+          "text": "gjøre rede for fysiske og psykiske forandringer i puberteten og samtale om hvordan dette kan påvirke følelser, handlinger og seksualitet",
+          "coreElements": [
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-48",
+          "text": "gjøre rede for noen av kroppens organsystemer og beskrive hvordan systemene virker sammen",
+          "coreElements": [
+            "Naturvitenskapelige praksiser"
+          ]
+        }
+      ],
+      "10": [
+        {
+          "code": "NAT-49",
+          "text": "stille spørsmål og lage hypoteser om naturfaglige fenomener, identifisere avhengige og uavhengige variabler og samle data for å finne svar",
+          "coreElements": [
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-50",
+          "text": "analysere og bruke innsamlede data til å lage forklaringer, drøfte forklaringene i lys av relevant teori og vurdere kvaliteten på egne og andres utforskinger",
+          "coreElements": [
+            "Teknologiske prosesser",
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-51",
+          "text": "bruke og lage modeller for å forutsi eller beskrive naturfaglige prosesser og systemer og gjøre rede for modellenes styrker og begrensninger",
+          "coreElements": [
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-52",
+          "text": "delta i risikovurderinger knyttet til forsøk og følge sikkerhetstiltakene",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-53",
+          "text": "gi eksempler på dagsaktuell forskning og drøfte hvordan ny kunnskap genereres gjennom samarbeid og kritisk tilnærming til eksisterende kunnskap",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-54",
+          "text": "utforske, forstå og lage teknologiske systemer som består av en sender og en mottaker",
+          "coreElements": [
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-55",
+          "text": "bruke programmering til å utforske naturfaglige fenomener",
+          "coreElements": [
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-56",
+          "text": "utforske kjemiske reaksjoner, forklare massebevaring og gjøre rede for betydninger av noen forbrenningsreaksjoner",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-57",
+          "text": "bruke atommodeller og periodesystemet til å gjøre rede for egenskaper til grunnstoffer og kjemiske forbindelser",
+          "coreElements": [
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-58",
+          "text": "beskrive drivhuseffekten og gjøre rede for faktorer som kan forårsake globale klimaendringer",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-59",
+          "text": "gjøre rede for energibevaring og energikvalitet og utforske ulike måter å omdanne, transportere og lagre energi på",
+          "coreElements": [
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-60",
+          "text": "drøfte hvordan energiproduksjon og energibruk kan påvirke miljøet lokalt og globalt",
+          "coreElements": [
+            "Teknologiske prosesser",
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-61",
+          "text": "beskrive hvordan forskere har kommet fram til evolusjonsteorien og bruke denne til å forklare utvikling av biologisk mangfold",
+          "coreElements": [
+            "Systemtenkning",
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-62",
+          "text": "sammenligne celler hos ulike organismer og beskrive sammenhenger mellom oppbygning og funksjon",
+          "coreElements": [
+            "Systemtenkning",
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-63",
+          "text": "utforske sammenhenger mellom abiotiske og biotiske faktorer i et økosystem og diskutere hvordan energi og materie omdannes i kretsløp",
+          "coreElements": [
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-64",
+          "text": "gi eksempler på og drøfte aktuelle dilemmaer knyttet til utnyttelse av naturressurser og tap av biologisk mangfold",
+          "coreElements": [
+            "Systemtenkning",
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-65",
+          "text": "gi eksempler på samers tradisjonelle kunnskap om naturen og diskutere hvordan denne kunnskapen kan bidra til bærekraftig forvaltning av naturen",
+          "coreElements": [
+            "Systemtenkning",
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-66",
+          "text": "gjøre rede for hvordan fotosyntese og celleånding gir energi til alt levende gjennom karbonkretsløpet",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Systemtenkning"
+          ]
+        },
+        {
+          "code": "NAT-67",
+          "text": "bruke platetektonikkteorien til å forklare jordas utvikling over tid og gi eksempler på observasjoner som støtter teorien",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-68",
+          "text": "drøfte spørsmål knyttet til seksuell og reproduktiv helse",
+          "coreElements": [
+            "Naturvitenskapelige praksiser",
+            "Teknologiske prosesser"
+          ]
+        },
+        {
+          "code": "NAT-69",
+          "text": "sammenligne nervesystemet og hormonsystemet og beskrive hvordan rusmidler, legemidler, miljøgifter og doping påvirker signalsystemene",
+          "coreElements": [
+            "Naturvitenskapelige praksiser"
+          ]
+        },
+        {
+          "code": "NAT-70",
+          "text": "beskrive kroppens immunforsvar og hvordan vaksiner virker, og gjøre rede for hva vaksiner betyr for folkehelsen Læreplan i naturfag Læreplankode: NAT01-04 Læreplankode: NAT01-04",
+          "coreElements": [
+            "Teknologiske prosesser",
+            "Naturvitenskapelige praksiser"
+          ]
+        }
+      ]
+    }
+  },
+  "NOR": {
+    "name": "Norsk",
+    "levels": {
+      "2": [
+        {
+          "code": "NOR-01",
+          "text": "lytte til og samtale om skjønnlitteratur og sakprosa på bokmål og nynorsk",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Sammensatte tekster",
+            "Lese og skrive"
+          ]
+        },
+        {
+          "code": "NOR-02",
+          "text": "låne og lese bøker fra biblioteket",
+          "coreElements": [
+            "Sammensatte tekster",
+            "Muntlige tekster",
+            "Tekstkompetanse"
+          ]
+        },
+        {
+          "code": "NOR-03",
+          "text": "uttrykke tekstopplevelser gjennom lek, sang, tegning, skriving og andre kreative aktiviteter",
+          "coreElements": [
+            "Sammensatte tekster",
+            "Lese og skrive",
+            "Muntlige tekster"
+          ]
+        },
+        {
+          "code": "NOR-04",
+          "text": "samtale om og beskrive hvordan ord vi bruker, kan påvirke andre",
+          "coreElements": [
+            "Sammensatte tekster",
+            "Språk og språkbruk"
+          ]
+        },
+        {
+          "code": "NOR-05",
+          "text": "leke med rim og rytme og lytte ut språklyder og stavelser i ord",
+          "coreElements": [
+            "Tekstkompetanse",
+            "Språk og språkbruk"
+          ]
+        },
+        {
+          "code": "NOR-06",
+          "text": "trekke bokstavlyder sammen til ord under lesing og skriving",
+          "coreElements": [
+            "Muntlige tekster",
+            "Språk og språkbruk",
+            "Tekstkompetanse"
+          ]
+        },
+        {
+          "code": "NOR-07",
+          "text": "lese med sammenheng og forståelse på papir og digitalt og bruke enkle strategier for leseforståelse",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Tekstkompetanse"
+          ]
+        },
+        {
+          "code": "NOR-08",
+          "text": "lytte, ta ordet etter tur og begrunne egne meninger i samtaler",
+          "coreElements": [
+            "Sammensatte tekster",
+            "Muntlige tekster",
+            "Tekstkompetanse"
+          ]
+        },
+        {
+          "code": "NOR-09",
+          "text": "beskrive og fortelle muntlig og skriftlig",
+          "coreElements": [
+            "Sammensatte tekster",
+            "Muntlige tekster",
+            "Tekstkompetanse"
+          ]
+        },
+        {
+          "code": "NOR-10",
+          "text": "skrive tekster for hånd og med tastatur",
+          "coreElements": [
+            "Lese og skrive",
+            "Tekstkompetanse",
+            "Sammensatte tekster"
+          ]
+        },
+        {
+          "code": "NOR-11",
+          "text": "bruke store og små bokstaver, punktum, spørsmålstegn og utropstegn i tekster og samtale om egne og andres tekster",
+          "coreElements": [
+            "Sammensatte tekster",
+            "Muntlige tekster"
+          ]
+        },
+        {
+          "code": "NOR-12",
+          "text": "lage tekster som kombinerer skrift med bilder",
+          "coreElements": [
+            "Muntlige tekster",
+            "Lese og skrive"
+          ]
+        },
+        {
+          "code": "NOR-13",
+          "text": "utforske og samtale om oppbygningen av og betydningen til ord og uttrykk",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Lese og skrive",
+            "Sammensatte tekster"
+          ]
+        },
+        {
+          "code": "NOR-14",
+          "text": "utforske eget talespråk og samtale om forskjeller og likheter mellom talespråk og skriftspråk",
+          "coreElements": [
+            "Lese og skrive",
+            "Språk og språkbruk",
+            "Tekstkompetanse"
+          ]
+        }
+      ],
+      "4": [
+        {
+          "code": "NOR-15",
+          "text": "lese og lytte til fortellinger, eventyr, sangtekster, faktabøker og andre tekster på bokmål og nynorsk og i oversettelse fra samiske og andre språk, og samtale om hva tekstene betyr for eleven",
+          "coreElements": [
+            "Sammensatte tekster",
+            "Språk og språkbruk"
+          ]
+        },
+        {
+          "code": "NOR-16",
+          "text": "velge bøker fra bibliotek ut fra egne interesser og leseferdigheter",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Lese og skrive",
+            "Tekstkompetanse"
+          ]
+        },
+        {
+          "code": "NOR-17",
+          "text": "lese tekster med flyt og forståelse og bruke lesestrategier målrettet for å lære",
+          "coreElements": [
+            "Tekstkompetanse",
+            "Lese og skrive",
+            "Språk og språkbruk"
+          ]
+        },
+        {
+          "code": "NOR-18",
+          "text": "utforske og formidle tekster gjennom samtale, skriving, lek, bevegelse og andre kreative uttrykk",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Muntlige tekster"
+          ]
+        },
+        {
+          "code": "NOR-19",
+          "text": "samtale om forskjellen mellom meninger og fakta i tekster",
+          "coreElements": [
+            "Tekstkompetanse",
+            "Muntlige tekster"
+          ]
+        },
+        {
+          "code": "NOR-20",
+          "text": "holde muntlige presentasjoner med og uten digitale ressurser",
+          "coreElements": [
+            "Muntlige tekster",
+            "Språk og språkbruk",
+            "Tekstkompetanse"
+          ]
+        },
+        {
+          "code": "NOR-21",
+          "text": "kombinere ulike uttrykksformer i sammensatte tekster",
+          "coreElements": [
+            "Muntlige tekster",
+            "Sammensatte tekster"
+          ]
+        },
+        {
+          "code": "NOR-22",
+          "text": "følge opp innspill fra andre i faglige samtaler og stille oppklarende og utdypende spørsmål",
+          "coreElements": [
+            "Lese og skrive",
+            "Muntlige tekster",
+            "Sammensatte tekster"
+          ]
+        },
+        {
+          "code": "NOR-23",
+          "text": "beskrive, fortelle og argumentere muntlig og skriftlig og bruke språket på kreative måter",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Muntlige tekster",
+            "Tekstkompetanse"
+          ]
+        },
+        {
+          "code": "NOR-24",
+          "text": "skrive tekster med funksjonell håndskrift og med tastatur",
+          "coreElements": [
+            "Muntlige tekster",
+            "Lese og skrive",
+            "Språk og språkbruk"
+          ]
+        },
+        {
+          "code": "NOR-25",
+          "text": "bruke komma og andre skilletegn i tekster",
+          "coreElements": [
+            "Sammensatte tekster",
+            "Muntlige tekster"
+          ]
+        },
+        {
+          "code": "NOR-26",
+          "text": "bruke fagspråk om setningsoppbygning og bøying av verb, substantiv og adjektiv i samtaler om språk og om egne og andres tekster",
+          "coreElements": [
+            "Muntlige tekster",
+            "Tekstkompetanse"
+          ]
+        },
+        {
+          "code": "NOR-27",
+          "text": "reflektere over hvordan språkbruken vår påvirker andre, og hvordan vi tilpasser og endrer språket i ulike situasjoner",
+          "coreElements": [
+            "Muntlige tekster",
+            "Tekstkompetanse",
+            "Språk og språkbruk"
+          ]
+        },
+        {
+          "code": "NOR-28",
+          "text": "sammenligne ord og uttrykk i norsk og andre språk",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Tekstkompetanse"
+          ]
+        },
+        {
+          "code": "NOR-29",
+          "text": "utforske og samtale om språklig variasjon og mangfold i nærmiljøet og utforske forskjeller og likheter mellom skriving på hovedmål og sidemål",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Lese og skrive"
+          ]
+        }
+      ],
+      "7": [
+        {
+          "code": "NOR-30",
+          "text": "lese lyrikk, noveller, fagtekster og annen skjønnlitteratur og sakprosa på bokmål og nynorsk, svensk og dansk og samtale om formål, form og innhold",
+          "coreElements": [
+            "Muntlige tekster",
+            "Lese og skrive"
+          ]
+        },
+        {
+          "code": "NOR-31",
+          "text": "lese samiske tekster på norsk og samtale om verdiene som kommer til uttrykk, og hvordan stedsnavn og personnavn som inneholder de samiske bokstavene, uttales",
+          "coreElements": [
+            "Lese og skrive",
+            "Muntlige tekster",
+            "Språk og språkbruk"
+          ]
+        },
+        {
+          "code": "NOR-32",
+          "text": "orientere seg i faglige kilder på bibliotek og digitalt, vurdere hvor pålitelige kildene er, og vise til kilder i egne tekster",
+          "coreElements": [
+            "Tekstkompetanse",
+            "Muntlige tekster",
+            "Sammensatte tekster"
+          ]
+        },
+        {
+          "code": "NOR-33",
+          "text": "bruke lesestrategier tilpasset formålet med lesingen",
+          "coreElements": [
+            "Tekstkompetanse",
+            "Muntlige tekster"
+          ]
+        },
+        {
+          "code": "NOR-34",
+          "text": "skrive tekster med funksjonell håndskrift og med flyt på tastatur",
+          "coreElements": [
+            "Lese og skrive",
+            "Tekstkompetanse",
+            "Muntlige tekster"
+          ]
+        },
+        {
+          "code": "NOR-35",
+          "text": "lytte til og videreutvikle innspill fra andre og begrunne egne standpunkter i samtaler",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Tekstkompetanse"
+          ]
+        },
+        {
+          "code": "NOR-36",
+          "text": "reflektere etisk over hvordan eleven framstiller seg selv og andre i digitale medier",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Lese og skrive"
+          ]
+        },
+        {
+          "code": "NOR-37",
+          "text": "presentere faglige emner muntlig med og uten digitale ressurser",
+          "coreElements": [
+            "Lese og skrive",
+            "Muntlige tekster",
+            "Tekstkompetanse"
+          ]
+        },
+        {
+          "code": "NOR-38",
+          "text": "leke med språket og prøve ut ulike virkemidler og framstillingsmåter i muntlige og skriftlige tekster",
+          "coreElements": [
+            "Tekstkompetanse",
+            "Lese og skrive"
+          ]
+        },
+        {
+          "code": "NOR-39",
+          "text": "beskrive, fortelle, argumentere og reflektere i ulike muntlige og skriftlige sjangre og for ulike formål",
+          "coreElements": [
+            "Muntlige tekster",
+            "Lese og skrive",
+            "Tekstkompetanse"
+          ]
+        },
+        {
+          "code": "NOR-40",
+          "text": "skrive tekster med tydelig struktur og mestre sentrale regler for rettskriving, ordbøying og tegnsetting",
+          "coreElements": [
+            "Tekstkompetanse",
+            "Sammensatte tekster"
+          ]
+        },
+        {
+          "code": "NOR-41",
+          "text": "gi tilbakemelding på medelevers tekster ut fra kriterier og bruke tilbakemeldinger i bearbeiding av egne tekster",
+          "coreElements": [
+            "Tekstkompetanse",
+            "Sammensatte tekster",
+            "Muntlige tekster"
+          ]
+        },
+        {
+          "code": "NOR-42",
+          "text": "bruke fagspråk og kunnskap om ordklasser og setningsoppbygning i samtale om egne og andres tekster",
+          "coreElements": [
+            "Lese og skrive",
+            "Muntlige tekster",
+            "Sammensatte tekster"
+          ]
+        },
+        {
+          "code": "NOR-43",
+          "text": "utforske og beskrive samspillet mellom skrift, bilder og andre uttrykksformer og lage egne sammensatte tekster",
+          "coreElements": [
+            "Tekstkompetanse",
+            "Muntlige tekster"
+          ]
+        },
+        {
+          "code": "NOR-44",
+          "text": "prøve ut skriving av tekster på sidemål",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Lese og skrive",
+            "Sammensatte tekster"
+          ]
+        },
+        {
+          "code": "NOR-45",
+          "text": "sammenligne talespråk i nærmiljøet med andre talespråkvarianter i Norge og med nabospråk",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Muntlige tekster"
+          ]
+        },
+        {
+          "code": "NOR-46",
+          "text": "utforske og reflektere over sammenhengen mellom språk og identitet",
+          "coreElements": [
+            "Sammensatte tekster",
+            "Lese og skrive",
+            "Tekstkompetanse"
+          ]
+        }
+      ],
+      "10": [
+        {
+          "code": "NOR-47",
+          "text": "sammenligne og tolke romaner, noveller, lyrikk og andre tekster ut fra historisk kontekst og egen samtid",
+          "coreElements": [
+            "Tekstkompetanse",
+            "Sammensatte tekster",
+            "Språk og språkbruk"
+          ]
+        },
+        {
+          "code": "NOR-48",
+          "text": "beskrive og reflektere over egen bruk av lesestrategier i lesing av skjønnlitteratur og sakprosa",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Tekstkompetanse"
+          ]
+        },
+        {
+          "code": "NOR-49",
+          "text": "lytte til og lese tekster på svensk og dansk og gjøre rede for innhold og språklige trekk",
+          "coreElements": [
+            "Lese og skrive",
+            "Språk og språkbruk"
+          ]
+        },
+        {
+          "code": "NOR-50",
+          "text": "utforske og reflektere over hvordan tekster framstiller unges livssituasjon",
+          "coreElements": [
+            "Lese og skrive",
+            "Språk og språkbruk",
+            "Muntlige tekster"
+          ]
+        },
+        {
+          "code": "NOR-51",
+          "text": "gjenkjenne og bruke språklige virkemidler og retoriske appellformer",
+          "coreElements": [
+            "Lese og skrive",
+            "Språk og språkbruk"
+          ]
+        },
+        {
+          "code": "NOR-52",
+          "text": "bruke kilder på en kritisk måte, markere sitater og vise til kilder på en etterrettelig måte i egne tekster",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Tekstkompetanse",
+            "Lese og skrive"
+          ]
+        },
+        {
+          "code": "NOR-53",
+          "text": "utforske og vurdere hvordan digitale medier påvirker og endrer språk og kommunikasjon",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Tekstkompetanse"
+          ]
+        },
+        {
+          "code": "NOR-54",
+          "text": "bruke fagspråk og argumentere saklig i diskusjoner, samtaler, muntlige presentasjoner og skriftlige framstillinger om norskfaglige og tverrfaglige temaer",
+          "coreElements": [
+            "Lese og skrive",
+            "Muntlige tekster"
+          ]
+        },
+        {
+          "code": "NOR-55",
+          "text": "informere, fortelle, argumentere og reflektere i ulike muntlige og skriftlige sjangre og for ulike formål tilpasset mottaker og medium",
+          "coreElements": [
+            "Muntlige tekster",
+            "Lese og skrive",
+            "Språk og språkbruk"
+          ]
+        },
+        {
+          "code": "NOR-56",
+          "text": "skrive tekster med funksjonell tekstbinding og riktig tegnsetting og mestre rettskriving og ordbøying på hovedmål og sidemål",
+          "coreElements": [
+            "Tekstkompetanse",
+            "Lese og skrive",
+            "Språk og språkbruk"
+          ]
+        },
+        {
+          "code": "NOR-57",
+          "text": "bruke fagspråk og kunnskap om grammatikk, tekststruktur og sjanger i samtale om og bearbeiding av tekster",
+          "coreElements": [
+            "Muntlige tekster",
+            "Tekstkompetanse",
+            "Sammensatte tekster"
+          ]
+        },
+        {
+          "code": "NOR-58",
+          "text": "uttrykke seg i ulike sjangre og eksperimentere med sjangre på kreative måter",
+          "coreElements": [
+            "Lese og skrive",
+            "Språk og språkbruk",
+            "Sammensatte tekster"
+          ]
+        },
+        {
+          "code": "NOR-59",
+          "text": "lage sammensatte tekster og begrunne valg av uttrykksformer",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Lese og skrive",
+            "Muntlige tekster"
+          ]
+        },
+        {
+          "code": "NOR-60",
+          "text": "forklare den historiske bakgrunnen for bokmål og nynorsk og reflektere over statusen til de offisielle språkene i Norge i dag",
+          "coreElements": [
+            "Språk og språkbruk",
+            "Lese og skrive",
+            "Tekstkompetanse"
+          ]
+        },
+        {
+          "code": "NOR-61",
+          "text": "utforske språklig variasjon og mangfold i Norge og reflektere over kompetansemål og vurdering i vg2 yrkesfaglige utdanningsprogram i læreplan i norsk (NOR01-07)",
+          "coreElements": [
+            "Sammensatte tekster",
+            "Lese og skrive"
           ]
         }
       ]
@@ -2446,6 +3431,447 @@
           "text": "utforske og gi eksempler på hvordan barn kan påvirke beslutninger og samarbeide om demokratiske prosesser",
           "coreElements": [
             "Utøve demokratisk medborgarskap",
+            "Analysere samfunnsfaglig informasjon",
+            "Utforske samfunnsfaglige temaer"
+          ]
+        },
+        {
+          "code": "SAF-11",
+          "text": "samtale om muligheter og utfordringer ved digital samhandling",
+          "coreElements": [
+            "Utforske samfunnsfaglige temaer",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-12",
+          "text": "samtale om følelser, kropp, kjønn og seksualitet og hvordan egne og andres grenser kan uttrykkes og respekteres",
+          "coreElements": [
+            "Tenke kritisk og håndtere uenighet",
+            "Utøve demokratisk medborgarskap",
+            "Utforske samfunnsfaglige temaer"
+          ]
+        },
+        {
+          "code": "SAF-13",
+          "text": "utforske og gi eksempler på hvordan mennesker i ulike deler av verden påvirker hverandres liv",
+          "coreElements": [
+            "Utforske samfunnsfaglige temaer",
+            "Utforske sammenhenger i tid og rom",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        }
+      ],
+      "4": [
+        {
+          "code": "SAF-14",
+          "text": "utforske og presentere samfunnsfaglige spørsmål, søke etter informasjon i ulike kilder og vurdere hvor nyttig informasjonen er til å belyse spørsmålene",
+          "coreElements": [
+            "Utøve demokratisk medborgarskap",
+            "Utforske samfunnsfaglige temaer",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-15",
+          "text": "utforske kulturminner og hvordan mennesker levde i den tiden kulturminnene er fra, og sammenligne med hvordan vi lever i dag",
+          "coreElements": [
+            "Analysere samfunnsfaglig informasjon",
+            "Utøve demokratisk medborgarskap",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-16",
+          "text": "beskrive kultur- og naturlandskap i Norge og samtale om hvordan historiske og geografiske kilder, inkludert kart, kan gi informasjon om landskap",
+          "coreElements": [
+            "Tenke kritisk og håndtere uenighet",
+            "Utøve demokratisk medborgarskap",
+            "Utforske samfunnsfaglige temaer"
+          ]
+        },
+        {
+          "code": "SAF-17",
+          "text": "samtale om hvorfor det oppstår konflikter i skole- og nærmiljøet, lytte til andres mening og samarbeide med andre om å finne konstruktive løsninger",
+          "coreElements": [
+            "Utforske samfunnsfaglige temaer",
+            "Utforske sammenhenger i tid og rom"
+          ]
+        },
+        {
+          "code": "SAF-18",
+          "text": "presentere menneskerettigheter og rettigheter som barn har, og reflektere over hvorfor disse rettighetene finnes",
+          "coreElements": [
+            "Utforske sammenhenger i tid og rom",
+            "Analysere samfunnsfaglig informasjon",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-19",
+          "text": "presentere årsaker til at samene har urfolksstatus i Norge, og beskrive forskjellige former for samisk kultur- og samfunnsliv før og nå",
+          "coreElements": [
+            "Utforske sammenhenger i tid og rom",
+            "Analysere samfunnsfaglig informasjon"
+          ]
+        },
+        {
+          "code": "SAF-20",
+          "text": "utforske og gi eksempler på noen sider ved bærekraftig utvikling",
+          "coreElements": [
+            "Tenke kritisk og håndtere uenighet",
+            "Utøve demokratisk medborgarskap"
+          ]
+        },
+        {
+          "code": "SAF-21",
+          "text": "reflektere over sammenhengen mellom personlig økonomi og forbruk hos den enkelte",
+          "coreElements": [
+            "Utforske samfunnsfaglige temaer",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-22",
+          "text": "samtale om identitet, mangfold og fellesskap og reflektere over hvordan det kan oppleves ikke å være del av fellesskapet",
+          "coreElements": [
+            "Analysere samfunnsfaglig informasjon",
+            "Utøve demokratisk medborgarskap",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-23",
+          "text": "samtale om regler og normer for personvern, om deling og beskyttelse av informasjon og om hva det vil si å bruke dømmekraft i digital samhandling",
+          "coreElements": [
+            "Analysere samfunnsfaglig informasjon",
+            "Utforske samfunnsfaglige temaer",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-24",
+          "text": "samtale om grenser knyttet til kropp, hva vold og seksuelle overgrep er, og hvor man kan få hjelp hvis man blir utsatt for vold og seksuelle overgrep",
+          "coreElements": [
+            "Utøve demokratisk medborgarskap",
+            "Utforske sammenhenger i tid og rom"
+          ]
+        },
+        {
+          "code": "SAF-25",
+          "text": "reflektere over hvem som har makt, og hva et demokrati er, og utvikle forslag til hvordan man kan være med på å påvirke beslutninger",
+          "coreElements": [
+            "Analysere samfunnsfaglig informasjon",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-26",
+          "text": "samtale om noen viktige offentlige institusjoner og virksomheter i Norge og reflektere over hva de betyr i livet til mennesker",
+          "coreElements": [
+            "Analysere samfunnsfaglig informasjon",
+            "Utforske samfunnsfaglige temaer",
+            "Utforske sammenhenger i tid og rom"
+          ]
+        }
+      ],
+      "7": [
+        {
+          "code": "SAF-27",
+          "text": "gjennomføre en samfunnsfaglig undersøkelse og presentere resultatene ved hjelp av egnede digitale verktøy",
+          "coreElements": [
+            "Analysere samfunnsfaglig informasjon",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-28",
+          "text": "presentere en aktuell nyhetssak og reflektere over forskjeller mellom fakta, meninger og kommersielt budskap i mediebildet",
+          "coreElements": [
+            "Utforske sammenhenger i tid og rom",
+            "Analysere samfunnsfaglig informasjon"
+          ]
+        },
+        {
+          "code": "SAF-29",
+          "text": "sammenligne hvordan ulike kilder kan gi ulik informasjon om samme tema, og reflektere over hvordan kilder kan brukes til å påvirke og fremme bestemte syn",
+          "coreElements": [
+            "Utøve demokratisk medborgarskap",
+            "Tenke kritisk og håndtere uenighet",
+            "Utforske sammenhenger i tid og rom"
+          ]
+        },
+        {
+          "code": "SAF-30",
+          "text": "utforske hvordan mennesker i fortiden livnærte seg, og samtale om hvordan sentrale endringer i livsgrunnlag og teknologi har påvirket og påvirker demografi, levekår og bosettingsmønstre",
+          "coreElements": [
+            "Tenke kritisk og håndtere uenighet",
+            "Analysere samfunnsfaglig informasjon",
+            "Utøve demokratisk medborgarskap"
+          ]
+        },
+        {
+          "code": "SAF-31",
+          "text": "beskrive geografiske hovedtrekk i ulike deler av verden og reflektere over hvordan disse hovedtrekkene påvirker menneskene som bor der",
+          "coreElements": [
+            "Utforske sammenhenger i tid og rom",
+            "Utøve demokratisk medborgarskap"
+          ]
+        },
+        {
+          "code": "SAF-32",
+          "text": "reflektere over hvorfor konflikter oppstår, og drøfte hvordan den enkelte og samfunnet kan håndtere konflikter",
+          "coreElements": [
+            "Tenke kritisk og håndtere uenighet",
+            "Utforske sammenhenger i tid og rom"
+          ]
+        },
+        {
+          "code": "SAF-33",
+          "text": "utforske ulike sider ved mangfold i Norge og reflektere over menneskers behov for å være seg selv og for å høre til i fellesskap",
+          "coreElements": [
+            "Utforske samfunnsfaglige temaer",
+            "Analysere samfunnsfaglig informasjon"
+          ]
+        },
+        {
+          "code": "SAF-34",
+          "text": "drøfte hva likeverd og likestilling betyr for et demokrati, og utvikle forslag til hvordan man kan motarbeide fordommer, rasisme og diskriminering",
+          "coreElements": [
+            "Utøve demokratisk medborgarskap",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-35",
+          "text": "samtale om menneske- og likeverd og sammenligne hvordan menneskerettighetene er blitt og blir ivaretatt i ulike land",
+          "coreElements": [
+            "Utforske samfunnsfaglige temaer",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-36",
+          "text": "utforske hovedtrekk ved historien til samene og de nasjonale minoritetene i Norge og presentere rettigheter samene og de nasjonale minoritetene i Norge har i dag",
+          "coreElements": [
+            "Utforske samfunnsfaglige temaer",
+            "Analysere samfunnsfaglig informasjon",
+            "Utforske sammenhenger i tid og rom"
+          ]
+        },
+        {
+          "code": "SAF-37",
+          "text": "reflektere over hvordan kommersiell påvirkning kan virke inn på forbruk, personlig økonomi og selvbilde",
+          "coreElements": [
+            "Utforske samfunnsfaglige temaer",
+            "Utøve demokratisk medborgarskap",
+            "Utforske sammenhenger i tid og rom"
+          ]
+        },
+        {
+          "code": "SAF-38",
+          "text": "utforske og presentere en global utfordring ved bærekraftig utvikling og hvilke konsekvenser den kan ha, og utvikle forslag til hvordan man kan være med på å motvirke utfordringen, og hvordan samarbeid mellom land kan bidra",
+          "coreElements": [
+            "Utøve demokratisk medborgarskap",
+            "Utforske sammenhenger i tid og rom"
+          ]
+        },
+        {
+          "code": "SAF-39",
+          "text": "reflektere over hvordan egen og andres deltakelse i digital samhandling påvirker dømmekraft, regler og normer",
+          "coreElements": [
+            "Utforske samfunnsfaglige temaer",
+            "Utforske sammenhenger i tid og rom"
+          ]
+        },
+        {
+          "code": "SAF-40",
+          "text": "reflektere over variasjoner i identiteter, seksuell orientering og kjønnsuttrykk og egne og andres grenser knyttet til følelser, kropp, kjønn og seksualitet og drøfte hva man kan gjøre om grenser blir brutt",
+          "coreElements": [
+            "Utforske sammenhenger i tid og rom",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-41",
+          "text": "beskrive sentrale hendelser som har ført til det demokratiet vi har i Norge i dag, og sammenligne hvordan enkeltmennesker har mulighet til å påvirke i ulike styresett",
+          "coreElements": [
+            "Tenke kritisk og håndtere uenighet",
+            "Utøve demokratisk medborgarskap"
+          ]
+        },
+        {
+          "code": "SAF-42",
+          "text": "gi eksempler på hva lover, regler og normer er, og hvilken funksjon de har i samfunnet, og reflektere over konsekvenser av å bryte dem",
+          "coreElements": [
+            "Utøve demokratisk medborgarskap",
+            "Utforske samfunnsfaglige temaer"
+          ]
+        },
+        {
+          "code": "SAF-43",
+          "text": "reflektere over hvordan møter mellom mennesker har bidratt til å endre hvordan mennesker har tenkt og samfunn har vært organisert",
+          "coreElements": [
+            "Utforske sammenhenger i tid og rom",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        }
+      ],
+      "10": [
+        {
+          "code": "SAF-44",
+          "text": "bruke samfunnsfaglige metoder og digitale ressurser i egne undersøkelser, presentere funn ved hjelp av digitale verktøy og drøfte hvor gyldige og relevante funnene er",
+          "coreElements": [
+            "Utforske sammenhenger i tid og rom",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-45",
+          "text": "vurdere på hvilke måter ulike kilder gir informasjon om et samfunnsfaglig tema, og reflektere over hvordan algoritmer, ensrettede kilder eller mangel på kilder kan prege forståelsen vår",
+          "coreElements": [
+            "Utforske sammenhenger i tid og rom",
+            "Analysere samfunnsfaglig informasjon"
+          ]
+        },
+        {
+          "code": "SAF-46",
+          "text": "drøfte hvordan framstillinger av fortiden, hendelser og grupper har påvirket og påvirker folks holdninger og handlinger",
+          "coreElements": [
+            "Tenke kritisk og håndtere uenighet",
+            "Utforske samfunnsfaglige temaer"
+          ]
+        },
+        {
+          "code": "SAF-47",
+          "text": "utforske hvordan teknologi har vært og fremdeles er en endringsfaktor, og drøfte innvirkningen teknologien har hatt og har på enkeltmennesker, samfunn og natur",
+          "coreElements": [
+            "Tenke kritisk og håndtere uenighet",
+            "Utforske samfunnsfaglige temaer"
+          ]
+        },
+        {
+          "code": "SAF-48",
+          "text": "reflektere over hvordan mennesker har kjempet og kjemper for forandringer i samfunnet og samtidig har vært og er påvirket av geografiske forhold og historisk kontekst",
+          "coreElements": [
+            "Utøve demokratisk medborgarskap",
+            "Analysere samfunnsfaglig informasjon"
+          ]
+        },
+        {
+          "code": "SAF-49",
+          "text": "sammenligne hvordan politiske, geografiske og historiske forhold påvirker levekår, bosettingsmønstre og demografi i forskjellige deler av verden i dag",
+          "coreElements": [
+            "Utforske sammenhenger i tid og rom",
+            "Utforske samfunnsfaglige temaer"
+          ]
+        },
+        {
+          "code": "SAF-50",
+          "text": "gjøre rede for årsaker til og konsekvenser av sentrale historiske og nåtidige konflikter og reflektere over om endringer av noen forutsetninger kunne ha hindret konfliktene",
+          "coreElements": [
+            "Utforske sammenhenger i tid og rom",
+            "Utforske samfunnsfaglige temaer",
+            "Utøve demokratisk medborgarskap"
+          ]
+        },
+        {
+          "code": "SAF-51",
+          "text": "gjøre rede for årsaker til og konsekvenser av terrorhandlinger og folkemord, som holocaust, og reflektere over hvordan ekstreme holdninger og ekstreme handlinger kan forebygges",
+          "coreElements": [
+            "Utforske samfunnsfaglige temaer",
+            "Utøve demokratisk medborgarskap"
+          ]
+        },
+        {
+          "code": "SAF-52",
+          "text": "utforske og beskrive hvordan menneske- og urfolksrettigheter og andre internasjonale avtaler og samarbeid har betydning for nasjonal politikk, menneskers liv og likestilling og likeverd",
+          "coreElements": [
+            "Analysere samfunnsfaglig informasjon",
+            "Tenke kritisk og håndtere uenighet",
+            "Utforske samfunnsfaglige temaer"
+          ]
+        },
+        {
+          "code": "SAF-53",
+          "text": "gjøre rede for fornorskningen av samene og de nasjonale minoritetene og urettferdigheten de har blitt utsatt for, og reflektere over hvilke konsekvenser det har hatt og har på individ- og samfunnsnivå",
+          "coreElements": [
+            "Utøve demokratisk medborgarskap",
+            "Analysere samfunnsfaglig informasjon"
+          ]
+        },
+        {
+          "code": "SAF-54",
+          "text": "beskrive ulike dimensjoner ved bærekraftig utvikling og hvordan de påvirker hverandre, og presentere tiltak for mer bærekraftige samfunn",
+          "coreElements": [
+            "Utforske samfunnsfaglige temaer",
+            "Utøve demokratisk medborgarskap",
+            "Utforske sammenhenger i tid og rom"
+          ]
+        },
+        {
+          "code": "SAF-55",
+          "text": "vurdere hvordan arbeid, inntekt og forbruk kan påvirke personlig økonomi, levestandard og livskvalitet",
+          "coreElements": [
+            "Tenke kritisk og håndtere uenighet",
+            "Utøve demokratisk medborgarskap"
+          ]
+        },
+        {
+          "code": "SAF-56",
+          "text": "reflektere over likheter og ulikheter i identiteter, levesett og kulturuttrykk og drøfte muligheter og utfordringer ved mangfold",
+          "coreElements": [
+            "Utforske sammenhenger i tid og rom",
+            "Utforske samfunnsfaglige temaer"
+          ]
+        },
+        {
+          "code": "SAF-57",
+          "text": "utforske og reflektere over egne digitale spor og muligheten for å få slettet sporene og verne om egen og andres rett til privatliv, personvern og opphavsrett",
+          "coreElements": [
+            "Utforske samfunnsfaglige temaer",
+            "Analysere samfunnsfaglig informasjon",
+            "Utøve demokratisk medborgarskap"
+          ]
+        },
+        {
+          "code": "SAF-58",
+          "text": "reflektere over hvordan identitet, selvbilde og egne grenser utvikles og utfordres i ulike fellesskap, og presentere forslag til hvordan man kan håndtere påvirkning og uønskede hendelser",
+          "coreElements": [
+            "Tenke kritisk og håndtere uenighet",
+            "Utøve demokratisk medborgarskap",
+            "Utforske sammenhenger i tid og rom"
+          ]
+        },
+        {
+          "code": "SAF-59",
+          "text": "reflektere over hvilke aktører som har makt i samfunnet i dag, og hvordan de begrunner standpunktene sine",
+          "coreElements": [
+            "Utøve demokratisk medborgarskap",
+            "Analysere samfunnsfaglig informasjon"
+          ]
+        },
+        {
+          "code": "SAF-60",
+          "text": "utforske ulike plattformer for digital samhandling og reflektere over hvordan digital deltakelse og samhandling påvirker formen på og innholdet i samfunnsdebatten",
+          "coreElements": [
+            "Tenke kritisk og håndtere uenighet",
+            "Utforske sammenhenger i tid og rom"
+          ]
+        },
+        {
+          "code": "SAF-61",
+          "text": "beskrive sentrale lover, regler og normer og drøfte hvilke konsekvenser brudd på disse kan ha for den enkelte og for samfunnet på kort og lang sikt",
+          "coreElements": [
+            "Analysere samfunnsfaglig informasjon",
+            "Utforske samfunnsfaglige temaer",
+            "Tenke kritisk og håndtere uenighet"
+          ]
+        },
+        {
+          "code": "SAF-62",
+          "text": "beskrive trekk ved det politiske systemet og velferdssamfunnet i Norge i dag og reflektere over sentrale utfordringer",
+          "coreElements": [
             "Analysere samfunnsfaglig informasjon",
             "Utforske samfunnsfaglige temaer"
           ]
