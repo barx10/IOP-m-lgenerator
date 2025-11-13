@@ -1,17 +1,17 @@
 ﻿  },
-  "RLE": {
+  "KRLE": {
     "name": "KRLE",
     "levels": {
       "4": [
         {
-          "code": "RLE-01",
+          "code": "KRLE-01",
           "text": "utforske og beskrive hvordan kristendom og andre religioner og livssyn kommer til uttrykk lokalt og regionalt",
           "coreElements": [
             "Kjenne til og utforske"
           ]
         },
         {
-          "code": "RLE-02",
+          "code": "KRLE-02",
           "text": "samtale om og presentere sentrale fortellinger og trosforestillinger i kristen tradisjon",
           "coreElements": [
             "Reflektere og analysere",
@@ -19,7 +19,7 @@
           ]
         },
         {
-          "code": "RLE-03",
+          "code": "KRLE-03",
           "text": "samtale om og presentere sentrale fortellinger og trosforestillinger i østlige og vestlige religiøse tradisjoner",
           "coreElements": [
             "Reflektere og analysere",
@@ -27,42 +27,42 @@
           ]
         },
         {
-          "code": "RLE-04",
+          "code": "KRLE-04",
           "text": "sammenligne og presentere ulike årstider og høytider i kristendom og andre religions- og livssynstradisjoner, som kulturarv",
           "coreElements": [
             "Kjenne til og utforske"
           ]
         },
         {
-          "code": "RLE-05",
+          "code": "KRLE-05",
           "text": "samtale om og presentere estetiske uttrykk fra kristendom og andre religioner og livssyn",
           "coreElements": [
             "Kjenne til og utforske"
           ]
         },
         {
-          "code": "RLE-06",
+          "code": "KRLE-06",
           "text": "bruke enkle fagbegreper i arbeidet med religioner og livssyn",
           "coreElements": [
             "Forstå og tolke"
           ]
         },
         {
-          "code": "RLE-07",
+          "code": "KRLE-07",
           "text": "skille mellom ulike kilder til kunnskap om religioner og livssyn",
           "coreElements": [
             "Kjenne til og utforske"
           ]
         },
         {
-          "code": "RLE-08",
+          "code": "KRLE-08",
           "text": "beskrive og samtale om ulike måter å leve sammen på i familie og samfunn",
           "coreElements": [
             "Reflektere og analysere"
           ]
         },
         {
-          "code": "RLE-09",
+          "code": "KRLE-09",
           "text": "samarbeide med andre i filosofisk samtale",
           "coreElements": [
             "Kjenne til og utforske",
@@ -70,7 +70,7 @@
           ]
         },
         {
-          "code": "RLE-10",
+          "code": "KRLE-10",
           "text": "identifisere og reflektere over etiske spørsmål",
           "coreElements": [
             "Forstå og tolke",
@@ -78,21 +78,21 @@
           ]
         },
         {
-          "code": "RLE-11",
+          "code": "KRLE-11",
           "text": "utforske og samtale om etiske sider ved menneskers levesett og ressursbruk",
           "coreElements": [
             "Kjenne til og utforske"
           ]
         },
         {
-          "code": "RLE-12",
+          "code": "KRLE-12",
           "text": "sette seg inn i og formidle egne og andres tanker, følelser og erfaringer",
           "coreElements": [
             "Kjenne til og utforske"
           ]
         },
         {
-          "code": "RLE-13",
+          "code": "KRLE-13",
           "text": "samtale om hva menneskeverd, respekt og toleranse betyr og hva det innebærer for hvordan vi lever sammen",
           "coreElements": [
             "Kjenne til og utforske",
@@ -102,14 +102,14 @@
       ],
       "7": [
         {
-          "code": "RLE-14",
+          "code": "KRLE-14",
           "text": "gjøre rede for historien til kristendom og andre religioner og livssyn i Norge, inkludert samers og nasjonale minoriteters religions- og livssynshistorie",
           "coreElements": [
             "Reflektere og analysere"
           ]
         },
         {
-          "code": "RLE-15",
+          "code": "KRLE-15",
           "text": "beskrive og presentere noen sentrale rituelle praksiser og etiske normer i kristendom",
           "coreElements": [
             "Reflektere og analysere",
@@ -117,14 +117,14 @@
           ]
         },
         {
-          "code": "RLE-16",
+          "code": "KRLE-16",
           "text": "beskrive og presentere noen sentrale rituelle praksiser og etiske normer fra østlige og vestlige religioner og livssynstradisjoner",
           "coreElements": [
             "Forstå og tolke"
           ]
         },
         {
-          "code": "RLE-17",
+          "code": "KRLE-17",
           "text": "utforske og sammenligne tekster og materielle uttrykk som kilder til kunnskap om kulturarv knyttet til kristendom og ulike religions- og livssynstradisjoner",
           "coreElements": [
             "Forstå og tolke",
@@ -132,28 +132,28 @@
           ]
         },
         {
-          "code": "RLE-18",
+          "code": "KRLE-18",
           "text": "utforske og samtale om mangfold både innenfor kristne trossamfunn og andre religionssamfunn",
           "coreElements": [
             "Kjenne til og utforske"
           ]
         },
         {
-          "code": "RLE-19",
+          "code": "KRLE-19",
           "text": "bruke fagbegreper i arbeidet med religioner og livssyn",
           "coreElements": [
             "Forstå og tolke"
           ]
         },
         {
-          "code": "RLE-20",
+          "code": "KRLE-20",
           "text": "gjøre rede for ulike syn på barndom, familie og samliv i religioner og livssyn",
           "coreElements": [
             "Kjenne til og utforske"
           ]
         },
         {
-          "code": "RLE-21",
+          "code": "KRLE-21",
           "text": "bruke filosofiske tenkemåter i samtale og undring",
           "coreElements": [
             "Reflektere og analysere",
@@ -161,21 +161,21 @@
           ]
         },
         {
-          "code": "RLE-22",
+          "code": "KRLE-22",
           "text": "samtale om og formidle etiske ideer fra sentrale skikkelser i religiøse og livssynsbaserte tradisjoner",
           "coreElements": [
             "Reflektere og analysere"
           ]
         },
         {
-          "code": "RLE-23",
+          "code": "KRLE-23",
           "text": "samtale om og formidle etiske ideer fra sentrale skikkelser i filosofihistorien",
           "coreElements": [
             "Forstå og tolke"
           ]
         },
         {
-          "code": "RLE-24",
+          "code": "KRLE-24",
           "text": "utforske og beskrive egne og andres perspektiver i etiske dilemmaer knyttet til hverdags- og samfunnsutfordringer",
           "coreElements": [
             "Reflektere og analysere",
@@ -183,7 +183,7 @@
           ]
         },
         {
-          "code": "RLE-25",
+          "code": "KRLE-25",
           "text": "reflektere over eksistensielle spørsmål knyttet til menneskets levesett og levekår og klodens framtid",
           "coreElements": [
             "Reflektere og analysere",
@@ -191,7 +191,7 @@
           ]
         },
         {
-          "code": "RLE-26",
+          "code": "KRLE-26",
           "text": "gjøre rede for hva menneskerettighetene innebærer for ytringsfrihet, religionsfrihet og religiøse minoriteters situasjon i Norge",
           "coreElements": [
             "Kjenne til og utforske",
@@ -201,21 +201,21 @@
       ],
       "10": [
         {
-          "code": "RLE-27",
+          "code": "KRLE-27",
           "text": "utforske og presentere sentrale trekk ved kristendom og andre religions- og livssynstradisjoner og deres utbredelse i dag",
           "coreElements": [
             "Forstå og tolke"
           ]
         },
         {
-          "code": "RLE-28",
+          "code": "KRLE-28",
           "text": "utforske og drøfte hvordan kristendom og andre religioner inngår i historiske endringsprosesser globalt og nasjonalt",
           "coreElements": [
             "Kjenne til og utforske"
           ]
         },
         {
-          "code": "RLE-29",
+          "code": "KRLE-29",
           "text": "undersøke og presentere sentrale ideer fra livssynshumanisme og andre ikke-religiøse livssyn",
           "coreElements": [
             "Forstå og tolke",
@@ -223,35 +223,35 @@
           ]
         },
         {
-          "code": "RLE-30",
+          "code": "KRLE-30",
           "text": "utforske og presentere religiøst mangfold og religiøse praksiser utenfor etablerte religionssamfunn",
           "coreElements": [
             "Forstå og tolke"
           ]
         },
         {
-          "code": "RLE-31",
+          "code": "KRLE-31",
           "text": "gjøre rede for og reflektere over samenes og andre urfolks religions- og livssynstradisjoner",
           "coreElements": [
             "Reflektere og analysere"
           ]
         },
         {
-          "code": "RLE-32",
+          "code": "KRLE-32",
           "text": "bruke og drøfte fagbegreper om religioner og livssyn",
           "coreElements": [
             "Forstå og tolke"
           ]
         },
         {
-          "code": "RLE-33",
+          "code": "KRLE-33",
           "text": "sammenligne og vurdere kritisk ulike kilder til kunnskap om religioner og livssyn",
           "coreElements": [
             "Kjenne til og utforske"
           ]
         },
         {
-          "code": "RLE-34",
+          "code": "KRLE-34",
           "text": "gjøre rede for og reflektere over ulike syn på kjønn og seksualitet i kristendom og andre religioner og livssyn",
           "coreElements": [
             "Kjenne til og utforske",
@@ -259,7 +259,7 @@
           ]
         },
         {
-          "code": "RLE-35",
+          "code": "KRLE-35",
           "text": "utforske og presentere hvordan elementer fra kristendom og andre religioner og livssyn kommer til uttrykk i medier og populærkultur",
           "coreElements": [
             "Kjenne til og utforske",
@@ -267,7 +267,7 @@
           ]
         },
         {
-          "code": "RLE-36",
+          "code": "KRLE-36",
           "text": "utforske og sammenligne etiske ideer fra sentrale skikkelser i religiøse og livssynsbaserte tradisjoner",
           "coreElements": [
             "Forstå og tolke",
@@ -275,7 +275,7 @@
           ]
         },
         {
-          "code": "RLE-37",
+          "code": "KRLE-37",
           "text": "utforske etiske ideer fra sentrale skikkelser i filosofihistorien og anvende ideene til å drøfte aktuelle etiske spørsmål",
           "coreElements": [
             "Forstå og tolke",
@@ -283,14 +283,14 @@
           ]
         },
         {
-          "code": "RLE-38",
+          "code": "KRLE-38",
           "text": "utforske andres perspektiv og håndtere uenighet og meningsbrytning",
           "coreElements": [
             "Forstå og tolke"
           ]
         },
         {
-          "code": "RLE-39",
+          "code": "KRLE-39",
           "text": "reflektere over eksistensielle spørsmål knyttet til det å vokse opp og leve i et mangfoldig og globalt samfunn",
           "coreElements": [
             "Reflektere og analysere",
@@ -298,7 +298,7 @@
           ]
         },
         {
-          "code": "RLE-40",
+          "code": "KRLE-40",
           "text": "identifisere og drøfte etiske problemstillinger knyttet til ulike former for kommunikasjon",
           "coreElements": [
             "Reflektere og analysere",
@@ -306,7 +306,7 @@
           ]
         },
         {
-          "code": "RLE-41",
+          "code": "KRLE-41",
           "text": "identifisere og drøfte aktuelle etiske problemstillinger knyttet til menneskerettigheter, bærekraft og fattigdom Læreplan i kristendom, religion, livssyn og etikk (KRLE) Læreplankode: RLE01-03 Læreplankode: RLE01-03",
           "coreElements": [
             "Kjenne til og utforske",
