@@ -1,4 +1,6 @@
 import React, { useState, useCallback, useMemo } from 'react';
+import { Document, Paragraph, TextRun, HeadingLevel, AlignmentType, Packer } from 'docx';
+import { saveAs } from 'file-saver';
 import {
   StudentProfile,
   Framework,
@@ -257,12 +259,166 @@ const App: React.FC = () => {
         setSavedSubjects(prev => prev.filter((_, i) => i !== index));
     };
 
-    const handleDownloadPdf = async () => {
-      if (savedSubjects.length === 0) return;
-  
-      // Use browser's native print dialog which allows saving as PDF
-      window.print();
-  };
+    const handleEditSavedSubject = (index: number) => {
+        const saved = savedSubjects[index];
+        
+        // Load the saved subject data back into the form
+        setProfile(saved.profile);
+        setFramework(saved.framework);
+        setSelections(saved.selections);
+        setIopResult({
+            skillsSuggestions: [saved.selections.skills],
+            knowledgeSuggestions: [saved.selections.knowledge],
+            overallBenefitSuggestion: saved.overallBenefit,
+            coreElementsInfluenceNote: saved.coreElementsNote
+        });
+        setEditedSocialGoals(saved.editedSocialGoals || {});
+        setStatus('generated');
+        
+        // Remove from saved subjects (will be re-saved after editing)
+        handleRemoveSavedSubject(index);
+        
+        // Scroll to top to show the result
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    const handleDownloadWord = async () => {
+        if (savedSubjects.length === 0) return;
+
+        const doc = new Document({
+            sections: [{
+                properties: {},
+                children: [
+                    // Header
+                    new Paragraph({
+                        text: "Individuell opplæringsplan (IOP)",
+                        heading: HeadingLevel.HEADING_1,
+                        alignment: AlignmentType.CENTER,
+                        spacing: { after: 400 }
+                    }),
+                    new Paragraph({
+                        children: [
+                            new TextRun({ text: "Elev: ", bold: true }),
+                            new TextRun(profile.studentName || "Ikke oppgitt")
+                        ],
+                        spacing: { after: 200 }
+                    }),
+                    new Paragraph({
+                        children: [
+                            new TextRun({ text: "Klassetrinn: ", bold: true }),
+                            new TextRun(profile.gradeLevel || "Ikke oppgitt")
+                        ],
+                        spacing: { after: 200 }
+                    }),
+                    new Paragraph({
+                        children: [
+                            new TextRun({ text: "Periode: ", bold: true }),
+                            new TextRun(`${profile.startDate} til ${profile.endDate}`)
+                        ],
+                        spacing: { after: 400 }
+                    }),
+                    
+                    // Add each saved subject
+                    ...savedSubjects.flatMap((saved, idx) => {
+                        const sections: Paragraph[] = [];
+                        
+                        // Subject heading
+                        sections.push(new Paragraph({
+                            text: `Fag ${idx + 1}: ${saved.subject}`,
+                            heading: HeadingLevel.HEADING_2,
+                            spacing: { before: 400, after: 200 }
+                        }));
+                        
+                        // Ferdighetsmål
+                        sections.push(new Paragraph({
+                            text: "Ferdighetsmål",
+                            heading: HeadingLevel.HEADING_3,
+                            spacing: { before: 300, after: 100 }
+                        }));
+                        sections.push(new Paragraph({
+                            children: [new TextRun({ text: "Mål: ", bold: true }), new TextRun(saved.selections.skills.goal)],
+                            spacing: { after: 100 }
+                        }));
+                        sections.push(new Paragraph({
+                            children: [new TextRun({ text: "Tilpasninger/tiltak: ", bold: true }), new TextRun(saved.selections.skills.measures)],
+                            spacing: { after: 100 }
+                        }));
+                        sections.push(new Paragraph({
+                            children: [new TextRun({ text: "Forankring: ", bold: true }), new TextRun(saved.selections.skills.anchoring)],
+                            spacing: { after: 200 }
+                        }));
+                        
+                        // Kunnskapsmål
+                        sections.push(new Paragraph({
+                            text: "Kunnskapsmål",
+                            heading: HeadingLevel.HEADING_3,
+                            spacing: { before: 300, after: 100 }
+                        }));
+                        sections.push(new Paragraph({
+                            children: [new TextRun({ text: "Mål: ", bold: true }), new TextRun(saved.selections.knowledge.goal)],
+                            spacing: { after: 100 }
+                        }));
+                        sections.push(new Paragraph({
+                            children: [new TextRun({ text: "Tilpasninger/tiltak: ", bold: true }), new TextRun(saved.selections.knowledge.measures)],
+                            spacing: { after: 100 }
+                        }));
+                        sections.push(new Paragraph({
+                            children: [new TextRun({ text: "Forankring: ", bold: true }), new TextRun(saved.selections.knowledge.anchoring)],
+                            spacing: { after: 200 }
+                        }));
+                        
+                        // IOP-mål
+                        sections.push(new Paragraph({
+                            text: "IOP-mål",
+                            heading: HeadingLevel.HEADING_3,
+                            spacing: { before: 300, after: 100 }
+                        }));
+                        sections.push(new Paragraph({
+                            children: [new TextRun({ text: "Individuelle læringsmål: ", bold: true }), new TextRun(saved.overallBenefit.goal)],
+                            spacing: { after: 100 }
+                        }));
+                        sections.push(new Paragraph({
+                            children: [new TextRun({ text: "Vurdering: ", bold: true }), new TextRun(saved.overallBenefit.measures)],
+                            spacing: { after: 100 }
+                        }));
+                        if (saved.overallBenefit.evaluation) {
+                            sections.push(new Paragraph({
+                                children: [new TextRun({ text: "Evaluering: ", bold: true }), new TextRun(saved.overallBenefit.evaluation)],
+                                spacing: { after: 200 }
+                            }));
+                        }
+                        
+                        // Sosiale mål
+                        if (saved.profile.selectedSocialGoals && saved.profile.selectedSocialGoals.length > 0) {
+                            sections.push(new Paragraph({
+                                text: "Sosiale mål for perioden",
+                                heading: HeadingLevel.HEADING_3,
+                                spacing: { before: 300, after: 100 }
+                            }));
+                            
+                            saved.profile.selectedSocialGoals.forEach(goalId => {
+                                const originalGoal = socialGoalsData.categories.find((g: any) => g.id === goalId);
+                                if (!originalGoal) return;
+                                
+                                const editedGoals = saved.editedSocialGoals || {};
+                                const description = editedGoals[goalId]?.description || originalGoal.description;
+                                
+                                sections.push(new Paragraph({
+                                    children: [new TextRun({ text: `${originalGoal.name}: `, bold: true }), new TextRun(description)],
+                                    spacing: { after: 100 }
+                                }));
+                            });
+                        }
+                        
+                        return sections;
+                    })
+                ]
+            }]
+        });
+
+        const blob = await Packer.toBlob(doc);
+        saveAs(blob, `IOP_${profile.studentName || 'elev'}_${new Date().toISOString().split('T')[0]}.docx`);
+    };
     
     const renderIopResult = () => {
         if (!iopResult) return null;
@@ -593,21 +749,30 @@ const App: React.FC = () => {
                                                 <p className="text-sm text-gray-600">{saved.profile.topic}</p>
                                             </div>
                                         </div>
-                                        <button
-                                            onClick={() => handleRemoveSavedSubject(index)}
-                                            className="px-3 py-1 text-sm text-red-600 hover:text-white hover:bg-red-600 rounded transition-all"
-                                            title="Fjern dette faget"
-                                        >
-                                            ✕
-                                        </button>
+                                        <div className="flex gap-2">
+                                            <button
+                                                onClick={() => handleEditSavedSubject(index)}
+                                                className="px-3 py-1 text-sm text-blue-600 hover:text-white hover:bg-blue-600 rounded transition-all"
+                                                title="Rediger dette faget"
+                                            >
+                                                ✏️ Rediger
+                                            </button>
+                                            <button
+                                                onClick={() => handleRemoveSavedSubject(index)}
+                                                className="px-3 py-1 text-sm text-red-600 hover:text-white hover:bg-red-600 rounded transition-all"
+                                                title="Fjern dette faget"
+                                            >
+                                                ✕
+                                            </button>
+                                        </div>
                                     </div>
                                 ))}
                                 <button
-                                    onClick={handleDownloadPdf}
+                                    onClick={handleDownloadWord}
                                     className="w-full mt-4 inline-flex items-center justify-center gap-2 px-4 py-2.5 border border-transparent shadow-sm text-sm font-semibold rounded-lg text-white bg-brand-blue hover:bg-blue-700 hover:shadow-md transition-all duration-200"
                                 >
                                     <DownloadIcon className="w-5 h-5" />
-                                    📄 Skriv ut alle {savedSubjects.length} fag (PDF)
+                                    📄 Last ned som Word-dokument
                                 </button>
                             </div>
                         </Card>
