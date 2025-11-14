@@ -315,21 +315,21 @@ const App: React.FC = () => {
                     new Paragraph({
                         children: [
                             new TextRun({ text: "Elev: ", bold: true }),
-                            new TextRun(profile.studentName || "Ikke oppgitt")
+                            new TextRun(studentCode || savedSubjects[0]?.profile.studentName || "Ikke oppgitt")
                         ],
                         spacing: { after: 200 }
                     }),
                     new Paragraph({
                         children: [
                             new TextRun({ text: "Klassetrinn: ", bold: true }),
-                            new TextRun(profile.gradeLevel || "Ikke oppgitt")
+                            new TextRun(savedSubjects[0]?.profile.grade || "Ikke oppgitt")
                         ],
                         spacing: { after: 200 }
                     }),
                     new Paragraph({
                         children: [
                             new TextRun({ text: "Periode: ", bold: true }),
-                            new TextRun(`${profile.startDate} til ${profile.endDate}`)
+                            new TextRun(`${savedSubjects[0]?.profile.startDate || ''} til ${savedSubjects[0]?.profile.endDate || ''}`)
                         ],
                         spacing: { after: 400 }
                     }),
@@ -433,7 +433,7 @@ const App: React.FC = () => {
         });
 
         const blob = await Packer.toBlob(doc);
-        saveAs(blob, `IOP_${profile.studentName || 'elev'}_${new Date().toISOString().split('T')[0]}.docx`);
+        saveAs(blob, `IOP_${studentCode || 'elev'}_${new Date().toISOString().split('T')[0]}.docx`);
     };
     
     const renderIopResult = () => {
@@ -968,6 +968,13 @@ const App: React.FC = () => {
                             {status === 'error' && <p className="text-red-600 text-sm mt-4 text-center">{error}</p>}
                         </div>
                     </div>
+
+                    {/* Show IOP result if available (for editing saved subjects) */}
+                    {iopResult && (
+                        <div className="max-w-4xl mx-auto mt-8">
+                            {renderIopResult()}
+                        </div>
+                    )}
                 </main>
                 <Footer />
             </div>
