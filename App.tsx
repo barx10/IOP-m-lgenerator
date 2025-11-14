@@ -19,6 +19,7 @@ import { AboutModal } from './components/AboutModal';
 import { Footer } from './components/Footer';
 import { SocialGoalsSelector } from './components/SocialGoalsSelector';
 import socialGoalsData from './data/socialGoals.json';
+import { EditableField } from './components/EditableField';
 
 import { DocumentIcon } from './components/icons/DocumentIcon';
 import { CalendarIcon } from './components/icons/CalendarIcon';
@@ -177,6 +178,46 @@ const App: React.FC = () => {
         }));
     };
 
+    // Update functions for editable fields
+    const handleUpdateSelection = (type: 'skills' | 'knowledge', field: keyof IopGoal, value: string) => {
+        setSelections(prev => {
+            if (!prev[type]) return prev;
+            return {
+                ...prev,
+                [type]: {
+                    ...prev[type]!,
+                    [field]: value
+                }
+            };
+        });
+    };
+
+    const handleUpdateOverallBenefit = (field: keyof IopGoal, value: string) => {
+        if (!iopResult?.overallBenefitSuggestion) return;
+        setIopResult(prev => {
+            if (!prev) return prev;
+            return {
+                ...prev,
+                overallBenefitSuggestion: {
+                    ...prev.overallBenefitSuggestion!,
+                    [field]: value
+                }
+            };
+        });
+    };
+
+    const handleUpdateSocialGoal = (goalId: string, field: string, value: string) => {
+        setProfile(prev => {
+            const updatedGoals = prev.socialGoals?.map(goal => 
+                goal.id === goalId ? { ...goal, [field]: value } : goal
+            ) || [];
+            return {
+                ...prev,
+                socialGoals: updatedGoals
+            };
+        });
+    };
+
     const handleSaveSubject = () => {
         if (!selections.skills || !selections.knowledge || !iopResult?.overallBenefitSuggestion) {
             alert('Vennligst velg både ferdighets- og kunnskapsmål før du lagrer.');
@@ -273,8 +314,33 @@ const App: React.FC = () => {
                                     </div>
                                     {selections.skills?.goal === suggestion.goal && (
                                         <div className="mt-4 text-base text-gray-700 space-y-3 leading-relaxed">
-                                            <p><span className="font-semibold">Tiltak:</span> {suggestion.measures}</p>
-                                            <p><span className="font-semibold">Forankring:</span> {suggestion.anchoring}</p>
+                                            <div>
+                                                <span className="font-semibold">Mål:</span>
+                                                <EditableField
+                                                    value={selections.skills.goal}
+                                                    onSave={(value) => handleUpdateSelection('skills', 'goal', value)}
+                                                    multiline
+                                                    className="mt-1"
+                                                />
+                                            </div>
+                                            <div>
+                                                <span className="font-semibold">Tiltak:</span>
+                                                <EditableField
+                                                    value={selections.skills.measures}
+                                                    onSave={(value) => handleUpdateSelection('skills', 'measures', value)}
+                                                    multiline
+                                                    className="mt-1"
+                                                />
+                                            </div>
+                                            <div>
+                                                <span className="font-semibold">Forankring:</span>
+                                                <EditableField
+                                                    value={selections.skills.anchoring}
+                                                    onSave={(value) => handleUpdateSelection('skills', 'anchoring', value)}
+                                                    multiline
+                                                    className="mt-1"
+                                                />
+                                            </div>
                                         </div>
                                     )}
                                 </div>
@@ -308,8 +374,33 @@ const App: React.FC = () => {
                                     </div>
                                     {selections.knowledge?.goal === suggestion.goal && (
                                         <div className="mt-4 text-base text-gray-700 space-y-3 leading-relaxed">
-                                            <p><span className="font-semibold">Tiltak:</span> {suggestion.measures}</p>
-                                            <p><span className="font-semibold">Forankring:</span> {suggestion.anchoring}</p>
+                                            <div>
+                                                <span className="font-semibold">Mål:</span>
+                                                <EditableField
+                                                    value={selections.knowledge.goal}
+                                                    onSave={(value) => handleUpdateSelection('knowledge', 'goal', value)}
+                                                    multiline
+                                                    className="mt-1"
+                                                />
+                                            </div>
+                                            <div>
+                                                <span className="font-semibold">Tiltak:</span>
+                                                <EditableField
+                                                    value={selections.knowledge.measures}
+                                                    onSave={(value) => handleUpdateSelection('knowledge', 'measures', value)}
+                                                    multiline
+                                                    className="mt-1"
+                                                />
+                                            </div>
+                                            <div>
+                                                <span className="font-semibold">Forankring:</span>
+                                                <EditableField
+                                                    value={selections.knowledge.anchoring}
+                                                    onSave={(value) => handleUpdateSelection('knowledge', 'anchoring', value)}
+                                                    multiline
+                                                    className="mt-1"
+                                                />
+                                            </div>
                                         </div>
                                     )}
                                 </div>
@@ -334,17 +425,29 @@ const App: React.FC = () => {
                     {overallBenefitSuggestion ? (
                          <div className="space-y-6">
                             <div>
-                                <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Individuelle læringsmål</h4>
-                                <p className="mt-1 text-base text-gray-800 leading-relaxed">{overallBenefitSuggestion.goal}</p>
+                                <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Individuelle læringsmål</h4>
+                                <EditableField
+                                    value={overallBenefitSuggestion.goal}
+                                    onSave={(value) => handleUpdateOverallBenefit('goal', value)}
+                                    multiline
+                                />
                             </div>
                             <div>
-                                <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Vurdering (hvordan eleven viser kompetanse)</h4>
-                                <p className="mt-1 text-base text-gray-800 leading-relaxed">{overallBenefitSuggestion.measures}</p>
+                                <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Vurdering (hvordan eleven viser kompetanse)</h4>
+                                <EditableField
+                                    value={overallBenefitSuggestion.measures}
+                                    onSave={(value) => handleUpdateOverallBenefit('measures', value)}
+                                    multiline
+                                />
                             </div>
                             {overallBenefitSuggestion.evaluation && (
                                 <div>
-                                    <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Evaluering av utvikling</h4>
-                                    <p className="mt-1 text-base text-gray-800 leading-relaxed">{overallBenefitSuggestion.evaluation}</p>
+                                    <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Evaluering av utvikling</h4>
+                                    <EditableField
+                                        value={overallBenefitSuggestion.evaluation}
+                                        onSave={(value) => handleUpdateOverallBenefit('evaluation', value)}
+                                        multiline
+                                    />
                                 </div>
                             )}
                         </div>
@@ -365,14 +468,27 @@ const App: React.FC = () => {
                                             <span className="text-2xl">{goal.icon}</span>
                                             <span className="font-semibold text-gray-900">{goal.name}</span>
                                         </div>
-                                        <p className="text-sm text-gray-600 mb-3">{goal.description}</p>
+                                        <EditableField
+                                            value={goal.description}
+                                            onSave={(value) => handleUpdateSocialGoal(goalId, 'description', value)}
+                                            multiline
+                                            className="text-sm text-gray-600 mb-3"
+                                        />
                                         <div className="mt-3 pt-3 border-t border-purple-200">
                                             <p className="text-xs font-semibold text-purple-700 mb-2">Eksempler på hvordan eleven jobber med dette:</p>
                                             <ul className="text-xs text-gray-600 space-y-1">
                                                 {goal.examples.slice(0, 3).map((example: string, idx: number) => (
                                                     <li key={idx} className="flex items-start">
                                                         <span className="mr-1">•</span>
-                                                        <span>{example}</span>
+                                                        <EditableField
+                                                            value={example}
+                                                            onSave={(value) => {
+                                                                const updatedExamples = [...goal.examples];
+                                                                updatedExamples[idx] = value;
+                                                                handleUpdateSocialGoal(goalId, 'examples', JSON.stringify(updatedExamples));
+                                                            }}
+                                                            className="flex-1"
+                                                        />
                                                     </li>
                                                 ))}
                                             </ul>
