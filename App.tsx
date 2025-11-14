@@ -273,13 +273,18 @@ const App: React.FC = () => {
             coreElementsInfluenceNote: saved.coreElementsNote
         });
         setEditedSocialGoals(saved.editedSocialGoals || {});
-        setStatus('generated');
+        setStatus('idle'); // Keep status as idle so form is still visible
         
         // Remove from saved subjects (will be re-saved after editing)
         handleRemoveSavedSubject(index);
         
-        // Scroll to top to show the result
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        // Scroll down to show the result
+        setTimeout(() => {
+            const resultElement = document.querySelector('[data-result-section]');
+            if (resultElement) {
+                resultElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }, 100);
     };
 
     const handleDownloadWord = async () => {
@@ -427,7 +432,7 @@ const App: React.FC = () => {
         const isPrintable = !!(selections.skills && selections.knowledge);
     
         return (
-            <div className="space-y-8 animate-fade-in">
+            <div className="space-y-8 animate-fade-in" data-result-section>
                 <div className="flex justify-between items-center">
                     <button onClick={handleReset} className="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 hover:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue">
                         <ArrowLeftIcon className="mr-2" />
