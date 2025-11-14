@@ -450,16 +450,7 @@ const App: React.FC = () => {
                         Start på nytt
                     </button>
                     <h1 className="text-4xl font-bold text-gray-900">Resultater - {profile.subject}</h1>
-                    <div className="flex gap-2">
-                        <button 
-                            onClick={handleSaveSubject}
-                            disabled={!isPrintable}
-                            className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-accent-green hover:bg-accent-green/90 hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-green disabled:bg-gray-400 disabled:cursor-not-allowed"
-                            title={!isPrintable ? "Velg et mål for både ferdigheter og kunnskap før du lagrer" : "Lagre dette faget og legg til nytt fag"}
-                        >
-                            💾 Lagre fag
-                        </button>
-                    </div>
+                    <div className="w-32"></div> {/* Spacer for alignment */}
                 </div>
                 {status === 'error' && <p className="text-red-600 text-sm mt-4 text-center">{error}</p>}
 
@@ -686,6 +677,18 @@ const App: React.FC = () => {
                         </p>
                     </Card>
                 )}
+
+                {/* Save button at the bottom */}
+                <div className="flex justify-center pt-4">
+                    <button 
+                        onClick={handleSaveSubject}
+                        disabled={!isPrintable}
+                        className="inline-flex items-center px-6 py-3 border border-transparent shadow-lg text-base font-semibold rounded-lg text-white bg-accent-green hover:bg-accent-green/90 hover:shadow-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-green disabled:bg-gray-400 disabled:cursor-not-allowed"
+                        title={!isPrintable ? "Velg et mål for både ferdigheter og kunnskap før du lagrer" : "Lagre dette faget og legg til nytt fag"}
+                    >
+                        💾 Lagre fag
+                    </button>
+                </div>
             </div>
         );
     };
