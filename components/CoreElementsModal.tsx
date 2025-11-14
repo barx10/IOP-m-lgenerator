@@ -32,23 +32,42 @@ export const CoreElementsModal: React.FC<CoreElementsModalProps> = React.memo(({
                 </div>
                 <div className="p-6 overflow-y-auto">
                     <div className="space-y-3">
-                        {coreElements.map((element, index) => (
-                            <label key={index} htmlFor={`element-${index}`} className="flex items-start p-4 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer border border-gray-200">
-                                <input
-                                    type="radio"
-                                    name="coreElement"
-                                    id={`element-${index}`}
-                                    checked={selectedCoreElement === element.name}
-                                    onChange={() => onToggleCoreElement(element.name)}
-                                    className="h-4 w-4 text-brand-blue border-gray-300 focus:ring-brand-blue mt-1 flex-shrink-0"
-                                />
-                                <div className="ml-3 flex-1">
-                                    <span className="text-sm font-medium text-gray-900 block">{element.name}</span>
-                                    <span className="text-xs text-gray-600 block mt-1">{element.description}</span>
-                                </div>
-                            </label>
-                        ))}
+                        {coreElements.map((element, index) => {
+                            const isSelected = selectedCoreElement === element.name;
+                            return (
+                                <button
+                                    key={index}
+                                    onClick={() => onToggleCoreElement(element.name)}
+                                    className={`flex items-start p-4 rounded-lg transition-all cursor-pointer border-2 w-full text-left ${
+                                        isSelected 
+                                            ? 'bg-blue-50 border-brand-blue shadow-md' 
+                                            : 'bg-white border-gray-200 hover:bg-gray-50 hover:border-gray-300'
+                                    }`}
+                                >
+                                    <div className={`h-5 w-5 rounded border-2 flex items-center justify-center flex-shrink-0 mt-0.5 ${
+                                        isSelected 
+                                            ? 'bg-brand-blue border-brand-blue' 
+                                            : 'bg-white border-gray-300'
+                                    }`}>
+                                        {isSelected && (
+                                            <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 12 12">
+                                                <path d="M10 3L4.5 8.5L2 6" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                                            </svg>
+                                        )}
+                                    </div>
+                                    <div className="ml-3 flex-1">
+                                        <span className={`text-sm font-medium block ${isSelected ? 'text-brand-blue' : 'text-gray-900'}`}>
+                                            {element.name}
+                                        </span>
+                                        <span className="text-xs text-gray-600 block mt-1">{element.description}</span>
+                                    </div>
+                                </button>
+                            );
+                        })}
                     </div>
+                    <p className="mt-4 text-xs text-gray-500 italic">
+                        💡 Klikk på valgt element igjen for å fjerne valget
+                    </p>
                 </div>
                  <div className="p-4 bg-gray-50/50 text-right rounded-b-xl border-t border-gray-200/80 mt-auto">
                     <button
