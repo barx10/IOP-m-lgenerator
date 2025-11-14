@@ -59,6 +59,7 @@ export interface SavedSubject {
   };
   overallBenefit: IopGoal;
   coreElementsNote: string;
+  editedSocialGoals?: Record<string, any>;
 }
 
 export interface CurriculumData {

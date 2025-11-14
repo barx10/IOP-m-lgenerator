@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface EditableFieldProps {
     value: string;
@@ -17,6 +17,11 @@ export const EditableField: React.FC<EditableFieldProps> = ({
 }) => {
     const [isEditing, setIsEditing] = useState(false);
     const [editValue, setEditValue] = useState(value);
+
+    // Sync editValue when value prop changes
+    useEffect(() => {
+        setEditValue(value);
+    }, [value]);
 
     const handleSave = () => {
         onSave(editValue);

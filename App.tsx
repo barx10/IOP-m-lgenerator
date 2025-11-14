@@ -67,6 +67,7 @@ const App: React.FC = () => {
     const [savedSubjects, setSavedSubjects] = useState<SavedSubject[]>([]);
     const [studentCode, setStudentCode] = useState<string>(''); // For student initials/code
     const [showAboutModal, setShowAboutModal] = useState(false);
+    const [editedSocialGoals, setEditedSocialGoals] = useState<Record<string, any>>({});
 
     const handleProfileChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
@@ -207,15 +208,13 @@ const App: React.FC = () => {
     };
 
     const handleUpdateSocialGoal = (goalId: string, field: string, value: string) => {
-        setProfile(prev => {
-            const updatedGoals = prev.socialGoals?.map(goal => 
-                goal.id === goalId ? { ...goal, [field]: value } : goal
-            ) || [];
-            return {
-                ...prev,
-                socialGoals: updatedGoals
-            };
-        });
+        setEditedSocialGoals(prev => ({
+            ...prev,
+            [goalId]: {
+                ...prev[goalId],
+                [field]: value
+            }
+        }));
     };
 
     const handleSaveSubject = () => {
@@ -234,6 +233,7 @@ const App: React.FC = () => {
             },
             overallBenefit: iopResult.overallBenefitSuggestion,
             coreElementsNote: iopResult.coreElementsInfluenceNote || '',
+            editedSocialGoals: { ...editedSocialGoals }, // Save edited social goals
         };
 
         setSavedSubjects(prev => [...prev, newSavedSubject]);
@@ -247,6 +247,7 @@ const App: React.FC = () => {
         setIopResult(null);
         setSelections({ skills: null, knowledge: null });
         setLoadingProgress(0);
+        setEditedSocialGoals({}); // Reset edited social goals
         
         // Scroll to top
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -461,8 +462,19 @@ const App: React.FC = () => {
                     <Card title="Sosiale mål for perioden" icon={<span className="text-2xl">👥</span>}>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                             {profile.selectedSocialGoals.map((goalId) => {
-                                const goal = socialGoalsData.categories.find((g: any) => g.id === goalId);
-                                return goal ? (
+                                const originalGoal = socialGoalsData.categories.find((g: any) => g.id === goalId);
+                                if (!originalGoal) return null;
+                                
+                                // Use edited values if available, otherwise use original
+                                const goal = {
+                                    ...originalGoal,
+                                    description: editedSocialGoals[goalId]?.description || originalGoal.description,
+                                    examples: editedSocialGoals[goalId]?.examples 
+                                        ? JSON.parse(editedSocialGoals[goalId].examples)
+                                        : originalGoal.examples
+                                };
+                                
+                                return (
                                     <div key={goalId} className="p-4 bg-purple-50 border-2 border-purple-200 rounded-xl">
                                         <div className="flex items-center gap-2 mb-2">
                                             <span className="text-2xl">{goal.icon}</span>
@@ -494,7 +506,7 @@ const App: React.FC = () => {
                                             </ul>
                                         </div>
                                     </div>
-                                ) : null;
+                                );
                             })}
                         </div>
                         <p className="mt-4 text-sm text-gray-500 italic">
@@ -881,8 +893,20 @@ const App: React.FC = () => {
                                                 <h3 className="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">Sosiale mål for perioden</h3>
                                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                                     {saved.profile.selectedSocialGoals.map((goalId) => {
-                                                        const goal = socialGoalsData.categories.find((g: any) => g.id === goalId);
-                                                        return goal ? (
+                                                        const originalGoal = socialGoalsData.categories.find((g: any) => g.id === goalId);
+                                                        if (!originalGoal) return null;
+                                                        
+                                                        // Use edited values if available from saved data
+                                                        const editedGoals = saved.editedSocialGoals || {};
+                                                        const goal = {
+                                                            ...originalGoal,
+                                                            description: editedGoals[goalId]?.description || originalGoal.description,
+                                                            examples: editedGoals[goalId]?.examples 
+                                                                ? JSON.parse(editedGoals[goalId].examples)
+                                                                : originalGoal.examples
+                                                        };
+                                                        
+                                                        return (
                                                             <div key={goalId} className="p-4 bg-purple-50 border-2 border-purple-200 rounded-lg">
                                                                 <div className="flex items-center gap-2 mb-2">
                                                                     <span className="text-xl">{goal.icon}</span>
@@ -901,7 +925,7 @@ const App: React.FC = () => {
                                                                     </ul>
                                                                 </div>
                                                             </div>
-                                                        ) : null;
+                                                        );
                                                     })}
                                                 </div>
                                                 <p className="mt-3 text-xs text-gray-500 italic">
