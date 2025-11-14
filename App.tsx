@@ -70,6 +70,7 @@ const App: React.FC = () => {
     const [studentCode, setStudentCode] = useState<string>(''); // For student initials/code
     const [showAboutModal, setShowAboutModal] = useState(false);
     const [editedSocialGoals, setEditedSocialGoals] = useState<Record<string, any>>({});
+    const [editingSubjectIndex, setEditingSubjectIndex] = useState<number | null>(null); // Track which subject is being edited
 
     const handleProfileChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
@@ -238,7 +239,17 @@ const App: React.FC = () => {
             editedSocialGoals: { ...editedSocialGoals }, // Save edited social goals
         };
 
-        setSavedSubjects(prev => [...prev, newSavedSubject]);
+        // If we're editing an existing subject, replace it; otherwise add new
+        if (editingSubjectIndex !== null) {
+            setSavedSubjects(prev => {
+                const updated = [...prev];
+                updated[editingSubjectIndex] = newSavedSubject;
+                return updated;
+            });
+            setEditingSubjectIndex(null); // Clear editing state
+        } else {
+            setSavedSubjects(prev => [...prev, newSavedSubject]);
+        }
         
         // Reset for next subject
         setProfile(initialProfile);
@@ -262,6 +273,9 @@ const App: React.FC = () => {
     const handleEditSavedSubject = (index: number) => {
         const saved = savedSubjects[index];
         
+        // Track that we're editing this subject (so we can replace it when saving)
+        setEditingSubjectIndex(index);
+        
         // Load the saved subject data back into the form
         setProfile(saved.profile);
         setFramework(saved.framework);
@@ -274,9 +288,6 @@ const App: React.FC = () => {
         });
         setEditedSocialGoals(saved.editedSocialGoals || {});
         setStatus('idle'); // Keep status as idle so form is still visible
-        
-        // Remove from saved subjects (will be re-saved after editing)
-        handleRemoveSavedSubject(index);
         
         // Scroll down to show the result
         setTimeout(() => {
