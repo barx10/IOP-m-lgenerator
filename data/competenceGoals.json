@@ -462,6 +462,202 @@
             "Arbeid med tekst i sjangre"
           ]
         }
+      ],
+      "Vg1": [
+        {
+          "code": "Engelsk VGS-Vg1-01",
+          "text": "bruke egnede strategier i språklæring, tekstskaping og kommunikasjon",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg1-02",
+          "text": "bruke egnede digitale ressurser og andre hjelpemidler i språklæring, tekstskaping og samhandling",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg1-03",
+          "text": "bruke mønstre for uttale i kommunikasjon",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg1-04",
+          "text": "lytte til, forstå og bruke akademisk språk i arbeid med egne muntlige og skriftlige tekster",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg1-05",
+          "text": "uttrykke seg nyansert og presist med flyt og sammenheng, idiomatiske uttrykk og varierte setningsstrukturer tilpasset formål, mottaker og situasjon",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg1-06",
+          "text": "gjøre rede for andres argumentasjon og bruke og følge opp andres innspill i samtaler og diskusjoner om ulike emner",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg1-07",
+          "text": "bruke kunnskap om sammenhenger mellom engelsk og andre språk eleven kjenner til i egen språklæring",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg1-08",
+          "text": "bruke kunnskap om grammatikk og tekststruktur i arbeid med egne muntlige og skriftlige tekster",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg1-09",
+          "text": "lese, diskutere og reflektere over innhold og virkemidler i ulike typer tekster, inkludert selvvalgte tekster",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg1-10",
+          "text": "lese, analysere og tolke engelskspråklig skjønnlitteratur",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg1-11",
+          "text": "lese og sammenligne ulike sakprosatekster om samme emne fra forskjellige kilder og kritisk vurdere hvor pålitelige kildene er",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg1-12",
+          "text": "bruke ulike kilder på en kritisk, hensiktsmessig og etterrettelig måte",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg1-13",
+          "text": "skrive ulike typer formelle og uformelle tekster, inkludert sammensatte, med struktur og sammenheng som beskriver, diskuterer, begrunner og reflekterer tilpasset formål, mottaker og situasjon",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg1-14",
+          "text": "vurdere og bearbeide egne tekster ut fra faglige kriterier og kunnskap om språk",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg1-15",
+          "text": "beskrive sentrale trekk ved framveksten av engelsk som verdensspråk",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg1-16",
+          "text": "utforske og reflektere over mangfold og samfunnsforhold i den engelskspråklige verden ut fra historiske sammenhenger",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg1-17",
+          "text": "diskutere og reflektere over form, innhold og virkemidler i engelskspråklige kulturelle uttrykksformer fra ulike medier, inkludert musikk, film og spill",
+          "coreElements": []
+        }
+      ],
+      "Vg2": [
+        {
+          "code": "Engelsk VGS-Vg2-01",
+          "text": "bruke egnede lese-, lytte-, tale- og skrivestrategier tilpasset situasjon og formål",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg2-02",
+          "text": "bruke et rikt og presist ordforråd av generell og fagspesifikk art på en hensiktsmessig og situasjonstilpasset måte både muntlig og skriftlig",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg2-03",
+          "text": "anvende kunnskaper om ord, setningsbygging, tekstbinding og språkbruk for å forbedre eget språk og egne tekster",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg2-04",
+          "text": "produsere ulike muntlige og skriftlige situasjonstilpassede tekster med klart innhold og hensiktsmessig stil og struktur",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg2-05",
+          "text": "anvende hensiktsmessige kilder på en kritisk og etterrettelig måte",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg2-06",
+          "text": "lese og bruke ulike typer tekster på engelsk som utgangspunkt for egen språklæring og faglig refleksjon",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg2-07",
+          "text": "bruke ulike fagspesifikke tekster på engelsk med tema fra andre fag, som utgangspunkt for egen språklæring og faglig refleksjon",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg2-08",
+          "text": "analysere og tolke skjønnlitterære tekster på engelsk, inkludert selvvalgte tekster",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg2-09",
+          "text": "reflektere over språklige varianter i noen engelskspråklige land",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg2-10",
+          "text": "reflektere over innflytelsen til og bruken av det engelske språket i informasjons- og meningsutveksling globalt",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg2-11",
+          "text": "vise forståelse, selvstendig refleksjon og kritisk tenking i analyse av noen aktuelle samfunnsdebatter i engelskspråklige land",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg2-12",
+          "text": "utforske og presentere minst ett selvvalgt emne knyttet til språk, kultur, samfunn eller vitenskap ved kritisk bruk av engelskspråklige tekster og andre kilder",
+          "coreElements": []
+        }
+      ],
+      "Vg3": [
+        {
+          "code": "Engelsk VGS-Vg3-01",
+          "text": "bruke egnede lese-, lytte-, tale- og skrivestrategier tilpasset situasjon og formål",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg3-02",
+          "text": "bruke et rikt, presist og variert språk av generell og fagspesifikk art på en hensiktsmessig og situasjonstilpasset måte både skriftlig og muntlig",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg3-03",
+          "text": "produsere ulike typer skriftlige og muntlige faglige tekster med klart innhold, hensiktsmessig stil og struktur",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg3-04",
+          "text": "anvende hensiktsmessige kilder på en kritisk og etterrettelig måte",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg3-05",
+          "text": "vise selvstendig refleksjon og kritisk tenking i lesing og drøfting av ulike typer tekster",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg3-06",
+          "text": "tolke og drøfte noen typer skjønnlitterære tekster på engelsk i lys av deres historiske og kulturelle sammenhenger",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg3-07",
+          "text": "utforske og drøfte noen engelskspråklige lands språklige, kulturelle og politiske innflytelse i verden",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg3-08",
+          "text": "sammenligne og videreformidle noen samfunnsmessige og politiske forhold i to engelskspråklige land ut fra historiske sammenhenger",
+          "coreElements": []
+        },
+        {
+          "code": "Engelsk VGS-Vg3-09",
+          "text": "utforske og presentere minst ett selvvalgt emne fra engelsk 2 ved kritisk bruk av engelskspråklige tekster og andre kilder",
+          "coreElements": []
+        }
       ]
     }
   },
@@ -1116,6 +1312,92 @@
             "Delta i bevegelsesglede",
             "Samhandle"
           ]
+        }
+      ],
+      "Vg1": [
+        {
+          "code": "Kroppsøving VGS-Vg1-01",
+          "text": "trene på og skape nye varianter av lek, bevegelsesaktivitet og dans sammen med andre",
+          "coreElements": []
+        },
+        {
+          "code": "Kroppsøving VGS-Vg1-02",
+          "text": "planlegge og gjennomføre metoder for øvelse og trening for å oppnå individuelle mål, også når man ikke fullt ut kan delta i aktiviteten",
+          "coreElements": []
+        },
+        {
+          "code": "Kroppsøving VGS-Vg1-03",
+          "text": "bruke egne ferdigheter og kunnskaper til å samarbeide og bidra til å gjøre andre gode i aktivitet og samspill",
+          "coreElements": []
+        },
+        {
+          "code": "Kroppsøving VGS-Vg1-04",
+          "text": "forebygge skader ved bevegelsesaktiviteter og utføre grunnleggende førstehjelp",
+          "coreElements": []
+        },
+        {
+          "code": "Kroppsøving VGS-Vg1-05",
+          "text": "bruke kart og digitale verktøy på en måte som sikrer trygg ferdsel for seg selv og for andre",
+          "coreElements": []
+        },
+        {
+          "code": "Kroppsøving VGS-Vg1-06",
+          "text": "bruke lokale tradisjoner for ferdsel i naturen under vekslende årstider",
+          "coreElements": []
+        }
+      ],
+      "Vg2": [
+        {
+          "code": "Kroppsøving VGS-Vg2-01",
+          "text": "gjennomføre leker, idrettsaktiviteter og andre bevegelsesaktiviteter og forstå hvordan ulike aktiviteter påvirker og utvikler koordinasjon, styrke, utholdenhet og bevegelighet",
+          "coreElements": []
+        },
+        {
+          "code": "Kroppsøving VGS-Vg2-02",
+          "text": "utføre trening på egen hånd og reflektere over hvordan fysisk aktivitet kan fremme god psykisk og fysisk helse og bidra til en helsefremmende livsstil etter avsluttet skolegang og i framtidig arbeidsliv",
+          "coreElements": []
+        },
+        {
+          "code": "Kroppsøving VGS-Vg2-03",
+          "text": "praktisere regler for å delta i ulike bevegelsesaktiviteter og medvirke til læring for andre",
+          "coreElements": []
+        },
+        {
+          "code": "Kroppsøving VGS-Vg2-04",
+          "text": "planlegge og gjennomføre uteaktiviteter til ulike årstider, der formålet er å ha gode naturopplevelser",
+          "coreElements": []
+        },
+        {
+          "code": "Kroppsøving VGS-Vg2-05",
+          "text": "praktisere bærekraftig ferdsel i naturen og gjennomføre friluftslivsaktiviteter i nærområdet",
+          "coreElements": []
+        }
+      ],
+      "Vg3": [
+        {
+          "code": "Kroppsøving VGS-Vg3-01",
+          "text": "øve på og utvikle kunnskaper og ferdigheter i ulike bevegelsesaktiviteter ut fra egne forutsetninger",
+          "coreElements": []
+        },
+        {
+          "code": "Kroppsøving VGS-Vg3-02",
+          "text": "planlegge, gjennomføre og vurdere egentrening og forklare hvordan dette kan medvirke til en fysisk aktiv og helsefremmende livsstil etter avsluttet skolegang",
+          "coreElements": []
+        },
+        {
+          "code": "Kroppsøving VGS-Vg3-03",
+          "text": "beskrive og drøfte sammenhenger mellom bevegelse, kropp, trening og helse i samfunnet",
+          "coreElements": []
+        },
+        {
+          "code": "Kroppsøving VGS-Vg3-04",
+          "text": "samarbeide om å løse praktiske oppgaver i et læringsfellesskap og ut fra øvelse og aktivitet reflektere over hvordan egen medvirkning kan påvirke andre",
+          "coreElements": []
+        },
+        {
+          "code": "Kroppsøving VGS-Vg3-05",
+          "text": "planlegge og gjennomføre uteaktiviteter og friluftslivsaktiviteter i nærområdet",
+          "coreElements": []
         }
       ]
     }
@@ -2967,6 +3249,88 @@
             "Naturvitenskapelige praksiser"
           ]
         }
+      ],
+      "Vg1": [
+        {
+          "code": "Naturfag VGS-Vg1-01",
+          "text": "utforske en selvvalgt naturfaglig problemstilling, presentere funn og argumentere for valg av metoder",
+          "coreElements": []
+        },
+        {
+          "code": "Naturfag VGS-Vg1-02",
+          "text": "risikovurdere egne forsøk og håndtere avfallet fra disse på en forsvarlig måte",
+          "coreElements": []
+        },
+        {
+          "code": "Naturfag VGS-Vg1-03",
+          "text": "drøfte hvordan utvikling av naturvitenskapelige hypoteser, modeller og teorier bidrar til at vi kan forstå og forklare verden",
+          "coreElements": []
+        },
+        {
+          "code": "Naturfag VGS-Vg1-04",
+          "text": "vurdere og lage programmer som modellerer naturfaglige fenomener",
+          "coreElements": []
+        },
+        {
+          "code": "Naturfag VGS-Vg1-05",
+          "text": "utforske og beskrive noen sentrale bølgefenomener",
+          "coreElements": []
+        },
+        {
+          "code": "Naturfag VGS-Vg1-06",
+          "text": "forklare hovedprinsippene for trådløs kommunikasjon og gi eksempler på hva slik teknologi brukes til",
+          "coreElements": []
+        },
+        {
+          "code": "Naturfag VGS-Vg1-07",
+          "text": "utforske og beskrive elektromagnetisk og ioniserende stråling, og vurdere informasjon om stråling og helseeffekter av ulike strålingstyper",
+          "coreElements": []
+        },
+        {
+          "code": "Naturfag VGS-Vg1-08",
+          "text": "beskrive big bang-teorien om hvordan universet har oppstått og utviklet seg, og gjøre rede for observasjoner som støtter denne teorien",
+          "coreElements": []
+        },
+        {
+          "code": "Naturfag VGS-Vg1-09",
+          "text": "utforske og gjøre rede for sammenhenger mellom kjemiske bindinger og egenskaper til ulike stoffer",
+          "coreElements": []
+        },
+        {
+          "code": "Naturfag VGS-Vg1-10",
+          "text": "utforske egenskaper og reaksjoner til noen organiske og uorganiske karbonforbindelser, gi eksempler på anvendelser og gjøre rede for karbonets betydning for livet på jorda",
+          "coreElements": []
+        },
+        {
+          "code": "Naturfag VGS-Vg1-11",
+          "text": "gjøre rede for hvordan noen miljøgifter kan akkumuleres i næringskjeder, og vurdere tiltak for å ta vare på helse og miljø",
+          "coreElements": []
+        },
+        {
+          "code": "Naturfag VGS-Vg1-12",
+          "text": "gjøre rede for funksjonene til noen næringsstoffer og diskutere hvorfor et variert kosthold er viktig i et helse- og bærekraftsperspektiv",
+          "coreElements": []
+        },
+        {
+          "code": "Naturfag VGS-Vg1-13",
+          "text": "drøfte aktuelle helse- og livsstilsspørsmål og vurdere pålitelighet i informasjon fra ulike kilder",
+          "coreElements": []
+        },
+        {
+          "code": "Naturfag VGS-Vg1-14",
+          "text": "beskrive DNA og hvordan egenskaper arves, og gjøre rede for hvordan arv er en forutsetning for evolusjon",
+          "coreElements": []
+        },
+        {
+          "code": "Naturfag VGS-Vg1-15",
+          "text": "gjøre rede for hvordan klimaendringer påvirker evolusjon, utbredelse av arter og biologisk mangfold",
+          "coreElements": []
+        },
+        {
+          "code": "Naturfag VGS-Vg1-16",
+          "text": "gi eksempler på bruk av bioteknologi og drøfte etiske spørsmål knyttet til bioteknologi",
+          "coreElements": []
+        }
       ]
     }
   },
@@ -4202,6 +4566,88 @@
             "Analysere samfunnsfaglig informasjon",
             "Utforske samfunnsfaglige temaer"
           ]
+        }
+      ],
+      "Vg1": [
+        {
+          "code": "Samfunnsfag VGS-Vg1-01",
+          "text": "utforske og presentere dagsaktuelle temaer eller debatter ved å bruke samfunnsfaglige metoder, kilder og digitale ressurser, og argumentere for egne og andres meninger og verdier",
+          "coreElements": []
+        },
+        {
+          "code": "Samfunnsfag VGS-Vg1-02",
+          "text": "utforske hvordan interesser og ideologisk ståsted påvirker våre argumenter og valg av kilder, og reflektere over hvordan det gir seg utslag i forskjellige meninger",
+          "coreElements": []
+        },
+        {
+          "code": "Samfunnsfag VGS-Vg1-03",
+          "text": "gjøre rede for sosialisering og drøfte hvordan identiteten og selvfølelsen til ungdom blir påvirket gjennom sosialisering",
+          "coreElements": []
+        },
+        {
+          "code": "Samfunnsfag VGS-Vg1-04",
+          "text": "drøfte hvordan personlig økonomi, kommersiell påvirkning og forbruk påvirker enkeltpersoner, grupper og samfunnet",
+          "coreElements": []
+        },
+        {
+          "code": "Samfunnsfag VGS-Vg1-05",
+          "text": "reflektere over utfordringer i sammenheng med grensesetting og drøfte ulike verdier, normer og lover som gjelder kjønn, seksualitet og kropp",
+          "coreElements": []
+        },
+        {
+          "code": "Samfunnsfag VGS-Vg1-06",
+          "text": "reflektere over egne digitale spor, utforske hvem som har tilgang til sporene, og drøfte hvordan data og personopplysninger kan brukes eller misbrukes",
+          "coreElements": []
+        },
+        {
+          "code": "Samfunnsfag VGS-Vg1-07",
+          "text": "innhente informasjon om forskjellige former for sosial ulikhet i Norge og drøfte sammenhengen mellom ulikhet og utenforskap",
+          "coreElements": []
+        },
+        {
+          "code": "Samfunnsfag VGS-Vg1-08",
+          "text": "reflektere over likheter og ulikheter i kulturuttrykk, identitet og levesett innenfor og mellom majoritet og minoritet i Norge og Sápmi/Sábme/Sáepmie",
+          "coreElements": []
+        },
+        {
+          "code": "Samfunnsfag VGS-Vg1-09",
+          "text": "utforske og beskrive hvordan organiseringen av samfunnet og arbeidslivet i Norge har endret seg, og drøfte hvordan den nordiske samfunnsmodellen møter utfordringer enkeltpersoner og samfunnet står overfor",
+          "coreElements": []
+        },
+        {
+          "code": "Samfunnsfag VGS-Vg1-10",
+          "text": "utforske og drøfte hvordan næringsgrunnlag, innovasjon og teknologi former og påvirker arbeidsliv og lokalsamfunn i Norge",
+          "coreElements": []
+        },
+        {
+          "code": "Samfunnsfag VGS-Vg1-11",
+          "text": "reflektere over hva det innebærer å være medborger, og sammenligne hvordan politiske systemer er organisert i forskjellige land og områder",
+          "coreElements": []
+        },
+        {
+          "code": "Samfunnsfag VGS-Vg1-12",
+          "text": "vurdere hvordan utøvelse av makt påvirker enkeltpersoner og samfunn",
+          "coreElements": []
+        },
+        {
+          "code": "Samfunnsfag VGS-Vg1-13",
+          "text": "gjøre rede for grunnlaget for menneskerettighetene og utforske og gi eksempler på brudd på menneskerettighetene nasjonalt eller globalt",
+          "coreElements": []
+        },
+        {
+          "code": "Samfunnsfag VGS-Vg1-14",
+          "text": "vurdere årsaker til og tiltak som kan forebygge rasisme, diskriminering og hatefulle ytringer, og drøfte grensene for ytringsfriheten",
+          "coreElements": []
+        },
+        {
+          "code": "Samfunnsfag VGS-Vg1-15",
+          "text": "utforske en utfordring eller en konflikt på lokalt, nasjonalt eller globalt nivå og drøfte hvordan utfordringen eller konflikten påvirker forskjellige grupper",
+          "coreElements": []
+        },
+        {
+          "code": "Samfunnsfag VGS-Vg1-16",
+          "text": "drøfte sammenhengen mellom økonomisk vekst, levestandard og livskvalitet i et globalt og bærekraftig perspektiv",
+          "coreElements": []
         }
       ]
     }

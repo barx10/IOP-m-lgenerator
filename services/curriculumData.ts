@@ -16,6 +16,10 @@ export const curriculumSubjects: string[] = [
 export const vgsSubjects: string[] = [
     'Norsk',
     'Matematikk',
+    'Engelsk',
+    'Samfunnsfag',
+    'Naturfag',
+    'Kroppsøving',
 ];
 
 export const allSubjects: string[] = [...curriculumSubjects];

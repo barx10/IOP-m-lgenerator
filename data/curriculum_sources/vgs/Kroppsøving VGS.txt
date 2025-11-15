@@ -1,0 +1,29 @@
+﻿{
+  "Kroppsøving VGS": {
+    "name": "Kroppsøving VGS",
+    "levels": {
+      "Vg1": [
+        "trene på og skape nye varianter av lek, bevegelsesaktivitet og dans sammen med andre",
+        "planlegge og gjennomføre metoder for øvelse og trening for å oppnå individuelle mål, også når man ikke fullt ut kan delta i aktiviteten",
+        "bruke egne ferdigheter og kunnskaper til å samarbeide og bidra til å gjøre andre gode i aktivitet og samspill",
+        "forebygge skader ved bevegelsesaktiviteter og utføre grunnleggende førstehjelp",
+        "bruke kart og digitale verktøy på en måte som sikrer trygg ferdsel for seg selv og for andre",
+        "bruke lokale tradisjoner for ferdsel i naturen under vekslende årstider"
+      ],
+      "Vg2": [
+        "gjennomføre leker, idrettsaktiviteter og andre bevegelsesaktiviteter og forstå hvordan ulike aktiviteter påvirker og utvikler koordinasjon, styrke, utholdenhet og bevegelighet",
+        "utføre trening på egen hånd og reflektere over hvordan fysisk aktivitet kan fremme god psykisk og fysisk helse og bidra til en helsefremmende livsstil etter avsluttet skolegang og i framtidig arbeidsliv",
+        "praktisere regler for å delta i ulike bevegelsesaktiviteter og medvirke til læring for andre",
+        "planlegge og gjennomføre uteaktiviteter til ulike årstider, der formålet er å ha gode naturopplevelser",
+        "praktisere bærekraftig ferdsel i naturen og gjennomføre friluftslivsaktiviteter i nærområdet"
+      ],
+      "Vg3": [
+        "øve på og utvikle kunnskaper og ferdigheter i ulike bevegelsesaktiviteter ut fra egne forutsetninger",
+        "planlegge, gjennomføre og vurdere egentrening og forklare hvordan dette kan medvirke til en fysisk aktiv og helsefremmende livsstil etter avsluttet skolegang",
+        "beskrive og drøfte sammenhenger mellom bevegelse, kropp, trening og helse i samfunnet",
+        "samarbeide om å løse praktiske oppgaver i et læringsfellesskap og ut fra øvelse og aktivitet reflektere over hvordan egen medvirkning kan påvirke andre",
+        "planlegge og gjennomføre uteaktiviteter og friluftslivsaktiviteter i nærområdet"
+      ]
+    }
+  }
+}

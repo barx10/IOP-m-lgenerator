@@ -1,0 +1,17 @@
+﻿{
+  "Geografi VGS": {
+    "name": "Geografi VGS",
+    "levels": {
+      "Vg1": [
+        "utforske og presentere geografiske forhold og prosesser ved å bruke ulike kilder, inkludert kart",
+        "gjøre rede for hvordan indre og ytre krefter har dannet ulike landskap, og utforske og gi eksempler på hvordan menneskene som bor der, kan utnytte ressursene",
+        "drøfte ulike interesser knyttet til ressurs- og arealbruk i Norge, Sápmi/Sábme/Sáepmie og nordområdene",
+        "reflektere over sin egen ressursbruk og ressursbruken i Norge i et globalt og bærekraftig perspektiv",
+        "utforske hva endringer i klimaet betyr for natur og samfunn lokalt, regionalt eller globalt",
+        "utforske og gjøre rede for årsakene til en aktuell natur- eller miljøkatastrofe og konsekvenser for mennesker, samfunn og natur",
+        "gjøre rede for årsaker til demografiske endringer og drøfte ulike levekår i forskjellige deler av verden",
+        "gjennomføre et feltarbeid for å undersøke og presentere geografiske forhold"
+      ]
+    }
+  }
+}

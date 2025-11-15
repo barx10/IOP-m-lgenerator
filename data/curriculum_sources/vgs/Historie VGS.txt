@@ -1,0 +1,39 @@
+﻿{
+  "Historie VGS": {
+    "name": "Historie VGS",
+    "levels": {
+      "Vg2": [
+        "reflektere over hvordan fortiden former oss som mennesker",
+        "utforske fortiden ved å stille spørsmål og innhente, tolke og bruke ulikt historisk materiale for å finne svar",
+        "reflektere over hvorfor historikere deler inn fortiden i perioder og vurdere hvordan vi kan periodisere fortiden på grunnlag av ulike kriterier",
+        "utforske og reflektere over hvordan fortiden minnes lokalt og nasjonalt",
+        "gjøre rede for viktige endringer i hvordan mennesker har skaffet seg mat og brukt naturressurser, og vurdere betydningen av dette for mennesker og et bærekraftig samfunn",
+        "presentere viktige demografiske endringer og vurdere årsaker til disse endringene og virkninger av dem for mennesker og samfunn",
+        "gjøre rede for hvordan handel og økonomiske systemer har påvirket maktforhold og menneskers liv",
+        "sammenligne hvordan demokratiet i antikken og demokratiet i vår tid har gitt mennesker ulike muligheter til demokratisk deltakelse",
+        "utforske hvordan kommunikasjon og kulturmøter har hatt betydning for mennesker i Norge og verden",
+        "vurdere endringer i fordeling og legitimering av makt fra middelalderen til og med tidlig nytid",
+        "beskrive religionens betydning for samfunns- og maktforhold fra middelalderen til og med vår tid og vurdere dens rolle i menneskers selvoppfatning og syn på andre"
+      ],
+      "Vg3": [
+        "reflektere over hvordan fortolkninger av fortiden er preget av nåtidsforståelse og forventninger til framtiden",
+        "reflektere over hvordan fortiden brukes av ulike aktører og drøfte hensikten med denne historiebruken",
+        "utforske fortiden ved å formulere problemstillinger, finne, vurdere og bruke ulikt materiale og presentere egne slutninger",
+        "utforske en historisk person og diskutere hans eller hennes tenkning, handlingsrom og valg i lys av samtiden han eller hun levde i",
+        "sammenligne ulike framstillinger av en hendelse og reflektere over at historiske framstillinger preges av opphavspersonens ståsted og kontekst",
+        "drøfte i hvilken grad utviklingen i ulike perioder har vært preget av brudd eller kontinuitet, og vurdere hva som gjør en hendelse i fortiden betydningsfull",
+        "gjøre rede for tanker og ideologier som har ligget til grunn for politiske omveltninger fra opplysningstiden til i dag og vurdere betydningen av disse for menneskers muligheter til demokratisk deltakelse",
+        "reflektere over hvordan teknologiske omveltninger fra den industrielle revolusjonen til i dag har endret menneskers liv og formet forventninger til framtiden",
+        "gjøre rede for årsaker til at mennesker har migrert, og diskutere kulturmøtene sett fra ulike perspektiver.",
+        "gjøre rede for årsaker til at kolonimakter underla seg landområder, og drøfte konsekvenser for mennesker og samfunn i land og områder som ble kolonisert",
+        "drøfte bakgrunnen for verdenskrigene og et utvalg andre sentrale kriger eller konflikter, og reflektere over om fredsslutninger har bidratt til å skape fred og forsoning",
+        "utforske menneskers handlingsrom og valgmuligheter i konfliktsituasjoner og vurdere konsekvenser av valgene de har tatt",
+        "reflektere over hvordan ideologier og tankesett på 1900-tallet og fram til i dag har bidratt til undertrykkelse, terror og folkemord som holocaust",
+        "analysere hvordan framstillinger av fortiden har blitt brukt i Norge for å skape nasjonal identitet og drøfte hvilke virkninger dette har hatt for ulike grupper",
+        "utforske hvordan mennesker har arbeidet for myndiggjøring og frigjøring i norsk og samisk historie, og gjøre rede for hvordan de samtidig har bidratt til utviklingen av demokratiet",
+        "gjøre rede for velferdsutviklingen i Norge på 1900-tallet og drøfte konsekvenser for menneskers liv",
+        "vurdere hvordan mennesket har forholdt seg til naturen, forvaltet og brukt ressurser og bruke historiske perspektiver i samtale om bærekraftige løsninger"
+      ]
+    }
+  }
+}

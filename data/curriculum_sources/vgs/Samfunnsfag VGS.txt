@@ -1,0 +1,25 @@
+﻿{
+  "Samfunnsfag VGS": {
+    "name": "Samfunnsfag VGS",
+    "levels": {
+      "Vg1": [
+        "utforske og presentere dagsaktuelle temaer eller debatter ved å bruke samfunnsfaglige metoder, kilder og digitale ressurser, og argumentere for egne og andres meninger og verdier",
+        "utforske hvordan interesser og ideologisk ståsted påvirker våre argumenter og valg av kilder, og reflektere over hvordan det gir seg utslag i forskjellige meninger",
+        "gjøre rede for sosialisering og drøfte hvordan identiteten og selvfølelsen til ungdom blir påvirket gjennom sosialisering",
+        "drøfte hvordan personlig økonomi, kommersiell påvirkning og forbruk påvirker enkeltpersoner, grupper og samfunnet",
+        "reflektere over utfordringer i sammenheng med grensesetting og drøfte ulike verdier, normer og lover som gjelder kjønn, seksualitet og kropp",
+        "reflektere over egne digitale spor, utforske hvem som har tilgang til sporene, og drøfte hvordan data og personopplysninger kan brukes eller misbrukes",
+        "innhente informasjon om forskjellige former for sosial ulikhet i Norge og drøfte sammenhengen mellom ulikhet og utenforskap",
+        "reflektere over likheter og ulikheter i kulturuttrykk, identitet og levesett innenfor og mellom majoritet og minoritet i Norge og Sápmi/Sábme/Sáepmie",
+        "utforske og beskrive hvordan organiseringen av samfunnet og arbeidslivet i Norge har endret seg, og drøfte hvordan den nordiske samfunnsmodellen møter utfordringer enkeltpersoner og samfunnet står overfor",
+        "utforske og drøfte hvordan næringsgrunnlag, innovasjon og teknologi former og påvirker arbeidsliv og lokalsamfunn i Norge",
+        "reflektere over hva det innebærer å være medborger, og sammenligne hvordan politiske systemer er organisert i forskjellige land og områder",
+        "vurdere hvordan utøvelse av makt påvirker enkeltpersoner og samfunn",
+        "gjøre rede for grunnlaget for menneskerettighetene og utforske og gi eksempler på brudd på menneskerettighetene nasjonalt eller globalt",
+        "vurdere årsaker til og tiltak som kan forebygge rasisme, diskriminering og hatefulle ytringer, og drøfte grensene for ytringsfriheten",
+        "utforske en utfordring eller en konflikt på lokalt, nasjonalt eller globalt nivå og drøfte hvordan utfordringen eller konflikten påvirker forskjellige grupper",
+        "drøfte sammenhengen mellom økonomisk vekst, levestandard og livskvalitet i et globalt og bærekraftig perspektiv"
+      ]
+    }
+  }
+}
