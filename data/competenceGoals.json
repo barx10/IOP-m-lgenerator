@@ -4651,5 +4651,201 @@
         }
       ]
     }
+  },
+  "HIS": {
+    "name": "Historie",
+    "levels": {
+      "Vg2": [
+        {
+          "code": "Historie VGS-Vg2-01",
+          "text": "reflektere over hvordan fortiden former oss som mennesker",
+          "coreElements": []
+        },
+        {
+          "code": "Historie VGS-Vg2-02",
+          "text": "utforske fortiden ved å stille spørsmål og innhente, tolke og bruke ulikt historisk materiale for å finne svar",
+          "coreElements": []
+        },
+        {
+          "code": "Historie VGS-Vg2-03",
+          "text": "reflektere over hvorfor historikere deler inn fortiden i perioder og vurdere hvordan vi kan periodisere fortiden på grunnlag av ulike kriterier",
+          "coreElements": []
+        },
+        {
+          "code": "Historie VGS-Vg2-04",
+          "text": "utforske og reflektere over hvordan fortiden minnes lokalt og nasjonalt",
+          "coreElements": []
+        },
+        {
+          "code": "Historie VGS-Vg2-05",
+          "text": "gjøre rede for viktige endringer i hvordan mennesker har skaffet seg mat og brukt naturressurser, og vurdere betydningen av dette for mennesker og et bærekraftig samfunn",
+          "coreElements": []
+        },
+        {
+          "code": "Historie VGS-Vg2-06",
+          "text": "presentere viktige demografiske endringer og vurdere årsaker til disse endringene og virkninger av dem for mennesker og samfunn",
+          "coreElements": []
+        },
+        {
+          "code": "Historie VGS-Vg2-07",
+          "text": "gjøre rede for hvordan handel og økonomiske systemer har påvirket maktforhold og menneskers liv",
+          "coreElements": []
+        },
+        {
+          "code": "Historie VGS-Vg2-08",
+          "text": "sammenligne hvordan demokratiet i antikken og demokratiet i vår tid har gitt mennesker ulike muligheter til demokratisk deltakelse",
+          "coreElements": []
+        },
+        {
+          "code": "Historie VGS-Vg2-09",
+          "text": "utforske hvordan kommunikasjon og kulturmøter har hatt betydning for mennesker i Norge og verden",
+          "coreElements": []
+        },
+        {
+          "code": "Historie VGS-Vg2-10",
+          "text": "vurdere endringer i fordeling og legitimering av makt fra middelalderen til og med tidlig nytid",
+          "coreElements": []
+        },
+        {
+          "code": "Historie VGS-Vg2-11",
+          "text": "beskrive religionens betydning for samfunns- og maktforhold fra middelalderen til og med vår tid og vurdere dens rolle i menneskers selvoppfatning og syn på andre",
+          "coreElements": []
+        }
+      ],
+      "Vg3": [
+        {
+          "code": "Historie VGS-Vg3-01",
+          "text": "reflektere over hvordan fortolkninger av fortiden er preget av nåtidsforståelse og forventninger til framtiden",
+          "coreElements": []
+        },
+        {
+          "code": "Historie VGS-Vg3-02",
+          "text": "reflektere over hvordan fortiden brukes av ulike aktører og drøfte hensikten med denne historiebruken",
+          "coreElements": []
+        },
+        {
+          "code": "Historie VGS-Vg3-03",
+          "text": "utforske fortiden ved å formulere problemstillinger, finne, vurdere og bruke ulikt materiale og presentere egne slutninger",
+          "coreElements": []
+        },
+        {
+          "code": "Historie VGS-Vg3-04",
+          "text": "utforske en historisk person og diskutere hans eller hennes tenkning, handlingsrom og valg i lys av samtiden han eller hun levde i",
+          "coreElements": []
+        },
+        {
+          "code": "Historie VGS-Vg3-05",
+          "text": "sammenligne ulike framstillinger av en hendelse og reflektere over at historiske framstillinger preges av opphavspersonens ståsted og kontekst",
+          "coreElements": []
+        },
+        {
+          "code": "Historie VGS-Vg3-06",
+          "text": "drøfte i hvilken grad utviklingen i ulike perioder har vært preget av brudd eller kontinuitet, og vurdere hva som gjør en hendelse i fortiden betydningsfull",
+          "coreElements": []
+        },
+        {
+          "code": "Historie VGS-Vg3-07",
+          "text": "gjøre rede for tanker og ideologier som har ligget til grunn for politiske omveltninger fra opplysningstiden til i dag og vurdere betydningen av disse for menneskers muligheter til demokratisk deltakelse",
+          "coreElements": []
+        },
+        {
+          "code": "Historie VGS-Vg3-08",
+          "text": "reflektere over hvordan teknologiske omveltninger fra den industrielle revolusjonen til i dag har endret menneskers liv og formet forventninger til framtiden",
+          "coreElements": []
+        },
+        {
+          "code": "Historie VGS-Vg3-09",
+          "text": "gjøre rede for årsaker til at mennesker har migrert, og diskutere kulturmøtene sett fra ulike perspektiver.",
+          "coreElements": []
+        },
+        {
+          "code": "Historie VGS-Vg3-10",
+          "text": "gjøre rede for årsaker til at kolonimakter underla seg landområder, og drøfte konsekvenser for mennesker og samfunn i land og områder som ble kolonisert",
+          "coreElements": []
+        },
+        {
+          "code": "Historie VGS-Vg3-11",
+          "text": "drøfte bakgrunnen for verdenskrigene og et utvalg andre sentrale kriger eller konflikter, og reflektere over om fredsslutninger har bidratt til å skape fred og forsoning",
+          "coreElements": []
+        },
+        {
+          "code": "Historie VGS-Vg3-12",
+          "text": "utforske menneskers handlingsrom og valgmuligheter i konfliktsituasjoner og vurdere konsekvenser av valgene de har tatt",
+          "coreElements": []
+        },
+        {
+          "code": "Historie VGS-Vg3-13",
+          "text": "reflektere over hvordan ideologier og tankesett på 1900-tallet og fram til i dag har bidratt til undertrykkelse, terror og folkemord som holocaust",
+          "coreElements": []
+        },
+        {
+          "code": "Historie VGS-Vg3-14",
+          "text": "analysere hvordan framstillinger av fortiden har blitt brukt i Norge for å skape nasjonal identitet og drøfte hvilke virkninger dette har hatt for ulike grupper",
+          "coreElements": []
+        },
+        {
+          "code": "Historie VGS-Vg3-15",
+          "text": "utforske hvordan mennesker har arbeidet for myndiggjøring og frigjøring i norsk og samisk historie, og gjøre rede for hvordan de samtidig har bidratt til utviklingen av demokratiet",
+          "coreElements": []
+        },
+        {
+          "code": "Historie VGS-Vg3-16",
+          "text": "gjøre rede for velferdsutviklingen i Norge på 1900-tallet og drøfte konsekvenser for menneskers liv",
+          "coreElements": []
+        },
+        {
+          "code": "Historie VGS-Vg3-17",
+          "text": "vurdere hvordan mennesket har forholdt seg til naturen, forvaltet og brukt ressurser og bruke historiske perspektiver i samtale om bærekraftige løsninger",
+          "coreElements": []
+        }
+      ]
+    }
+  },
+  "GEO": {
+    "name": "Geografi",
+    "levels": {
+      "Vg1": [
+        {
+          "code": "Geografi VGS-Vg1-01",
+          "text": "utforske og presentere geografiske forhold og prosesser ved å bruke ulike kilder, inkludert kart",
+          "coreElements": []
+        },
+        {
+          "code": "Geografi VGS-Vg1-02",
+          "text": "gjøre rede for hvordan indre og ytre krefter har dannet ulike landskap, og utforske og gi eksempler på hvordan menneskene som bor der, kan utnytte ressursene",
+          "coreElements": []
+        },
+        {
+          "code": "Geografi VGS-Vg1-03",
+          "text": "drøfte ulike interesser knyttet til ressurs- og arealbruk i Norge, Sápmi/Sábme/Sáepmie og nordområdene",
+          "coreElements": []
+        },
+        {
+          "code": "Geografi VGS-Vg1-04",
+          "text": "reflektere over sin egen ressursbruk og ressursbruken i Norge i et globalt og bærekraftig perspektiv",
+          "coreElements": []
+        },
+        {
+          "code": "Geografi VGS-Vg1-05",
+          "text": "utforske hva endringer i klimaet betyr for natur og samfunn lokalt, regionalt eller globalt",
+          "coreElements": []
+        },
+        {
+          "code": "Geografi VGS-Vg1-06",
+          "text": "utforske og gjøre rede for årsakene til en aktuell natur- eller miljøkatastrofe og konsekvenser for mennesker, samfunn og natur",
+          "coreElements": []
+        },
+        {
+          "code": "Geografi VGS-Vg1-07",
+          "text": "gjøre rede for årsaker til demografiske endringer og drøfte ulike levekår i forskjellige deler av verden",
+          "coreElements": []
+        },
+        {
+          "code": "Geografi VGS-Vg1-08",
+          "text": "gjennomføre et feltarbeid for å undersøke og presentere geografiske forhold",
+          "coreElements": []
+        }
+      ]
+    }
   }
 }

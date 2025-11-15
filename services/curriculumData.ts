@@ -20,6 +20,8 @@ export const vgsSubjects: string[] = [
     'Samfunnsfag',
     'Naturfag',
     'Kroppsøving',
+    'Historie',
+    'Geografi',
 ];
 
 export const allSubjects: string[] = [...curriculumSubjects];
@@ -166,6 +168,16 @@ export const curriculumData: CurriculumData = {
             { name: "Demokrati og medborgerskap", description: "Kritisk forbruk og forbrukermakt i matproduksjon" },
             { name: "Bærekraftig utvikling", description: "Bærekraftig matproduksjon, matsvinn og klimaavtrykk" }
         ],
+        goals: []
+    },
+    'Historie': {
+        coreElements: [],
+        crossCurricularThemes: [],
+        goals: []
+    },
+    'Geografi': {
+        coreElements: [],
+        crossCurricularThemes: [],
         goals: []
     }
 };

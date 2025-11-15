@@ -36,7 +36,9 @@ export const CompetenceGoalLibrary: React.FC<CompetenceGoalLibraryProps> = ({
         'Kroppsøving': 'KRO',
         'Kunst og håndverk': 'KHV',
         'Musikk': 'MUS',
-        'Mat og helse': 'MAH'
+        'Mat og helse': 'MAH',
+        'Historie': 'HIS',
+        'Geografi': 'GEO'
     };
 
     const subjectCode = subjectCodeMap[selectedSubject];
