@@ -43,8 +43,8 @@ export const CompetenceGoalLibrary: React.FC<CompetenceGoalLibraryProps> = ({
         'Mat og helse': 'MAH'
     };
 
-    // For VGS: use subject name + " VGS", for grunnskole: use mapped code
-    const subjectCode = isVGS ? `${selectedSubject} VGS` : subjectCodeMap[selectedSubject];
+    // For VGS: use subject name directly (e.g., "Norsk VGS"), for grunnskole: use mapped code
+    const subjectCode = isVGS ? selectedSubject : subjectCodeMap[selectedSubject];
 
     // Get available goals for selected subject and level
     const availableGoals: CompetenceGoal[] = useMemo(() => {

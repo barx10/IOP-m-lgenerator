@@ -68,9 +68,6 @@ const App: React.FC = () => {
     const [loadingProgress, setLoadingProgress] = useState(0);
     const [savedSubjects, setSavedSubjects] = useState<SavedSubject[]>([]);
     const [studentCode, setStudentCode] = useState<string>(''); // For student initials/code
-    
-    // Helper to check if current grade is VGS
-    const isVGSLevel = profile.grade.startsWith('Vg');
     const [showAboutModal, setShowAboutModal] = useState(false);
     const [editedSocialGoals, setEditedSocialGoals] = useState<Record<string, any>>({});
     const [editingSubjectIndex, setEditingSubjectIndex] = useState<number | null>(null); // Track which subject is being edited
@@ -894,8 +891,8 @@ const App: React.FC = () => {
                             </div>
                         </Card>
 
-                        {/* Core Elements - only for grunnskole */}
-                        {!isVGSLevel && profile.subject && curriculumData[profile.subject]?.coreElements.length > 0 && (
+                        {/* Core Elements */}
+                        {profile.subject && curriculumData[profile.subject]?.coreElements.length > 0 && (
                              <Card title={`Kjerneelement for ${profile.subject}`} icon={<BookOpenIcon className="text-brand-blue" />} className="border-l-4 border-brand-blue shadow-blue-200">
                                 <div className="space-y-3 p-4 bg-gradient-to-br from-blue-50 to-transparent rounded-xl">
                                     <p className="text-base text-gray-700">
@@ -908,8 +905,8 @@ const App: React.FC = () => {
                             </Card>
                         )}
 
-                        {/* Cross-Curricular Themes - only for grunnskole */}
-                        {!isVGSLevel && profile.subject && curriculumData[profile.subject]?.crossCurricularThemes.length > 0 && (
+                        {/* Cross-Curricular Themes */}
+                        {profile.subject && curriculumData[profile.subject]?.crossCurricularThemes.length > 0 && (
                              <Card title={`Tverrfaglig tema for ${profile.subject}`} icon={<BookOpenIcon className="text-accent-green" />} className="border-l-4 border-accent-green shadow-green-200">
                                 <div className="space-y-3 p-4 bg-gradient-to-br from-green-50 to-transparent rounded-xl">
                                     <p className="text-base text-gray-700">
@@ -985,7 +982,7 @@ const App: React.FC = () => {
                 <Footer />
             </div>
 
-            {showCoreElementsModal && !isVGSLevel && profile.subject && curriculumData[profile.subject] && (
+            {showCoreElementsModal && profile.subject && curriculumData[profile.subject] && (
                 <CoreElementsModal
                     subject={profile.subject}
                     coreElements={curriculumData[profile.subject].coreElements}
@@ -995,7 +992,7 @@ const App: React.FC = () => {
                 />
             )}
 
-            {showCrossCurricularModal && !isVGSLevel && profile.subject && curriculumData[profile.subject] && (
+            {showCrossCurricularModal && profile.subject && curriculumData[profile.subject] && (
                 <CoreElementsModal
                     subject={profile.subject}
                     coreElements={curriculumData[profile.subject].crossCurricularThemes}

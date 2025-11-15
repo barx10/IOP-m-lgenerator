@@ -14,11 +14,11 @@ export const curriculumSubjects: string[] = [
 ];
 
 export const vgsSubjects: string[] = [
-    'Norsk',
-    'Matematikk',
+    'Norsk VGS',
+    'Matematikk VGS',
 ];
 
-export const allSubjects: string[] = [...curriculumSubjects];
+export const allSubjects: string[] = [...curriculumSubjects, ...vgsSubjects];
 
 export const curriculumData: CurriculumData = {
     'Norsk': {
@@ -162,6 +162,16 @@ export const curriculumData: CurriculumData = {
             { name: "Demokrati og medborgerskap", description: "Kritisk forbruk og forbrukermakt i matproduksjon" },
             { name: "Bærekraftig utvikling", description: "Bærekraftig matproduksjon, matsvinn og klimaavtrykk" }
         ],
+        goals: []
+    },
+    'Norsk VGS': {
+        coreElements: [],
+        crossCurricularThemes: [],
+        goals: []
+    },
+    'Matematikk VGS': {
+        coreElements: [],
+        crossCurricularThemes: [],
         goals: []
     }
 };
