@@ -76,7 +76,6 @@ const App: React.FC = () => {
         const { name, value } = e.target;
     
         if (name === 'subject') {
-            console.log('App.tsx: Subject changed to:', value);
             // When subject changes, reset related state separately for robustness.
             setPastedGoals('');
             setProfile(prev => ({

@@ -23,13 +23,11 @@ export const CompetenceGoalLibrary: React.FC<CompetenceGoalLibraryProps> = ({
 }) => {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedGoals, setSelectedGoals] = useState<string[]>(currentlySelected);
-
-    console.log('CompetenceGoalLibrary: Received props', { selectedSubject, selectedLevel });
     
     // Determine if this is a VGS subject
     const isVGS = selectedSubject.includes('VGS');
     
-    // Map subject names to codes (for grunnskole)
+    // Map subject names to codes (only for grunnskole)
     const subjectCodeMap: Record<string, string> = {
         'Matematikk': 'MAT',
         'Norsk': 'NOR',
@@ -45,30 +43,24 @@ export const CompetenceGoalLibrary: React.FC<CompetenceGoalLibraryProps> = ({
         'Mat og helse': 'MAH'
     };
 
+    // For VGS: use full subject name, for grunnskole: use mapped code
     const subjectCode = isVGS ? selectedSubject : subjectCodeMap[selectedSubject];
 
     // Get available goals for selected subject and level
     const availableGoals: CompetenceGoal[] = useMemo(() => {
         if (!subjectCode || !selectedLevel) {
-            console.log('CompetenceGoalLibrary: Missing subjectCode or selectedLevel', { subjectCode, selectedLevel });
             return [];
         }
         
+        // Choose data source based on VGS or grunnskole
         const dataSource = isVGS ? competenceGoalsVGSData : competenceGoalsData;
-        console.log('CompetenceGoalLibrary: Looking up', { isVGS, subjectCode, selectedLevel, availableKeys: Object.keys(dataSource) });
         const subjectData = (dataSource as any)[subjectCode];
-        if (!subjectData) {
-            console.log('CompetenceGoalLibrary: Subject not found in data source');
-            return [];
-        }
-        if (!subjectData.levels[selectedLevel]) {
-            console.log('CompetenceGoalLibrary: Level not found', { availableLevels: Object.keys(subjectData.levels || {}) });
+        
+        if (!subjectData || !subjectData.levels || !subjectData.levels[selectedLevel]) {
             return [];
         }
         
-        const goals = subjectData.levels[selectedLevel];
-        console.log('CompetenceGoalLibrary: Found goals', goals.length);
-        return goals;
+        return subjectData.levels[selectedLevel];
     }, [subjectCode, selectedLevel, isVGS]);
 
     // Filter goals based on search term
