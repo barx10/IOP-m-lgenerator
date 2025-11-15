@@ -269,38 +269,26 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
                                         </ul>
                                         <p className="mt-2">
                                             Klikk deretter på <strong>"✨ Generer IOP-mål"</strong>-knappen. KI-en vil nå analysere 
-                                            all informasjonen og foreslå konkrete mål.
+                                            all informasjonen og foreslå konkrete ferdighetsmål og kunnskapsmål.
                                         </p>
                                     </div>
 
                                     <div>
-                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 9: Velg ferdighetsmål og kunnskapsmål</h4>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 9: Velg og rediger forslag</h4>
                                         <p className="mb-2">
                                             Når forslagene er generert:
                                         </p>
                                         <ul className="list-disc pl-6 space-y-1">
                                             <li>Du får flere forslag til ferdighetsmål og kunnskapsmål</li>
                                             <li>Velg de målene som passer best for eleven</li>
-                                            <li>Klikk på tekst for å redigere målene direkte</li>
+                                            <li>Klikk på tekst i IOP-mål, samlet vurdering og sosiale mål for å redigere direkte</li>
                                             <li>Tilpass målene til elevens spesifikke behov</li>
-                                        </ul>
-                                    </div>
-
-                                    <div>
-                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 10: Rediger og kvalitetssikre</h4>
-                                        <p className="mb-2">
-                                            Gå gjennom alle målene:
-                                        </p>
-                                        <ul className="list-disc pl-6 space-y-1">
-                                            <li>Les gjennom IOP-mål, samlet vurdering og sosiale mål</li>
-                                            <li>Klikk på tekst for å redigere den direkte</li>
                                             <li>Kvalitetssikre at målene er realistiske og målbare</li>
-                                            <li>Pass på at målene er tilpasset elevens nivå</li>
                                         </ul>
                                     </div>
 
                                     <div>
-                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 11: Lagre faget</h4>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 10: Lagre faget</h4>
                                         <p className="mb-2">
                                             Når du er fornøyd med målene, klikk <strong>"💾 Lagre fag"</strong> (knappen ligger nederst på siden). 
                                             Du kan lagre flere fag for samme elev.
@@ -308,7 +296,7 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
                                     </div>
 
                                     <div>
-                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 12: Last ned Word-dokument</h4>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 11: Last ned Word-dokument</h4>
                                         <p className="mb-2">
                                             Når alle fag er lagret:
                                         </p>
