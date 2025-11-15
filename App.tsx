@@ -11,7 +11,7 @@ import {
   IopGoal
 } from './types';
 import { generateIopGoals } from './services/geminiService.backend';
-import { curriculumData, allSubjects } from './services/curriculumData';
+import { curriculumData, curriculumSubjects, vgsSubjects } from './services/curriculumData';
 
 import { Card } from './components/Card';
 import { CompetenceGoalSelector } from './components/CompetenceGoalSelector';
@@ -71,6 +71,20 @@ const App: React.FC = () => {
     const [showAboutModal, setShowAboutModal] = useState(false);
     const [editedSocialGoals, setEditedSocialGoals] = useState<Record<string, any>>({});
     const [editingSubjectIndex, setEditingSubjectIndex] = useState<number | null>(null); // Track which subject is being edited
+
+    // Get available subjects based on selected grade level
+    const availableSubjects = useMemo(() => {
+        if (!profile.grade) return curriculumSubjects;
+        
+        // For VGS levels, show both curriculum subjects and VGS-only subjects
+        if (profile.grade.startsWith('Vg')) {
+            // Combine and remove duplicates
+            return [...new Set([...curriculumSubjects, ...vgsSubjects])].sort();
+        }
+        
+        // For grunnskole, only show curriculum subjects
+        return curriculumSubjects;
+    }, [profile.grade]);
 
     const handleProfileChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
@@ -842,7 +856,7 @@ const App: React.FC = () => {
                                     <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 mb-1">Fag</label>
                                     <select id="subject" name="subject" value={profile.subject} onChange={handleProfileChange} className="mt-1 block w-full pl-3 pr-10 py-2.5 text-base border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-brand-blue sm:text-sm rounded-lg bg-white shadow-sm transition-all">
                                         <option value="" disabled>Velg fag</option>
-                                        {allSubjects.map(sub => <option key={sub} value={sub}>{sub}</option>)}
+                                        {availableSubjects.map(sub => <option key={sub} value={sub}>{sub}</option>)}
                                     </select>
                                 </div>
                                 <div className="sm:col-span-6">
