@@ -7,7 +7,7 @@ interface AboutModalProps {
 }
 
 export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
-    const [activeTab, setActiveTab] = useState<'om' | 'retningslinjer'>('om');
+    const [activeTab, setActiveTab] = useState<'info' | 'bruk' | 'lovverk'>('info');
 
     if (!isOpen) return null;
 
@@ -16,7 +16,7 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
             <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
                 <div className="sticky top-0 bg-white border-b border-gray-200 px-6 py-4">
                     <div className="flex justify-between items-center mb-4">
-                        <h2 className="text-2xl font-bold text-gray-900">Om IOP-målgenerator</h2>
+                        <h2 className="text-2xl font-bold text-gray-900">Info, bruk og retningslinjer</h2>
                         <button
                             onClick={onClose}
                             className="text-gray-400 hover:text-gray-600 transition-colors"
@@ -29,34 +29,44 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
                     {/* Tabs */}
                     <div className="flex gap-4 border-b border-gray-200">
                         <button
-                            onClick={() => setActiveTab('om')}
+                            onClick={() => setActiveTab('info')}
                             className={`pb-2 px-1 font-medium transition-colors ${
-                                activeTab === 'om'
+                                activeTab === 'info'
                                     ? 'text-brand-blue border-b-2 border-brand-blue'
                                     : 'text-gray-500 hover:text-gray-700'
                             }`}
                         >
-                            Info og retningslinjer
+                            ℹ️ Info
                         </button>
                         <button
-                            onClick={() => setActiveTab('retningslinjer')}
+                            onClick={() => setActiveTab('bruk')}
                             className={`pb-2 px-1 font-medium transition-colors ${
-                                activeTab === 'retningslinjer'
+                                activeTab === 'bruk'
                                     ? 'text-brand-blue border-b-2 border-brand-blue'
                                     : 'text-gray-500 hover:text-gray-700'
                             }`}
                         >
-                            📋 Retningslinjer
+                            📖 Bruk
+                        </button>
+                        <button
+                            onClick={() => setActiveTab('lovverk')}
+                            className={`pb-2 px-1 font-medium transition-colors ${
+                                activeTab === 'lovverk'
+                                    ? 'text-brand-blue border-b-2 border-brand-blue'
+                                    : 'text-gray-500 hover:text-gray-700'
+                            }`}
+                        >
+                            📋 Lovverk
                         </button>
                     </div>
                 </div>
 
                 <div className="px-6 py-6 space-y-6">
-                    {activeTab === 'om' && (
+                    {activeTab === 'info' && (
                         <>
                             {/* Om appen */}
                             <section>
-                                <h3 className="text-xl font-semibold text-gray-900 mb-3">Info og retningslinjer</h3>
+                                <h3 className="text-xl font-semibold text-gray-900 mb-3">Om IOP-målbygger</h3>
                                 <div className="text-gray-700 space-y-2">
                                     <p>
                                         IOP-målbygger er et verktøy som hjelper lærere og spesialpedagoger med å lage 
@@ -166,7 +176,151 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
                         </>
                     )}
 
-                    {activeTab === 'retningslinjer' && (
+                    {activeTab === 'bruk' && (
+                        <>
+                            {/* Brukerveiledning */}
+                            <section>
+                                <h3 className="text-xl font-semibold text-gray-900 mb-3">Slik bruker du IOP-målbygger</h3>
+                                <div className="text-gray-700 space-y-4">
+                                    <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                                        <p className="font-semibold text-blue-900 mb-2">💡 Før du starter:</p>
+                                        <p className="text-blue-800 text-sm">
+                                            Anonymiser all elevdata! Ikke bruk personnavn, fødselsnummer eller andre direkte 
+                                            identifiserbare opplysninger. Bruk kun generell informasjon som er relevant for 
+                                            å lage gode IOP-mål.
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 1: Fyll ut elevinfo og rammer</h4>
+                                        <ul className="list-disc pl-6 space-y-1">
+                                            <li><strong>Elevkode:</strong> Bruk initialer eller en kode (f.eks. "EL01")</li>
+                                            <li><strong>Starttid og sluttid:</strong> Velg perioden IOP-målene skal gjelde for</li>
+                                            <li><strong>Kompetansemålnivå:</strong> Velg nærmeste sluttvurderingstidspunkt (2. trinn, 4. trinn, osv.)</li>
+                                            <li><strong>Fag:</strong> Velg hvilket fag målene skal lages for</li>
+                                            <li><strong>Tema:</strong> Beskriv temaet for perioden (f.eks. "Å skrive en fortelling")</li>
+                                        </ul>
+                                    </div>
+
+                                    <div>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 2: Velg kjerneelementer (valgfritt)</h4>
+                                        <p className="mb-2">
+                                            Klikk på kortene for å velge relevante kjerneelementer og tverrfaglige tema. 
+                                            Dette hjelper KI-en med å lage mer presise forslag.
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 3: Velg kompetansemål</h4>
+                                        <p className="mb-2">
+                                            Du kan enten:
+                                        </p>
+                                        <ul className="list-disc pl-6 space-y-1">
+                                            <li><strong>📚 Velg fra bibliotek:</strong> Bla gjennom kompetansemål fra læreplanen og velg ETT mål som er mest relevant</li>
+                                            <li><strong>✍️ Lim inn selv:</strong> Kopier inn kompetansemålet manuelt hvis du har det fra annet sted</li>
+                                        </ul>
+                                    </div>
+
+                                    <div>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 4: Legg inn sakkyndig vurdering</h4>
+                                        <p className="mb-2">
+                                            Lim inn relevant tekst fra sakkyndig vurdering som beskriver:
+                                        </p>
+                                        <ul className="list-disc pl-6 space-y-1">
+                                            <li>Elevens forutsetninger og behov</li>
+                                            <li>Anbefalte tiltak og tilrettelegging</li>
+                                            <li>Styrker og utfordringer</li>
+                                        </ul>
+                                        <p className="text-sm text-gray-600 mt-2">
+                                            💡 Tips: Jo mer relevant informasjon du gir, desto bedre blir forslagene.
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 5: Velg vanskelighetsgrad</h4>
+                                        <p className="mb-2">
+                                            Sett vanskelighetsgraden for målene:
+                                        </p>
+                                        <ul className="list-disc pl-6 space-y-1">
+                                            <li><strong>Tilpasset:</strong> Mål som er enklere enn kompetansemålet</li>
+                                            <li><strong>Utfordrende:</strong> Mål som er ambisiøse, men realistiske</li>
+                                        </ul>
+                                    </div>
+
+                                    <div>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 6: Generer IOP-mål</h4>
+                                        <p className="mb-2">
+                                            Klikk på <strong>"✨ Generer IOP-mål"</strong>-knappen. KI-en vil nå:
+                                        </p>
+                                        <ul className="list-disc pl-6 space-y-1">
+                                            <li>Analysere all informasjonen du har lagt inn</li>
+                                            <li>Foreslå konkrete ferdighetsmål og kunnskapsmål</li>
+                                            <li>Gi en samlet vurdering av måloppnåelse</li>
+                                            <li>Beskrive hvordan kjerneelementer påvirker målene</li>
+                                        </ul>
+                                    </div>
+
+                                    <div>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 7: Rediger og tilpass</h4>
+                                        <p className="mb-2">
+                                            Når forslagene er generert:
+                                        </p>
+                                        <ul className="list-disc pl-6 space-y-1">
+                                            <li>Les gjennom alle forslag nøye</li>
+                                            <li>Klikk på tekst for å redigere den direkte</li>
+                                            <li>Tilpass målene til elevens spesifikke behov</li>
+                                            <li>Kvalitetssikre at målene er realistiske og målbare</li>
+                                        </ul>
+                                    </div>
+
+                                    <div>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 8: Velg sosiale mål (valgfritt)</h4>
+                                        <p className="mb-2">
+                                            Hvis eleven har sosiale mål i IOP-en, kan du:
+                                        </p>
+                                        <ul className="list-disc pl-6 space-y-1">
+                                            <li>Velge fra forhåndsdefinerte sosiale mål</li>
+                                            <li>Redigere målene for å tilpasse dem</li>
+                                            <li>Legge til egne sosiale mål</li>
+                                        </ul>
+                                    </div>
+
+                                    <div>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 9: Lagre faget</h4>
+                                        <p className="mb-2">
+                                            Når du er fornøyd med målene, klikk <strong>"💾 Lagre fag"</strong>. 
+                                            Du kan lagre flere fag for samme elev.
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 10: Last ned Word-dokument</h4>
+                                        <p className="mb-2">
+                                            Når alle fag er lagret:
+                                        </p>
+                                        <ul className="list-disc pl-6 space-y-1">
+                                            <li>Klikk på <strong>"📥 Last ned Word-dokument"</strong></li>
+                                            <li>Dokumentet inneholder alle lagrede fag med mål</li>
+                                            <li>Åpne dokumentet i Word og gjør eventuelle siste justeringer</li>
+                                            <li>Kopier innholdet over i skolens IOP-mal</li>
+                                        </ul>
+                                    </div>
+
+                                    <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
+                                        <p className="font-semibold text-amber-900 mb-2">⚠️ Viktig å huske:</p>
+                                        <ul className="text-amber-800 text-sm space-y-1">
+                                            <li>• Data lagres kun midlertidig mens du bruker appen</li>
+                                            <li>• Alt slettes når du lukker eller laster siden på nytt</li>
+                                            <li>• Last ned Word-dokumentet før du lukker appen</li>
+                                            <li>• KI-forslag må alltid kvalitetssikres av fagperson</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </section>
+                        </>
+                    )}
+
+                    {activeTab === 'lovverk' && (
                         <>
                             {/* Tips for bruk av AI */}
                             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
