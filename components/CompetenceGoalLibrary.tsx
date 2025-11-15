@@ -1,6 +1,5 @@
 import React, { useState, useMemo } from 'react';
 import competenceGoalsData from '../data/competenceGoals.json';
-import competenceGoalsVGSData from '../data/competenceGoalsVGS.json';
 
 interface CompetenceGoal {
     code: string;
@@ -24,10 +23,7 @@ export const CompetenceGoalLibrary: React.FC<CompetenceGoalLibraryProps> = ({
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedGoals, setSelectedGoals] = useState<string[]>(currentlySelected);
     
-    // Determine if this is VGS level
-    const isVGS = selectedLevel.startsWith('Vg');
-    
-    // Map subject names to codes (only for grunnskole)
+    // Map subject names to codes
     const subjectCodeMap: Record<string, string> = {
         'Matematikk': 'MAT',
         'Norsk': 'NOR',
@@ -43,8 +39,7 @@ export const CompetenceGoalLibrary: React.FC<CompetenceGoalLibraryProps> = ({
         'Mat og helse': 'MAH'
     };
 
-    // For VGS: use subject name directly (e.g., "Norsk VGS"), for grunnskole: use mapped code
-    const subjectCode = isVGS ? selectedSubject : subjectCodeMap[selectedSubject];
+    const subjectCode = subjectCodeMap[selectedSubject];
 
     // Get available goals for selected subject and level
     const availableGoals: CompetenceGoal[] = useMemo(() => {
@@ -52,16 +47,14 @@ export const CompetenceGoalLibrary: React.FC<CompetenceGoalLibraryProps> = ({
             return [];
         }
         
-        // Choose data source based on level (VGS or grunnskole)
-        const dataSource = isVGS ? competenceGoalsVGSData : competenceGoalsData;
-        const subjectData = (dataSource as any)[subjectCode];
+        const subjectData = (competenceGoalsData as any)[subjectCode];
         
         if (!subjectData || !subjectData.levels || !subjectData.levels[selectedLevel]) {
             return [];
         }
         
         return subjectData.levels[selectedLevel];
-    }, [subjectCode, selectedLevel, isVGS]);
+    }, [subjectCode, selectedLevel]);
 
     // Filter goals based on search term
     const filteredGoals = useMemo(() => {
