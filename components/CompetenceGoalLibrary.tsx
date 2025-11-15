@@ -24,8 +24,8 @@ export const CompetenceGoalLibrary: React.FC<CompetenceGoalLibraryProps> = ({
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedGoals, setSelectedGoals] = useState<string[]>(currentlySelected);
     
-    // Determine if this is a VGS subject
-    const isVGS = selectedSubject.includes('VGS');
+    // Determine if this is VGS level
+    const isVGS = selectedLevel.startsWith('Vg');
     
     // Map subject names to codes (only for grunnskole)
     const subjectCodeMap: Record<string, string> = {
@@ -43,8 +43,8 @@ export const CompetenceGoalLibrary: React.FC<CompetenceGoalLibraryProps> = ({
         'Mat og helse': 'MAH'
     };
 
-    // For VGS: use full subject name, for grunnskole: use mapped code
-    const subjectCode = isVGS ? selectedSubject : subjectCodeMap[selectedSubject];
+    // For VGS: use subject name + " VGS", for grunnskole: use mapped code
+    const subjectCode = isVGS ? `${selectedSubject} VGS` : subjectCodeMap[selectedSubject];
 
     // Get available goals for selected subject and level
     const availableGoals: CompetenceGoal[] = useMemo(() => {
@@ -52,7 +52,7 @@ export const CompetenceGoalLibrary: React.FC<CompetenceGoalLibraryProps> = ({
             return [];
         }
         
-        // Choose data source based on VGS or grunnskole
+        // Choose data source based on level (VGS or grunnskole)
         const dataSource = isVGS ? competenceGoalsVGSData : competenceGoalsData;
         const subjectData = (dataSource as any)[subjectCode];
         

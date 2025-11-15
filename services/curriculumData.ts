@@ -14,11 +14,11 @@ export const curriculumSubjects: string[] = [
 ];
 
 export const vgsSubjects: string[] = [
-    'Norsk VGS',
-    'Matematikk VGS',
+    'Norsk',
+    'Matematikk',
 ];
 
-export const allSubjects: string[] = [...curriculumSubjects, ...vgsSubjects];
+export const allSubjects: string[] = [...curriculumSubjects];
 
 export const curriculumData: CurriculumData = {
     'Norsk': {
