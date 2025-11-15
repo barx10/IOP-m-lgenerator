@@ -7,13 +7,19 @@
     </linearGradient>
   </defs>
   
-  <!-- Rounded square background -->
-  <rect x="10" y="10" width="80" height="80" rx="16" fill="url(#grad)"/>
+  <!-- Rounded square background with gradient (matches app design) -->
+  <rect x="5" y="5" width="90" height="90" rx="18" fill="url(#grad)"/>
   
-  <!-- Document icon -->
-  <path d="M 35 28 L 50 28 L 65 43 L 65 72 L 35 72 Z" fill="white"/>
-  <path d="M 50 28 L 50 43 L 65 43" fill="none" stroke="white" stroke-width="1"/>
-  <line x1="40" y1="50" x2="60" y2="50" stroke="url(#grad)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="40" y1="56" x2="60" y2="56" stroke="url(#grad)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="40" y1="62" x2="55" y2="62" stroke="url(#grad)" stroke-width="2" stroke-linecap="round"/>
+  <!-- Document icon - exact same path from DocumentIcon.tsx -->
+  <!-- Scaled and centered to fit the 100x100 viewBox -->
+  <g transform="translate(50, 50) scale(2.8) translate(-12, -12)">
+    <path 
+      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" 
+      fill="none" 
+      stroke="white" 
+      stroke-width="2" 
+      stroke-linecap="round" 
+      stroke-linejoin="round"
+    />
+  </g>
 </svg>
