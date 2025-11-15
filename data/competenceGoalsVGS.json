@@ -3,42 +3,170 @@
     "name": "Norsk VGS",
     "levels": {
       "Vg1": [
-        "lese, analysere og tolke nyere skjønnlitteratur på bokmål og nynorsk og i oversettelse fra samiske og andre språk",
-        "reflektere over hvordan tekster framstiller møter mellom ulike kulturer",
-        "gjøre rede for og reflektere over bruken av retoriske appellformer og språklige virkemidler i sakprosatekster",
-        "lytte til andre, bygge opp saklig argumentasjon og bruke retoriske appellformer i diskusjoner",
-        "bruke ulike kilder på en kritisk, selvstendig og etterrettelig måte",
-        "greie ut om og drøfte norskfaglige eller tverrfaglige temaer muntlig",
-        "skrive fagartikler som greier ut om og drøfter norskfaglige eller tverrfaglige temaer",
-        "bruke fagspråk til å beskrive setningsoppbygningen og sammenhengen mellom setninger i arbeid med tekster",
-        "kombinere virkemidler og uttrykksformer kreativt i egen tekstskaping",
-        "vurdere og bearbeide egne tekster ut fra tilbakemeldinger og faglige kriterier",
-        "skrive tekster med god struktur og tekstbinding og mestre tegnsetting og rettskriving på hovedmål og sidemål",
-        "sammenligne særtrekk ved norsk med andre språk og vise hvordan språklige møter kan skape språkendringer",
-        "gjøre rede for utbredelsen av de samiske språkene i Norge, fornorskingspolitikken og de språklige rettighetene samer har som urfolk"
+        {
+          "code": "Norsk VGS-Vg1-01",
+          "text": "lese, analysere og tolke nyere skjønnlitteratur på bokmål og nynorsk og i oversettelse fra samiske og andre språk",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg1-02",
+          "text": "reflektere over hvordan tekster framstiller møter mellom ulike kulturer",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg1-03",
+          "text": "gjøre rede for og reflektere over bruken av retoriske appellformer og språklige virkemidler i sakprosatekster",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg1-04",
+          "text": "lytte til andre, bygge opp saklig argumentasjon og bruke retoriske appellformer i diskusjoner",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg1-05",
+          "text": "bruke ulike kilder på en kritisk, selvstendig og etterrettelig måte",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg1-06",
+          "text": "greie ut om og drøfte norskfaglige eller tverrfaglige temaer muntlig",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg1-07",
+          "text": "skrive fagartikler som greier ut om og drøfter norskfaglige eller tverrfaglige temaer",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg1-08",
+          "text": "bruke fagspråk til å beskrive setningsoppbygningen og sammenhengen mellom setninger i arbeid med tekster",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg1-09",
+          "text": "kombinere virkemidler og uttrykksformer kreativt i egen tekstskaping",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg1-10",
+          "text": "vurdere og bearbeide egne tekster ut fra tilbakemeldinger og faglige kriterier",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg1-11",
+          "text": "skrive tekster med god struktur og tekstbinding og mestre tegnsetting og rettskriving på hovedmål og sidemål",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg1-12",
+          "text": "sammenligne særtrekk ved norsk med andre språk og vise hvordan språklige møter kan skape språkendringer",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg1-13",
+          "text": "gjøre rede for utbredelsen av de samiske språkene i Norge, fornorskingspolitikken og de språklige rettighetene samer har som urfolk",
+          "coreElements": []
+        }
       ],
       "Vg2": [
-        "lese norrøne tekster i oversettelse og sammenligne dem med tekster fra nyere tid",
-        "lese og tolke tekster fra 1500 til 1850 i kulturhistorisk kontekst og drøfte hvordan de er relevante i dag",
-        "utforske og reflektere over hvordan tekster fra romantikken og nasjonalromantikken framstiller menneske, natur og samfunn, og sammenligne med tekster fra nyere tid",
-        "reflektere over sakprosatekster og gjøre rede for den retoriske situasjonen de er blitt til i",
-        "skrive fagartikler som gjør rede for og drøfter tekster i kontekst",
-        "bruke tilbakemeldinger og kunnskap om språk, tekst og sjanger til å utvikle egne tekster",
-        "bruke fagkunnskap og retoriske ferdigheter i norskfaglige diskusjoner og presentasjoner",
-        "bruke fagspråk til å beskrive særtrekk ved norsk sammenlignet med svensk, dansk og norrønt",
-        "gjøre rede for den historiske bakgrunnen for språksituasjonen i Norge i dag"
+        {
+          "code": "Norsk VGS-Vg2-01",
+          "text": "lese norrøne tekster i oversettelse og sammenligne dem med tekster fra nyere tid",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg2-02",
+          "text": "lese og tolke tekster fra 1500 til 1850 i kulturhistorisk kontekst og drøfte hvordan de er relevante i dag",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg2-03",
+          "text": "utforske og reflektere over hvordan tekster fra romantikken og nasjonalromantikken framstiller menneske, natur og samfunn, og sammenligne med tekster fra nyere tid",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg2-04",
+          "text": "reflektere over sakprosatekster og gjøre rede for den retoriske situasjonen de er blitt til i",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg2-05",
+          "text": "skrive fagartikler som gjør rede for og drøfter tekster i kontekst",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg2-06",
+          "text": "bruke tilbakemeldinger og kunnskap om språk, tekst og sjanger til å utvikle egne tekster",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg2-07",
+          "text": "bruke fagkunnskap og retoriske ferdigheter i norskfaglige diskusjoner og presentasjoner",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg2-08",
+          "text": "bruke fagspråk til å beskrive særtrekk ved norsk sammenlignet med svensk, dansk og norrønt",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg2-09",
+          "text": "gjøre rede for den historiske bakgrunnen for språksituasjonen i Norge i dag",
+          "coreElements": []
+        }
       ],
       "Vg3": [
-        "analysere og tolke romaner, noveller, drama, lyrikk og sakprosa på bokmål og nynorsk fra 1850 til i dag og reflektere over tekstene i lys av den kulturhistoriske konteksten og egen samtid",
-        "utforske og reflektere over hvordan tekster fra den realistiske og den modernistiske tradisjonen framstiller menneske, natur og samfunn",
-        "skrive essay som utforsker og reflekterer over innhold i tekster",
-        "skrive litterære tolkninger og sammenligninger",
-        "analysere uttrykksformer i sammensatte tekster i ulike medier og vurdere samspillet mellom dem",
-        "bruke fagkunnskap og presist fagspråk i utforskende samtaler, diskusjoner og muntlige presentasjoner om norskfaglige emner",
-        "skrive retoriske analyser og tolkninger av sakprosatekster",
-        "mestre språklige formkrav på hovedmål og sidemål og skrive tekster med etterrettelig kildebruk og et presist og nyansert språk",
-        "orientere seg i faglitteratur, vurdere kilder kritisk og skrive fagartikler som greier ut om og drøfter norskfaglige emner",
-        "gjøre rede for endringer i talespråk i Norge i dag og reflektere over sammenhenger mellom språk, kultur og identitet"
+        {
+          "code": "Norsk VGS-Vg3-01",
+          "text": "analysere og tolke romaner, noveller, drama, lyrikk og sakprosa på bokmål og nynorsk fra 1850 til i dag og reflektere over tekstene i lys av den kulturhistoriske konteksten og egen samtid",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg3-02",
+          "text": "utforske og reflektere over hvordan tekster fra den realistiske og den modernistiske tradisjonen framstiller menneske, natur og samfunn",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg3-03",
+          "text": "skrive essay som utforsker og reflekterer over innhold i tekster",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg3-04",
+          "text": "skrive litterære tolkninger og sammenligninger",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg3-05",
+          "text": "analysere uttrykksformer i sammensatte tekster i ulike medier og vurdere samspillet mellom dem",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg3-06",
+          "text": "bruke fagkunnskap og presist fagspråk i utforskende samtaler, diskusjoner og muntlige presentasjoner om norskfaglige emner",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg3-07",
+          "text": "skrive retoriske analyser og tolkninger av sakprosatekster",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg3-08",
+          "text": "mestre språklige formkrav på hovedmål og sidemål og skrive tekster med etterrettelig kildebruk og et presist og nyansert språk",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg3-09",
+          "text": "orientere seg i faglitteratur, vurdere kilder kritisk og skrive fagartikler som greier ut om og drøfter norskfaglige emner",
+          "coreElements": []
+        },
+        {
+          "code": "Norsk VGS-Vg3-10",
+          "text": "gjøre rede for endringer i talespråk i Norge i dag og reflektere over sammenhenger mellom språk, kultur og identitet",
+          "coreElements": []
+        }
       ]
     }
   },
@@ -46,41 +174,165 @@
     "name": "Matematikk VGS",
     "levels": {
       "Vg1": [
-        "formulere og løse problemer ved hjelp av algoritmisk tenkning, ulike problemløsingsstrategier, digitale verktøy og programmering",
-        "lese og forstå matematiske bevis og utforske og utvikle bevis i relevante matematiske emner",
-        "identifisere variable størrelser i ulike situasjoner, sette opp formler og utforske disse ved hjelp av digitale verktøy",
-        "utforske strategier for å løse ligninger, ligningssystemer og ulikheter og argumentere for tenkemåtene sine",
-        "forklare forskjellen mellom en identitet, en ligning, et algebraisk uttrykk og en funksjon",
-        "utforske sammenhenger mellom andregradsligninger og andregradsulikheter, andregradsfunksjoner og kvadratsetningene og bruke sammenhengene i problemløsing",
-        "modellere situasjoner knyttet til ulike temaer, drøfte, presentere og forklare resultatene og argumentere for om modellene er gyldige",
-        "lese, hente ut og vurdere matematikk i relevante tekster om ulike temaer og presentere relevante beregninger og analyser av resultatene",
-        "utforske og beskrive egenskapene ved polynomfunksjoner, rasjonale funksjoner, eksponentialfunksjoner og potensfunksjoner",
-        "bruke gjennomsnittlig og momentan vekstfart i konkrete eksempler og gjøre rede for den deriverte",
-        "forklare polynomdivisjon og bruke det til å omskrive algebraiske uttrykk, drøfte funksjoner og løse ligninger og ulikheter",
-        "gjøre rede for definisjonene av sinus, cosinus og tangens og bruke trigonometri til å beregne lengder, vinkler og arealer i vilkårlige trekanter",
-        "begrunne sinus-, cosinus- og arealsetningen",
-        "bruke trigonometri til å analysere og løse sammensatte teoretiske og praktiske problemer med lengder, vinkler og arealer"
+        {
+          "code": "Matematikk VGS-Vg1-01",
+          "text": "formulere og løse problemer ved hjelp av algoritmisk tenkning, ulike problemløsingsstrategier, digitale verktøy og programmering",
+          "coreElements": []
+        },
+        {
+          "code": "Matematikk VGS-Vg1-02",
+          "text": "lese og forstå matematiske bevis og utforske og utvikle bevis i relevante matematiske emner",
+          "coreElements": []
+        },
+        {
+          "code": "Matematikk VGS-Vg1-03",
+          "text": "identifisere variable størrelser i ulike situasjoner, sette opp formler og utforske disse ved hjelp av digitale verktøy",
+          "coreElements": []
+        },
+        {
+          "code": "Matematikk VGS-Vg1-04",
+          "text": "utforske strategier for å løse ligninger, ligningssystemer og ulikheter og argumentere for tenkemåtene sine",
+          "coreElements": []
+        },
+        {
+          "code": "Matematikk VGS-Vg1-05",
+          "text": "forklare forskjellen mellom en identitet, en ligning, et algebraisk uttrykk og en funksjon",
+          "coreElements": []
+        },
+        {
+          "code": "Matematikk VGS-Vg1-06",
+          "text": "utforske sammenhenger mellom andregradsligninger og andregradsulikheter, andregradsfunksjoner og kvadratsetningene og bruke sammenhengene i problemløsing",
+          "coreElements": []
+        },
+        {
+          "code": "Matematikk VGS-Vg1-07",
+          "text": "modellere situasjoner knyttet til ulike temaer, drøfte, presentere og forklare resultatene og argumentere for om modellene er gyldige",
+          "coreElements": []
+        },
+        {
+          "code": "Matematikk VGS-Vg1-08",
+          "text": "lese, hente ut og vurdere matematikk i relevante tekster om ulike temaer og presentere relevante beregninger og analyser av resultatene",
+          "coreElements": []
+        },
+        {
+          "code": "Matematikk VGS-Vg1-09",
+          "text": "utforske og beskrive egenskapene ved polynomfunksjoner, rasjonale funksjoner, eksponentialfunksjoner og potensfunksjoner",
+          "coreElements": []
+        },
+        {
+          "code": "Matematikk VGS-Vg1-10",
+          "text": "bruke gjennomsnittlig og momentan vekstfart i konkrete eksempler og gjøre rede for den deriverte",
+          "coreElements": []
+        },
+        {
+          "code": "Matematikk VGS-Vg1-11",
+          "text": "forklare polynomdivisjon og bruke det til å omskrive algebraiske uttrykk, drøfte funksjoner og løse ligninger og ulikheter",
+          "coreElements": []
+        },
+        {
+          "code": "Matematikk VGS-Vg1-12",
+          "text": "gjøre rede for definisjonene av sinus, cosinus og tangens og bruke trigonometri til å beregne lengder, vinkler og arealer i vilkårlige trekanter",
+          "coreElements": []
+        },
+        {
+          "code": "Matematikk VGS-Vg1-13",
+          "text": "begrunne sinus-, cosinus- og arealsetningen",
+          "coreElements": []
+        },
+        {
+          "code": "Matematikk VGS-Vg1-14",
+          "text": "bruke trigonometri til å analysere og løse sammensatte teoretiske og praktiske problemer med lengder, vinkler og arealer",
+          "coreElements": []
+        }
       ],
       "Vg2": [
-        "forklare og bruke prosent, prosentpoeng og vekstfaktor til modellering av praktiske situasjoner med digitale verktøy",
-        "utforske og forklare sammenhenger mellom prisindeks, kroneverdi, reallønn, nominell lønn og brutto- og nettoinntekt",
-        "utforske strategier for å løse ligninger, ligningssystemer og ulikheter og argumentere for tenkemåtene sine",
-        "vurdere valg knyttet til personlig økonomi og reflektere over konsekvenser av å ta opp lån og å bruke kredittkort",
-        "analysere og presentere funn i datasett fra lokalsamfunn og media",
-        "bruke og vurdere valg av hensiktsmessige sentralmål og spredningsmål for statistisk datamateriale",
-        "utforske og forklare hvordan formlikhet, målestokk og egenskaper ved geometriske figurer kan brukes i beregninger og i praktisk arbeid"
+        {
+          "code": "Matematikk VGS-Vg2-01",
+          "text": "forklare og bruke prosent, prosentpoeng og vekstfaktor til modellering av praktiske situasjoner med digitale verktøy",
+          "coreElements": []
+        },
+        {
+          "code": "Matematikk VGS-Vg2-02",
+          "text": "utforske og forklare sammenhenger mellom prisindeks, kroneverdi, reallønn, nominell lønn og brutto- og nettoinntekt",
+          "coreElements": []
+        },
+        {
+          "code": "Matematikk VGS-Vg2-03",
+          "text": "utforske strategier for å løse ligninger, ligningssystemer og ulikheter og argumentere for tenkemåtene sine",
+          "coreElements": []
+        },
+        {
+          "code": "Matematikk VGS-Vg2-04",
+          "text": "vurdere valg knyttet til personlig økonomi og reflektere over konsekvenser av å ta opp lån og å bruke kredittkort",
+          "coreElements": []
+        },
+        {
+          "code": "Matematikk VGS-Vg2-05",
+          "text": "analysere og presentere funn i datasett fra lokalsamfunn og media",
+          "coreElements": []
+        },
+        {
+          "code": "Matematikk VGS-Vg2-06",
+          "text": "bruke og vurdere valg av hensiktsmessige sentralmål og spredningsmål for statistisk datamateriale",
+          "coreElements": []
+        },
+        {
+          "code": "Matematikk VGS-Vg2-07",
+          "text": "utforske og forklare hvordan formlikhet, målestokk og egenskaper ved geometriske figurer kan brukes i beregninger og i praktisk arbeid",
+          "coreElements": []
+        }
       ],
       "Vg3": [
-        "utforske hvordan ulike premisser vil kunne påvirke hvordan matematiske problemer fra samfunnsliv og arbeidsliv løses",
-        "analysere og presentere funn i datasett fra lokalsamfunn og media",
-        "bruke og vurdere valg av formålstjenlige sentralmål og spredningsmål for statistisk datamateriale",
-        "lese, hente ut og vurdere matematikk i tekster om samfunnsfaglige temaer og temaer fra lokalmiljøet, gjøre beregninger knyttet til dette og presentere og argumentere for resultatene",
-        "utforske, beskrive og bruke begrepene proporsjonalitet og omvendt proporsjonalitet",
-        "identifisere variable størrelser i ulike situasjoner og bruke dem til utforsking og generalisering",
-        "forklare og bruke prosent, prosentpoeng og vekstfaktorer til modellering av praktiske situasjoner med digitale verktøy",
-        "tolke og regne med rotuttrykk, potenser og tall på standardform",
-        "planlegge, utføre og presentere selvstendig arbeid knyttet til modellering og funksjoner innenfor samfunnsfaglige temaer",
-        "bruke digitale verktøy i utforsking og problemløsing knyttet til egenskaper ved funksjoner og diskutere løsningene"
+        {
+          "code": "Matematikk VGS-Vg3-01",
+          "text": "utforske hvordan ulike premisser vil kunne påvirke hvordan matematiske problemer fra samfunnsliv og arbeidsliv løses",
+          "coreElements": []
+        },
+        {
+          "code": "Matematikk VGS-Vg3-02",
+          "text": "analysere og presentere funn i datasett fra lokalsamfunn og media",
+          "coreElements": []
+        },
+        {
+          "code": "Matematikk VGS-Vg3-03",
+          "text": "bruke og vurdere valg av formålstjenlige sentralmål og spredningsmål for statistisk datamateriale",
+          "coreElements": []
+        },
+        {
+          "code": "Matematikk VGS-Vg3-04",
+          "text": "lese, hente ut og vurdere matematikk i tekster om samfunnsfaglige temaer og temaer fra lokalmiljøet, gjøre beregninger knyttet til dette og presentere og argumentere for resultatene",
+          "coreElements": []
+        },
+        {
+          "code": "Matematikk VGS-Vg3-05",
+          "text": "utforske, beskrive og bruke begrepene proporsjonalitet og omvendt proporsjonalitet",
+          "coreElements": []
+        },
+        {
+          "code": "Matematikk VGS-Vg3-06",
+          "text": "identifisere variable størrelser i ulike situasjoner og bruke dem til utforsking og generalisering",
+          "coreElements": []
+        },
+        {
+          "code": "Matematikk VGS-Vg3-07",
+          "text": "forklare og bruke prosent, prosentpoeng og vekstfaktorer til modellering av praktiske situasjoner med digitale verktøy",
+          "coreElements": []
+        },
+        {
+          "code": "Matematikk VGS-Vg3-08",
+          "text": "tolke og regne med rotuttrykk, potenser og tall på standardform",
+          "coreElements": []
+        },
+        {
+          "code": "Matematikk VGS-Vg3-09",
+          "text": "planlegge, utføre og presentere selvstendig arbeid knyttet til modellering og funksjoner innenfor samfunnsfaglige temaer",
+          "coreElements": []
+        },
+        {
+          "code": "Matematikk VGS-Vg3-10",
+          "text": "bruke digitale verktøy i utforsking og problemløsing knyttet til egenskaper ved funksjoner og diskutere løsningene",
+          "coreElements": []
+        }
       ]
     }
   }

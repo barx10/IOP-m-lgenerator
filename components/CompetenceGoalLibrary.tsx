@@ -53,18 +53,7 @@ export const CompetenceGoalLibrary: React.FC<CompetenceGoalLibraryProps> = ({
         const subjectData = (dataSource as any)[subjectCode];
         if (!subjectData || !subjectData.levels[selectedLevel]) return [];
         
-        const goals = subjectData.levels[selectedLevel];
-        
-        // For VGS, goals are simple strings, convert to CompetenceGoal format
-        if (isVGS) {
-            return goals.map((text: string, index: number) => ({
-                code: `${subjectCode}-${selectedLevel}-${index + 1}`,
-                text: text,
-                coreElements: []
-            }));
-        }
-        
-        return goals;
+        return subjectData.levels[selectedLevel];
     }, [subjectCode, selectedLevel, isVGS]);
 
     // Filter goals based on search term
