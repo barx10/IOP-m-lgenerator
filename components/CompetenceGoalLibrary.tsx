@@ -47,13 +47,26 @@ export const CompetenceGoalLibrary: React.FC<CompetenceGoalLibraryProps> = ({
 
     // Get available goals for selected subject and level
     const availableGoals: CompetenceGoal[] = useMemo(() => {
-        if (!subjectCode || !selectedLevel) return [];
+        if (!subjectCode || !selectedLevel) {
+            console.log('CompetenceGoalLibrary: Missing subjectCode or selectedLevel', { subjectCode, selectedLevel });
+            return [];
+        }
         
         const dataSource = isVGS ? competenceGoalsVGSData : competenceGoalsData;
+        console.log('CompetenceGoalLibrary: Looking up', { isVGS, subjectCode, selectedLevel, availableKeys: Object.keys(dataSource) });
         const subjectData = (dataSource as any)[subjectCode];
-        if (!subjectData || !subjectData.levels[selectedLevel]) return [];
+        if (!subjectData) {
+            console.log('CompetenceGoalLibrary: Subject not found in data source');
+            return [];
+        }
+        if (!subjectData.levels[selectedLevel]) {
+            console.log('CompetenceGoalLibrary: Level not found', { availableLevels: Object.keys(subjectData.levels || {}) });
+            return [];
+        }
         
-        return subjectData.levels[selectedLevel];
+        const goals = subjectData.levels[selectedLevel];
+        console.log('CompetenceGoalLibrary: Found goals', goals.length);
+        return goals;
     }, [subjectCode, selectedLevel, isVGS]);
 
     // Filter goals based on search term
