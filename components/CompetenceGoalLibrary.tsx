@@ -24,6 +24,8 @@ export const CompetenceGoalLibrary: React.FC<CompetenceGoalLibraryProps> = ({
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedGoals, setSelectedGoals] = useState<string[]>(currentlySelected);
 
+    console.log('CompetenceGoalLibrary: Received props', { selectedSubject, selectedLevel });
+    
     // Determine if this is a VGS subject
     const isVGS = selectedSubject.includes('VGS');
     
