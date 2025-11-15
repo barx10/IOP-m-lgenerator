@@ -248,24 +248,13 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
                                     </div>
 
                                     <div>
-                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 7: Velg kompetansemål</h4>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 7: Velg kompetansemål og generer</h4>
                                         <p className="mb-2">
                                             Du kan enten:
                                         </p>
                                         <ul className="list-disc pl-6 space-y-1">
                                             <li><strong>📚 Velg fra bibliotek:</strong> Bla gjennom kompetansemål fra læreplanen og velg ETT mål som er mest relevant</li>
                                             <li><strong>✍️ Lim inn selv:</strong> Kopier inn kompetansemålet manuelt hvis du har det fra annet sted</li>
-                                        </ul>
-                                    </div>
-
-                                    <div>
-                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 8: Velg vanskelighetsgrad og generer</h4>
-                                        <p className="mb-2">
-                                            Sett vanskelighetsgraden for målene:
-                                        </p>
-                                        <ul className="list-disc pl-6 space-y-1">
-                                            <li><strong>Tilpasset:</strong> Mål som er enklere enn kompetansemålet</li>
-                                            <li><strong>Utfordrende:</strong> Mål som er ambisiøse, men realistiske</li>
                                         </ul>
                                         <p className="mt-2">
                                             Klikk deretter på <strong>"✨ Generer IOP-mål"</strong>-knappen. KI-en vil nå analysere 
@@ -274,9 +263,20 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
                                     </div>
 
                                     <div>
-                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 9: Velg og rediger forslag</h4>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 8: Velg vanskelighetsgrad</h4>
                                         <p className="mb-2">
-                                            Når forslagene er generert:
+                                            Når forslagene er generert, sett vanskelighetsgraden for målene:
+                                        </p>
+                                        <ul className="list-disc pl-6 space-y-1">
+                                            <li><strong>Tilpasset:</strong> Mål som er enklere enn kompetansemålet</li>
+                                            <li><strong>Utfordrende:</strong> Mål som er ambisiøse, men realistiske</li>
+                                        </ul>
+                                    </div>
+
+                                    <div>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 9: Rediger forslag</h4>
+                                        <p className="mb-2">
+                                            Gå gjennom de genererte målene:
                                         </p>
                                         <ul className="list-disc pl-6 space-y-1">
                                             <li>Du får flere forslag til ferdighetsmål og kunnskapsmål</li>
