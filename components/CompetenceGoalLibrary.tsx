@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import competenceGoalsData from '../data/competenceGoals.json';
+import competenceGoalsVGSData from '../data/competenceGoalsVGS.json';
 
 interface CompetenceGoal {
     code: string;
@@ -23,7 +24,10 @@ export const CompetenceGoalLibrary: React.FC<CompetenceGoalLibraryProps> = ({
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedGoals, setSelectedGoals] = useState<string[]>(currentlySelected);
 
-    // Map subject names to codes
+    // Determine if this is a VGS subject
+    const isVGS = selectedSubject.includes('VGS');
+    
+    // Map subject names to codes (for grunnskole)
     const subjectCodeMap: Record<string, string> = {
         'Matematikk': 'MAT',
         'Norsk': 'NOR',
@@ -39,17 +43,29 @@ export const CompetenceGoalLibrary: React.FC<CompetenceGoalLibraryProps> = ({
         'Mat og helse': 'MAH'
     };
 
-    const subjectCode = subjectCodeMap[selectedSubject];
+    const subjectCode = isVGS ? selectedSubject : subjectCodeMap[selectedSubject];
 
     // Get available goals for selected subject and level
     const availableGoals: CompetenceGoal[] = useMemo(() => {
         if (!subjectCode || !selectedLevel) return [];
         
-        const subjectData = (competenceGoalsData as any)[subjectCode];
+        const dataSource = isVGS ? competenceGoalsVGSData : competenceGoalsData;
+        const subjectData = (dataSource as any)[subjectCode];
         if (!subjectData || !subjectData.levels[selectedLevel]) return [];
         
-        return subjectData.levels[selectedLevel];
-    }, [subjectCode, selectedLevel]);
+        const goals = subjectData.levels[selectedLevel];
+        
+        // For VGS, goals are simple strings, convert to CompetenceGoal format
+        if (isVGS) {
+            return goals.map((text: string, index: number) => ({
+                code: `${subjectCode}-${selectedLevel}-${index + 1}`,
+                text: text,
+                coreElements: []
+            }));
+        }
+        
+        return goals;
+    }, [subjectCode, selectedLevel, isVGS]);
 
     // Filter goals based on search term
     const filteredGoals = useMemo(() => {

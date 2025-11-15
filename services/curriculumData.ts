@@ -13,6 +13,13 @@ export const curriculumSubjects: string[] = [
     'Naturfag',
 ];
 
+export const vgsSubjects: string[] = [
+    'Norsk VGS',
+    'Matematikk VGS',
+];
+
+export const allSubjects: string[] = [...curriculumSubjects, ...vgsSubjects];
+
 export const curriculumData: CurriculumData = {
     'Norsk': {
         coreElements: [

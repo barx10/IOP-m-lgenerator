@@ -11,7 +11,7 @@ import {
   IopGoal
 } from './types';
 import { generateIopGoals } from './services/geminiService.backend';
-import { curriculumData, curriculumSubjects } from './services/curriculumData';
+import { curriculumData, allSubjects } from './services/curriculumData';
 
 import { Card } from './components/Card';
 import { CompetenceGoalSelector } from './components/CompetenceGoalSelector';
@@ -81,6 +81,7 @@ const App: React.FC = () => {
             setProfile(prev => ({
                 ...prev,
                 subject: value,
+                grade: '', // Reset grade when subject changes (VGS vs grunnskole)
                 selectedCoreElement: '',
                 selectedCrossCurricularTheme: '',
             }));
@@ -829,17 +830,32 @@ const App: React.FC = () => {
                                     </label>
                                     <select id="grade" name="grade" value={profile.grade} onChange={handleProfileChange} className="mt-1 block w-full pl-3 pr-10 py-2.5 text-base border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-brand-blue sm:text-sm rounded-lg bg-white shadow-sm transition-all">
                                         <option value="" disabled>Velg kompetansemålnivå</option>
-                                        <option value="2">Etter 2. trinn (1-2)</option>
-                                        <option value="4">Etter 4. trinn (3-4)</option>
-                                        <option value="7">Etter 7. trinn (5-7)</option>
-                                        <option value="10">Etter 10. trinn (8-10)</option>
+                                        {profile.subject.includes('VGS') ? (
+                                            <>
+                                                <option value="Vg1">Vg1</option>
+                                                <option value="Vg2">Vg2</option>
+                                                <option value="Vg3">Vg3</option>
+                                            </>
+                                        ) : (
+                                            <>
+                                                <option value="2">Etter 2. trinn (1-2)</option>
+                                                <option value="4">Etter 4. trinn (3-4)</option>
+                                                <option value="7">Etter 7. trinn (5-7)</option>
+                                                <option value="10">Etter 10. trinn (8-10)</option>
+                                            </>
+                                        )}
                                     </select>
                                 </div>
                                 <div className="sm:col-span-3">
                                     <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 mb-1">Fag</label>
                                     <select id="subject" name="subject" value={profile.subject} onChange={handleProfileChange} className="mt-1 block w-full pl-3 pr-10 py-2.5 text-base border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-brand-blue sm:text-sm rounded-lg bg-white shadow-sm transition-all">
                                         <option value="" disabled>Velg fag</option>
-                                        {curriculumSubjects.map(sub => <option key={sub} value={sub}>{sub}</option>)}
+                                        <optgroup label="Grunnskole">
+                                            {allSubjects.filter(s => !s.includes('VGS')).map(sub => <option key={sub} value={sub}>{sub}</option>)}
+                                        </optgroup>
+                                        <optgroup label="Videregående">
+                                            {allSubjects.filter(s => s.includes('VGS')).map(sub => <option key={sub} value={sub}>{sub}</option>)}
+                                        </optgroup>
                                     </select>
                                 </div>
                                 <div className="sm:col-span-6">
