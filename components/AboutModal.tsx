@@ -274,17 +274,20 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
                                     </div>
 
                                     <div>
-                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 9: Rediger forslag</h4>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 9: Rediger og tilpass målene</h4>
                                         <p className="mb-2">
-                                            Gå gjennom de genererte målene:
+                                            <strong>Dette er kraften i appen:</strong> KI-en gir deg smarte forslag, men DU har full kontroll over innholdet.
                                         </p>
                                         <ul className="list-disc pl-6 space-y-1">
-                                            <li>Du får flere forslag til ferdighetsmål og kunnskapsmål</li>
-                                            <li>Velg de målene som passer best for eleven</li>
-                                            <li>Klikk på tekst i IOP-mål, samlet vurdering og sosiale mål for å redigere direkte</li>
-                                            <li>Tilpass målene til elevens spesifikke behov</li>
-                                            <li>Kvalitetssikre at målene er realistiske og målbare</li>
+                                            <li><strong>✍️ Klikk og rediger:</strong> All tekst kan redigeres direkte - både IOP-mål, samlet vurdering og sosiale mål</li>
+                                            <li><strong>🎯 Velg dine favoritter:</strong> Plukk ut de forslagene som passer best, ignorer resten</li>
+                                            <li><strong>✨ Tilpass ordlyden:</strong> Endre formuleringer så de matcher akkurat din elev og situasjon</li>
+                                            <li><strong>➕ Legg til egne:</strong> Du kan legge til helt egne mål eller tekst der du trenger det</li>
+                                            <li><strong>🔧 Kombiner fritt:</strong> Bruk KI-forslagene som utgangspunkt og tilpass til elevens spesifikke behov</li>
                                         </ul>
+                                        <p className="mt-2 text-sm text-gray-600">
+                                            💡 <em>Appen er et verktøy som sparer deg tid, ikke en ferdig løsning. Din faglige vurdering er alltid det viktigste!</em>
+                                        </p>
                                     </div>
 
                                     <div>
