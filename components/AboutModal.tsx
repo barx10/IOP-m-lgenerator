@@ -192,37 +192,17 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
                                     </div>
 
                                     <div>
-                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 1: Fyll ut elevinfo og rammer</h4>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 1: Fyll ut tema</h4>
                                         <ul className="list-disc pl-6 space-y-1">
                                             <li><strong>Elevkode:</strong> Bruk initialer eller en kode (f.eks. "EL01")</li>
-                                            <li><strong>Starttid og sluttid:</strong> Velg perioden IOP-målene skal gjelde for</li>
-                                            <li><strong>Kompetansemålnivå:</strong> Velg nærmeste sluttvurderingstidspunkt (2. trinn, 4. trinn, osv.)</li>
+                                            <li><strong>Kompetansemålnivå:</strong> Velg nærmeste sluttvurderingstidspunkt (2. trinn, 4. trinn, 7. trinn, 10. trinn, Vg1, Vg2, Vg3)</li>
                                             <li><strong>Fag:</strong> Velg hvilket fag målene skal lages for</li>
                                             <li><strong>Tema:</strong> Beskriv temaet for perioden (f.eks. "Å skrive en fortelling")</li>
                                         </ul>
                                     </div>
 
                                     <div>
-                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 2: Velg kjerneelementer (valgfritt)</h4>
-                                        <p className="mb-2">
-                                            Klikk på kortene for å velge relevante kjerneelementer og tverrfaglige tema. 
-                                            Dette hjelper KI-en med å lage mer presise forslag.
-                                        </p>
-                                    </div>
-
-                                    <div>
-                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 3: Velg kompetansemål</h4>
-                                        <p className="mb-2">
-                                            Du kan enten:
-                                        </p>
-                                        <ul className="list-disc pl-6 space-y-1">
-                                            <li><strong>📚 Velg fra bibliotek:</strong> Bla gjennom kompetansemål fra læreplanen og velg ETT mål som er mest relevant</li>
-                                            <li><strong>✍️ Lim inn selv:</strong> Kopier inn kompetansemålet manuelt hvis du har det fra annet sted</li>
-                                        </ul>
-                                    </div>
-
-                                    <div>
-                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 4: Legg inn sakkyndig vurdering</h4>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 2: Lim inn fra sakkyndig vurdering</h4>
                                         <p className="mb-2">
                                             Lim inn relevant tekst fra sakkyndig vurdering som beskriver:
                                         </p>
@@ -237,7 +217,49 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
                                     </div>
 
                                     <div>
-                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 5: Velg vanskelighetsgrad</h4>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 3: Sett tidsramme</h4>
+                                        <ul className="list-disc pl-6 space-y-1">
+                                            <li><strong>Starttid:</strong> Velg når IOP-perioden starter</li>
+                                            <li><strong>Sluttid:</strong> Velg når IOP-perioden slutter</li>
+                                        </ul>
+                                    </div>
+
+                                    <div>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 4: Velg kjerneelementer (valgfritt)</h4>
+                                        <p className="mb-2">
+                                            Klikk på kortet "Kjerneelement" for å åpne modal og velg relevante kjerneelementer. 
+                                            Dette hjelper KI-en med å lage mer presise forslag.
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 5: Velg tverrfaglig tema (valgfritt)</h4>
+                                        <p className="mb-2">
+                                            Klikk på kortet "Tverrfaglig tema" for å åpne modal og velg et relevant tverrfaglig tema hvis ønskelig.
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 6: Velg sosiale mål (valgfritt)</h4>
+                                        <p className="mb-2">
+                                            Hvis eleven har sosiale mål i IOP-en, kan du velge fra forhåndsdefinerte sosiale mål. 
+                                            Disse kan redigeres senere.
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 7: Velg kompetansemål</h4>
+                                        <p className="mb-2">
+                                            Du kan enten:
+                                        </p>
+                                        <ul className="list-disc pl-6 space-y-1">
+                                            <li><strong>📚 Velg fra bibliotek:</strong> Bla gjennom kompetansemål fra læreplanen og velg ETT mål som er mest relevant</li>
+                                            <li><strong>✍️ Lim inn selv:</strong> Kopier inn kompetansemålet manuelt hvis du har det fra annet sted</li>
+                                        </ul>
+                                    </div>
+
+                                    <div>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 8: Velg vanskelighetsgrad og generer</h4>
                                         <p className="mb-2">
                                             Sett vanskelighetsgraden for målene:
                                         </p>
@@ -245,56 +267,48 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
                                             <li><strong>Tilpasset:</strong> Mål som er enklere enn kompetansemålet</li>
                                             <li><strong>Utfordrende:</strong> Mål som er ambisiøse, men realistiske</li>
                                         </ul>
-                                    </div>
-
-                                    <div>
-                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 6: Generer IOP-mål</h4>
-                                        <p className="mb-2">
-                                            Klikk på <strong>"✨ Generer IOP-mål"</strong>-knappen. KI-en vil nå:
+                                        <p className="mt-2">
+                                            Klikk deretter på <strong>"✨ Generer IOP-mål"</strong>-knappen. KI-en vil nå analysere 
+                                            all informasjonen og foreslå konkrete mål.
                                         </p>
-                                        <ul className="list-disc pl-6 space-y-1">
-                                            <li>Analysere all informasjonen du har lagt inn</li>
-                                            <li>Foreslå konkrete ferdighetsmål og kunnskapsmål</li>
-                                            <li>Gi en samlet vurdering av måloppnåelse</li>
-                                            <li>Beskrive hvordan kjerneelementer påvirker målene</li>
-                                        </ul>
                                     </div>
 
                                     <div>
-                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 7: Rediger og tilpass</h4>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 9: Velg ferdighetsmål og kunnskapsmål</h4>
                                         <p className="mb-2">
                                             Når forslagene er generert:
                                         </p>
                                         <ul className="list-disc pl-6 space-y-1">
-                                            <li>Les gjennom alle forslag nøye</li>
-                                            <li>Klikk på tekst for å redigere den direkte</li>
+                                            <li>Du får flere forslag til ferdighetsmål og kunnskapsmål</li>
+                                            <li>Velg de målene som passer best for eleven</li>
+                                            <li>Klikk på tekst for å redigere målene direkte</li>
                                             <li>Tilpass målene til elevens spesifikke behov</li>
-                                            <li>Kvalitetssikre at målene er realistiske og målbare</li>
                                         </ul>
                                     </div>
 
                                     <div>
-                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 8: Velg sosiale mål (valgfritt)</h4>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 10: Rediger og kvalitetssikre</h4>
                                         <p className="mb-2">
-                                            Hvis eleven har sosiale mål i IOP-en, kan du:
+                                            Gå gjennom alle målene:
                                         </p>
                                         <ul className="list-disc pl-6 space-y-1">
-                                            <li>Velge fra forhåndsdefinerte sosiale mål</li>
-                                            <li>Redigere målene for å tilpasse dem</li>
-                                            <li>Legge til egne sosiale mål</li>
+                                            <li>Les gjennom IOP-mål, samlet vurdering og sosiale mål</li>
+                                            <li>Klikk på tekst for å redigere den direkte</li>
+                                            <li>Kvalitetssikre at målene er realistiske og målbare</li>
+                                            <li>Pass på at målene er tilpasset elevens nivå</li>
                                         </ul>
                                     </div>
 
                                     <div>
-                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 9: Lagre faget</h4>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 11: Lagre faget</h4>
                                         <p className="mb-2">
-                                            Når du er fornøyd med målene, klikk <strong>"💾 Lagre fag"</strong>. 
+                                            Når du er fornøyd med målene, klikk <strong>"💾 Lagre fag"</strong> (knappen ligger nederst på siden). 
                                             Du kan lagre flere fag for samme elev.
                                         </p>
                                     </div>
 
                                     <div>
-                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 10: Last ned Word-dokument</h4>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 12: Last ned Word-dokument</h4>
                                         <p className="mb-2">
                                             Når alle fag er lagret:
                                         </p>
