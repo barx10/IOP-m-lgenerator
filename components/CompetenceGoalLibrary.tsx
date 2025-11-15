@@ -41,6 +41,14 @@ export const CompetenceGoalLibrary: React.FC<CompetenceGoalLibraryProps> = ({
 
     const subjectCode = subjectCodeMap[selectedSubject];
 
+    // Format level display text
+    const getLevelDisplayText = (level: string): string => {
+        if (level.startsWith('Vg')) {
+            return level; // Vg1, Vg2, Vg3
+        }
+        return `Etter ${level}. trinn`; // Etter 2. trinn, etc.
+    };
+
     // Get available goals for selected subject and level
     const availableGoals: CompetenceGoal[] = useMemo(() => {
         if (!subjectCode || !selectedLevel) {
@@ -137,7 +145,7 @@ export const CompetenceGoalLibrary: React.FC<CompetenceGoalLibraryProps> = ({
             <div className="bg-gradient-to-r from-brand-blue to-purple-600 text-white p-4 rounded-lg">
                 <h3 className="text-lg font-semibold mb-1">📚 Kompetansemålbibliotek</h3>
                 <p className="text-sm opacity-90">
-                    {(competenceGoalsData as any)[subjectCode].name} - Etter {selectedLevel === '2' ? '2.' : selectedLevel === '4' ? '4.' : selectedLevel === '7' ? '7.' : '10.'} trinn
+                    {(competenceGoalsData as any)[subjectCode].name} - {getLevelDisplayText(selectedLevel)}
                 </p>
                 <p className="text-xs opacity-75 mt-1">
                     💡 Velg ETT kompetansemål som er mest relevant
