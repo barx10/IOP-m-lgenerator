@@ -253,6 +253,7 @@ const App: React.FC = () => {
             },
             overallBenefit: iopResult.overallBenefitSuggestion,
             coreElementsNote: iopResult.coreElementsInfluenceNote || '',
+            recommendations: iopResult.recommendations || '',
             editedSocialGoals: { ...editedSocialGoals }, // Save edited social goals
         };
 
@@ -301,7 +302,8 @@ const App: React.FC = () => {
             skillsSuggestions: [saved.selections.skills],
             knowledgeSuggestions: [saved.selections.knowledge],
             overallBenefitSuggestion: saved.overallBenefit,
-            coreElementsInfluenceNote: saved.coreElementsNote
+            coreElementsInfluenceNote: saved.coreElementsNote,
+            recommendations: saved.recommendations || ''
         });
         setEditedSocialGoals(saved.editedSocialGoals || {});
         setStatus('idle'); // Keep status as idle so form is still visible
@@ -479,6 +481,18 @@ const App: React.FC = () => {
                                 spacing: { after: 200 }
                             }));
                             
+                            // Add recommendations if present
+                            if (saved.recommendations) {
+                                sections.push(new Paragraph({
+                                    children: [new TextRun({ text: "Konkrete anbefalinger: ", bold: true })],
+                                    spacing: { before: 100, after: 50 }
+                                }));
+                                sections.push(new Paragraph({
+                                    text: saved.recommendations,
+                                    spacing: { after: 200 }
+                                }));
+                            }
+                            
                             // Add social goals summary if present
                             if (saved.profile.selectedSocialGoals && saved.profile.selectedSocialGoals.length > 0) {
                                 const socialGoalNames = saved.profile.selectedSocialGoals
@@ -517,7 +531,7 @@ const App: React.FC = () => {
     const renderIopResult = () => {
         if (!iopResult) return null;
     
-        const { coreElementsInfluenceNote, skillsSuggestions, knowledgeSuggestions, overallBenefitSuggestion } = iopResult;
+        const { coreElementsInfluenceNote, recommendations, skillsSuggestions, knowledgeSuggestions, overallBenefitSuggestion } = iopResult;
         const isPrintable = !!(selections.skills && selections.knowledge);
     
         return (
@@ -776,9 +790,22 @@ const App: React.FC = () => {
                 {/* Summary with recommendations - placed before save button */}
                 <Card title="Sammendrag og anbefalinger" icon={<DocumentIcon />} className="border-l-4 border-brand-blue">
                     {coreElementsInfluenceNote ? (
-                        <div>
-                            <p className="text-gray-700 text-base leading-relaxed">{coreElementsInfluenceNote}</p>
-                            <div className="mt-4 pt-4 border-t border-gray-200 bg-blue-50 -mx-6 -mb-6 px-6 py-4 rounded-b-lg">
+                        <div className="space-y-6">
+                            <div>
+                                <h4 className="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-2">Sammendrag</h4>
+                                <p className="text-gray-700 text-base leading-relaxed">{coreElementsInfluenceNote}</p>
+                            </div>
+                            
+                            {recommendations && (
+                                <div className="pt-4 border-t border-gray-200">
+                                    <h4 className="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-3">Konkrete anbefalinger</h4>
+                                    <div className="text-gray-700 text-sm leading-relaxed whitespace-pre-line">
+                                        {recommendations}
+                                    </div>
+                                </div>
+                            )}
+                            
+                            <div className="pt-4 border-t border-gray-200 bg-blue-50 -mx-6 -mb-6 px-6 py-4 rounded-b-lg">
                                 <p className="text-sm text-gray-600 italic">
                                     💡 Dette sammendraget gir et helhetlig bilde av elevens IOP og anbefales inkludert i dokumentet.
                                 </p>
