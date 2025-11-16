@@ -68,6 +68,7 @@ const App: React.FC = () => {
     const [error, setError] = useState<string | null>(null);
     const [iopResult, setIopResult] = useState<IopConstructionKit | null>(null);
     const [selections, setSelections] = useState<Selections>({ skills: null, knowledge: null });
+    const [selectedIndices, setSelectedIndices] = useState<{ skills: number | null; knowledge: number | null }>({ skills: null, knowledge: null });
     const [loadingProgress, setLoadingProgress] = useState(0);
     const [savedSubjects, setSavedSubjects] = useState<SavedSubject[]>([]);
     const [studentCode, setStudentCode] = useState<string>(''); // For student initials/code
@@ -190,13 +191,19 @@ const App: React.FC = () => {
         setError(null);
         setIopResult(null);
         setSelections({ skills: null, knowledge: null });
+        setSelectedIndices({ skills: null, knowledge: null });
         setLoadingProgress(0);
     };
 
-    const handleSelectionChange = (type: 'skills' | 'knowledge', goal: IopGoal) => {
+    const handleSelectionChange = (type: 'skills' | 'knowledge', goal: IopGoal, index: number) => {
+        const isSelected = selectedIndices[type] === index;
         setSelections(prev => ({
             ...prev,
-            [type]: prev[type]?.goal === goal.goal ? null : goal
+            [type]: isSelected ? null : goal
+        }));
+        setSelectedIndices(prev => ({
+            ...prev,
+            [type]: isSelected ? null : index
         }));
     };
 
@@ -291,6 +298,7 @@ const App: React.FC = () => {
         setError(null);
         setIopResult(null);
         setSelections({ skills: null, knowledge: null });
+        setSelectedIndices({ skills: null, knowledge: null });
         setLoadingProgress(0);
         setEditedSocialGoals({}); // Reset edited social goals
         setEditedOtherNeedsMeasures({}); // Reset edited other needs measures
@@ -313,6 +321,7 @@ const App: React.FC = () => {
         setProfile(saved.profile);
         setFramework(saved.framework);
         setSelections(saved.selections);
+        setSelectedIndices({ skills: 0, knowledge: 0 }); // Set to 0 since we only have one suggestion each when editing
         setIopResult({
             skillsSuggestions: [saved.selections.skills],
             knowledgeSuggestions: [saved.selections.knowledge],
@@ -590,14 +599,14 @@ const App: React.FC = () => {
                     <div className="space-y-4">
                         {skillsSuggestions && skillsSuggestions.length > 0 ? (
                             skillsSuggestions.map((suggestion, index) => (
-                                <div key={index} className={`p-4 rounded-xl border cursor-pointer transition-all duration-200 ${selections.skills?.goal === suggestion.goal ? 'bg-accent-purple-light border-accent-purple ring-2 ring-accent-purple shadow-md' : 'bg-white border-gray-200 hover:border-accent-purple hover:shadow-md'}`} onClick={() => handleSelectionChange('skills', suggestion)}>
+                                <div key={index} className={`p-4 rounded-xl border cursor-pointer transition-all duration-200 ${selectedIndices.skills === index ? 'bg-accent-purple-light border-accent-purple ring-2 ring-accent-purple shadow-md' : 'bg-white border-gray-200 hover:border-accent-purple hover:shadow-md'}`} onClick={() => handleSelectionChange('skills', suggestion, index)}>
                                     <div className="flex justify-between items-start gap-4">
                                         <p className="font-medium text-gray-800 flex-grow text-base">{suggestion.goal}</p>
                                         {difficultyLabels[index] && (
                                              <span className="text-xs font-semibold text-accent-purple bg-accent-purple-light px-2.5 py-1 rounded-full whitespace-nowrap">{difficultyLabels[index]}</span>
                                         )}
                                     </div>
-                                    {selections.skills?.goal === suggestion.goal && (
+                                    {selectedIndices.skills === index && (
                                         <div className="mt-4 text-base text-gray-700 space-y-3 leading-relaxed">
                                             <div>
                                                 <span className="font-semibold">Mål:</span>
@@ -650,14 +659,14 @@ const App: React.FC = () => {
                      <div className="space-y-4">
                         {knowledgeSuggestions && knowledgeSuggestions.length > 0 ? (
                             knowledgeSuggestions.map((suggestion, index) => (
-                                <div key={index} className={`p-4 rounded-xl border cursor-pointer transition-all duration-200 ${selections.knowledge?.goal === suggestion.goal ? 'bg-accent-orange-light border-accent-orange ring-2 ring-accent-orange shadow-md' : 'bg-white border-gray-200 hover:border-accent-orange hover:shadow-md'}`} onClick={() => handleSelectionChange('knowledge', suggestion)}>
+                                <div key={index} className={`p-4 rounded-xl border cursor-pointer transition-all duration-200 ${selectedIndices.knowledge === index ? 'bg-accent-orange-light border-accent-orange ring-2 ring-accent-orange shadow-md' : 'bg-white border-gray-200 hover:border-accent-orange hover:shadow-md'}`} onClick={() => handleSelectionChange('knowledge', suggestion, index)}>
                                     <div className="flex justify-between items-start gap-4">
                                         <p className="font-medium text-gray-800 flex-grow text-base">{suggestion.goal}</p>
                                         {difficultyLabels[index] && (
                                             <span className="text-xs font-semibold text-accent-orange bg-accent-orange-light px-2.5 py-1 rounded-full whitespace-nowrap">{difficultyLabels[index]}</span>
                                         )}
                                     </div>
-                                    {selections.knowledge?.goal === suggestion.goal && (
+                                    {selectedIndices.knowledge === index && (
                                         <div className="mt-4 text-base text-gray-700 space-y-3 leading-relaxed">
                                             <div>
                                                 <span className="font-semibold">Mål:</span>
