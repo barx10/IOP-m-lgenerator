@@ -63,6 +63,7 @@ export interface SavedSubject {
   coreElementsNote: string;
   recommendations?: string;
   editedSocialGoals?: Record<string, any>;
+  editedOtherNeedsMeasures?: Record<string, string[]>;
 }
 
 export interface CurriculumData {

@@ -36,13 +36,13 @@ export const EditableField: React.FC<EditableFieldProps> = ({
     if (!isEditing) {
         return (
             <div className={`group relative ${className}`}>
-                <p className="text-base text-gray-800 leading-relaxed pr-8">{value}</p>
+                <p className="text-base text-gray-800 leading-relaxed pr-8 whitespace-pre-line">{value}</p>
                 <button
                     onClick={() => setIsEditing(true)}
-                    className="absolute top-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity p-1 rounded hover:bg-gray-100"
-                    title="Rediger"
+                    className="absolute top-0 right-0 opacity-50 group-hover:opacity-100 transition-opacity p-1 rounded hover:bg-gray-100"
+                    title="Klikk for å redigere"
                 >
-                    <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-gray-500 hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                     </svg>
                 </button>

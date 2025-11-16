@@ -73,6 +73,7 @@ const App: React.FC = () => {
     const [studentCode, setStudentCode] = useState<string>(''); // For student initials/code
     const [showAboutModal, setShowAboutModal] = useState(false);
     const [editedSocialGoals, setEditedSocialGoals] = useState<Record<string, any>>({});
+    const [editedOtherNeedsMeasures, setEditedOtherNeedsMeasures] = useState<Record<string, string[]>>({});
     const [editingSubjectIndex, setEditingSubjectIndex] = useState<number | null>(null); // Track which subject is being edited
 
     // Get available subjects based on selected grade level
@@ -237,6 +238,18 @@ const App: React.FC = () => {
         }));
     };
 
+    const handleUpdateOtherNeedMeasure = (needId: string, measureIndex: number, value: string) => {
+        setEditedOtherNeedsMeasures(prev => {
+            const currentMeasures = prev[needId] || otherNeedsData.otherNeeds.find((n: any) => n.id === needId)?.measures || [];
+            const newMeasures = [...currentMeasures];
+            newMeasures[measureIndex] = value;
+            return {
+                ...prev,
+                [needId]: newMeasures
+            };
+        });
+    };
+
     const handleSaveSubject = () => {
         if (!selections.skills || !selections.knowledge || !iopResult?.overallBenefitSuggestion) {
             alert('Vennligst velg både ferdighets- og kunnskapsmål før du lagrer.');
@@ -255,6 +268,7 @@ const App: React.FC = () => {
             coreElementsNote: iopResult.coreElementsInfluenceNote || '',
             recommendations: iopResult.recommendations || '',
             editedSocialGoals: { ...editedSocialGoals }, // Save edited social goals
+            editedOtherNeedsMeasures: { ...editedOtherNeedsMeasures }, // Save edited measures
         };
 
         // If we're editing an existing subject, replace it; otherwise add new
@@ -279,6 +293,7 @@ const App: React.FC = () => {
         setSelections({ skills: null, knowledge: null });
         setLoadingProgress(0);
         setEditedSocialGoals({}); // Reset edited social goals
+        setEditedOtherNeedsMeasures({}); // Reset edited other needs measures
         
         // Scroll to top
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -306,6 +321,7 @@ const App: React.FC = () => {
             recommendations: saved.recommendations || ''
         });
         setEditedSocialGoals(saved.editedSocialGoals || {});
+        setEditedOtherNeedsMeasures(saved.editedOtherNeedsMeasures || {});
         setStatus('idle'); // Keep status as idle so form is still visible
         
         // Scroll down to show the result
@@ -462,15 +478,17 @@ const App: React.FC = () => {
                                     spacing: { after: 50 }
                                 }));
                                 
-                                // Add measures if available
-                                if (need.measures && need.measures.length > 0) {
+                                // Use edited measures if available, otherwise use original
+                                const measures = saved.editedOtherNeedsMeasures?.[needId] || need.measures || [];
+                                
+                                if (measures.length > 0) {
                                     sections.push(new Paragraph({
                                         text: "Konkrete tiltak:",
                                         spacing: { before: 50, after: 50 },
                                         indent: { left: 360 }
                                     }));
                                     
-                                    need.measures.forEach((measure: string) => {
+                                    measures.forEach((measure: string) => {
                                         sections.push(new Paragraph({
                                             text: `• ${measure}`,
                                             spacing: { after: 50 },
@@ -754,17 +772,24 @@ const App: React.FC = () => {
                                 const need = otherNeedsData.otherNeeds.find((n: any) => n.id === needId);
                                 if (!need) return null;
                                 
+                                // Use edited measures if available, otherwise use original
+                                const measures = editedOtherNeedsMeasures[needId] || need.measures || [];
+                                
                                 return (
                                     <div key={needId} className="p-4 bg-teal-50 border-2 border-teal-200 rounded-lg">
                                         <p className="font-semibold text-gray-900 text-sm mb-2">{need.name}</p>
                                         <p className="text-xs text-gray-600 mb-3">{need.description}</p>
                                         <div className="pt-3 mt-3 border-t border-teal-300">
                                             <p className="text-xs font-semibold text-teal-800 mb-2">📋 Konkrete tiltak:</p>
-                                            <ul className="space-y-1.5">
-                                                {need.measures?.map((measure: string, idx: number) => (
+                                            <ul className="space-y-2">
+                                                {measures.map((measure: string, idx: number) => (
                                                     <li key={idx} className="text-xs text-gray-700 flex items-start gap-2">
-                                                        <span className="text-teal-600 mt-0.5">•</span>
-                                                        <span>{measure}</span>
+                                                        <span className="text-teal-600 mt-0.5 flex-shrink-0">•</span>
+                                                        <EditableField
+                                                            value={measure}
+                                                            onSave={(value) => handleUpdateOtherNeedMeasure(needId, idx, value)}
+                                                            className="flex-1"
+                                                        />
                                                     </li>
                                                 ))}
                                             </ul>
@@ -1314,15 +1339,18 @@ const App: React.FC = () => {
                                                         const need = otherNeedsData.otherNeeds.find((n: any) => n.id === needId);
                                                         if (!need) return null;
                                                         
+                                                        // Use edited measures if available, otherwise use original
+                                                        const measures = saved.editedOtherNeedsMeasures?.[needId] || need.measures || [];
+                                                        
                                                         return (
                                                             <div key={needId} className="p-4 bg-teal-50 border-2 border-teal-200 rounded-lg">
                                                                 <p className="font-semibold text-gray-900 text-sm mb-2">{need.name}</p>
                                                                 <p className="text-xs text-gray-600 mb-3">{need.description}</p>
-                                                                {need.measures && need.measures.length > 0 && (
+                                                                {measures.length > 0 && (
                                                                     <div className="pt-3 mt-3 border-t border-teal-300">
                                                                         <p className="text-xs font-semibold text-teal-800 mb-2">📋 Konkrete tiltak:</p>
                                                                         <ul className="space-y-1.5">
-                                                                            {need.measures.map((measure: string, idx: number) => (
+                                                                            {measures.map((measure: string, idx: number) => (
                                                                                 <li key={idx} className="text-xs text-gray-700 flex items-start gap-2">
                                                                                     <span className="text-teal-600 mt-0.5">•</span>
                                                                                     <span>{measure}</span>
