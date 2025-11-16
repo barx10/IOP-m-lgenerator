@@ -462,6 +462,48 @@ const App: React.FC = () => {
                             });
                         }
                         
+                        // Sammendrag og anbefalinger
+                        if (saved.coreElementsNote) {
+                            sections.push(new Paragraph({
+                                text: "Sammendrag og anbefalinger",
+                                heading: HeadingLevel.HEADING_3,
+                                spacing: { before: 300, after: 100 }
+                            }));
+                            
+                            sections.push(new Paragraph({
+                                children: [new TextRun({ text: "Tilrettelegging og tiltak: ", bold: true })],
+                                spacing: { after: 50 }
+                            }));
+                            sections.push(new Paragraph({
+                                text: saved.coreElementsNote,
+                                spacing: { after: 200 }
+                            }));
+                            
+                            // Add social goals summary if present
+                            if (saved.profile.selectedSocialGoals && saved.profile.selectedSocialGoals.length > 0) {
+                                const socialGoalNames = saved.profile.selectedSocialGoals
+                                    .map(goalId => socialGoalsData.categories.find((g: any) => g.id === goalId)?.name)
+                                    .filter(Boolean)
+                                    .join(', ');
+                                sections.push(new Paragraph({
+                                    text: `Sosiale mål i fokus: ${socialGoalNames}.`,
+                                    spacing: { after: 100 }
+                                }));
+                            }
+                            
+                            // Add other needs summary if present
+                            if (saved.profile.selectedOtherNeeds && saved.profile.selectedOtherNeeds.length > 0) {
+                                const needNames = saved.profile.selectedOtherNeeds
+                                    .map(needId => otherNeedsData.otherNeeds.find((n: any) => n.id === needId)?.name)
+                                    .filter(Boolean)
+                                    .join(', ');
+                                sections.push(new Paragraph({
+                                    text: `Tilretteleggingen tar hensyn til: ${needNames}.`,
+                                    spacing: { after: 200 }
+                                }));
+                            }
+                        }
+                        
                         return sections;
                     })
                 ]
@@ -489,17 +531,6 @@ const App: React.FC = () => {
                     <div className="w-32"></div> {/* Spacer for alignment */}
                 </div>
                 {status === 'error' && <p className="text-red-600 text-sm mt-4 text-center">{error}</p>}
-
-                <Card title="Sammendrag" icon={<DocumentIcon />}>
-                    {coreElementsInfluenceNote ? (
-                        <p className="text-gray-700 text-base leading-relaxed">{coreElementsInfluenceNote}</p>
-                    ) : (
-                        <div className="animate-pulse">
-                            <div className="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
-                            <div className="h-4 bg-gray-200 rounded w-1/2"></div>
-                        </div>
-                    )}
-                </Card>
 
                 <Card title="Velg mål for ferdigheter" icon={<CheckCircleIcon />} className="border-l-4 border-accent-purple">
                     <div className="space-y-4">
@@ -735,6 +766,55 @@ const App: React.FC = () => {
                         </p>
                     </Card>
                 )}
+
+                {/* Summary with recommendations - placed before save button */}
+                <Card title="Sammendrag og anbefalinger" icon={<DocumentIcon />} className="border-l-4 border-brand-blue">
+                    {coreElementsInfluenceNote ? (
+                        <div className="space-y-4">
+                            <div>
+                                <h4 className="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-2">Tilrettelegging og tiltak</h4>
+                                <p className="text-gray-700 text-base leading-relaxed">{coreElementsInfluenceNote}</p>
+                            </div>
+                            
+                            {/* Show social goals summary if selected */}
+                            {profile.selectedSocialGoals && profile.selectedSocialGoals.length > 0 && (
+                                <div className="pt-4 border-t border-gray-200">
+                                    <h4 className="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-2">Sosiale mål i fokus</h4>
+                                    <p className="text-gray-700 text-sm leading-relaxed">
+                                        Følgende sosiale områder er integrert i målene: {profile.selectedSocialGoals.map(goalId => {
+                                            const goal = socialGoalsData.categories.find((g: any) => g.id === goalId);
+                                            return goal?.name;
+                                        }).filter(Boolean).join(', ')}.
+                                    </p>
+                                </div>
+                            )}
+                            
+                            {/* Show other needs summary if selected */}
+                            {profile.selectedOtherNeeds && profile.selectedOtherNeeds.length > 0 && (
+                                <div className="pt-4 border-t border-gray-200">
+                                    <h4 className="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-2">Spesielle behov</h4>
+                                    <p className="text-gray-700 text-sm leading-relaxed">
+                                        Tilretteleggingen tar hensyn til: {profile.selectedOtherNeeds.map(needId => {
+                                            const need = otherNeedsData.otherNeeds.find((n: any) => n.id === needId);
+                                            return need?.name;
+                                        }).filter(Boolean).join(', ')}.
+                                    </p>
+                                </div>
+                            )}
+                            
+                            <div className="pt-4 border-t border-gray-200 bg-blue-50 -mx-6 -mb-6 px-6 py-4 rounded-b-lg">
+                                <p className="text-sm text-gray-600 italic">
+                                    💡 Dette sammendraget gir et helhetlig bilde av elevens IOP og anbefales inkludert i dokumentet.
+                                </p>
+                            </div>
+                        </div>
+                    ) : (
+                        <div className="animate-pulse">
+                            <div className="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
+                            <div className="h-4 bg-gray-200 rounded w-1/2"></div>
+                        </div>
+                    )}
+                </Card>
 
                 {/* Save button at the bottom */}
                 <div className="flex justify-center pt-4">

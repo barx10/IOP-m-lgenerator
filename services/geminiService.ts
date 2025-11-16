@@ -19,7 +19,11 @@ export const generateIopGoals = async (
 VIKTIG: Du skal ALLTID skrive på norsk (bokmål). ALDRI bytt til andre språk.
 
 Basert på input skal du generere:
-1) 1 kort note som kobler sakkyndig vurdering, kjerneelementer og kompetansemål til elevens behov
+1) 1 sammendrag (ca. 3-5 setninger) som:
+   - Kobler sakkyndig vurdering, kjerneelementer og kompetansemål til elevens behov
+   - Gir konkrete forslag til tilrettelegging og tiltak på alle relevante områder
+   - Forklarer HVORDAN eleven skal støttes i å nå målene (metoder, verktøy, arbeidsmåter)
+   - Er praktisk anvendelig for lærere som skal følge opp eleven
 2) 2 ferdighetsmål (praktiske ferdigheter)
 3) 2 kunnskapsmål (teoretisk kunnskap)
 4) 1 kort samlet vurdering av om målene er realistiske og i tråd med alder
