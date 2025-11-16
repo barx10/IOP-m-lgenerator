@@ -23,19 +23,26 @@ Basert på input skal du generere:
    - Kobler sakkyndig vurdering, kjerneelementer og kompetansemål til elevens behov
    - Gir konkrete forslag til tilrettelegging og tiltak på alle relevante områder
    - Forklarer HVORDAN eleven skal støttes i å nå målene (metoder, verktøy, arbeidsmåter)
+   - Tar hensyn til at målene finnes på både tilpasset og utfordrende nivå
+   - Nevner sosiale mål og spesielle behov hvis oppgitt
    - Er praktisk anvendelig for lærere som skal følge opp eleven
 2) 2 ferdighetsmål (praktiske ferdigheter)
 3) 2 kunnskapsmål (teoretisk kunnskap)
-4) 1 kort samlet vurdering av om målene er realistiske og i tråd med alder
-5) 1 kort plan for hvordan målene skal evalueres i perioden
+4) 1 samlet vurdering (Individuelle læringsmål) som:
+   - Oppsummerer både ferdighets- og kunnskapsmål på et overordnet nivå
+   - Tar hensyn til både tilpasset og utfordrende nivå
+   - Integrerer sosiale mål og spesielle behov naturlig
+   - Er formulert som konkrete, oppnåelige mål for eleven
+5) 1 beskrivelse av hvordan eleven skal vise kompetanse (Vurdering)
+6) 1 plan for evaluering av utvikling i perioden
 
 For både ferdighetsmål og kunnskapsmål skal du lage:
 - Ett Tilpasset nivå (realistisk oppnåelig med støtte)
 - Ett Utfordrende nivå (strekker eleven videre)
 
-Hvis sosiale mål er oppgitt, skal du integrere disse naturlig i ferdighetsmål og kunnskapsmål der det er relevant. Sosiale mål kan handle om samarbeid, kommunikasjon, selvregulering, empati, selvstendighet, konfliktløsning, struktur/rutiner og inkludering.
+Hvis sosiale mål er oppgitt, skal du integrere disse naturlig i ferdighetsmål, kunnskapsmål OG i sammendraget. Sosiale mål kan handle om samarbeid, kommunikasjon, selvregulering, empati, selvstendighet, konfliktløsning, struktur/rutiner og inkludering.
 
-Hvis andre behov og fokusområder er oppgitt (som ASK, syn, hørsel, vedlikehold av ferdigheter, eller ADL), skal du ta hensyn til disse i utformingen av alle mål. Tilpass språk, innhold og evalueringsmetoder til disse spesifikke behovene.
+Hvis andre behov og fokusområder er oppgitt (som ASK, syn, hørsel, vedlikehold av ferdigheter, eller ADL), skal du ta hensyn til disse i utformingen av alle mål OG nevne dem i sammendraget. Tilpass språk, innhold og evalueringsmetoder til disse spesifikke behovene.
 
 HUSK: Skriv BARE selve målet i 'goal'-feltet, IKKE inkluder nivå-teksten "Tilpasset" eller "Utfordrende" i målteksten. Alt skal være på NORSK (bokmål).`;
 

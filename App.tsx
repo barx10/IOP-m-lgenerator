@@ -652,6 +652,92 @@ const App: React.FC = () => {
                     </div>
                 </Card>
 
+                {/* Show selected social goals if any - MOVED BEFORE IOP goals */}
+                {profile.selectedSocialGoals && profile.selectedSocialGoals.length > 0 && (
+                    <Card title="Sosiale mål for perioden" icon={<span className="text-2xl">👥</span>}>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                            {profile.selectedSocialGoals.map((goalId) => {
+                                const originalGoal = socialGoalsData.categories.find((g: any) => g.id === goalId);
+                                if (!originalGoal) return null;
+                                
+                                // Use edited values if available, otherwise use original
+                                const goal = {
+                                    ...originalGoal,
+                                    description: editedSocialGoals[goalId]?.description || originalGoal.description,
+                                    examples: editedSocialGoals[goalId]?.examples 
+                                        ? JSON.parse(editedSocialGoals[goalId].examples)
+                                        : originalGoal.examples
+                                };
+                                
+                                return (
+                                    <div key={goalId} className="p-4 bg-purple-50 border-2 border-purple-200 rounded-xl">
+                                        <div className="flex items-center gap-2 mb-2">
+                                            <span className="text-2xl">{goal.icon}</span>
+                                            <span className="font-semibold text-gray-900">{goal.name}</span>
+                                        </div>
+                                        <EditableField
+                                            value={goal.description}
+                                            onSave={(value) => handleUpdateSocialGoal(goalId, 'description', value)}
+                                            multiline
+                                            className="text-sm text-gray-600 mb-3"
+                                        />
+                                        <div className="mt-3 pt-3 border-t border-purple-200">
+                                            <p className="text-xs font-semibold text-purple-700 mb-2">Forslag til tiltak:</p>
+                                            <ul className="text-xs text-gray-600 space-y-1">
+                                                {goal.examples.slice(0, 3).map((example: string, idx: number) => (
+                                                    <li key={idx} className="flex items-start">
+                                                        <span className="mr-1">•</span>
+                                                        <EditableField
+                                                            value={example}
+                                                            onSave={(value) => {
+                                                                const updatedExamples = [...goal.examples];
+                                                                updatedExamples[idx] = value;
+                                                                handleUpdateSocialGoal(goalId, 'examples', JSON.stringify(updatedExamples));
+                                                            }}
+                                                            className="flex-1"
+                                                        />
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                        <p className="mt-4 text-sm text-gray-500 italic">
+                            💡 Disse sosiale målene er vevd inn i ferdighetsmål og kunnskapsmål ovenfor
+                        </p>
+                    </Card>
+                )}
+
+                {/* Show selected other needs if any - MOVED BEFORE IOP goals */}
+                {profile.selectedOtherNeeds && profile.selectedOtherNeeds.length > 0 && (
+                    <Card title="Andre behov og fokusområder" icon={<span className="text-2xl">🎯</span>}>
+                        <div className="space-y-3">
+                            {profile.selectedOtherNeeds.map((needId) => {
+                                const need = otherNeedsData.otherNeeds.find((n: any) => n.id === needId);
+                                if (!need) return null;
+                                
+                                return (
+                                    <div key={needId} className="p-4 bg-teal-50 border-2 border-teal-200 rounded-lg">
+                                        <p className="font-semibold text-gray-900 text-sm mb-2">{need.name}</p>
+                                        <p className="text-xs text-gray-600">{need.description}</p>
+                                        <div className="pt-3 mt-3 border-t border-teal-200">
+                                            <p className="text-xs font-semibold text-teal-700 mb-2">Forslag til tilrettelegging:</p>
+                                            <p className="text-xs text-gray-600 italic">
+                                                Tiltak for dette behovet er integrert i ferdighetsmål og kunnskapsmål ovenfor.
+                                            </p>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                        <p className="mt-4 text-sm text-gray-500 italic">
+                            🎯 Disse behovene er tatt hensyn til i utformingen av målene
+                        </p>
+                    </Card>
+                )}
+
                 <Card title="IOP-mål" icon={<DocumentIcon />}>
                     {overallBenefitSuggestion ? (
                          <div className="space-y-6">
@@ -687,122 +773,12 @@ const App: React.FC = () => {
                     )}
                 </Card>
 
-                {/* Show selected social goals if any */}
-                {profile.selectedSocialGoals && profile.selectedSocialGoals.length > 0 && (
-                    <Card title="Sosiale mål for perioden" icon={<span className="text-2xl">👥</span>}>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                            {profile.selectedSocialGoals.map((goalId) => {
-                                const originalGoal = socialGoalsData.categories.find((g: any) => g.id === goalId);
-                                if (!originalGoal) return null;
-                                
-                                // Use edited values if available, otherwise use original
-                                const goal = {
-                                    ...originalGoal,
-                                    description: editedSocialGoals[goalId]?.description || originalGoal.description,
-                                    examples: editedSocialGoals[goalId]?.examples 
-                                        ? JSON.parse(editedSocialGoals[goalId].examples)
-                                        : originalGoal.examples
-                                };
-                                
-                                return (
-                                    <div key={goalId} className="p-4 bg-purple-50 border-2 border-purple-200 rounded-xl">
-                                        <div className="flex items-center gap-2 mb-2">
-                                            <span className="text-2xl">{goal.icon}</span>
-                                            <span className="font-semibold text-gray-900">{goal.name}</span>
-                                        </div>
-                                        <EditableField
-                                            value={goal.description}
-                                            onSave={(value) => handleUpdateSocialGoal(goalId, 'description', value)}
-                                            multiline
-                                            className="text-sm text-gray-600 mb-3"
-                                        />
-                                        <div className="mt-3 pt-3 border-t border-purple-200">
-                                            <p className="text-xs font-semibold text-purple-700 mb-2">Eksempler på hvordan eleven jobber med dette:</p>
-                                            <ul className="text-xs text-gray-600 space-y-1">
-                                                {goal.examples.slice(0, 3).map((example: string, idx: number) => (
-                                                    <li key={idx} className="flex items-start">
-                                                        <span className="mr-1">•</span>
-                                                        <EditableField
-                                                            value={example}
-                                                            onSave={(value) => {
-                                                                const updatedExamples = [...goal.examples];
-                                                                updatedExamples[idx] = value;
-                                                                handleUpdateSocialGoal(goalId, 'examples', JSON.stringify(updatedExamples));
-                                                            }}
-                                                            className="flex-1"
-                                                        />
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    </div>
-                                );
-                            })}
-                        </div>
-                        <p className="mt-4 text-sm text-gray-500 italic">
-                            💡 Disse sosiale målene er vevd inn i ferdighetsmål og kunnskapsmål ovenfor
-                        </p>
-                    </Card>
-                )}
-
-                {/* Show selected other needs if any */}
-                {profile.selectedOtherNeeds && profile.selectedOtherNeeds.length > 0 && (
-                    <Card title="Andre behov og fokusområder" icon={<span className="text-2xl">🎯</span>}>
-                        <div className="space-y-3">
-                            {profile.selectedOtherNeeds.map((needId) => {
-                                const need = otherNeedsData.otherNeeds.find((n: any) => n.id === needId);
-                                if (!need) return null;
-                                
-                                return (
-                                    <div key={needId} className="p-4 bg-teal-50 border-2 border-teal-200 rounded-lg">
-                                        <p className="font-semibold text-gray-900 text-sm mb-2">{need.name}</p>
-                                        <p className="text-xs text-gray-600">{need.description}</p>
-                                    </div>
-                                );
-                            })}
-                        </div>
-                        <p className="mt-4 text-sm text-gray-500 italic">
-                            🎯 Disse behovene er tatt hensyn til i utformingen av målene
-                        </p>
-                    </Card>
-                )}
-
                 {/* Summary with recommendations - placed before save button */}
                 <Card title="Sammendrag og anbefalinger" icon={<DocumentIcon />} className="border-l-4 border-brand-blue">
                     {coreElementsInfluenceNote ? (
-                        <div className="space-y-4">
-                            <div>
-                                <h4 className="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-2">Tilrettelegging og tiltak</h4>
-                                <p className="text-gray-700 text-base leading-relaxed">{coreElementsInfluenceNote}</p>
-                            </div>
-                            
-                            {/* Show social goals summary if selected */}
-                            {profile.selectedSocialGoals && profile.selectedSocialGoals.length > 0 && (
-                                <div className="pt-4 border-t border-gray-200">
-                                    <h4 className="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-2">Sosiale mål i fokus</h4>
-                                    <p className="text-gray-700 text-sm leading-relaxed">
-                                        Følgende sosiale områder er integrert i målene: {profile.selectedSocialGoals.map(goalId => {
-                                            const goal = socialGoalsData.categories.find((g: any) => g.id === goalId);
-                                            return goal?.name;
-                                        }).filter(Boolean).join(', ')}.
-                                    </p>
-                                </div>
-                            )}
-                            
-                            {/* Show other needs summary if selected */}
-                            {profile.selectedOtherNeeds && profile.selectedOtherNeeds.length > 0 && (
-                                <div className="pt-4 border-t border-gray-200">
-                                    <h4 className="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-2">Spesielle behov</h4>
-                                    <p className="text-gray-700 text-sm leading-relaxed">
-                                        Tilretteleggingen tar hensyn til: {profile.selectedOtherNeeds.map(needId => {
-                                            const need = otherNeedsData.otherNeeds.find((n: any) => n.id === needId);
-                                            return need?.name;
-                                        }).filter(Boolean).join(', ')}.
-                                    </p>
-                                </div>
-                            )}
-                            
-                            <div className="pt-4 border-t border-gray-200 bg-blue-50 -mx-6 -mb-6 px-6 py-4 rounded-b-lg">
+                        <div>
+                            <p className="text-gray-700 text-base leading-relaxed">{coreElementsInfluenceNote}</p>
+                            <div className="mt-4 pt-4 border-t border-gray-200 bg-blue-50 -mx-6 -mb-6 px-6 py-4 rounded-b-lg">
                                 <p className="text-sm text-gray-600 italic">
                                     💡 Dette sammendraget gir et helhetlig bilde av elevens IOP og anbefales inkludert i dokumentet.
                                 </p>
