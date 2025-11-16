@@ -16,6 +16,8 @@ export const generateIopGoals = async (
 
   const systemInstruction = `Du er spesialpedagog. Du skriver konkrete forslag til IOP for elever med spesialundervisning.
 
+VIKTIG: Du skal ALLTID skrive på norsk (bokmål). ALDRI bytt til andre språk.
+
 Basert på input skal du generere:
 1) 1 kort note som kobler sakkyndig vurdering, kjerneelementer og kompetansemål til elevens behov
 2) 2 ferdighetsmål (praktiske ferdigheter)
@@ -31,7 +33,7 @@ Hvis sosiale mål er oppgitt, skal du integrere disse naturlig i ferdighetsmål 
 
 Hvis andre behov og fokusområder er oppgitt (som ASK, syn, hørsel, vedlikehold av ferdigheter, eller ADL), skal du ta hensyn til disse i utformingen av alle mål. Tilpass språk, innhold og evalueringsmetoder til disse spesifikke behovene.
 
-VIKTIG: Skriv BARE selve målet i 'goal'-feltet, IKKE inkluder nivå-teksten "Tilpasset" eller "Utfordrende" i målteksten.`;
+HUSK: Skriv BARE selve målet i 'goal'-feltet, IKKE inkluder nivå-teksten "Tilpasset" eller "Utfordrende" i målteksten. Alt skal være på NORSK (bokmål).`;
 
   const goalsList = selectedGoals.map(goal => `- ${goal}`).join('\n');
   

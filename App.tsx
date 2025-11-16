@@ -714,6 +714,28 @@ const App: React.FC = () => {
                     </Card>
                 )}
 
+                {/* Show selected other needs if any */}
+                {profile.selectedOtherNeeds && profile.selectedOtherNeeds.length > 0 && (
+                    <Card title="Andre behov og fokusområder" icon={<span className="text-2xl">🎯</span>}>
+                        <div className="space-y-3">
+                            {profile.selectedOtherNeeds.map((needId) => {
+                                const need = otherNeedsData.otherNeeds.find((n: any) => n.id === needId);
+                                if (!need) return null;
+                                
+                                return (
+                                    <div key={needId} className="p-4 bg-teal-50 border-2 border-teal-200 rounded-lg">
+                                        <p className="font-semibold text-gray-900 text-sm mb-2">{need.name}</p>
+                                        <p className="text-xs text-gray-600">{need.description}</p>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                        <p className="mt-4 text-sm text-gray-500 italic">
+                            🎯 Disse behovene er tatt hensyn til i utformingen av målene
+                        </p>
+                    </Card>
+                )}
+
                 {/* Save button at the bottom */}
                 <div className="flex justify-center pt-4">
                     <button 
