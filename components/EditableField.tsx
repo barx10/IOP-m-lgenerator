@@ -38,7 +38,10 @@ export const EditableField: React.FC<EditableFieldProps> = ({
             <div className={`group relative ${className}`}>
                 <p className="text-base text-gray-800 leading-relaxed pr-8 whitespace-pre-line">{value}</p>
                 <button
-                    onClick={() => setIsEditing(true)}
+                    onClick={(e) => {
+                        e.stopPropagation(); // Prevent parent click handlers
+                        setIsEditing(true);
+                    }}
                     className="absolute top-0 right-0 opacity-50 group-hover:opacity-100 transition-opacity p-1 rounded hover:bg-gray-100"
                     title="Klikk for å redigere"
                 >
@@ -51,7 +54,7 @@ export const EditableField: React.FC<EditableFieldProps> = ({
     }
 
     return (
-        <div className={className}>
+        <div className={className} onClick={(e) => e.stopPropagation()}>
             {multiline ? (
                 <textarea
                     value={editValue}
