@@ -248,7 +248,24 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
                                     </div>
 
                                     <div>
-                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 7: Velg kompetansemål og generer</h4>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 7: Velg andre behov (valgfritt)</h4>
+                                        <p className="mb-2">
+                                            Hvis eleven har spesifikke behov eller fokusområder, kan du velge relevante alternativer:
+                                        </p>
+                                        <ul className="list-disc pl-6 space-y-1">
+                                            <li><strong>ASK:</strong> Alternativ og Supplerende Kommunikasjon</li>
+                                            <li><strong>Syn:</strong> Tilrettelegging for synsvansker</li>
+                                            <li><strong>Hørsel:</strong> Tilrettelegging for hørselsvansker</li>
+                                            <li><strong>Vedlikehold av ferdigheter:</strong> Fokus på å opprettholde allerede ervervede ferdigheter</li>
+                                            <li><strong>ADL:</strong> Dagliglivets aktiviteter (personlig hygiene, påkledning, selvstendighet)</li>
+                                        </ul>
+                                        <p className="mt-2">
+                                            KI-en vil ta hensyn til disse behovene når den genererer IOP-mål.
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 8: Velg kompetansemål og generer</h4>
                                         <p className="mb-2">
                                             Du kan enten:
                                         </p>
@@ -263,7 +280,7 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
                                     </div>
 
                                     <div>
-                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 8: Velg vanskelighetsgrad</h4>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 9: Velg vanskelighetsgrad</h4>
                                         <p className="mb-2">
                                             Når forslagene er generert, sett vanskelighetsgraden for målene:
                                         </p>
@@ -274,7 +291,7 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
                                     </div>
 
                                     <div>
-                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 9: Rediger og tilpass målene</h4>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 10: Rediger og tilpass målene</h4>
                                         <p className="mb-2">
                                             <strong>Dette er kraften i appen:</strong> KI-en gir deg smarte forslag, men DU har full kontroll over innholdet.
                                         </p>
@@ -291,7 +308,7 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
                                     </div>
 
                                     <div>
-                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 10: Lagre faget</h4>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 11: Lagre faget</h4>
                                         <p className="mb-2">
                                             Når du er fornøyd med målene, klikk <strong>"💾 Lagre fag"</strong> (knappen ligger nederst på siden). 
                                             Du kan lagre flere fag for samme elev.
@@ -299,7 +316,7 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
                                     </div>
 
                                     <div>
-                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 11: Last ned Word-dokument</h4>
+                                        <h4 className="font-semibold text-gray-900 mb-2">Steg 12: Last ned Word-dokument</h4>
                                         <p className="mb-2">
                                             Når alle fag er lagret:
                                         </p>
