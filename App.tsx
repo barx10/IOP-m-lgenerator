@@ -459,8 +459,30 @@ const App: React.FC = () => {
                                 
                                 sections.push(new Paragraph({
                                     children: [new TextRun({ text: `${need.name}: `, bold: true }), new TextRun(need.description)],
-                                    spacing: { after: 100 }
+                                    spacing: { after: 50 }
                                 }));
+                                
+                                // Add measures if available
+                                if (need.measures && need.measures.length > 0) {
+                                    sections.push(new Paragraph({
+                                        text: "Konkrete tiltak:",
+                                        spacing: { before: 50, after: 50 },
+                                        indent: { left: 360 }
+                                    }));
+                                    
+                                    need.measures.forEach((measure: string) => {
+                                        sections.push(new Paragraph({
+                                            text: `• ${measure}`,
+                                            spacing: { after: 50 },
+                                            indent: { left: 720 }
+                                        }));
+                                    });
+                                    
+                                    sections.push(new Paragraph({
+                                        text: "",
+                                        spacing: { after: 100 }
+                                    }));
+                                }
                             });
                         }
                         
@@ -735,12 +757,17 @@ const App: React.FC = () => {
                                 return (
                                     <div key={needId} className="p-4 bg-teal-50 border-2 border-teal-200 rounded-lg">
                                         <p className="font-semibold text-gray-900 text-sm mb-2">{need.name}</p>
-                                        <p className="text-xs text-gray-600">{need.description}</p>
-                                        <div className="pt-3 mt-3 border-t border-teal-200">
-                                            <p className="text-xs font-semibold text-teal-700 mb-2">Forslag til tilrettelegging:</p>
-                                            <p className="text-xs text-gray-600 italic">
-                                                Tiltak for dette behovet er integrert i ferdighetsmål og kunnskapsmål ovenfor.
-                                            </p>
+                                        <p className="text-xs text-gray-600 mb-3">{need.description}</p>
+                                        <div className="pt-3 mt-3 border-t border-teal-300">
+                                            <p className="text-xs font-semibold text-teal-800 mb-2">📋 Konkrete tiltak:</p>
+                                            <ul className="space-y-1.5">
+                                                {need.measures?.map((measure: string, idx: number) => (
+                                                    <li key={idx} className="text-xs text-gray-700 flex items-start gap-2">
+                                                        <span className="text-teal-600 mt-0.5">•</span>
+                                                        <span>{measure}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
                                         </div>
                                     </div>
                                 );
@@ -1290,14 +1317,24 @@ const App: React.FC = () => {
                                                         return (
                                                             <div key={needId} className="p-4 bg-teal-50 border-2 border-teal-200 rounded-lg">
                                                                 <p className="font-semibold text-gray-900 text-sm mb-2">{need.name}</p>
-                                                                <p className="text-xs text-gray-600">{need.description}</p>
+                                                                <p className="text-xs text-gray-600 mb-3">{need.description}</p>
+                                                                {need.measures && need.measures.length > 0 && (
+                                                                    <div className="pt-3 mt-3 border-t border-teal-300">
+                                                                        <p className="text-xs font-semibold text-teal-800 mb-2">📋 Konkrete tiltak:</p>
+                                                                        <ul className="space-y-1.5">
+                                                                            {need.measures.map((measure: string, idx: number) => (
+                                                                                <li key={idx} className="text-xs text-gray-700 flex items-start gap-2">
+                                                                                    <span className="text-teal-600 mt-0.5">•</span>
+                                                                                    <span>{measure}</span>
+                                                                                </li>
+                                                                            ))}
+                                                                        </ul>
+                                                                    </div>
+                                                                )}
                                                             </div>
                                                         );
                                                     })}
                                                 </div>
-                                                <p className="mt-3 text-xs text-gray-500 italic">
-                                                    🎯 Disse behovene er tatt hensyn til i utformingen av målene
-                                                </p>
                                             </div>
                                         )}
                                     </div>

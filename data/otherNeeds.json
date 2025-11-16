@@ -3,27 +3,70 @@
     {
       "id": "ask",
       "name": "ASK (Alternativ og Supplerende Kommunikasjon)",
-      "description": "Fokus på kommunikasjon gjennom alternative verktøy og metoder som tegn, symboler, bilder eller teknologi."
+      "description": "Fokus på kommunikasjon gjennom alternative verktøy og metoder som tegn, symboler, bilder eller teknologi.",
+      "measures": [
+        "Bruk av kommunikasjonstavle eller bildesymboler (PECS, Bliss, etc.)",
+        "Tilgang til kommunikasjonsteknologi (talende musematte, iPad med kommunikasjonsapp)",
+        "Systematisk bruk av tegn til tale i undervisningen",
+        "Visuell støtte og strukturering av aktiviteter",
+        "Involvering av logoped i planlegging og oppfølging",
+        "Opplæring av personale og medelever i brukerens kommunikasjonssystem"
+      ]
     },
     {
       "id": "syn",
       "name": "Syn",
-      "description": "Tilrettelegging og tilpasning knyttet til synsvansker eller blindhet."
+      "description": "Tilrettelegging og tilpasning knyttet til synsvansker eller blindhet.",
+      "measures": [
+        "Tilpasset belysning og kontrastfarger i læringsmiljøet",
+        "Forstørret tekst og bilder (digital forstørrelse eller papir)",
+        "Taktilt materiell og konkrete hjelpemidler",
+        "Bruk av punktskrift og punktskriftsutstyr ved behov",
+        "Tilgang til digital teknologi med skjermleser eller talesyntese",
+        "God struktur og konsekvent plassering av materiell i klasserommet",
+        "Samarbeid med synskontakt/synspedagog"
+      ]
     },
     {
       "id": "horsel",
       "name": "Hørsel",
-      "description": "Tilrettelegging og tilpasning knyttet til hørselsvansker eller døvhet."
+      "description": "Tilrettelegging og tilpasning knyttet til hørselsvansker eller døvhet.",
+      "measures": [
+        "Bruk av FM-anlegg eller teleslynge i klasserommet",
+        "Tegnspråktolk ved behov",
+        "Visuell støtte: skriftlig informasjon, bilder og tavlebruk",
+        "Lærers plassering: god oversikt og god munnavlesning",
+        "Redusert støynivå og god akustikk i klasserommet",
+        "Ekstra tid til å bearbeide informasjon",
+        "Samarbeid med audiopedagog"
+      ]
     },
     {
       "id": "vedlikehold",
       "name": "Vedlikehold av ferdigheter",
-      "description": "Fokus på å opprettholde og vedlikeholde allerede ervervede ferdigheter (særlig relevant for voksne)."
+      "description": "Fokus på å opprettholde og vedlikeholde allerede ervervede ferdigheter (særlig relevant for voksne).",
+      "measures": [
+        "Regelmessig repetisjon og trening på tidligere innlærte ferdigheter",
+        "Strukturert plan for vedlikehold av kognitive og motoriske funksjoner",
+        "Varierte og meningsfulle aktiviteter for å opprettholde motivasjon",
+        "Tett oppfølging og evaluering av ferdighetsnivå",
+        "Tilpasning av aktivitetsnivå ved endringer i funksjon",
+        "Samarbeid med ergoterapeut og fysioterapeut ved behov"
+      ]
     },
     {
       "id": "adl",
       "name": "ADL (Activities of Daily Living)",
-      "description": "Dagliglivets aktiviteter - fokus på praktiske ferdigheter som personlig hygiene, påkledning, måltider og selvstendighet."
+      "description": "Dagliglivets aktiviteter - fokus på praktiske ferdigheter som personlig hygiene, påkledning, måltider og selvstendighet.",
+      "measures": [
+        "Systematisk trening på påkledning og personlig hygiene",
+        "Strukturert måltidstrening med fokus på selvstendighet",
+        "Bruk av visuelle støttesystemer (bildesekvenser, sjekklister)",
+        "Praktisk trening i naturlige situasjoner (kjøkken, garderobe, toalett)",
+        "Tilpasning av fysisk miljø for økt selvstendighet",
+        "Involvering av foreldre/foresatte for overføring til hjemmet",
+        "Samarbeid med ergoterapeut ved behov for hjelpemidler"
+      ]
     }
   ]
 }
