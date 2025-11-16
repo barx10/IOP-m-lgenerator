@@ -15,6 +15,7 @@ export interface StudentProfile {
   selectedCoreElement: string; // Changed from array to single string
   selectedCrossCurricularTheme: string; // Added for cross-curricular themes
   selectedSocialGoals?: string[]; // Added for social goals (max 3)
+  selectedOtherNeeds?: string[]; // Added for other needs (ASK, syn, hørsel, vedlikehold, ADL)
 }
 
 export interface Framework {

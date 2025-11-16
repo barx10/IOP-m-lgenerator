@@ -20,7 +20,9 @@ import { CoreElementsModal } from './components/CoreElementsModal';
 import { AboutModal } from './components/AboutModal';
 import { Footer } from './components/Footer';
 import { SocialGoalsSelector } from './components/SocialGoalsSelector';
+import { OtherNeedsSelector } from './components/OtherNeedsSelector';
 import socialGoalsData from './data/socialGoals.json';
+import otherNeedsData from './data/otherNeeds.json';
 import { EditableField } from './components/EditableField';
 
 import { DocumentIcon } from './components/icons/DocumentIcon';
@@ -45,6 +47,7 @@ const initialProfile: StudentProfile = {
   selectedCoreElement: '',
   selectedCrossCurricularTheme: '',
   selectedSocialGoals: [],
+  selectedOtherNeeds: [],
 };
 
 const initialFramework: Framework = {
@@ -435,6 +438,25 @@ const App: React.FC = () => {
                                 
                                 sections.push(new Paragraph({
                                     children: [new TextRun({ text: `${originalGoal.name}: `, bold: true }), new TextRun(description)],
+                                    spacing: { after: 100 }
+                                }));
+                            });
+                        }
+                        
+                        // Andre behov
+                        if (saved.profile.selectedOtherNeeds && saved.profile.selectedOtherNeeds.length > 0) {
+                            sections.push(new Paragraph({
+                                text: "Andre behov og fokusområder",
+                                heading: HeadingLevel.HEADING_3,
+                                spacing: { before: 300, after: 100 }
+                            }));
+                            
+                            saved.profile.selectedOtherNeeds.forEach(needId => {
+                                const need = otherNeedsData.otherNeeds.find((n: any) => n.id === needId);
+                                if (!need) return;
+                                
+                                sections.push(new Paragraph({
+                                    children: [new TextRun({ text: `${need.name}: `, bold: true }), new TextRun(need.description)],
                                     spacing: { after: 100 }
                                 }));
                             });
@@ -942,6 +964,15 @@ const App: React.FC = () => {
                             />
                         </Card>
 
+                        {/* Other Needs */}
+                        <Card title="Andre behov" icon={<span className="text-2xl">🎯</span>}>
+                            <OtherNeedsSelector
+                                selectedNeeds={profile.selectedOtherNeeds || []}
+                                onSelectionChange={(needs) => setProfile(prev => ({ ...prev, selectedOtherNeeds: needs }))}
+                                maxSelections={5}
+                            />
+                        </Card>
+
                         {/* Competence Goals */}
                         <CompetenceGoalSelector
                             selectedSubject={profile.subject}
@@ -1138,6 +1169,29 @@ const App: React.FC = () => {
                                                 </div>
                                                 <p className="mt-3 text-xs text-gray-500 italic">
                                                     💡 Disse sosiale målene er vevd inn i ferdighetsmål og kunnskapsmål ovenfor
+                                                </p>
+                                            </div>
+                                        )}
+
+                                        {/* Other Needs in Print */}
+                                        {saved.profile.selectedOtherNeeds && saved.profile.selectedOtherNeeds.length > 0 && (
+                                            <div className="mt-6">
+                                                <h3 className="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">Andre behov og fokusområder</h3>
+                                                <div className="space-y-3">
+                                                    {saved.profile.selectedOtherNeeds.map((needId) => {
+                                                        const need = otherNeedsData.otherNeeds.find((n: any) => n.id === needId);
+                                                        if (!need) return null;
+                                                        
+                                                        return (
+                                                            <div key={needId} className="p-4 bg-teal-50 border-2 border-teal-200 rounded-lg">
+                                                                <p className="font-semibold text-gray-900 text-sm mb-2">{need.name}</p>
+                                                                <p className="text-xs text-gray-600">{need.description}</p>
+                                                            </div>
+                                                        );
+                                                    })}
+                                                </div>
+                                                <p className="mt-3 text-xs text-gray-500 italic">
+                                                    🎯 Disse behovene er tatt hensyn til i utformingen av målene
                                                 </p>
                                             </div>
                                         )}

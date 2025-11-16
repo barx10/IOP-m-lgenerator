@@ -29,6 +29,8 @@ For både ferdighetsmål og kunnskapsmål skal du lage:
 
 Hvis sosiale mål er oppgitt, skal du integrere disse naturlig i ferdighetsmål og kunnskapsmål der det er relevant. Sosiale mål kan handle om samarbeid, kommunikasjon, selvregulering, empati, selvstendighet, konfliktløsning, struktur/rutiner og inkludering.
 
+Hvis andre behov og fokusområder er oppgitt (som ASK, syn, hørsel, vedlikehold av ferdigheter, eller ADL), skal du ta hensyn til disse i utformingen av alle mål. Tilpass språk, innhold og evalueringsmetoder til disse spesifikke behovene.
+
 VIKTIG: Skriv BARE selve målet i 'goal'-feltet, IKKE inkluder nivå-teksten "Tilpasset" eller "Utfordrende" i målteksten.`;
 
   const goalsList = selectedGoals.map(goal => `- ${goal}`).join('\n');
@@ -65,11 +67,23 @@ VIKTIG: Skriv BARE selve målet i 'goal'-feltet, IKKE inkluder nivå-teksten "Ti
     socialGoalsText = selectedGoalNames ? `**Sosiale mål:**\n${selectedGoalNames}\n` : '';
   }
 
+  // Get other needs (if selected)
+  let otherNeedsText = '';
+  if (profile.selectedOtherNeeds && profile.selectedOtherNeeds.length > 0) {
+    const otherNeedsData = await import('../data/otherNeeds.json');
+    const selectedNeedNames = profile.selectedOtherNeeds
+      .map(id => otherNeedsData.otherNeeds.find((n: any) => n.id === id))
+      .filter(Boolean)
+      .map((n: any) => `${n.name} - ${n.description}`)
+      .join('\n');
+    otherNeedsText = selectedNeedNames ? `**Andre behov og fokusområder:**\n${selectedNeedNames}\n` : '';
+  }
+
   const userPrompt = `
 **Trinn:** ${profile.grade} (ca. ${parseInt(profile.grade) + 5} år)
 **Fag:** ${profile.subject}
 **Tema:** ${profile.topic}
-${expertAssessment ? `**Sakkyndig:** ${expertAssessment}\n` : ''}${coreElementText ? `**Kjerneelement:** ${coreElementText}\n` : ''}${crossCurricularText ? `**Tverrfaglig tema:** ${crossCurricularText}\n` : ''}${socialGoalsText}**Kompetansemål:**
+${expertAssessment ? `**Sakkyndig:** ${expertAssessment}\n` : ''}${coreElementText ? `**Kjerneelement:** ${coreElementText}\n` : ''}${crossCurricularText ? `**Tverrfaglig tema:** ${crossCurricularText}\n` : ''}${socialGoalsText}${otherNeedsText}**Kompetansemål:**
 ${goalsList}
 `.trim();
 

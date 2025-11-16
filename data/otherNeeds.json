@@ -1,0 +1,29 @@
+{
+  "otherNeeds": [
+    {
+      "id": "ask",
+      "name": "ASK (Alternativ og Supplerende Kommunikasjon)",
+      "description": "Fokus på kommunikasjon gjennom alternative verktøy og metoder som tegn, symboler, bilder eller teknologi."
+    },
+    {
+      "id": "syn",
+      "name": "Syn",
+      "description": "Tilrettelegging og tilpasning knyttet til synsvansker eller blindhet."
+    },
+    {
+      "id": "horsel",
+      "name": "Hørsel",
+      "description": "Tilrettelegging og tilpasning knyttet til hørselsvansker eller døvhet."
+    },
+    {
+      "id": "vedlikehold",
+      "name": "Vedlikehold av ferdigheter",
+      "description": "Fokus på å opprettholde og vedlikeholde allerede ervervede ferdigheter (særlig relevant for voksne)."
+    },
+    {
+      "id": "adl",
+      "name": "ADL (Activities of Daily Living)",
+      "description": "Dagliglivets aktiviteter - fokus på praktiske ferdigheter som personlig hygiene, påkledning, måltider og selvstendighet."
+    }
+  ]
+}
