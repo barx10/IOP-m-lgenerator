@@ -598,7 +598,7 @@ const App: React.FC = () => {
     const renderIopResult = () => {
         if (!iopResult) return null;
     
-        const { coreElementsInfluenceNote, recommendations, skillsSuggestions, knowledgeSuggestions, overallBenefitSuggestion } = iopResult;
+        const { coreElementsInfluenceNote, recommendations, learningActivities, skillsSuggestions, knowledgeSuggestions, overallBenefitSuggestion } = iopResult;
         const isPrintable = !!(selections.skills && selections.knowledge);
     
         return (
@@ -846,12 +846,12 @@ const App: React.FC = () => {
                             </div>
                             
                             {/* Learning Activities inside IOP-mål */}
-                            {iopResult?.learningActivities && (
+                            {learningActivities && (
                                 <div>
                                     <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Læringsaktiviteter</h4>
                                     <p className="text-xs text-gray-500 mb-2">Konkrete aktiviteter basert på ferdighetsmål og kunnskapsmål</p>
                                     <EditableField
-                                        value={editedLearningActivities || iopResult.learningActivities}
+                                        value={editedLearningActivities || learningActivities}
                                         onSave={(value) => setEditedLearningActivities(value)}
                                         multiline
                                     />
