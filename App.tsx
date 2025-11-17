@@ -73,6 +73,7 @@ const App: React.FC = () => {
     const [savedSubjects, setSavedSubjects] = useState<SavedSubject[]>([]);
     const [studentCode, setStudentCode] = useState<string>(''); // For student initials/code
     const [showAboutModal, setShowAboutModal] = useState(false);
+    const [showBetaModal, setShowBetaModal] = useState(false);
     const [editedSocialGoals, setEditedSocialGoals] = useState<Record<string, any>>({});
     const [editedOtherNeedsMeasures, setEditedOtherNeedsMeasures] = useState<Record<string, string[]>>({});
     const [editedLearningActivities, setEditedLearningActivities] = useState<string>('');
@@ -986,22 +987,24 @@ const App: React.FC = () => {
         <>
             <div className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 min-h-screen">
                 {/* BETA stamp in top left corner */}
-                <div className="fixed top-8 left-8 z-40 pointer-events-none">
-                    <div className="relative">
-                        <div className="transform -rotate-12 opacity-30 hover:opacity-50 transition-opacity duration-300">
-                            <div className="relative">
-                                {/* Outer circle */}
-                                <div className="w-24 h-24 rounded-full border-4 border-red-600 flex items-center justify-center bg-white/10 backdrop-blur-sm">
-                                    {/* Inner circle */}
-                                    <div className="w-20 h-20 rounded-full border-2 border-red-600 flex items-center justify-center">
-                                        <span className="text-red-600 font-black text-2xl tracking-wider" style={{ fontFamily: 'Impact, Arial Black, sans-serif' }}>
-                                            BETA
-                                        </span>
-                                    </div>
+                <div className="fixed top-8 left-8 z-40">
+                    <button
+                        onClick={() => setShowBetaModal(true)}
+                        className="transform -rotate-12 opacity-30 hover:opacity-70 transition-all duration-300 cursor-pointer hover:scale-110"
+                        title="Klikk for BETA-informasjon"
+                    >
+                        <div className="relative">
+                            {/* Outer circle */}
+                            <div className="w-24 h-24 rounded-full border-4 border-red-600 flex items-center justify-center bg-white/10 backdrop-blur-sm">
+                                {/* Inner circle */}
+                                <div className="w-20 h-20 rounded-full border-2 border-red-600 flex items-center justify-center">
+                                    <span className="text-red-600 font-black text-2xl tracking-wider" style={{ fontFamily: 'Impact, Arial Black, sans-serif' }}>
+                                        BETA
+                                    </span>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </button>
                 </div>
 
                 {/* Om button in top right corner */}
@@ -1457,6 +1460,109 @@ const App: React.FC = () => {
 
             {/* About Modal */}
             <AboutModal isOpen={showAboutModal} onClose={() => setShowAboutModal(false)} />
+
+            {/* Beta Modal */}
+            {showBetaModal && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+                    <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+                        <div className="sticky top-0 bg-gradient-to-r from-red-600 to-red-500 text-white px-6 py-4 rounded-t-2xl flex justify-between items-center">
+                            <div className="flex items-center gap-3">
+                                <div className="w-12 h-12 rounded-full border-3 border-white flex items-center justify-center bg-white/10 backdrop-blur-sm transform -rotate-12">
+                                    <span className="font-black text-lg tracking-wider" style={{ fontFamily: 'Impact, Arial Black, sans-serif' }}>
+                                        BETA
+                                    </span>
+                                </div>
+                                <h2 className="text-2xl font-bold">Beta-versjon</h2>
+                            </div>
+                            <button
+                                onClick={() => setShowBetaModal(false)}
+                                className="text-white hover:text-red-100 transition-colors p-2"
+                                aria-label="Lukk"
+                            >
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div className="p-6 space-y-6">
+                            <div className="bg-red-50 border-l-4 border-red-600 p-4 rounded-r-lg">
+                                <h3 className="font-semibold text-red-900 mb-2">🚧 Dette er en beta-versjon</h3>
+                                <p className="text-red-800 text-sm">
+                                    IOP Målbygger er under aktiv testing og utvikling. Funksjoner kan endres, og det kan forekomme feil eller uventede resultater.
+                                </p>
+                            </div>
+
+                            <div className="space-y-4">
+                                <div>
+                                    <h3 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                                        <span className="text-xl">🧪</span>
+                                        Hva betyr BETA?
+                                    </h3>
+                                    <p className="text-gray-700 text-sm leading-relaxed">
+                                        En beta-versjon er en testversjon av programvaren som er tilgjengelig for utvalgte brukere. 
+                                        Den er ikke ferdig utviklet, men funksjonell nok til å gi verdifull tilbakemelding på funksjonalitet, 
+                                        brukervennlighet og eventuelle feil.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h3 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                                        <span className="text-xl">🎯</span>
+                                        Hva tester vi?
+                                    </h3>
+                                    <ul className="text-gray-700 text-sm space-y-2 list-disc list-inside">
+                                        <li>Kvalitet og relevans på AI-genererte IOP-mål</li>
+                                        <li>Brukervennlighet og arbeidsflyt</li>
+                                        <li>Integrasjon med kompetansemål fra LK20</li>
+                                        <li>Word-eksport og dokumenthåndtering</li>
+                                        <li>Tilpasning til ulike elever og fagområder</li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h3 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                                        <span className="text-xl">💡</span>
+                                        Din tilbakemelding er viktig!
+                                    </h3>
+                                    <p className="text-gray-700 text-sm leading-relaxed mb-3">
+                                        Som beta-tester hjelper du med å forbedre IOP Målbygger. Din erfaring og tilbakemeldinger 
+                                        er uvurderlige for å gjøre verktøyet bedre for alle spesialpedagoger.
+                                    </p>
+                                    <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                                        <p className="text-sm text-gray-800 mb-2">
+                                            <strong>Kontakt meg gjerne:</strong>
+                                        </p>
+                                        <ul className="text-sm text-gray-700 space-y-1">
+                                            <li>📧 E-post: <a href="mailto:kenneth@laererliv.no" className="text-blue-600 hover:text-blue-800 underline">kenneth@laererliv.no</a></li>
+                                            <li>🌐 Nettside: <a href="https://laererliv.no" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">laererliv.no</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-r-lg">
+                                    <h3 className="font-semibold text-yellow-900 mb-2 flex items-center gap-2">
+                                        <span className="text-xl">⚠️</span>
+                                        Viktig å vite
+                                    </h3>
+                                    <ul className="text-yellow-800 text-sm space-y-1 list-disc list-inside">
+                                        <li>Alltid kvalitetssjekk AI-generert innhold før bruk</li>
+                                        <li>Lagre viktige dokumenter lokalt (last ned Word)</li>
+                                        <li>Data kan gå tapt ved oppdateringer</li>
+                                        <li>Forvent endringer i funksjonalitet underveis</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div className="pt-4 border-t border-gray-200">
+                                <p className="text-sm text-gray-600 text-center">
+                                    Takk for at du bidrar til utviklingen av IOP Målbygger! 🙏
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
         </>
     );
 };
