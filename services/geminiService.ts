@@ -30,23 +30,30 @@ Basert på input skal du generere:
    - Er direkte anvendelige i klasserommet
    - Tar hensyn til sosiale mål og spesielle behov hvis oppgitt
    - Skrives som korte, klare punkter (1-2 setninger per punkt)
-3) 2 ferdighetsmål (praktiske ferdigheter)
-4) 2 kunnskapsmål (teoretisk kunnskap)
-5) 1 samlet vurdering (Individuelle læringsmål) som:
+3) 1 liste med læringsaktiviteter (4-6 konkrete aktiviteter) som:
+   - Er praktiske, gjennomførbare aktiviteter basert på ferdighetsmål og kunnskapsmål
+   - Dekker både praktiske og teoretiske aspekter
+   - Tilpasses elevens nivå og behov
+   - Inkluderer varierte arbeidsformer (individuelt, i gruppe, med støtte)
+   - Tar hensyn til sosiale mål og spesielle behov hvis oppgitt
+   - Skrives som konkrete, handlingsrettede punkter
+4) 2 ferdighetsmål (praktiske ferdigheter)
+5) 2 kunnskapsmål (teoretisk kunnskap)
+6) 1 samlet vurdering (Individuelle læringsmål) som:
    - Oppsummerer både ferdighets- og kunnskapsmål på et overordnet nivå
    - Tar hensyn til både tilpasset og utfordrende nivå
    - Integrerer sosiale mål og spesielle behov naturlig
    - Er formulert som konkrete, oppnåelige mål for eleven
-6) 1 beskrivelse av hvordan eleven skal vise kompetanse (Vurdering)
-7) 1 plan for evaluering av utvikling i perioden
+7) 1 beskrivelse av hvordan eleven skal vise kompetanse (Vurdering)
+8) 1 plan for evaluering av utvikling i perioden
 
 For både ferdighetsmål og kunnskapsmål skal du lage:
 - Ett Tilpasset nivå (realistisk oppnåelig med støtte)
 - Ett Utfordrende nivå (strekker eleven videre)
 
-Hvis sosiale mål er oppgitt, skal du integrere disse naturlig i ferdighetsmål, kunnskapsmål OG i sammendraget/anbefalingene. Sosiale mål kan handle om samarbeid, kommunikasjon, selvregulering, empati, selvstendighet, konfliktløsning, struktur/rutiner og inkludering.
+Hvis sosiale mål er oppgitt, skal du integrere disse naturlig i ferdighetsmål, kunnskapsmål OG i sammendraget/anbefalingene/læringsaktivitetene. Sosiale mål kan handle om samarbeid, kommunikasjon, selvregulering, empati, selvstendighet, konfliktløsning, struktur/rutiner og inkludering.
 
-Hvis andre behov og fokusområder er oppgitt (som ASK, syn, hørsel, vedlikehold av ferdigheter, eller ADL), skal du ta hensyn til disse i utformingen av alle mål OG nevne dem i sammendraget/anbefalingene. Tilpass språk, innhold og evalueringsmetoder til disse spesifikke behovene.
+Hvis andre behov og fokusområder er oppgitt (som ASK, syn, hørsel, vedlikehold av ferdigheter, eller ADL), skal du ta hensyn til disse i utformingen av alle mål OG nevne dem i sammendraget/anbefalingene/læringsaktivitetene. Tilpass språk, innhold og evalueringsmetoder til disse spesifikke behovene.
 
 HUSK: Skriv BARE selve målet i 'goal'-feltet, IKKE inkluder nivå-teksten "Tilpasset" eller "Utfordrende" i målteksten. Alt skal være på NORSK (bokmål).`;
 
@@ -159,6 +166,10 @@ ${goalsList}
                           type: Type.STRING,
                           description: "En liste med 4-6 konkrete, praktiske anbefalinger for læreren. Hver anbefaling skal være et eget punkt (bruk • eller -) og være 1-2 setninger lang."
                       },
+                      learningActivities: {
+                          type: Type.STRING,
+                          description: "En liste med 4-6 konkrete læringsaktiviteter basert på ferdighetsmål og kunnskapsmål. Hver aktivitet skal være et eget punkt (bruk • eller -) og være handlingsrettet og praktisk gjennomførbar."
+                      },
                       skillsSuggestions: {
                           type: Type.ARRAY,
                           description: "2 forslag til mål under 'Ferdigheter' (Tilpasset, Utfordrende).",
@@ -178,7 +189,7 @@ ${goalsList}
                           description: "Ett enkelt forslag til mål under 'Samlet vurdering'."
                       }
                   },
-                  required: ['coreElementsInfluenceNote', 'recommendations', 'skillsSuggestions', 'knowledgeSuggestions', 'overallBenefitSuggestion']
+                  required: ['coreElementsInfluenceNote', 'recommendations', 'learningActivities', 'skillsSuggestions', 'knowledgeSuggestions', 'overallBenefitSuggestion']
               },
           }
       });
@@ -223,6 +234,10 @@ ${goalsList}
                           type: Type.STRING,
                           description: "En liste med 4-6 konkrete, praktiske anbefalinger for læreren. Hver anbefaling skal være et eget punkt (bruk • eller -) og være 1-2 setninger lang."
                       },
+                      learningActivities: {
+                          type: Type.STRING,
+                          description: "En liste med 4-6 konkrete læringsaktiviteter basert på ferdighetsmål og kunnskapsmål. Hver aktivitet skal være et eget punkt (bruk • eller -) og være handlingsrettet og praktisk gjennomførbar."
+                      },
                       skillsSuggestions: {
                           type: Type.ARRAY,
                           description: "2 forslag til mål under 'Ferdigheter' (Tilpasset, Utfordrende).",
@@ -242,7 +257,7 @@ ${goalsList}
                           description: "Ett enkelt forslag til mål under 'Samlet vurdering'."
                       }
                   },
-                  required: ['coreElementsInfluenceNote', 'recommendations', 'skillsSuggestions', 'knowledgeSuggestions', 'overallBenefitSuggestion']
+                  required: ['coreElementsInfluenceNote', 'recommendations', 'learningActivities', 'skillsSuggestions', 'knowledgeSuggestions', 'overallBenefitSuggestion']
               },
           }
       });

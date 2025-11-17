@@ -75,6 +75,7 @@ const App: React.FC = () => {
     const [showAboutModal, setShowAboutModal] = useState(false);
     const [editedSocialGoals, setEditedSocialGoals] = useState<Record<string, any>>({});
     const [editedOtherNeedsMeasures, setEditedOtherNeedsMeasures] = useState<Record<string, string[]>>({});
+    const [editedLearningActivities, setEditedLearningActivities] = useState<string>('');
     const [editingSubjectIndex, setEditingSubjectIndex] = useState<number | null>(null); // Track which subject is being edited
 
     // Get available subjects based on selected grade level
@@ -274,6 +275,7 @@ const App: React.FC = () => {
             overallBenefit: iopResult.overallBenefitSuggestion,
             coreElementsNote: iopResult.coreElementsInfluenceNote || '',
             recommendations: iopResult.recommendations || '',
+            learningActivities: editedLearningActivities || iopResult.learningActivities || '',
             editedSocialGoals: { ...editedSocialGoals }, // Save edited social goals
             editedOtherNeedsMeasures: { ...editedOtherNeedsMeasures }, // Save edited measures
         };
@@ -302,6 +304,8 @@ const App: React.FC = () => {
         setLoadingProgress(0);
         setEditedSocialGoals({}); // Reset edited social goals
         setEditedOtherNeedsMeasures({}); // Reset edited other needs measures
+        setEditedLearningActivities(''); // Reset edited learning activities
+        setEditedLearningActivities(''); // Reset edited learning activities
         
         // Scroll to top
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -327,10 +331,12 @@ const App: React.FC = () => {
             knowledgeSuggestions: [saved.selections.knowledge],
             overallBenefitSuggestion: saved.overallBenefit,
             coreElementsInfluenceNote: saved.coreElementsNote,
-            recommendations: saved.recommendations || ''
+            recommendations: saved.recommendations || '',
+            learningActivities: saved.learningActivities || ''
         });
         setEditedSocialGoals(saved.editedSocialGoals || {});
         setEditedOtherNeedsMeasures(saved.editedOtherNeedsMeasures || {});
+        setEditedLearningActivities(saved.learningActivities || '');
         setStatus('idle'); // Keep status as idle so form is still visible
         
         // Scroll down to show the result
@@ -538,6 +544,18 @@ const App: React.FC = () => {
                                 }));
                                 sections.push(new Paragraph({
                                     text: saved.recommendations,
+                                    spacing: { after: 200 }
+                                }));
+                            }
+                            
+                            // Add learning activities if present
+                            if (saved.learningActivities) {
+                                sections.push(new Paragraph({
+                                    children: [new TextRun({ text: "Læringsaktiviteter: ", bold: true })],
+                                    spacing: { before: 100, after: 50 }
+                                }));
+                                sections.push(new Paragraph({
+                                    text: saved.learningActivities,
                                     spacing: { after: 200 }
                                 }));
                             }
@@ -810,6 +828,23 @@ const App: React.FC = () => {
                         <p className="mt-4 text-sm text-gray-500 italic">
                             🎯 Disse behovene er tatt hensyn til i utformingen av målene
                         </p>
+                    </Card>
+                )}
+
+                {/* Learning Activities */}
+                {iopResult?.learningActivities && (
+                    <Card title="Læringsaktiviteter" icon={<span className="text-2xl">📚</span>} className="border-l-4 border-green-500">
+                        <div className="space-y-3">
+                            <p className="text-sm text-gray-600 mb-3">
+                                Konkrete aktiviteter basert på ferdighetsmål og kunnskapsmål:
+                            </p>
+                            <EditableField
+                                value={editedLearningActivities || iopResult.learningActivities}
+                                onSave={(value) => setEditedLearningActivities(value)}
+                                multiline
+                                className="text-gray-700"
+                            />
+                        </div>
                     </Card>
                 )}
 

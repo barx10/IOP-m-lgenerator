@@ -39,6 +39,7 @@ export interface IopGoal {
 export interface IopConstructionKit {
   coreElementsInfluenceNote: string; // Added field for core elements influence
   recommendations: string; // Concrete recommendations for the student
+  learningActivities: string; // Concrete learning activities based on goals
   skillsSuggestions: IopGoal[];
   knowledgeSuggestions: IopGoal[];
   overallBenefitSuggestion: IopGoal;
@@ -62,6 +63,7 @@ export interface SavedSubject {
   overallBenefit: IopGoal;
   coreElementsNote: string;
   recommendations?: string;
+  learningActivities?: string;
   editedSocialGoals?: Record<string, any>;
   editedOtherNeedsMeasures?: Record<string, string[]>;
 }
