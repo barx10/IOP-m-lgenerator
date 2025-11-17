@@ -985,6 +985,25 @@ const App: React.FC = () => {
     return (
         <>
             <div className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 min-h-screen">
+                {/* BETA stamp in top left corner */}
+                <div className="fixed top-8 left-8 z-40 pointer-events-none">
+                    <div className="relative">
+                        <div className="transform -rotate-12 opacity-30 hover:opacity-50 transition-opacity duration-300">
+                            <div className="relative">
+                                {/* Outer circle */}
+                                <div className="w-24 h-24 rounded-full border-4 border-red-600 flex items-center justify-center bg-white/10 backdrop-blur-sm">
+                                    {/* Inner circle */}
+                                    <div className="w-20 h-20 rounded-full border-2 border-red-600 flex items-center justify-center">
+                                        <span className="text-red-600 font-black text-2xl tracking-wider" style={{ fontFamily: 'Impact, Arial Black, sans-serif' }}>
+                                            BETA
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 {/* Om button in top right corner */}
                 <div className="fixed top-4 right-4 z-40">
                     <button
