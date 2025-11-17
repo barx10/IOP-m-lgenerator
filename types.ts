@@ -40,6 +40,8 @@ export interface IopConstructionKit {
   coreElementsInfluenceNote: string; // Added field for core elements influence
   recommendations: string; // Concrete recommendations for the student
   learningActivities: string; // Concrete learning activities based on goals
+  otherNeedsMeasures?: Record<string, string[]>; // AI-generated measures per selected need ID
+  socialGoalDescriptions?: Record<string, { description: string, examples: string[] }>; // AI-generated descriptions and examples per selected social goal ID
   skillsSuggestions: IopGoal[];
   knowledgeSuggestions: IopGoal[];
   overallBenefitSuggestion: IopGoal;

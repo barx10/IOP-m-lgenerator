@@ -166,12 +166,54 @@ const App: React.FC = () => {
                 (partial) => {
                     // Update UI when complete JSON is received
                     setIopResult(prev => ({ ...prev, ...partial } as IopConstructionKit));
+                    
+                    // Initialize editedSocialGoals with AI-generated descriptions if available
+                    if (partial.socialGoalDescriptions && Object.keys(partial.socialGoalDescriptions).length > 0) {
+                        setEditedSocialGoals(prev => {
+                            const newGoals: Record<string, any> = { ...prev };
+                            Object.entries(partial.socialGoalDescriptions).forEach(([goalId, data]: [string, any]) => {
+                                if (!prev[goalId]) {
+                                    newGoals[goalId] = {
+                                        description: data.description,
+                                        examples: JSON.stringify(data.examples)
+                                    };
+                                }
+                            });
+                            return newGoals;
+                        });
+                    }
+                    
+                    // Initialize editedOtherNeedsMeasures with AI-generated measures if available
+                    if (partial.otherNeedsMeasures && Object.keys(partial.otherNeedsMeasures).length > 0) {
+                        setEditedOtherNeedsMeasures(prev => ({
+                            ...prev,
+                            ...partial.otherNeedsMeasures
+                        }));
+                    }
                 }
             );
             
             clearInterval(progressInterval);
             setLoadingProgress(100);
             setIopResult(result);
+            
+            // Initialize editedSocialGoals with AI-generated descriptions if available
+            if (result.socialGoalDescriptions && Object.keys(result.socialGoalDescriptions).length > 0) {
+                const newSocialGoals: Record<string, any> = {};
+                Object.entries(result.socialGoalDescriptions).forEach(([goalId, data]: [string, any]) => {
+                    newSocialGoals[goalId] = {
+                        description: data.description,
+                        examples: JSON.stringify(data.examples)
+                    };
+                });
+                setEditedSocialGoals(newSocialGoals);
+            }
+            
+            // Initialize editedOtherNeedsMeasures with AI-generated measures if available
+            if (result.otherNeedsMeasures && Object.keys(result.otherNeedsMeasures).length > 0) {
+                setEditedOtherNeedsMeasures(result.otherNeedsMeasures);
+            }
+            
             setStatus('success');
             
             // Scroll to top when results are shown
@@ -598,7 +640,7 @@ const App: React.FC = () => {
     const renderIopResult = () => {
         if (!iopResult) return null;
     
-        const { coreElementsInfluenceNote, recommendations, learningActivities, skillsSuggestions, knowledgeSuggestions, overallBenefitSuggestion } = iopResult;
+        const { coreElementsInfluenceNote, recommendations, learningActivities, socialGoalDescriptions, otherNeedsMeasures, skillsSuggestions, knowledgeSuggestions, overallBenefitSuggestion } = iopResult;
         const isPrintable = !!(selections.skills && selections.knowledge);
     
         return (
@@ -741,13 +783,16 @@ const App: React.FC = () => {
                                 const originalGoal = socialGoalsData.categories.find((g: any) => g.id === goalId);
                                 if (!originalGoal) return null;
                                 
-                                // Use edited values if available, otherwise use original
+                                // Use edited values if available, otherwise use AI-generated, then fallback to original
+                                const aiGenerated = socialGoalDescriptions?.[goalId];
                                 const goal = {
                                     ...originalGoal,
-                                    description: editedSocialGoals[goalId]?.description || originalGoal.description,
+                                    description: editedSocialGoals[goalId]?.description 
+                                        || aiGenerated?.description 
+                                        || originalGoal.description,
                                     examples: editedSocialGoals[goalId]?.examples 
                                         ? JSON.parse(editedSocialGoals[goalId].examples)
-                                        : originalGoal.examples
+                                        : (aiGenerated?.examples || originalGoal.examples)
                                 };
                                 
                                 return (
@@ -799,8 +844,11 @@ const App: React.FC = () => {
                                 const need = otherNeedsData.otherNeeds.find((n: any) => n.id === needId);
                                 if (!need) return null;
                                 
-                                // Use edited measures if available, otherwise use original
-                                const measures = editedOtherNeedsMeasures[needId] || need.measures || [];
+                                // Use edited measures if available, otherwise use AI-generated or fallback to JSON
+                                const measures = editedOtherNeedsMeasures[needId] 
+                                    || otherNeedsMeasures?.[needId] 
+                                    || need.measures 
+                                    || [];
                                 
                                 return (
                                     <div key={needId} className="p-4 bg-teal-50 border-2 border-teal-200 rounded-lg">
