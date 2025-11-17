@@ -986,7 +986,7 @@ const App: React.FC = () => {
     return (
         <>
             <div className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 min-h-screen">
-                {/* BETA stamp in top left corner */}
+                {/* BETA stamp in top left corner with arrow and text */}
                 <div className="fixed top-8 left-8 z-40">
                     <button
                         onClick={() => setShowBetaModal(true)}
@@ -1005,6 +1005,44 @@ const App: React.FC = () => {
                             </div>
                         </div>
                     </button>
+                    
+                    {/* Pil og håndskrevet tekst */}
+                    <div className="absolute top-24 left-20 pointer-events-none">
+                        {/* Håndtegnet pil */}
+                        <svg 
+                            className="w-20 h-20 text-red-600 transform rotate-12" 
+                            viewBox="0 0 100 100"
+                            style={{ filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.15))' }}
+                        >
+                            <path 
+                                d="M 15 5 Q 25 20, 35 40 Q 42 55, 48 70 L 52 82" 
+                                stroke="currentColor" 
+                                strokeWidth="2.5" 
+                                fill="none"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            />
+                            <path 
+                                d="M 52 82 L 44 77 M 52 82 L 50 73" 
+                                stroke="currentColor" 
+                                strokeWidth="2.5" 
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            />
+                        </svg>
+                        
+                        {/* Håndskrevet tekst */}
+                        <div 
+                            className="text-red-600 font-bold text-xl transform -rotate-6 whitespace-nowrap mt-2 ml-2"
+                            style={{ 
+                                fontFamily: "'Caveat', 'Patrick Hand', 'Comic Sans MS', cursive",
+                                textShadow: '1px 1px 2px rgba(0,0,0,0.1)',
+                                letterSpacing: '0.5px'
+                            }}
+                        >
+                            Trykk på meg :)
+                        </div>
+                    </div>
                 </div>
 
                 {/* Om button in top right corner */}
