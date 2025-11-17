@@ -1007,15 +1007,15 @@ const App: React.FC = () => {
                     </button>
                     
                     {/* Pil og håndskrevet tekst */}
-                    <div className="absolute top-24 left-20 pointer-events-none">
-                        {/* Håndtegnet pil */}
+                    <div className="absolute top-32 -left-24 pointer-events-none">
+                        {/* Håndtegnet pil som peker oppover mot stempelet */}
                         <svg 
-                            className="w-20 h-20 text-red-600 transform rotate-12" 
+                            className="w-24 h-24 text-red-600 transform rotate-45" 
                             viewBox="0 0 100 100"
                             style={{ filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.15))' }}
                         >
                             <path 
-                                d="M 15 5 Q 25 20, 35 40 Q 42 55, 48 70 L 52 82" 
+                                d="M 10 85 Q 25 70, 40 55 Q 55 40, 70 25" 
                                 stroke="currentColor" 
                                 strokeWidth="2.5" 
                                 fill="none"
@@ -1023,7 +1023,7 @@ const App: React.FC = () => {
                                 strokeLinejoin="round"
                             />
                             <path 
-                                d="M 52 82 L 44 77 M 52 82 L 50 73" 
+                                d="M 70 25 L 62 32 M 70 25 L 66 34" 
                                 stroke="currentColor" 
                                 strokeWidth="2.5" 
                                 strokeLinecap="round"
@@ -1033,7 +1033,7 @@ const App: React.FC = () => {
                         
                         {/* Håndskrevet tekst */}
                         <div 
-                            className="text-red-600 font-bold text-xl transform -rotate-6 whitespace-nowrap mt-2 ml-2"
+                            className="text-red-600 font-bold text-xl transform -rotate-12 whitespace-nowrap mt-1"
                             style={{ 
                                 fontFamily: "'Caveat', 'Patrick Hand', 'Comic Sans MS', cursive",
                                 textShadow: '1px 1px 2px rgba(0,0,0,0.1)',
