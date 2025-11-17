@@ -1023,12 +1023,15 @@ const App: React.FC = () => {
     return (
         <>
             <div className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 min-h-screen">
-                {/* BETA stamp in top left corner with arrow and text */}
+                {/* BETA stamp in top left corner with glow effect */}
                 <div className="fixed top-8 left-8 z-40">
                     <button
                         onClick={() => setShowBetaModal(true)}
-                        className="transform -rotate-12 opacity-30 hover:opacity-70 transition-all duration-300 cursor-pointer hover:scale-110"
+                        className="transform -rotate-12 opacity-30 hover:opacity-100 transition-all duration-300 cursor-pointer hover:scale-110 animate-pulse-slow"
                         title="Klikk for BETA-informasjon"
+                        style={{
+                            filter: 'drop-shadow(0 0 8px rgba(220, 38, 38, 0.4))',
+                        }}
                     >
                         <div className="relative">
                             {/* Outer circle */}
@@ -1042,44 +1045,6 @@ const App: React.FC = () => {
                             </div>
                         </div>
                     </button>
-                    
-                    {/* Pil og håndskrevet tekst */}
-                    <div className="absolute top-32 -left-24 pointer-events-none">
-                        {/* Håndtegnet pil som peker oppover mot stempelet */}
-                        <svg 
-                            className="w-24 h-24 text-red-600 transform rotate-45" 
-                            viewBox="0 0 100 100"
-                            style={{ filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.15))' }}
-                        >
-                            <path 
-                                d="M 10 85 Q 25 70, 40 55 Q 55 40, 70 25" 
-                                stroke="currentColor" 
-                                strokeWidth="2.5" 
-                                fill="none"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
-                            <path 
-                                d="M 70 25 L 62 32 M 70 25 L 66 34" 
-                                stroke="currentColor" 
-                                strokeWidth="2.5" 
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
-                        </svg>
-                        
-                        {/* Håndskrevet tekst */}
-                        <div 
-                            className="text-red-600 font-bold text-xl transform -rotate-12 whitespace-nowrap mt-1"
-                            style={{ 
-                                fontFamily: "'Caveat', 'Patrick Hand', 'Comic Sans MS', cursive",
-                                textShadow: '1px 1px 2px rgba(0,0,0,0.1)',
-                                letterSpacing: '0.5px'
-                            }}
-                        >
-                            Trykk på meg :)
-                        </div>
-                    </div>
                 </div>
 
                 {/* Om button in top right corner */}
