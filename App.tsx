@@ -831,22 +831,7 @@ const App: React.FC = () => {
                     </Card>
                 )}
 
-                {/* Learning Activities */}
-                {iopResult?.learningActivities && (
-                    <Card title="Læringsaktiviteter" icon={<span className="text-2xl">📚</span>} className="border-l-4 border-green-500">
-                        <div className="space-y-3">
-                            <p className="text-sm text-gray-600 mb-3">
-                                Konkrete aktiviteter basert på ferdighetsmål og kunnskapsmål:
-                            </p>
-                            <EditableField
-                                value={editedLearningActivities || iopResult.learningActivities}
-                                onSave={(value) => setEditedLearningActivities(value)}
-                                multiline
-                                className="text-gray-700"
-                            />
-                        </div>
-                    </Card>
-                )}
+                {/* Learning Activities - REMOVED, now inside IOP-mål */}
 
                 <Card title="IOP-mål" icon={<DocumentIcon />}>
                     {overallBenefitSuggestion ? (
@@ -859,6 +844,20 @@ const App: React.FC = () => {
                                     multiline
                                 />
                             </div>
+                            
+                            {/* Learning Activities inside IOP-mål */}
+                            {iopResult?.learningActivities && (
+                                <div>
+                                    <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Læringsaktiviteter</h4>
+                                    <p className="text-xs text-gray-500 mb-2">Konkrete aktiviteter basert på ferdighetsmål og kunnskapsmål</p>
+                                    <EditableField
+                                        value={editedLearningActivities || iopResult.learningActivities}
+                                        onSave={(value) => setEditedLearningActivities(value)}
+                                        multiline
+                                    />
+                                </div>
+                            )}
+                            
                             <div>
                                 <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Vurdering (hvordan eleven viser kompetanse)</h4>
                                 <EditableField
