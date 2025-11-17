@@ -904,7 +904,7 @@ const App: React.FC = () => {
                             </div>
                             
                             {/* Learning Activities inside IOP-mål */}
-                            {learningActivities && (
+                            {(editedLearningActivities || learningActivities) && (
                                 <div>
                                     <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Læringsaktiviteter</h4>
                                     <p className="text-xs text-gray-500 mb-2">Konkrete aktiviteter basert på ferdighetsmål og kunnskapsmål</p>
@@ -1403,6 +1403,15 @@ const App: React.FC = () => {
                                             <h3 className="text-base font-semibold text-brand-blue">Samlet vurdering</h3>
                                             <div className="mt-2 space-y-2 text-sm text-gray-700 leading-relaxed">
                                                 <p><span className="font-semibold">Individuelle læringsmål:</span> {saved.overallBenefit.goal}</p>
+                                                
+                                                {/* Learning Activities */}
+                                                {saved.learningActivities && (
+                                                    <div className="mt-3 pt-3 border-t border-blue-200">
+                                                        <p className="font-semibold text-blue-800 mb-1">📚 Læringsaktiviteter:</p>
+                                                        <p className="text-sm text-gray-700 leading-relaxed whitespace-pre-line">{saved.learningActivities}</p>
+                                                    </div>
+                                                )}
+                                                
                                                 <p><span className="font-semibold">Vurdering (hvordan eleven viser kompetanse):</span> {saved.overallBenefit.measures}</p>
                                                 {saved.overallBenefit.evaluation && <p><span className="font-semibold">Evaluering av utvikling:</span> {saved.overallBenefit.evaluation}</p>}
                                             </div>
