@@ -70,7 +70,16 @@ const App: React.FC = () => {
     const [selections, setSelections] = useState<Selections>({ skills: null, knowledge: null });
     const [selectedIndices, setSelectedIndices] = useState<{ skills: number | null; knowledge: number | null }>({ skills: null, knowledge: null });
     const [loadingProgress, setLoadingProgress] = useState(0);
-    const [savedSubjects, setSavedSubjects] = useState<SavedSubject[]>([]);
+    const [savedSubjects, setSavedSubjects] = useState<SavedSubject[]>(() => {
+        // Load saved subjects from localStorage on mount
+        try {
+            const saved = localStorage.getItem('iop-saved-subjects');
+            return saved ? JSON.parse(saved) : [];
+        } catch (error) {
+            console.error('Error loading saved subjects from localStorage:', error);
+            return [];
+        }
+    });
     const [studentCode, setStudentCode] = useState<string>(''); // For student initials/code
     const [showAboutModal, setShowAboutModal] = useState(false);
     const [showBetaModal, setShowBetaModal] = useState(false);
@@ -275,6 +284,7 @@ const App: React.FC = () => {
 
     const handleSaveSubject = () => {
         if (!selections.skills || !selections.knowledge || !iopResult?.overallBenefitSuggestion) {
+            console.log('Validation failed:', { skills: selections.skills, knowledge: selections.knowledge, overallBenefit: iopResult?.overallBenefitSuggestion });
             alert('Vennligst velg både ferdighets- og kunnskapsmål før du lagrer.');
             return;
         }
@@ -300,11 +310,28 @@ const App: React.FC = () => {
             setSavedSubjects(prev => {
                 const updated = [...prev];
                 updated[editingSubjectIndex] = newSavedSubject;
+                // Save to localStorage
+                try {
+                    localStorage.setItem('iop-saved-subjects', JSON.stringify(updated));
+                    console.log('Updated subject saved to localStorage:', updated.length, 'subjects');
+                } catch (error) {
+                    console.error('Error saving to localStorage:', error);
+                }
                 return updated;
             });
             setEditingSubjectIndex(null); // Clear editing state
         } else {
-            setSavedSubjects(prev => [...prev, newSavedSubject]);
+            setSavedSubjects(prev => {
+                const updated = [...prev, newSavedSubject];
+                // Save to localStorage
+                try {
+                    localStorage.setItem('iop-saved-subjects', JSON.stringify(updated));
+                    console.log('New subject saved to localStorage:', updated.length, 'subjects');
+                } catch (error) {
+                    console.error('Error saving to localStorage:', error);
+                }
+                return updated;
+            });
         }
         
         // Reset for next subject
@@ -327,7 +354,17 @@ const App: React.FC = () => {
     };
 
     const handleRemoveSavedSubject = (index: number) => {
-        setSavedSubjects(prev => prev.filter((_, i) => i !== index));
+        setSavedSubjects(prev => {
+            const updated = prev.filter((_, i) => i !== index);
+            // Save to localStorage
+            try {
+                localStorage.setItem('iop-saved-subjects', JSON.stringify(updated));
+                console.log('Subject removed, remaining:', updated.length, 'subjects');
+            } catch (error) {
+                console.error('Error saving to localStorage:', error);
+            }
+            return updated;
+        });
     };
 
     const handleEditSavedSubject = (index: number) => {
