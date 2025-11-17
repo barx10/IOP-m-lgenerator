@@ -782,7 +782,7 @@ const App: React.FC = () => {
                                         <div className="mt-3 pt-3 border-t border-purple-200">
                                             <p className="text-xs font-semibold text-purple-700 mb-2">Forslag til tiltak:</p>
                                             <ul className="text-xs text-gray-600 space-y-1">
-                                                {goal.examples.slice(0, 3).map((example: string, idx: number) => (
+                                                {goal.examples.map((example: string, idx: number) => (
                                                     <li key={idx} className="flex items-start">
                                                         <span className="mr-1">•</span>
                                                         <EditableField
