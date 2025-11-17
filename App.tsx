@@ -157,40 +157,12 @@ const App: React.FC = () => {
             // Single goal - trim and wrap in array
             const goalsArray = [pastedGoals.trim()];
             
-            // Generate IOP goals (streaming callback may not trigger incrementally due to JSON parsing)
+            // Generate IOP goals
             const result = await generateIopGoals(
                 profile,
                 framework,
                 goalsArray,
-                expertAssessment,
-                (partial) => {
-                    // Update UI when complete JSON is received
-                    setIopResult(prev => ({ ...prev, ...partial } as IopConstructionKit));
-                    
-                    // Initialize editedSocialGoals with AI-generated descriptions if available
-                    if (partial.socialGoalDescriptions && Object.keys(partial.socialGoalDescriptions).length > 0) {
-                        setEditedSocialGoals(prev => {
-                            const newGoals: Record<string, any> = { ...prev };
-                            Object.entries(partial.socialGoalDescriptions).forEach(([goalId, data]: [string, any]) => {
-                                if (!prev[goalId]) {
-                                    newGoals[goalId] = {
-                                        description: data.description,
-                                        examples: JSON.stringify(data.examples)
-                                    };
-                                }
-                            });
-                            return newGoals;
-                        });
-                    }
-                    
-                    // Initialize editedOtherNeedsMeasures with AI-generated measures if available
-                    if (partial.otherNeedsMeasures && Object.keys(partial.otherNeedsMeasures).length > 0) {
-                        setEditedOtherNeedsMeasures(prev => ({
-                            ...prev,
-                            ...partial.otherNeedsMeasures
-                        }));
-                    }
-                }
+                expertAssessment
             );
             
             clearInterval(progressInterval);

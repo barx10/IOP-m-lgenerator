@@ -2,15 +2,11 @@ import { GoogleGenAI, Type } from "@google/genai";
 import type { StudentProfile, Framework, IopConstructionKit } from '../types';
 import { curriculumData } from './curriculumData';
 
-// Callback type for streaming updates
-type StreamCallback = (partial: Partial<IopConstructionKit>) => void;
-
 export const generateIopGoals = async (
   profile: StudentProfile,
   framework: Framework,
   selectedGoals: string[],
-  expertAssessment: string,
-  onStream?: StreamCallback
+  expertAssessment: string
 ): Promise<IopConstructionKit> => {
   const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
@@ -249,54 +245,19 @@ ${goalsList}
   };
 
   try {
-    // Use streaming if callback provided
-    if (onStream) {
-      const streamResponse = await ai.models.generateContentStream({
-          model: 'gemini-2.0-flash-001',
-          contents: { parts: promptParts },
-          config: {
-              systemInstruction,
-              responseMimeType: 'application/json',
-              responseSchema
-          }
-      });
-
-      let accumulatedText = '';
-      
-      // Stream chunks as they arrive
-      for await (const chunk of streamResponse) {
-        const chunkText = chunk.text;
-        accumulatedText += chunkText;
-        
-        // Try to parse partial JSON and send updates
-        try {
-          const partial = JSON.parse(accumulatedText);
-          onStream(partial);
-        } catch {
-          // Not yet valid JSON, continue accumulating
+    const response = await ai.models.generateContent({
+        model: 'gemini-2.0-flash-001',
+        contents: { parts: promptParts },
+        config: {
+            systemInstruction,
+            responseMimeType: 'application/json',
+            responseSchema
         }
-      }
-      
-      // Final parse
-      const parsedResult: IopConstructionKit = JSON.parse(accumulatedText);
-      return parsedResult;
-      
-    } else {
-      // Non-streaming (original behavior)
-      const response = await ai.models.generateContent({
-          model: 'gemini-2.0-flash-001',
-          contents: { parts: promptParts },
-          config: {
-              systemInstruction,
-              responseMimeType: 'application/json',
-              responseSchema
-          }
-      });
-      
-      const textResponse = response.text;
-      const parsedResult: IopConstructionKit = JSON.parse(textResponse);
-      return parsedResult;
-    }
+    });
+    
+    const textResponse = response.text;
+    const parsedResult: IopConstructionKit = JSON.parse(textResponse);
+    return parsedResult;
   } catch (error) {
     console.error("Error generating IOP goals:", error);
     if (error instanceof Error && error.message.includes("API key not valid")) {
