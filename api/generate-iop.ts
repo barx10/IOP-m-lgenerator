@@ -23,12 +23,24 @@ function checkRateLimit(ip: string): boolean {
   return true;
 }
 
+// PIN-gate validation
+function validatePinCode(providedPin: string): boolean {
+  const validPin = process.env.PINGATE_CODE;
+
+  // If no PIN is configured, allow all requests (backwards compatible)
+  if (!validPin) {
+    return true;
+  }
+
+  return providedPin === validPin;
+}
+
 export default async function handler(req: any, res: any) {
   // CORS headers
   res.setHeader('Access-Control-Allow-Credentials', 'true');
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,POST');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, X-Pin-Code');
 
   if (req.method === 'OPTIONS') {
     return res.status(200).end();
@@ -38,12 +50,21 @@ export default async function handler(req: any, res: any) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
+  // PIN-gate validation
+  const pinCode = req.headers['x-pin-code'] || '';
+  if (!validatePinCode(pinCode)) {
+    return res.status(401).json({
+      error: 'Ugyldig PIN-kode. Vennligst oppgi riktig PIN for å bruke tjenesten.',
+      code: 'INVALID_PIN'
+    });
+  }
+
   // Rate limiting
   const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress || 'unknown';
   if (!checkRateLimit(ip)) {
-    return res.status(429).json({ 
+    return res.status(429).json({
       error: 'For mange forespørsler. Vennligst prøv igjen om en time.',
-      retryAfter: 3600 
+      retryAfter: 3600
     });
   }
 
