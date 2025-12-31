@@ -3,6 +3,39 @@ import type { StudentProfile, Framework, IopConstructionKit } from '../types';
 // Callback type for streaming updates (not implemented in backend version)
 type StreamCallback = (partial: Partial<IopConstructionKit>) => void;
 
+// PIN-gate storage key
+const PIN_STORAGE_KEY = 'iop-pingate-code';
+
+// Get stored PIN code from localStorage
+export const getStoredPinCode = (): string | null => {
+  if (typeof window === 'undefined') return null;
+  try {
+    return localStorage.getItem(PIN_STORAGE_KEY);
+  } catch {
+    return null;
+  }
+};
+
+// Store PIN code in localStorage
+export const storePinCode = (pin: string): void => {
+  if (typeof window === 'undefined') return;
+  try {
+    localStorage.setItem(PIN_STORAGE_KEY, pin);
+  } catch {
+    // Ignore storage errors
+  }
+};
+
+// Clear stored PIN code
+export const clearStoredPinCode = (): void => {
+  if (typeof window === 'undefined') return;
+  try {
+    localStorage.removeItem(PIN_STORAGE_KEY);
+  } catch {
+    // Ignore storage errors
+  }
+};
+
 // Get API URL based on environment
 // In production, use same origin (relative path)
 // In development, use localhost:3000 for Vite dev server
@@ -31,11 +64,15 @@ export const generateIopGoals = async (
     const timeoutId = setTimeout(() => controller.abort(), 55000); // 55 second timeout
     
     console.log('Calling API:', `${API_URL}/api/generate-iop`);
-    
+
+    // Get stored PIN code for authentication
+    const pinCode = getStoredPinCode() || '';
+
     const response = await fetch(`${API_URL}/api/generate-iop`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'X-Pin-Code': pinCode,
       },
       body: JSON.stringify({
         profile,
@@ -52,15 +89,23 @@ export const generateIopGoals = async (
 
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({ error: 'Unknown error' }));
-      
+
+      if (response.status === 401) {
+        // Clear invalid PIN and throw specific error
+        clearStoredPinCode();
+        const error = new Error(errorData.error || 'Ugyldig PIN-kode.');
+        (error as any).code = 'INVALID_PIN';
+        throw error;
+      }
+
       if (response.status === 429) {
         throw new Error('For mange forespørsler. Vennligst prøv igjen om en time.');
       }
-      
+
       if (response.status === 504) {
         throw new Error('Serveren brukte for lang tid. Prøv med færre kompetansemål eller enklere beskrivelse.');
       }
-      
+
       throw new Error(errorData.error || `Server error: ${response.status}`);
     }
 

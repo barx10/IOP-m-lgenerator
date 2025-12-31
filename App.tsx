@@ -10,10 +10,11 @@ import {
   AppStatus,
   IopGoal
 } from './types';
-import { generateIopGoals } from './services/geminiService.backend';
+import { generateIopGoals, clearStoredPinCode } from './services/geminiService.backend';
 import { curriculumData, curriculumSubjects, vgsSubjects } from './services/curriculumData';
 
 import { Card } from './components/Card';
+import { PinGate } from './components/PinGate';
 import { CompetenceGoalSelector } from './components/CompetenceGoalSelector';
 import { TextAreaField } from './components/TextAreaField';
 import { CoreElementsModal } from './components/CoreElementsModal';
@@ -200,8 +201,16 @@ const App: React.FC = () => {
             
             // Scroll to top when results are shown
             window.scrollTo({ top: 0, behavior: 'smooth' });
-        } catch (err) {
+        } catch (err: any) {
             clearInterval(progressInterval);
+
+            // Handle invalid PIN error - reload page to show PIN gate
+            if (err.code === 'INVALID_PIN') {
+                clearStoredPinCode();
+                window.location.reload();
+                return;
+            }
+
             setError(err instanceof Error ? err.message : 'An unknown error occurred.');
             setStatus('error');
         }
@@ -1616,4 +1625,11 @@ const App: React.FC = () => {
     );
 };
 
-export default App;
+// Wrap App with PinGate for access control
+const AppWithPinGate: React.FC = () => (
+    <PinGate>
+        <App />
+    </PinGate>
+);
+
+export default AppWithPinGate;
