@@ -115,11 +115,20 @@ For sikker deployment med backend API og rate limiting, se vår detaljerte guide
 
 ## 🔒 Personvern og sikkerhet
 
+- ✅ **PIN-gate** - Tilgangskontroll for autoriserte brukere
 - ✅ **Ingen permanent lagring** - Data slettes ved refresh
 - ✅ **Backend API** - API-nøkkel er sikret server-side
 - ✅ **Rate limiting** - Beskyttelse mot misbruk (50 req/time)
 - ✅ **GDPR-vennlig** - Ingen personopplysninger lagres
 - ⚠️ **Viktig:** Anonymiser alltid elevdata før bruk
+
+### 🔑 Få tilgang
+
+For å bruke verktøyet trenger du en PIN-kode. Kontakt prosjekteier:
+- 📧 E-post: **kenneth@laererliv.no**
+- 🌐 Nettside: **[laererliv.no](https://www.laererliv.no/)**
+
+_(Dette sikrer at verktøyet brukes ansvarlig og i riktig kontekst)_
 
 ---
 
