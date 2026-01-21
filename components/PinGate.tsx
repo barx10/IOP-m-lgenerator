@@ -1,9 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { getStoredPinCode, storePinCode } from '../services/geminiService.backend';
+import { getStoredPinCode, storePinCode, clearStoredPinCode } from '../services/geminiService.backend';
 
 interface PinGateProps {
   children: React.ReactNode;
 }
+
+// Get API URL based on environment
+const getApiUrl = () => {
+  if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
+    return 'http://localhost:3000';
+  }
+  return '';
+};
 
 export const PinGate: React.FC<PinGateProps> = ({ children }) => {
   const [isUnlocked, setIsUnlocked] = useState<boolean | null>(null);
@@ -15,11 +23,49 @@ export const PinGate: React.FC<PinGateProps> = ({ children }) => {
     // Check if PIN is already stored
     const storedPin = getStoredPinCode();
     if (storedPin) {
-      setIsUnlocked(true);
+      // Re-validate stored PIN on app load
+      validatePin(storedPin, true);
     } else {
       setIsUnlocked(false);
     }
   }, []);
+
+  const validatePin = async (pin: string, isSilent: boolean = false) => {
+    try {
+      const API_URL = getApiUrl();
+      const response = await fetch(`${API_URL}/api/validate-pin`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ pin }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.valid) {
+        // PIN is valid - store it and unlock app
+        storePinCode(pin);
+        setIsUnlocked(true);
+        return true;
+      } else {
+        // PIN is invalid - clear stored PIN and show error
+        clearStoredPinCode();
+        setIsUnlocked(false);
+        if (!isSilent) {
+          setError(data.error || 'Ugyldig PIN-kode');
+        }
+        return false;
+      }
+    } catch (err) {
+      console.error('PIN validation error:', err);
+      if (!isSilent) {
+        setError('Kunne ikke validere PIN-kode. Sjekk internettforbindelsen.');
+      }
+      setIsUnlocked(false);
+      return false;
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,10 +79,8 @@ export const PinGate: React.FC<PinGateProps> = ({ children }) => {
       return;
     }
 
-    // Store the PIN and mark as unlocked
-    // The actual validation happens when making API calls
-    storePinCode(trimmedPin);
-    setIsUnlocked(true);
+    // Validate PIN against server
+    await validatePin(trimmedPin, false);
     setIsValidating(false);
   };
 
