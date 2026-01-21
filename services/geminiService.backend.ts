@@ -3,8 +3,8 @@ import type { StudentProfile, Framework, IopConstructionKit } from '../types';
 // Callback type for streaming updates (not implemented in backend version)
 type StreamCallback = (partial: Partial<IopConstructionKit>) => void;
 
-// PIN-gate storage key
-const PIN_STORAGE_KEY = 'iop-pingate-code';
+// PIN-gate storage key (changed to invalidate old stored pins)
+const PIN_STORAGE_KEY = 'iop-pingate-code-v2';
 
 // Get stored PIN code from localStorage
 export const getStoredPinCode = (): string | null => {
