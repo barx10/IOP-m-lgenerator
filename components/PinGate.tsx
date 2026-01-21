@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getStoredPinCode, storePinCode } from '../services/geminiService.backend';
+import { getStoredPinCode, storePinCode, clearStoredPinCode } from '../services/geminiService.backend';
 
 interface PinGateProps {
   children: React.ReactNode;
@@ -12,7 +12,15 @@ export const PinGate: React.FC<PinGateProps> = ({ children }) => {
   const [isValidating, setIsValidating] = useState(false);
 
   useEffect(() => {
-    // Check if PIN is already stored
+    // IMPORTANT: Clear old localStorage keys to force re-login
+    // This removes any old PIN codes stored with previous keys
+    try {
+      localStorage.removeItem('iop-pingate-code'); // Remove old key
+    } catch (e) {
+      // Ignore errors
+    }
+
+    // Check if PIN is already stored (with new key)
     const storedPin = getStoredPinCode();
     if (storedPin) {
       setIsUnlocked(true);
