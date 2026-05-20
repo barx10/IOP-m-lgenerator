@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { getStoredPinCode, storePinCode, clearStoredPinCode } from '../services/geminiService.backend';
+import { storePinCode, clearStoredPinCode } from '../services/geminiService.backend';
+
+const AUTH_KEY = 'app_auth';
 
 interface PinGateProps {
   children: React.ReactNode;
 }
 
-// Get API URL based on environment
 const getApiUrl = () => {
   if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
     return 'http://localhost:3000';
@@ -20,79 +21,47 @@ export const PinGate: React.FC<PinGateProps> = ({ children }) => {
   const [isValidating, setIsValidating] = useState(false);
 
   useEffect(() => {
-    // IMPORTANT: Clear old localStorage keys to force re-login
-    // This removes any old PIN codes stored with previous keys
-    try {
-      localStorage.removeItem('iop-pingate-code'); // Remove old key
-    } catch (e) {
-      // Ignore errors
-    }
-
-    // Check if PIN is already stored (with new key)
-    const storedPin = getStoredPinCode();
-    if (storedPin) {
-      // Re-validate stored PIN on app load
-      validatePin(storedPin, true);
-    } else {
-      setIsUnlocked(false);
-    }
+    const authenticated = localStorage.getItem(AUTH_KEY) === 'true';
+    setIsUnlocked(authenticated);
   }, []);
 
-  const validatePin = async (pin: string, isSilent: boolean = false) => {
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError(null);
+
+    const trimmedPin = pinInput.trim();
+    if (!trimmedPin) {
+      setError('Vennligst oppgi en PIN-kode');
+      return;
+    }
+
+    setIsValidating(true);
+
     try {
       const API_URL = getApiUrl();
-      const response = await fetch(`${API_URL}/api/validate-pin`, {
+      const response = await fetch(`${API_URL}/api/verify-pin`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ pin }),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ pin: trimmedPin }),
       });
 
       const data = await response.json();
 
       if (response.ok && data.valid) {
-        // PIN is valid - store it and unlock app
-        storePinCode(pin);
+        localStorage.setItem(AUTH_KEY, 'true');
+        storePinCode(trimmedPin);
         setIsUnlocked(true);
-        return true;
       } else {
-        // PIN is invalid - clear stored PIN and show error
         clearStoredPinCode();
-        setIsUnlocked(false);
-        if (!isSilent) {
-          setError(data.error || 'Ugyldig PIN-kode');
-        }
-        return false;
+        setError(data.error || 'Ugyldig PIN-kode');
       }
-    } catch (err) {
-      console.error('PIN validation error:', err);
-      if (!isSilent) {
-        setError('Kunne ikke validere PIN-kode. Sjekk internettforbindelsen.');
-      }
-      setIsUnlocked(false);
-      return false;
-    }
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError(null);
-    setIsValidating(true);
-
-    const trimmedPin = pinInput.trim();
-    if (!trimmedPin) {
-      setError('Vennligst oppgi en PIN-kode');
+    } catch {
+      setError('Kunne ikke validere PIN-kode. Sjekk internettforbindelsen.');
+    } finally {
       setIsValidating(false);
-      return;
     }
-
-    // Validate PIN against server
-    await validatePin(trimmedPin, false);
-    setIsValidating(false);
   };
 
-  // Show loading state while checking
   if (isUnlocked === null) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 flex items-center justify-center">
@@ -101,7 +70,6 @@ export const PinGate: React.FC<PinGateProps> = ({ children }) => {
     );
   }
 
-  // Show PIN input modal if not unlocked
   if (!isUnlocked) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 flex items-center justify-center p-4">
@@ -166,6 +134,5 @@ export const PinGate: React.FC<PinGateProps> = ({ children }) => {
     );
   }
 
-  // Render children if unlocked
   return <>{children}</>;
 };
