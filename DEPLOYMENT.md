@@ -13,10 +13,7 @@ direkte fra nettleseren til leverandøren. Det betyr:
 
 - ✅ Ingen `GEMINI_API_KEY` trengs på serveren lenger
 - ✅ Ingen API-kostnader for deg som drifter appen
-- ✅ Ingen backend-funksjon for generering (`api/generate-iop.ts` er fjernet)
-
-Det eneste som kjører server-side er PIN-gaten (`api/verify-pin.ts`), som
-styrer hvem som får tilgang til appen.
+- ✅ Ingen backend i det hele tatt – appen er en ren statisk frontend
 
 ## Deploy til Vercel
 
@@ -25,20 +22,13 @@ styrer hvem som får tilgang til appen.
 1. **Gå til [vercel.com](https://vercel.com)** og logg inn med GitHub
 2. **Klikk "Add New Project"**
 3. **Import repoet ditt** (`IOP-m-lgenerator`)
-4. **Konfigurer miljøvariabler:**
-   - **Name:** `PINGATE_CODE`
-   - **Value:** `[ønsket PIN-kode for tilgang til appen]`
-   - **Environment:** Production, Preview, Development (velg alle)
-5. **Klikk "Deploy"**
+4. **Klikk "Deploy"** – ingen miljøvariabler trengs
 
 ### Metode 2: Via CLI
 
 ```bash
 # Fra prosjektmappen:
 vercel
-
-# Legg til miljøvariabel for PIN-gate:
-vercel env add PINGATE_CODE production
 
 # Deploy:
 vercel --prod
@@ -47,9 +37,8 @@ vercel --prod
 ## Etter deployment
 
 1. Åpne URL-en Vercel gir deg
-2. Logg inn med PIN-koden
-3. Åpne «⚙️ KI-innstillinger», velg leverandør og legg inn en API-nøkkel
-4. Test å generere en IOP
+2. Åpne «⚙️ KI-innstillinger», velg leverandør og legg inn en API-nøkkel
+3. Test å generere en IOP
 
 ## Lokal utvikling
 
@@ -58,8 +47,7 @@ npm install
 npm run dev
 ```
 
-Ingen miljøvariabler trengs for generering – du legger inn API-nøkkel i selve
-appen. (Uten `PINGATE_CODE` slipper PIN-gaten alle gjennom lokalt.)
+Ingen miljøvariabler trengs – API-nøkkelen legges inn i selve appen.
 
 ## Feilsøking
 

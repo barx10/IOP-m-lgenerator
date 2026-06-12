@@ -76,7 +76,7 @@ For sikker deployment med backend API og rate limiting, se vår detaljerte guide
 
 **Kort oppsummert:**
 - BYOK: brukerne tar med egen API-nøkkel – ingen API-kostnader for deg
-- PIN-gate styrer tilgang til appen (`PINGATE_CODE` miljøvariabel)
+- Ren statisk frontend – ingen backend eller miljøvariabler
 - Automatisk deployment via GitHub
 - Gratis hosting på Vercel
 
@@ -86,12 +86,12 @@ For sikker deployment med backend API og rate limiting, se vår detaljerte guide
 
 <div align="center">
 
-| Frontend | Backend | Deployment | AI |
-|----------|---------|------------|-----|
-| React 19 | Vercel Functions (PIN-gate) | Vercel | OpenAI gpt-5.4-mini |
-| TypeScript | Node.js | GitHub Actions | Google Gemini 3.1 Flash Lite |
-| Tailwind CSS | - | - | BYOK (egen API-nøkkel) |
-| Vite | - | - | JSON Schema Output |
+| Frontend | Deployment | AI |
+|----------|------------|-----|
+| React 19 | Vercel | OpenAI gpt-5.4-mini |
+| TypeScript | GitHub Actions | Google Gemini 3.1 Flash Lite |
+| Tailwind CSS | - | BYOK (egen API-nøkkel) |
+| Vite | - | JSON Schema Output |
 
 </div>
 
@@ -111,20 +111,11 @@ For sikker deployment med backend API og rate limiting, se vår detaljerte guide
 
 ## 🔒 Personvern og sikkerhet
 
-- ✅ **PIN-gate** - Tilgangskontroll for autoriserte brukere
 - ✅ **Ingen permanent lagring** - Data slettes ved refresh
 - ✅ **BYOK** - Din API-nøkkel lagres kun i din egen nettleser, aldri på server
 - ✅ **Direkte til leverandør** - Forespørsler går rett fra nettleseren til OpenAI/Google
 - ✅ **GDPR-vennlig** - Ingen personopplysninger lagres
 - ⚠️ **Viktig:** Anonymiser alltid elevdata før bruk
-
-### 🔑 Få tilgang
-
-For å bruke verktøyet trenger du en PIN-kode. Kontakt prosjekteier:
-- 📧 E-post: **kenneth@laererliv.no**
-- 🌐 Nettside: **[laererliv.no](https://www.laererliv.no/)**
-
-_(Dette sikrer at verktøyet brukes ansvarlig og i riktig kontekst)_
 
 ---
 

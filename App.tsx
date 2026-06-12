@@ -14,7 +14,6 @@ import { generateIopGoals, hasApiKey } from './services/llmService';
 import { curriculumData, curriculumSubjects, vgsSubjects } from './services/curriculumData';
 
 import { Card } from './components/Card';
-import { PinGate } from './components/PinGate';
 import { CompetenceGoalSelector } from './components/CompetenceGoalSelector';
 import { TextAreaField } from './components/TextAreaField';
 import { CoreElementsModal } from './components/CoreElementsModal';
@@ -1644,11 +1643,4 @@ const App: React.FC = () => {
     );
 };
 
-// Wrap App with PinGate for access control
-const AppWithPinGate: React.FC = () => (
-    <PinGate>
-        <App />
-    </PinGate>
-);
-
-export default AppWithPinGate;
+export default App;
