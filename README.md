@@ -16,7 +16,9 @@
 
 ## ✨ Om prosjektet
 
-IOP Målbygger er et AI-drevet verktøy designet for norske lærere og spesialpedagoger. Med kunstig intelligens fra Google Gemini genererer verktøyet skreddersydde kompetansemål for elever med spesialundervisning, basert på læreplanen (LK20).
+IOP Målbygger er et AI-drevet verktøy designet for norske lærere og spesialpedagoger. Med kunstig intelligens fra OpenAI eller Google Gemini genererer verktøyet skreddersydde kompetansemål for elever med spesialundervisning, basert på læreplanen (LK20).
+
+Appen bruker **BYOK (Bring Your Own Key)**: du legger inn din egen API-nøkkel i appen og velger selv mellom OpenAI (`gpt-5.4-mini`) og Google Gemini (`gemini-3.1-flash-lite`). Nøkkelen lagres kun i nettleseren din.
 
 ### 🎯 Hovedfunksjoner
 
@@ -36,7 +38,7 @@ IOP Målbygger er et AI-drevet verktøy designet for norske lærere og spesialpe
 
 - **Node.js** (v18 eller nyere)
 - **npm** eller **yarn**
-- **Gemini API-nøkkel** ([Få gratis her](https://aistudio.google.com/app/apikey))
+- **Egen API-nøkkel** fra [OpenAI](https://platform.openai.com/api-keys) eller [Google AI Studio](https://aistudio.google.com/apikey) (legges inn i appen, ikke i koden)
 
 ### Installasjon (Lokal utvikling)
 
@@ -51,24 +53,18 @@ IOP Målbygger er et AI-drevet verktøy designet for norske lærere og spesialpe
    npm install
    ```
 
-3. **Sett opp miljøvariabler:**
-   ```bash
-   cp .env.example .env
-   ```
-   
-   Åpne `.env` og legg til din Gemini API-nøkkel:
-   ```bash
-   GEMINI_API_KEY=din-api-nøkkel-her
-   ```
-
-4. **Start utviklingsserver:**
+3. **Start utviklingsserver:**
    ```bash
    npm run dev
    ```
 
-5. **Åpne i nettleseren:**
-   
-   Gå til http://localhost:5173 (eller porten som vises i terminalen)
+4. **Åpne i nettleseren:**
+
+   Gå til http://localhost:3000 (eller porten som vises i terminalen)
+
+5. **Legg inn API-nøkkel:**
+
+   Klikk «⚙️ KI-innstillinger» oppe til høyre i appen, velg leverandør og lim inn nøkkelen din.
 
 ---
 
@@ -79,8 +75,8 @@ For sikker deployment med backend API og rate limiting, se vår detaljerte guide
 📖 **[DEPLOYMENT.md](DEPLOYMENT.md)** - Komplett Vercel deployment-guide
 
 **Kort oppsummert:**
-- Backend API beskytter API-nøkkelen
-- Rate limiting (50 requests/time per IP)
+- BYOK: brukerne tar med egen API-nøkkel – ingen API-kostnader for deg
+- Ren statisk frontend – ingen backend eller miljøvariabler
 - Automatisk deployment via GitHub
 - Gratis hosting på Vercel
 
@@ -90,12 +86,12 @@ For sikker deployment med backend API og rate limiting, se vår detaljerte guide
 
 <div align="center">
 
-| Frontend | Backend | Deployment | AI |
-|----------|---------|------------|-----|
-| React 19 | Vercel Functions | Vercel | Google Gemini 2.0 Flash |
-| TypeScript | Node.js | GitHub Actions | JSON Schema Output |
-| Tailwind CSS | Rate Limiting | - | - |
-| Vite | CORS | - | - |
+| Frontend | Deployment | AI |
+|----------|------------|-----|
+| React 19 | Vercel | OpenAI gpt-5.4-mini |
+| TypeScript | GitHub Actions | Google Gemini 3.1 Flash Lite |
+| Tailwind CSS | - | BYOK (egen API-nøkkel) |
+| Vite | - | JSON Schema Output |
 
 </div>
 
@@ -115,20 +111,11 @@ For sikker deployment med backend API og rate limiting, se vår detaljerte guide
 
 ## 🔒 Personvern og sikkerhet
 
-- ✅ **PIN-gate** - Tilgangskontroll for autoriserte brukere
 - ✅ **Ingen permanent lagring** - Data slettes ved refresh
-- ✅ **Backend API** - API-nøkkel er sikret server-side
-- ✅ **Rate limiting** - Beskyttelse mot misbruk (50 req/time)
+- ✅ **BYOK** - Din API-nøkkel lagres kun i din egen nettleser, aldri på server
+- ✅ **Direkte til leverandør** - Forespørsler går rett fra nettleseren til OpenAI/Google
 - ✅ **GDPR-vennlig** - Ingen personopplysninger lagres
 - ⚠️ **Viktig:** Anonymiser alltid elevdata før bruk
-
-### 🔑 Få tilgang
-
-For å bruke verktøyet trenger du en PIN-kode. Kontakt prosjekteier:
-- 📧 E-post: **kenneth@laererliv.no**
-- 🌐 Nettside: **[laererliv.no](https://www.laererliv.no/)**
-
-_(Dette sikrer at verktøyet brukes ansvarlig og i riktig kontekst)_
 
 ---
 
@@ -171,9 +158,9 @@ Lærer og utvikler med lidenskap for å lage verktøy som gjør hverdagen enkler
 ## 📊 Statistikk
 
 - ⚡ **~30 sekunder** generering per IOP
-- 💰 **~0.05 øre** per generering
-- 🚀 **50 requests/time** rate limit
-- 📈 **100% gratis** å bruke
+- 💰 **Typisk under én krone** per generering (betales via din egen API-nøkkel)
+- 🔑 **BYOK** - du velger selv mellom OpenAI og Google Gemini
+- 📈 **Gratis å drifte** - ingen API-kostnader på server
 
 ---
 

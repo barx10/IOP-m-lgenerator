@@ -1,24 +1,19 @@
 # 🚀 Deployment Guide - Vercel
 
-## Forberedelser
+## Slik fungerer appen (BYOK)
 
-### 1. Bytt til backend-versjon av geminiService
+Appen bruker **BYOK (Bring Your Own Key)**: hver bruker legger inn sin egen
+API-nøkkel under «⚙️ KI-innstillinger» i appen, og velger selv leverandør:
 
-For å bruke backend API (sikker for offentlig bruk), bytt ut importen i `App.tsx`:
+- **OpenAI** (`gpt-5.4-mini`)
+- **Google Gemini** (`gemini-3.1-flash-lite`)
 
-```typescript
-// Erstatt denne linjen:
-import { generateIopGoals } from './services/geminiService';
+Nøkkelen lagres kun i brukerens nettleser (localStorage), og forespørslene går
+direkte fra nettleseren til leverandøren. Det betyr:
 
-// Med denne:
-import { generateIopGoals } from './services/geminiService.backend';
-```
-
-### 2. Installer Vercel CLI (valgfritt)
-
-```bash
-npm install -g vercel
-```
+- ✅ Ingen `GEMINI_API_KEY` trengs på serveren lenger
+- ✅ Ingen API-kostnader for deg som drifter appen
+- ✅ Ingen backend i det hele tatt – appen er en ren statisk frontend
 
 ## Deploy til Vercel
 
@@ -27,13 +22,7 @@ npm install -g vercel
 1. **Gå til [vercel.com](https://vercel.com)** og logg inn med GitHub
 2. **Klikk "Add New Project"**
 3. **Import repoet ditt** (`IOP-m-lgenerator`)
-4. **Konfigurer miljøvariabler:**
-   - Klikk "Environment Variables"
-   - Legg til:
-     - **Name:** `GEMINI_API_KEY`
-     - **Value:** `[din-gemini-api-nøkkel]`
-     - **Environment:** Production, Preview, Development (velg alle)
-5. **Klikk "Deploy"**
+4. **Klikk "Deploy"** – ingen miljøvariabler trengs
 
 ### Metode 2: Via CLI
 
@@ -41,102 +30,38 @@ npm install -g vercel
 # Fra prosjektmappen:
 vercel
 
-# Følg instruksjonene:
-# - Link to existing project? No
-# - Project name? iop-malbygger
-# - Directory? ./
-# - Override settings? No
-
-# Legg til miljøvariabel:
-vercel env add GEMINI_API_KEY production
-# Lim inn din Gemini API-nøkkel
-
 # Deploy:
 vercel --prod
 ```
 
 ## Etter deployment
 
-### Test appen
+1. Åpne URL-en Vercel gir deg
+2. Åpne «⚙️ KI-innstillinger», velg leverandør og legg inn en API-nøkkel
+3. Test å generere en IOP
 
-1. Åpne URL-en Vercel gir deg (f.eks. `iop-malbygger.vercel.app`)
-2. Test å generere en IOP
-3. Sjekk at rate limiting fungerer (prøv > 10 forespørsler på en time)
-
-### Overvåk bruken
-
-1. Gå til [Vercel Dashboard](https://vercel.com/dashboard)
-2. Velg prosjektet ditt
-3. Se "Analytics" for bruksstatistikk
-4. Se "Logs" for eventuelle feil
-
-### Overvåk API-kostnader
-
-1. Gå til [Google AI Studio](https://aistudio.google.com)
-2. Se "API Usage" for å overvåke Gemini API-kostnader
-3. Sett opp varslinger i Google Cloud Console
-
-## Rate Limiting
-
-Backend-en har innebygd rate limiting:
-- **10 forespørsler per IP per time**
-- Ved overskridelse: "429 Too Many Requests"
-- Brukeren får beskjed om å vente en time
-
-## Sikkerhet
-
-✅ **API-nøkkel** er trygt lagret på server-siden
-✅ **Rate limiting** forhindrer misbruk
-✅ **CORS** tillater kun forespørsler fra din frontend
-
-## Oppdatering
-
-For å oppdatere appen etter deployment:
+## Lokal utvikling
 
 ```bash
-# Commit endringene dine
-git add .
-git commit -m "Din commit-melding"
-git push
-
-# Vercel deployer automatisk ved push til main-branch
+npm install
+npm run dev
 ```
 
-## Tilbake til lokal utvikling
-
-For lokal utvikling med direkte Gemini API (uten backend):
-
-1. Bytt tilbake til original geminiService:
-   ```typescript
-   import { generateIopGoals } from './services/geminiService';
-   ```
-
-2. Kjør dev server:
-   ```bash
-   npm run dev
-   ```
+Ingen miljøvariabler trengs – API-nøkkelen legges inn i selve appen.
 
 ## Feilsøking
 
-### "Failed to fetch" error
+### "API-nøkkelen er ugyldig"
 
-- Sjekk at `GEMINI_API_KEY` er lagt til i Vercel Environment Variables
-- Sjekk at API-nøkkelen er gyldig i Google AI Studio
-- Se Vercel Function Logs for detaljer
+- Sjekk at nøkkelen er limt inn riktig under KI-innstillinger
+- Sjekk at nøkkelen er aktiv hos leverandøren
+  ([OpenAI](https://platform.openai.com/api-keys) /
+  [Google AI Studio](https://aistudio.google.com/apikey))
 
-### Rate limiting for streng?
+### "Kvoten er brukt opp"
 
-Endre verdiene i `api/generate-iop.ts`:
-```typescript
-const RATE_LIMIT = 20; // Øk antall forespørsler
-const RATE_WINDOW = 60 * 60 * 1000; // Eller reduser tidsvinduet
-```
-
-### Trege responser?
-
-- Gemini 2.0 Flash er rask (~5-10s)
-- Hvis tregere: sjekk Vercel Function Logs
-- Vurder å øke timeout i vercel.json (standard 10s)
+- Brukeren har gått tom for kreditt/kvote hos leverandøren sin – dette styres
+  av brukerens egen konto, ikke av appen
 
 ## Support
 

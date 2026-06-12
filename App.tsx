@@ -10,15 +10,15 @@ import {
   AppStatus,
   IopGoal
 } from './types';
-import { generateIopGoals, clearStoredPinCode } from './services/geminiService.backend';
+import { generateIopGoals, hasApiKey } from './services/llmService';
 import { curriculumData, curriculumSubjects, vgsSubjects } from './services/curriculumData';
 
 import { Card } from './components/Card';
-import { PinGate } from './components/PinGate';
 import { CompetenceGoalSelector } from './components/CompetenceGoalSelector';
 import { TextAreaField } from './components/TextAreaField';
 import { CoreElementsModal } from './components/CoreElementsModal';
 import { AboutModal } from './components/AboutModal';
+import { SettingsModal } from './components/SettingsModal';
 import { Footer } from './components/Footer';
 import { SocialGoalsSelector } from './components/SocialGoalsSelector';
 import { OtherNeedsSelector } from './components/OtherNeedsSelector';
@@ -83,6 +83,7 @@ const App: React.FC = () => {
     });
     const [studentCode, setStudentCode] = useState<string>(''); // For student initials/code
     const [showAboutModal, setShowAboutModal] = useState(false);
+    const [showSettingsModal, setShowSettingsModal] = useState(false);
     const [showBetaModal, setShowBetaModal] = useState(false);
     const [editedSocialGoals, setEditedSocialGoals] = useState<Record<string, any>>({});
     const [editedOtherNeedsMeasures, setEditedOtherNeedsMeasures] = useState<Record<string, string[]>>({});
@@ -148,6 +149,12 @@ const App: React.FC = () => {
 
     const handleSubmit = async () => {
         if (!isFormValid) return;
+        if (!hasApiKey()) {
+            setError('Du må legge inn din egen API-nøkkel under KI-innstillinger før du kan generere forslag.');
+            setStatus('error');
+            setShowSettingsModal(true);
+            return;
+        }
         setStatus('loading');
         setError(null);
         setIopResult(null);
@@ -204,11 +211,9 @@ const App: React.FC = () => {
         } catch (err: any) {
             clearInterval(progressInterval);
 
-            // Handle invalid PIN error - reload page to show PIN gate
-            if (err.code === 'INVALID_PIN') {
-                clearStoredPinCode();
-                window.location.reload();
-                return;
+            // Missing or invalid API key - open settings so the user can fix it
+            if (err.code === 'NO_API_KEY' || err.code === 'INVALID_API_KEY') {
+                setShowSettingsModal(true);
             }
 
             setError(err instanceof Error ? err.message : 'An unknown error occurred.');
@@ -1056,8 +1061,18 @@ const App: React.FC = () => {
                     </button>
                 </div>
 
-                {/* Om button in top right corner */}
-                <div className="fixed top-4 right-4 z-40">
+                {/* Settings and Om buttons in top right corner */}
+                <div className="fixed top-4 right-4 z-40 flex gap-2">
+                    <button
+                        onClick={() => setShowSettingsModal(true)}
+                        className="inline-flex items-center gap-2 px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 hover:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue"
+                        title="Velg KI-leverandør og legg inn API-nøkkel"
+                    >
+                        ⚙️ KI-innstillinger
+                        {!hasApiKey() && (
+                            <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" title="Ingen API-nøkkel lagt inn"></span>
+                        )}
+                    </button>
                     <button
                         onClick={() => setShowAboutModal(true)}
                         className="inline-flex items-center gap-2 px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 hover:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue"
@@ -1519,6 +1534,9 @@ const App: React.FC = () => {
             {/* About Modal */}
             <AboutModal isOpen={showAboutModal} onClose={() => setShowAboutModal(false)} />
 
+            {/* Settings Modal (BYOK: provider + API key) */}
+            <SettingsModal isOpen={showSettingsModal} onClose={() => setShowSettingsModal(false)} />
+
             {/* Beta Modal */}
             {showBetaModal && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
@@ -1625,11 +1643,4 @@ const App: React.FC = () => {
     );
 };
 
-// Wrap App with PinGate for access control
-const AppWithPinGate: React.FC = () => (
-    <PinGate>
-        <App />
-    </PinGate>
-);
-
-export default AppWithPinGate;
+export default App;
