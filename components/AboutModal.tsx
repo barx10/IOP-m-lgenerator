@@ -73,9 +73,11 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
                                         konkrete, strukturerte mål for elever med individuell opplæringsplan (IOP).
                                     </p>
                                     <p>
-                                        Appen bruker kunstig intelligens (Google Gemini) til å foreslå realistiske 
-                                        ferdighetsmål og kunnskapsmål basert på kompetansemål fra læreplanen, 
-                                        kjerneelementer, og sakkyndig vurdering.
+                                        Appen bruker kunstig intelligens (OpenAI eller Google Gemini – du velger selv
+                                        under KI-innstillinger) til å foreslå realistiske
+                                        ferdighetsmål og kunnskapsmål basert på kompetansemål fra læreplanen,
+                                        kjerneelementer, og sakkyndig vurdering. Du bruker din egen API-nøkkel
+                                        (BYOK – Bring Your Own Key).
                                     </p>
                                     <p className="font-medium text-amber-700">
                                         ⚠️ Viktig: KI-genererte forslag må alltid kvalitetssikres og tilpasses av fagperson. 
@@ -118,9 +120,10 @@ export const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onClose }) => {
                                     <div>
                                         <h4 className="font-semibold text-gray-900 mb-1">Sending til KI-tjeneste</h4>
                                         <p>
-                                            Informasjonen du legger inn (kompetansemål, sakkyndig vurdering, etc.) sendes til 
-                                            Google Gemini API for å generere IOP-mål. Google behandler data i henhold til deres 
-                                            personvernregler og tjenestevilkår.
+                                            Informasjonen du legger inn (kompetansemål, sakkyndig vurdering, etc.) sendes
+                                            direkte fra nettleseren din til KI-leverandøren du har valgt (OpenAI eller Google),
+                                            med din egen API-nøkkel. Leverandøren behandler data i henhold til sine
+                                            personvernregler og tjenestevilkår. API-nøkkelen lagres kun lokalt i nettleseren din.
                                         </p>
                                         <p className="font-semibold text-red-600 mt-2 flex items-start gap-2">
                                             <span className="text-lg flex-shrink-0">⚠️</span>

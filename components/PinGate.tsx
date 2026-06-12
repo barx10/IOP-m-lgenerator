@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { storePinCode, clearStoredPinCode } from '../services/geminiService.backend';
+import { storePinCode, clearStoredPinCode } from '../services/pinStorage';
 
 const AUTH_KEY = 'app_auth';
 
