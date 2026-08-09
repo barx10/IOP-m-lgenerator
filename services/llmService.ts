@@ -20,13 +20,13 @@ export interface ProviderInfo {
 export const PROVIDERS: Record<LlmProvider, ProviderInfo> = {
     openai: {
         label: 'OpenAI',
-        model: 'gpt-5.4-mini',
+        model: 'gpt-5.6-luna',
         keyUrl: 'https://platform.openai.com/api-keys',
         keyPlaceholder: 'sk-...',
     },
     google: {
         label: 'Google Gemini',
-        model: 'gemini-3.1-flash-lite',
+        model: 'gemini-3.6-flash',
         keyUrl: 'https://aistudio.google.com/apikey',
         keyPlaceholder: 'AIza...',
     },

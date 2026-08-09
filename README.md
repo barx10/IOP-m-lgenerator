@@ -18,7 +18,7 @@
 
 IOP Målbygger er et AI-drevet verktøy designet for norske lærere og spesialpedagoger. Med kunstig intelligens fra OpenAI eller Google Gemini genererer verktøyet skreddersydde kompetansemål for elever med spesialundervisning, basert på læreplanen (LK20).
 
-Appen bruker **BYOK (Bring Your Own Key)**: du legger inn din egen API-nøkkel i appen og velger selv mellom OpenAI (`gpt-5.4-mini`) og Google Gemini (`gemini-3.1-flash-lite`). Nøkkelen lagres kun i nettleseren din.
+Appen bruker **BYOK (Bring Your Own Key)**: du legger inn din egen API-nøkkel i appen og velger selv mellom OpenAI (`gpt-5.6-luna`) og Google Gemini (`gemini-3.6-flash`). Nøkkelen lagres kun i nettleseren din.
 
 ### 🎯 Hovedfunksjoner
 
@@ -88,8 +88,8 @@ For sikker deployment med backend API og rate limiting, se vår detaljerte guide
 
 | Frontend | Deployment | AI |
 |----------|------------|-----|
-| React 19 | Vercel | OpenAI gpt-5.4-mini |
-| TypeScript | GitHub Actions | Google Gemini 3.1 Flash Lite |
+| React 19 | Vercel | OpenAI gpt-5.6-luna |
+| TypeScript | GitHub Actions | Google Gemini 3.6 Flash |
 | Tailwind CSS | - | BYOK (egen API-nøkkel) |
 | Vite | - | JSON Schema Output |
 

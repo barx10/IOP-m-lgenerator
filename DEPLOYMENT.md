@@ -5,8 +5,8 @@
 Appen bruker **BYOK (Bring Your Own Key)**: hver bruker legger inn sin egen
 API-nøkkel under «⚙️ KI-innstillinger» i appen, og velger selv leverandør:
 
-- **OpenAI** (`gpt-5.4-mini`)
-- **Google Gemini** (`gemini-3.1-flash-lite`)
+- **OpenAI** (`gpt-5.6-luna`)
+- **Google Gemini** (`gemini-3.6-flash`)
 
 Nøkkelen lagres kun i brukerens nettleser (localStorage), og forespørslene går
 direkte fra nettleseren til leverandøren. Det betyr:
